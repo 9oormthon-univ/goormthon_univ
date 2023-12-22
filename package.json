@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@goorm-dev/charts": "0.0.3",
     "@goorm-dev/gds-components": "^1.26.0-cdn.1",
+    "@goorm-dev/gds-gantt": "^1.26.3",
+    "@goorm-dev/gds-goormstrap": "^1.26.3",
     "@goorm-dev/gds-icons": "^1.26.0",
+    "@goorm-dev/gds-tables": "^1.26.3",
+    "@goorm-dev/gds-toastify": "^1.26.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.3",
