@@ -30,7 +30,6 @@
     "no-tabs": ["error", { "allowIndentationTabs": true }], // \t의 사용을 금지하고 tab키의 사용은 허용
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "off", // Checks effect dependencies
-    "react/react-in-jsx-scope": "off", // import React from "react"가 필수였던 시기에 필요한 규칙이므로 off
     "simple-import-sort/imports": "error", //import 정렬 강제
     "simple-import-sort/exports": "error", //export 정렬 강제
     "no-unused-vars": "warn",

@@ -1,14 +1,12 @@
-import { Button } from '@goorm-dev/gds-components';
 import React, { Component } from 'react';
 
-import { ActivityIcon } from '@goorm-dev/gds-icons';
+import Router from './Router';
 
 class App extends Component {
   render() {
     return (
       <>
-        <ActivityIcon />
-        <Button>hi</Button>
+        <Router />
       </>
     );
   }

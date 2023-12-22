@@ -12,6 +12,7 @@
     "@goorm-dev/gds-toastify": "^1.26.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-router-dom": "^6.21.1",
     "react-scripts": "2.0.3",
     "reactstrap": "^8.10.1"
   },
