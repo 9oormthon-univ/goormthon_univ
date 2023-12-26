@@ -1,7 +1,6 @@
 import React from 'react';
 import * as S from './style';
-import { Link } from 'react-router-dom';
-import { FacebookIcon, GithubIcon, InstagramIcon, MenuIcon } from '@goorm-dev/gds-icons';
+import { FacebookIcon, GithubIcon, InstagramIcon } from '@goorm-dev/gds-icons';
 
 function Footer() {
   return (

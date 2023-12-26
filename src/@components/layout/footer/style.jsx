@@ -17,6 +17,7 @@ export const SocialContainer = styled.div`
   gap: 2rem;
   float: right;
 `;
+
 export const FooterSlogan = styled.h3`
   color: var(--light-gray-gray-700-alternative, #525463);
   font-feature-settings: 'clig' off, 'liga' off;
@@ -25,17 +26,4 @@ export const FooterSlogan = styled.h3`
   letter-spacing: -0.01875rem;
   margin-right: auto;
   margin-left: auto;
-`;
-
-export const FooterInfo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: gray;
-  margin: 0.25rem 0;
-
-  svg {
-    margin-right: 0.5rem;
-  }
 `;

@@ -81,7 +81,7 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener('resize', resizingHandler);
-    resizingHandler(); // Call it once initially
+    resizingHandler(); 
 
     return () => {
       window.removeEventListener('resize', resizingHandler);
