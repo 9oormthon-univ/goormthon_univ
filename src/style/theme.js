@@ -1,3 +1,4 @@
+
 // css변수
 const getCSSVariable = (name) => getComputedStyle(document.documentElement).getPropertyValue(name);
 
@@ -23,62 +24,63 @@ const effects = {
 };
 
 const fonts = {
-  // heading1
-  heading1: FONT({
-    family: 'Pretendard',
-    weight: 700,
-    size: 2.375,
-    height: 'normal',
-  }),
-  heading02: FONT({
-    family: 'Pretendard',
-    weight: 700,
-    size: 2,
-    height: 'normal',
-  }),
-  heading03: FONT({
-    family: 'Pretendard',
-    weight: 700,
-    size: 1.5,
-    height: 'normal',
-  }),
-  heading04: FONT({
-    family: 'Pretendard',
-    weight: 700,
-    size: 1.25,
-    height: 'normal',
-  }),
-  heading05: FONT({
-    family: 'Pretendard',
-    weight: 700,
-    size: 1.125,
-    height: 'normal',
-  }),
-  heading06: FONT({
-    family: 'Pretendard',
-    weight: 500,
-    size: 1,
-    height: 'normal',
-  }),
-  subtitle01: FONT({
-    family: 'Pretendard',
-    weight: 600,
-    size: 0.875,
-    height: 'normal',
-  }),
-  body01: FONT({
-    family: 'Pretendard',
-    weight: 400,
-    size: 1,
-    height: 'normal',
-  }),
-  body02: FONT({
-    family: 'Pretendard',
-    weight: 400,
-    size: 0.875,
-    height: 'normal',
-  }),
+//   // heading1
+//   heading1: FONT({
+//     family: 'Pretendard',
+//     weight: 700,
+//     size: 2.375,
+//     height: 'normal',
+//   }),
+//   heading02: FONT({
+//     family: 'Pretendard',
+//     weight: 700,
+//     size: 2,
+//     height: 'normal',
+//   }),
+//   heading03: FONT({
+//     family: 'Pretendard',
+//     weight: 700,
+//     size: 1.5,
+//     height: 'normal',
+//   }),
+//   heading04: FONT({
+//     family: 'Pretendard',
+//     weight: 700,
+//     size: 1.25,
+//     height: 'normal',
+//   }),
+//   heading05: FONT({
+//     family: 'Pretendard',
+//     weight: 700,
+//     size: 1.125,
+//     height: 'normal',
+//   }),
+//   heading06: FONT({
+//     family: 'Pretendard',
+//     weight: 500,
+//     size: 1,
+//     height: 'normal',
+//   }),
+//   subtitle01: FONT({
+//     family: 'Pretendard',
+//     weight: 600,
+//     size: 0.875,
+//     height: 'normal',
+//   }),
+//   body01: FONT({
+//     family: 'Pretendard',
+//     weight: 400,
+//     size: 1,
+//     height: 'normal',
+//   }),
+//   body02: FONT({
+//     family: 'Pretendard',
+//     weight: 400,
+//     size: 0.875,
+//     height: 'normal',
+//   }),
 };
+
 
 export const theme = {
   colors,
