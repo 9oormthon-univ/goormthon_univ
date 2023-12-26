@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
+import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar';
 
 const Wrapper = styled.div`
@@ -19,7 +20,7 @@ const Layout = () => {
       <Wrapper>
         <Outlet />
       </Wrapper>
-      {/* <FooterBar /> */}
+      <Footer />
     </>
   );
 };
