@@ -10,7 +10,6 @@ export const NavWrapper = styled.div`
   height: 3.5rem;
   padding: 0 1.5rem;
   z-index: 2;
-  border: 1px solid red;
 `;
 
 // 로고
