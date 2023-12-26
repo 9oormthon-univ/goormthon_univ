@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import * as S from './style';
-import GULogo from '../../../assets/images/goormthon_univ_BI-W.png';
+import { ChevronRightIcon, MenuIcon } from '@goorm-dev/gds-icons';
+import GULogo from '../../../assets/images/goormthon_univ_BI-Bk.png';
 function Navbar() {
   //사이드바 열고 닫는 함수
   const sideBar = useRef();
@@ -33,6 +34,10 @@ function Navbar() {
       title: 'About',
     },
     {
+      link: `/project`,
+      title: 'Project',
+    },
+    {
       link: `/recruite`,
       title: 'recruite',
     },
@@ -49,9 +54,9 @@ function Navbar() {
 
   const setMenu = () => {
     return menuContents.map((menu, idx) => (
-      <Link to={menu.link} key={idx} $isActive={location.pathname.startsWith(menu.link)}>
+      <S.NavMenuLink to={menu.link} key={idx} $isActive={location.pathname.startsWith(menu.link)}>
         {menu.title}
-      </Link>
+      </S.NavMenuLink>
     ));
   };
 
@@ -69,20 +74,20 @@ function Navbar() {
   return (
     <>
       <S.NavWrapper>
-        <S.NavLogo>
+        <S.NavLogo to={'/'}>
           <S.NavLogoIcon src={GULogo} alt="9oormthon Univ" />
-          {/* <S.NavLogoTitle to={`/`}> </S.NavLogoTitle> */}
         </S.NavLogo>
 
         {isMobile ? (
           <>
-            <S.NavMobileMenu>아이콘</S.NavMobileMenu>
+            <S.NavMobileMenu>
+              <MenuIcon width="3rem" className="MenuIcon__icon" onClick={sideBarOpen} />
+            </S.NavMobileMenu>
             {/* 사이드바 */}
             <S.NavSideBarWrapper ref={sideBar}>
               <S.NavSideBarMenu>
                 <S.NavSideBarHeader>
-                  아이콘
-                  {/* <BsChevronCompactRight /> */}
+                  <ChevronRightIcon width="1rem" className="ChevronRightIcon__icon" />
                 </S.NavSideBarHeader>
                 <S.NavSideBarBody>{setMenu()}</S.NavSideBarBody>
               </S.NavSideBarMenu>

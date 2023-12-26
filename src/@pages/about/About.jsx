@@ -1,7 +1,7 @@
 import { GoormNavbar } from '@goorm-dev/gds-components';
 import React from 'react';
 import * as S from './style';
-import { ActivityIcon, CheckCircleIcon } from '@goorm-dev/gds-icons';
+
 import { HScrollTable } from '@goorm-dev/gds-tables';
 //...
 

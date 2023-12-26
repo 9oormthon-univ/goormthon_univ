@@ -2,18 +2,15 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const NavWrapper = styled.div`
-  margin: auto;
-  color: gray;
   background-color: #fff;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1178px;
-  height: 60px;
-  padding: 0 2rem;
-
+  height: 3.5rem;
+  padding: 0 1.5rem;
   z-index: 2;
+  border: 1px solid red;
 `;
 
 // 로고
@@ -25,9 +22,9 @@ export const NavLogo = styled(Link)`
 `;
 
 export const NavLogoIcon = styled.img`
-  height: 3rem;
+  height: 0.9375rem;
   object-fit: cover;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 `;
 
 export const NavLogoTitle = styled.div`
@@ -37,14 +34,24 @@ export const NavLogoTitle = styled.div`
 
 // 모니터
 export const NavMonitorMenu = styled.div`
-  width: 620px;
-  height: 6rem;
+  gap: 0.25rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   z-index: 1;
 `;
 
+// 네브링크
+export const NavMenuLink = styled(Link)`
+  padding: 0.56rem 1rem;
+  color: var(--basic-color-gray-gray-900, #2b2d36);
+  font-size: 0.875rem;
+  &:hover {
+    border-radius: var(--border-radius-300, 0.5rem);
+    background: var(--semantic-color-theme-link-transparent-8, rgba(133, 136, 153, 0.08));
+    color: var(--basic-color-gray-gray-900, #2b2d36);
+  }
+`;
 // 모바일
 export const NavMobileMenu = styled.div`
   height: 6rem;
@@ -53,7 +60,6 @@ export const NavMobileMenu = styled.div`
   justify-content: end;
   align-items: center;
   z-index: 1;
-  color: gray;
 `;
 
 // NavLink
@@ -62,11 +68,6 @@ export const NavLink = styled(Link)`
   font-weight: 600;
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
-  color: blue;
-
-  &:hover {
-    background-color: #fff;
-  }
 `;
 
 // 한글 영어
