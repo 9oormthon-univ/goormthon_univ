@@ -59,8 +59,6 @@ export const NavMenuLink = styled(Link)`
 `;
 // 모바일
 export const NavMobileMenu = styled.div`
-  height: 6rem;
-  width: 10;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -108,31 +106,26 @@ export const NavSideBarBackground = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 2;
-  background-color: gray;
-  opacity: 30%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, display 0.3s ease;
 `;
 
+// 네브바 감싸기
 export const NavSideBarWrapper = styled.div`
-  display: none;
-  opacity: 100%;
-  width: 40rem;
+  display: flex;
+  opacity: 0;
+  width: 16rem;
   height: 100vh;
   padding: 2rem 2.5rem;
   z-index: 3;
   position: fixed;
-  right: 0;
+  right: -16rem;
   top: 0;
-
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-
   background-color: #fff;
-  * {
-    font-size: 2rem;
-  }
+  transition: right 0.3s ease, opacity 0.3s ease;
 `;
 
+// 슬러이드 메뉴
 export const NavSideBarMenu = styled.div`
   width: 100%;
   display: flex;
@@ -143,8 +136,8 @@ export const NavSideBarHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10rem;
-  margin-bottom: 4rem;
+  height: 3rem;
+  margin-bottom: 2rem;
   border-bottom: 0.2rem solid;
   border-color: black;
   color: blue;
@@ -157,5 +150,4 @@ export const NavSideBarBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 30rem;
 `;
