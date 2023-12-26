@@ -30,7 +30,7 @@ function Navbar() {
 
   const menuContents = [
     {
-      link: `/about`,
+      link: `/`,
       title: 'About',
     },
     {
@@ -53,11 +53,16 @@ function Navbar() {
   }, [location]);
 
   const setMenu = () => {
-    return menuContents.map((menu, idx) => (
-      <S.NavMenuLink to={menu.link} key={idx} $isActive={location.pathname.startsWith(menu.link)}>
-        {menu.title}
-      </S.NavMenuLink>
-    ));
+    return menuContents.map((menu, idx) => {
+      // Check for an exact match if the link is '/', otherwise check with startsWith
+      const isActive = menu.link === '/' ? location.pathname === menu.link : location.pathname.startsWith(menu.link);
+
+      return (
+        <S.NavMenuLink to={menu.link} key={idx} $isActive={isActive}>
+          {menu.title}
+        </S.NavMenuLink>
+      );
+    });
   };
 
   useEffect(() => {
