@@ -104,8 +104,6 @@ export default function Timeline() {
     } else if (value > 2433 && value < 2734) {
       setMonth(6);
     }
-
-    console.log(value, window.pageYOffset);
   }, [value]);
 
   const TIMELINE_FILL_RATIO = {
