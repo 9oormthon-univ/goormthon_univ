@@ -116,7 +116,7 @@ function Navbar() {
         {isMobile ? (
           <>
             <S.NavMobileMenu>
-              <MenuIcon width="3rem" className="MenuIcon__icon" onClick={sideBarOpen} />
+              <MenuIcon width="3rem" className="MenuIcon__icon" onClick={sideBarOpen} color="black" />
             </S.NavMobileMenu>
             {/* 사이드바 */}
             <S.NavSideBarWrapper ref={sideBar}>
