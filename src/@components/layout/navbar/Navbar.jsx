@@ -3,11 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import * as S from './style';
 import { ChevronRightIcon, MenuIcon } from '@goorm-dev/gds-icons';
 import GULogo from '../../../assets/images/goormthon_univ_BI-Bk.png';
+import { Tooltip } from '@goorm-dev/gds-components';
 function Navbar() {
   //사이드바 열고 닫는 함수
   const sideBar = useRef();
   const sideBarBackground = useRef();
   const [isMobile, setisMobile] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   //네브바 열릴떄
   const sideBarOpen = () => {
@@ -63,9 +65,12 @@ function Navbar() {
     return menuContents.map((menu, idx) => {
       const isActive = menu.link === '/' ? location.pathname === menu.link : location.pathname.startsWith(menu.link);
       return (
-        <S.NavMenuLink to={menu.link} key={idx} $isActive={isActive}>
-          {menu.title}
-        </S.NavMenuLink>
+        <React.Fragment key={idx}>
+          <S.NavMenuLink to={menu.link} $isActive={isActive}>
+            {menu.title}
+          </S.NavMenuLink>
+          {menu.title === 'Recruit' && !isMobile ? <S.AlertMessage>2기 모집중 !</S.AlertMessage> : null}
+        </React.Fragment>
       );
     });
   };

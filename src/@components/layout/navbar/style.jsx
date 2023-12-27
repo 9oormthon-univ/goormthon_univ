@@ -12,6 +12,24 @@ export const NavWrapper = styled.div`
   z-index: 2;
 `;
 
+export const AlertMessage = styled.div`
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  background-color: #5094fa;
+  color: #fff;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20px; /* 뾰족한 부분의 위치 조정 */
+    right: 15px; /* 뾰족한 부분의 위치 조정 */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #5094fa transparent;
+  }
+`;
 // 로고
 export const NavLogo = styled(Link)`
   display: flex;
