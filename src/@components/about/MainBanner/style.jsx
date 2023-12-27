@@ -18,7 +18,7 @@ export const HeaderTitleText = styled.h1`
   color: var(--light-black-black, #000);
   font-feature-settings: 'clig' off, 'liga' off;
   text-align: center;
-  margin-top: 17rem;
+  margin-top: 10.63rem;
 `;
 
 export const HeaderDescriptionText = styled.h4`
