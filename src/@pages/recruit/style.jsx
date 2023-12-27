@@ -31,3 +31,31 @@ export const RecuritCalendarWrapper = styled.div`
   margin-bottom: 9.81rem;
   border: 1px solid green;
 `;
+
+export const RecuritCautionWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 9.37rem;
+  border: 1px solid green;
+`;
+
+export const CautionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+`;
+
+export const RecuritFAQWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 11rem;
+  border: 1px solid orange;
+`;
