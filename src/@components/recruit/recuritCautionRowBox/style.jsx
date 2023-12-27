@@ -46,4 +46,7 @@ export const CautionDetail = styled.sub`
   line-height: 2.25rem; /* 225% */
   letter-spacing: -0.00625rem;
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;

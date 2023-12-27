@@ -10,6 +10,10 @@ export const RecuritFAQWrapper = styled.div`
 export const QuestionText = styled.h6`
   color: var(--semantic-color-text-text-normal, #2b2d36);
   font-feature-settings: 'clig' off, 'liga' off;
+  margin: 0px;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const FAQBox = styled.div`
@@ -20,6 +24,9 @@ export const FAQBox = styled.div`
 export const AnswerText = styled.p`
   color: var(--semantic-color-text-text-normal, #2b2d36);
   font-feature-settings: 'clig' off, 'liga' off;
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+  }
 `;
 
 export const QuestionWrapper = styled.div`

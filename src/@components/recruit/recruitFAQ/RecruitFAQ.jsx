@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import * as S from './style';
-
 import { Collapse } from '@goorm-dev/gds-components';
 import { ChevronDownIcon, ChevronUpIcon } from '@goorm-dev/gds-icons';
 import FAQData from '../../../utilities/FAQData';

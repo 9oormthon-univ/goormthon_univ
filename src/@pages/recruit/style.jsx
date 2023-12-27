@@ -38,15 +38,6 @@ export const RecuritCautionWrapper = styled.div`
   align-items: start;
   margin-bottom: 9.37rem;
 `;
-
-export const CautionWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 1rem;
-`;
-
 export const RecuritFAQContainer = styled.div`
   width: 100%;
   display: flex;
