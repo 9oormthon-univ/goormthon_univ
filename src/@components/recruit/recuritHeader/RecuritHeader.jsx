@@ -8,9 +8,11 @@ import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import './style.css';
+import { useNavigate } from 'react-router-dom';
 
 function RecuritHeader() {
   const [daysRemaining, setDaysRemaining] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // 목표 날짜 설정 (24년 1월 12일)
@@ -34,7 +36,7 @@ function RecuritHeader() {
           <h4>D-{daysRemaining}</h4>
         </S.HeaderTitleText>
 
-        <S.GoormBtn>학교 대표 신청</S.GoormBtn>
+        <S.GoormBtn onClick={() => navigate('/apply')}>학교 대표 신청</S.GoormBtn>
       </S.HeaderTitleWrapper>
       <S.HeaderUnivContainer>
         <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>

@@ -7,6 +7,7 @@ import Layout from './@components/layout/Layout';
 const About = lazy(() => import('./@pages/about/About'));
 const Project = lazy(() => import('./@pages/Project'));
 const Recruit = lazy(() => import('./@pages/recruit/Recruit'));
+const Apply = lazy(() => import('./@pages/apply/Apply'));
 const NotFound = lazy(() => import('./@pages/errors/NotFound'));
 
 // 라우터 생성
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: 'recruit',
         element: <Suspense fallback={<div>Loading...</div>}>{React.createElement(Recruit)}</Suspense>,
+      },
+      {
+        path: 'apply',
+        element: <Suspense fallback={<div>Loading...</div>}>{React.createElement(Apply)}</Suspense>,
       },
       { path: '*', element: <Suspense fallback={<div>Loading...</div>}>{React.createElement(NotFound)}</Suspense> },
     ],
