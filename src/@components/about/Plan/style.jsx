@@ -103,12 +103,15 @@ export const MonthTextClickable = styled.h5`
     background-color: var(--blue-500);
     border-radius: 50%;
   }
+
+  &.prev {
+    color: var(--light-white-white-light, #fff);
+  }
 `;
 
 export const CardBar = styled.img`
   transition: margin 0.5s ease-in-out;
   width: max-content;
   height: 5.5rem;
-  ${({ $month }) =>
-    $month === '1월' ? 'margin-left: 30px' : $month === '6-8월' ? 'margin-left: 296px' : 'margin-left:169px'};
+  ${({ $month }) => ($month === 1 ? 'margin-left: 30px' : $month === 6 ? 'margin-left: 296px' : 'margin-left:169px')};
 `;

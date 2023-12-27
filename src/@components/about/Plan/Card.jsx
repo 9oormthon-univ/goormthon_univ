@@ -7,7 +7,7 @@ export default function Card({ data, $xOffset, $yOffset, $month }) {
   const { Icon, title, description } = data;
 
   return (
-    <S.CardWrapper $xOffset={$xOffset} $yOffset={$yOffset}>
+    <S.CardWrapper $xOffset={$xOffset} $yOffset={$yOffset} $month={$month}>
       <S.CardContentsWrapper>
         <S.IconWrapper>
           <Icon />
