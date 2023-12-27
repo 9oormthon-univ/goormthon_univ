@@ -6,7 +6,7 @@ import Layout from './@components/layout/Layout';
 // 레이지 로딩 적용
 const About = lazy(() => import('./@pages/about/About'));
 const Project = lazy(() => import('./@pages/Project'));
-const Recruit = lazy(() => import('./@pages/Recruit'));
+const Recruit = lazy(() => import('./@pages/recruit/Recruit'));
 const NotFound = lazy(() => import('./@pages/errors/NotFound'));
 
 // 라우터 생성

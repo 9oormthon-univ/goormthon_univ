@@ -45,8 +45,8 @@ function Navbar() {
       title: 'Project',
     },
     {
-      link: `/recruite`,
-      title: 'recruite',
+    link: `/recruit`,
+      title: 'recruit',
     },
   ];
 
@@ -81,7 +81,7 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener('resize', resizingHandler);
-    resizingHandler(); 
+    resizingHandler();
 
     return () => {
       window.removeEventListener('resize', resizingHandler);
