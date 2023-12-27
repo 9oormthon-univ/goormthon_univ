@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import GoorimeeEffect from '../../../assets/svgs/GoormieeEffect';
 
 export const MainBannerWrapper = styled.div`
-  height: calc(100vh - 3.625rem);
+  height: calc(100vh - 3.53rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
