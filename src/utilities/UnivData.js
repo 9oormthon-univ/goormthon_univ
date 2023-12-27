@@ -28,17 +28,17 @@ const Universities = [
   {
     image: DuckseongUnivImg,
     name: '덕성여자대학교',
-    link: 'https://www.instagram.com/goormthon_univ_Kangwoon/',
+    link: 'https://www.instagram.com/9oormthon_univ_duksung/',
   },
   {
     image: DonggukUnivImg,
     name: '동국대학교',
-    link: 'https://www.instagram.com/goormthon_univ_ku/',
+    link: 'https://www.instagram.com/goormthon_univ_dgu/',
   },
   {
     image: DongdukUnivImg,
     name: '동덕여자대학교',
-    link: 'https://www.instagram.com/goormthon_univ_Kangwoon/',
+    link: 'https://www.instagram.com/goormthon_univ_dongduk/',
   },
   {
     image: SangmyeongUnivImg,
@@ -48,12 +48,12 @@ const Universities = [
   {
     image: SungkonghoeUnivImg,
     name: '성공회대학교',
-    link: 'https://www.instagram.com/goormthon_univ_Kangwoon/',
+    link: 'https://www.instagram.com/goormthon_univ_skhu/',
   },
   {
     image: ChungangUnivImg,
     name: '중앙대학교',
-    link: 'https://www.instagram.com/goormthon_univ_ku/',
+    link: 'https://www.instagram.com/goormthon_univ_cau/',
   },
   {
     image: IncheonUnivImg,
