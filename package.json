@@ -10,13 +10,15 @@
     "@goorm-dev/gds-icons": "^1.26.0",
     "@goorm-dev/gds-tables": "^1.26.3",
     "@goorm-dev/gds-toastify": "^1.26.3",
+    "framer-motion": "^2.9.5",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router-dom": "^6.21.1",
     "react-scripts": "2.0.3",
     "reactstrap": "^8.10.1",
     "styled-components": "^5.3.6",
-    "styled-reset": "^4.5.1"
+    "styled-reset": "^4.5.1",
+    "swiper": "^6.8.4"
   },
   "scripts": {
     "start": "react-scripts start",

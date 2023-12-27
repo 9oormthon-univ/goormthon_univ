@@ -1,37 +1,65 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import RecuritHeader from '../../@components/recruit/recuritHeader/RecuritHeader';
+import RecuritTarget from '../../@components/recruit/recuritTarget/RecuritTarget';
+import DefaultImg from '../../assets/images/dummy.png';
 import * as S from './style';
-import { Button } from 'reactstrap';
-import KoreaUnivSaejongImg from '../../assets/images/university/koreaSaejong.png';
-import { TextButton } from '@goorm-dev/gds-components';
+import { motion, useAnimation } from 'framer-motion';
+import RecuritFAQ from '../../@components/recruit/recruitFAQ/RecruitFAQ';
+import RecruitCaution from '../../@components/recruit/recruitCaution/RecruitCaution';
 
 export default function Recruit() {
+  const [isVisible, setIsVisible] = useState(false);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+      // 스크롤 위치에 따라 isVisible 상태를 설정
+      if (scrollY >= 400) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    // 스크롤 이벤트 리스너 등록
+    window.addEventListener('scroll', handleScroll);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <S.HeaderContainer>
-        <S.HeaderTitleWrapper>
-          <S.HeaderTitleText>구름톤 유니브 2기 모집 중!</S.HeaderTitleText>
-          <TextButton>학교 대표 신청</TextButton>
-        </S.HeaderTitleWrapper>
-        <S.HeaderUnivContainer>
-          <S.HeaderUnivTitleText>현재 함께하는 유니브 9개</S.HeaderUnivTitleText>
-          <S.HeaderUnivListContainer>
-            <S.HeaderUnivlWrapper>
-              <S.UnivImg src={KoreaUnivSaejongImg} />
-              <S.UnivName class="p-lg-3">고려대학교(세종)</S.UnivName>
-            </S.HeaderUnivlWrapper>
-            <S.HeaderUnivlWrapper>
-              <S.UnivImg src={KoreaUnivSaejongImg} />
-              <S.UnivName class="p-lg-3">고려대학교(세종)</S.UnivName>
-            </S.HeaderUnivlWrapper>
-            <S.HeaderUnivlWrapper>
-              <S.UnivImg src={KoreaUnivSaejongImg} />
-              <S.UnivName class="p-lg-3">고려대학교(세종)</S.UnivName>
-            </S.HeaderUnivlWrapper>
-          </S.HeaderUnivListContainer>
-        </S.HeaderUnivContainer>
-        모집 페이지 입니다.
-      </S.HeaderContainer>
-      <div>으아아악</div>
+      <RecuritHeader />
+      <S.RecuritBody>
+        {/* ---------------- 지원 대상 ---------------- */}
+        <RecuritTarget />
+        {/* ---------------- 모집일정 ---------------- */}
+        <S.RecuritCalendarWrapper>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5 }}
+          >
+            <S.BodyTitle>모집일정</S.BodyTitle>
+            <S.RecuritCalendarImg src={DefaultImg}></S.RecuritCalendarImg>
+          </motion.div>
+        </S.RecuritCalendarWrapper>
+        {/* ---------------- 유의 사항 ---------------- */}
+        <S.RecuritCautionWrapper>
+          <S.BodyTitle>유의사항</S.BodyTitle>
+          <RecruitCaution />
+        </S.RecuritCautionWrapper>
+        {/* ---------------- 자주 묻는 질문 ---------------- */}
+        <S.RecuritFAQContainer>
+          <S.BodyTitle>자주 묻는 질문</S.BodyTitle>
+          <RecuritFAQ />
+        </S.RecuritFAQContainer>
+      </S.RecuritBody>
     </>
   );
 }

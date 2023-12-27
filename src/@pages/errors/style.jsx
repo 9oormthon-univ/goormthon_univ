@@ -5,15 +5,16 @@ export const MainWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100%;
-  background-color: #f5f5f5;
+  height: 70vh;
+  width: 80%;
+  background-color: #fff;
 `;
 
 export const MainTitle = styled.h1`
   font-size: 3rem;
   font-weight: 700;
   color: #333;
+  margin-top: 1rem;
 `;
 
 export const MainDescription = styled.p`
@@ -23,4 +24,9 @@ export const MainDescription = styled.p`
 export const MainSubDescription = styled.p`
   font-size: 1rem;
   color: grey;
+`;
+
+export const NotFoundImg = styled.img`
+  width: 8.375rem;
+  height: 6rem;
 `;
