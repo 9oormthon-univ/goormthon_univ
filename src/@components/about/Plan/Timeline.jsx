@@ -108,10 +108,20 @@ export default function Timeline() {
     console.log(value, window.pageYOffset);
   }, [value]);
 
+  const TIMELINE_FILL_RATIO = {
+    '1월': 10,
+    '2월': 25,
+    '3월': 42,
+    '4월': 59,
+    '5월': 75,
+    '6-8월': 92,
+  };
+
   return (
     <>
       <Card data={TIMELINE_DATA[month]} $xOffset={monthTextXOffset} $yOffset={monthTextYOffset} $month={month} />
       <S.TimelineBar>
+        <S.TimelineFillBar $fillRatio={TIMELINE_FILL_RATIO[month]} />
         <S.MonthTextWrapper>
           {Object.keys(TIMELINE_DATA).map((key) => (
             <S.MonthTextClickable

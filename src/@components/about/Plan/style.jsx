@@ -65,6 +65,15 @@ export const TimelineBar = styled.figure`
   position: relative;
 `;
 
+export const TimelineFillBar = styled.div`
+  width: ${({ $fillRatio }) => $fillRatio}%;
+  height: var(--size-size-500, 2.5rem);
+  background-color: var(--blue-500);
+  border-radius: 1.34375rem;
+  position: absolute;
+  transition: width 0.5s ease-in-out;
+`;
+
 export const ProgressBar = styled.div`
   position: absolute;
 `;
@@ -87,6 +96,7 @@ export const MonthTextClickable = styled.h5`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 
   &.active {
     color: var(--light-white-white-light, #fff);
@@ -98,7 +108,7 @@ export const MonthTextClickable = styled.h5`
 export const CardBar = styled.img`
   transition: margin 0.5s ease-in-out;
   width: max-content;
-  height: max-content;
+  height: 5.5rem;
   ${({ $month }) =>
     $month === '1월' ? 'margin-left: 30px' : $month === '6-8월' ? 'margin-left: 296px' : 'margin-left:169px'};
 `;
