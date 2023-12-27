@@ -1,10 +1,23 @@
 import React from 'react';
 import * as S from './style';
 
+function ProjectCard({ index, award, title, content, link, image }) {
+  // 애니메이션 설정
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+  // const isView = useInview
 
-function ProjectCard({ award, title, content, link, image }) {
   return (
-    <S.CardContainer onClick={() => window.open(link, '_blank')}>
+    <S.CardContainer
+      onClick={() => window.open(link, '_blank')}
+      key={index}
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+    >
       <S.CardImgWrapper>
         <S.CardImg src={image} />
         {award ? (

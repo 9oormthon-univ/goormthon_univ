@@ -4,7 +4,6 @@ import * as S from './style';
 import DummyBannerImg from '../../assets/images/dummyBanner.png';
 import ProjectCard from '../../@components/project/ProjectCard';
 import DanpoongProject2023Data from '../../utilities/ProjectData';
-
 export default function Project() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -22,9 +21,9 @@ export default function Project() {
         <S.GoormBtn onClick={() => handleButtonClick(1)} active={activeIndex === 1}>
           2기
         </S.GoormBtn>
-        <S.GoormBtn onClick={() => handleButtonClick(2)} active={activeIndex === 2}>
+        {/* <S.GoormBtn onClick={() => handleButtonClick(2)} active={activeIndex === 2}>
           3기
-        </S.GoormBtn>
+        </S.GoormBtn> */}
       </S.BtnWrapper>
 
       <S.ProjectBody>
@@ -37,7 +36,7 @@ export default function Project() {
             <S.ProjectCardGrid>
               {DanpoongProject2023Data.map((project, index) => (
                 <ProjectCard
-                  key={index}
+                  index={index}
                   award={project.award}
                   title={project.title}
                   content={project.content}
