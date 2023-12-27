@@ -5,7 +5,7 @@ export const HeaderUnivlWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   width: 8rem;
   cursor: pointer;
 `;
@@ -15,4 +15,6 @@ export const UnivImg = styled.img`
   height: 5.75rem;
 `;
 
-export const UnivName = styled.p``;
+export const UnivName = styled.p`
+  font-size: 0.8rem;
+`;
