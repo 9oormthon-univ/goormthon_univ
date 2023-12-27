@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import * as S from './style';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import UniversityItem from '../UniversityItem/UniversityItem';
@@ -10,9 +10,41 @@ import 'swiper/components/pagination/pagination.min.css';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
 
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+`;
+
+const ImageSlider = styled.div`
+  display: flex;
+  /* ImageSlider 컴포넌트의 스타일에서 애니메이션 속성을 이렇게 수정합니다 */
+  animation: slide 20s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    } // 목록의 절반만큼만 이동
+  }
+`;
+
+const Image = styled.img`
+  width: 100px;
+  margin-right: 10px;
+`;
+
 function RecuritHeader() {
   const [daysRemaining, setDaysRemaining] = useState(0);
   const navigate = useNavigate();
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     // 목표 날짜 설정 (24년 1월 12일)
@@ -28,6 +60,20 @@ function RecuritHeader() {
     setDaysRemaining(daysRemaining);
   }, []);
 
+  const AutoScrollingImages = () => {
+    const doubledUniversities = [...Universities, ...Universities];
+
+    return (
+      <Container>
+        <ImageSlider>
+          {doubledUniversities.map((univ, index) => (
+            <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
+          ))}
+        </ImageSlider>
+      </Container>
+    );
+  };
+
   return (
     <S.HeaderContainer>
       <S.HeaderTitleWrapper>
@@ -41,10 +87,14 @@ function RecuritHeader() {
       <S.HeaderUnivContainer>
         <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
         <S.HeaderUnivListContainer>
-          <Swiper
+          <AutoScrollingImages />
+          {/* 스와이핑 방식 */}
+          {/* <Swiper
+            ref={swiperRef}
+            onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
+            onMouseLeave={() => swiperRef.current.swiper.autoplay.start()}
             spaceBetween={0}
-            autoplay={{ delay: 3000 }} // 3초(3000 밀리초)마다 자동으로 넘어감
-            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop={true}
             breakpoints={{
               //크기별로 다르게 주기
@@ -75,7 +125,7 @@ function RecuritHeader() {
                 <UniversityItem image={univ.image} name={univ.name} link={univ.link} />
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper> */}
         </S.HeaderUnivListContainer>
       </S.HeaderUnivContainer>
     </S.HeaderContainer>

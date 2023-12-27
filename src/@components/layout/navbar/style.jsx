@@ -14,7 +14,7 @@ export const NavWrapper = styled.div`
 
 export const AlertMessage = styled.div`
   position: absolute;
-  top: 70px;
+  top: 60px;
   right: 40px;
   background-color: #5094fa;
   color: #fff;

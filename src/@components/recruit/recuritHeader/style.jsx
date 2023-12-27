@@ -58,6 +58,7 @@ export const HeaderUnivListContainer = styled.div`
   flex-direction: row;
   /* border: 1px solid purple; */
   width: 100%;
+  margin-top: 1.5rem;
 `;
 
 export const GoormBtn = styled(Button)`
