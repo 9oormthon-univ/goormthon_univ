@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
-export const MainWrapper = styled.div`
-  border: 1px solid red;
+export const AboutWrapper = styled.div`
+  width: 100%;
+  overflow: hidden;
 `;

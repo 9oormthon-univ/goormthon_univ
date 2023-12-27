@@ -18,7 +18,7 @@ export const HeaderTitleText = styled.h1`
   color: var(--light-black-black, #000);
   font-feature-settings: 'clig' off, 'liga' off;
   text-align: center;
-  margin-top: 17rem;
+  margin-top: 10.63rem;
 `;
 
 export const HeaderDescriptionText = styled.h4`
@@ -34,10 +34,13 @@ export const MainImgWrapper = styled.div`
   cursor: pointer;
 
   & > svg {
-    stroke-dashoffset: -500;
+    stroke-dashoffset: -65;
   }
   &:hover > svg {
     stroke-dashoffset: 0;
+    & > path#click {
+      fill: black;
+    }
   }
 `;
 
@@ -53,10 +56,15 @@ export const AnimatedGoormieeEffect = styled(GoorimeeEffect)`
   width: 31rem;
   height: 13.3rem;
   position: absolute;
-  bottom: 5.6rem;
+  bottom: 2.6rem;
   left: 50%;
   transform: translate(-50%);
 
   stroke-dasharray: 500;
-  transition: stroke-dashoffset 1s ease-in-out;
+  transition: stroke-dashoffset 0.5s ease-in-out;
+
+  & > path#click {
+    fill: white;
+    transition: fill 0.5s ease-in-out;
+  }
 `;
