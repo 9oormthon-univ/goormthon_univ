@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const TargetContainer = styled.div`
   width: 100%;
   flex-direction: column;
-  border: 1px solid red;
   margin-top: 8.56rem;
   margin-bottom: 9.06rem;
 `;

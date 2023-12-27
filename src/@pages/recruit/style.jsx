@@ -6,7 +6,6 @@ export const RecuritBody = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  border: 1px solid blue;
   @media (max-width: 768px) {
     width: 80%;
   }
@@ -29,7 +28,6 @@ export const RecuritCalendarWrapper = styled.div`
   justify-content: center;
   align-items: start;
   margin-bottom: 9.81rem;
-  border: 1px solid green;
 `;
 
 export const RecuritCautionWrapper = styled.div`
@@ -39,7 +37,6 @@ export const RecuritCautionWrapper = styled.div`
   justify-content: center;
   align-items: start;
   margin-bottom: 9.37rem;
-  border: 1px solid green;
 `;
 
 export const CautionWrapper = styled.div`
@@ -50,12 +47,11 @@ export const CautionWrapper = styled.div`
   gap: 1rem;
 `;
 
-export const RecuritFAQWrapper = styled.div`
+export const RecuritFAQContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   margin-bottom: 11rem;
-  border: 1px solid orange;
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from 'reactstrap';
+import { Button } from '@goorm-dev/gds-components';
 
 export const HeaderContainer = styled.div`
   display: flex;
