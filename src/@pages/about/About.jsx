@@ -1,15 +1,18 @@
-import { GoormNavbar } from '@goorm-dev/gds-components';
 import React from 'react';
+
+import MainBanner from '../../@components/about/MainBanner/MainBanner';
+import Plan from '../../@components/about/Plan/Plan';
+import useMoveScroll from '../../hooks/useMoveScroll.js';
+
 import * as S from './style';
 
-import { HScrollTable } from '@goorm-dev/gds-tables';
-import MainBanner from '../../@components/about/MainBanner/MainBanner';
-import SlidingText from '../../@components/about/SlidingText/SlidingText';
-
 export default function About() {
+  const { element, onMoveToElement } = useMoveScroll();
+
   return (
-    <>
-      <MainBanner />
-    </>
+    <S.AboutWrapper>
+      <MainBanner scrollTrigger={onMoveToElement} />
+      <Plan scrollTarget={element} />
+    </S.AboutWrapper>
   );
 }
