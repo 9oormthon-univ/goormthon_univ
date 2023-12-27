@@ -89,6 +89,7 @@ export const MonthTextWrapper = styled.div`
 export const MonthTextClickable = styled.h5`
   margin: 0;
   cursor: pointer;
+  color: var(--light-gray-gray-400, #cdced6);
 
   font-feature-settings: 'clig' off, 'liga' off;
   width: 3.875rem;
