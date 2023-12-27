@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import GoorimeeEffect from '../../../assets/svgs/GoormieeEffect';
 
 export const MainBannerWrapper = styled.div`
-  height: 100vh;
+  height: calc(100vh - 3.625rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,22 +29,34 @@ export const HeaderDescriptionText = styled.h4`
 
 export const MainImgWrapper = styled.div`
   position: relative;
+  height: 100%;
+
+  cursor: pointer;
+
+  & > svg {
+    stroke-dashoffset: -500;
+  }
+  &:hover > svg {
+    stroke-dashoffset: 0;
+  }
 `;
 
 export const MainImg = styled.img`
   width: 17.4rem;
-  height: 12.7rem;
   position: absolute;
-  bottom: 3.625rem;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%);
 `;
 
-export const EffectImg = styled.img`
+export const AnimatedGoormieeEffect = styled(GoorimeeEffect)`
   width: 31rem;
   height: 13.3rem;
   position: absolute;
-  bottom: 8.5rem;
+  bottom: 5.6rem;
   left: 50%;
   transform: translate(-50%);
+
+  stroke-dasharray: 500;
+  transition: stroke-dashoffset 1s ease-in-out;
 `;
