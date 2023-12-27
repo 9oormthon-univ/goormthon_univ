@@ -1,0 +1,14 @@
+.swiper-container .swiper-wrapper {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+.swiper-container .swiper-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-container .swiper-container-initialized .swiper-container-horizontal .swiper-container-pointer-events {
+  margin: 0px !important;
+}

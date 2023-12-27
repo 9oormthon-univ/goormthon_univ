@@ -45,8 +45,8 @@ function Navbar() {
       title: 'Project',
     },
     {
-    link: `/recruit`,
-      title: 'recruit',
+      link: `/recruit`,
+      title: 'Recruit',
     },
   ];
 
