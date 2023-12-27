@@ -34,10 +34,13 @@ export const MainImgWrapper = styled.div`
   cursor: pointer;
 
   & > svg {
-    stroke-dashoffset: -500;
+    stroke-dashoffset: -65;
   }
   &:hover > svg {
     stroke-dashoffset: 0;
+    & > path#click {
+      fill: black;
+    }
   }
 `;
 
@@ -58,5 +61,10 @@ export const AnimatedGoormieeEffect = styled(GoorimeeEffect)`
   transform: translate(-50%);
 
   stroke-dasharray: 500;
-  transition: stroke-dashoffset 1s ease-in-out;
+  transition: stroke-dashoffset 0.5s ease-in-out;
+
+  & > path#click {
+    fill: white;
+    transition: fill 0.5s ease-in-out;
+  }
 `;
