@@ -1,57 +1,38 @@
 import React from 'react';
 import * as S from './style';
-import UniversityItem from '../../@components/recruit/UniversityItem/UniversityItem';
-import Universities from '../../utilities/UnivData';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-import './style.css';
+import RecuritHeader from '../../@components/recruit/recuritHeader/RecuritHeader';
+import { CalendarIcon, GroupIcon, SchoolIcon } from '@goorm-dev/gds-icons';
 
 export default function Recruit() {
   return (
     <>
-      <S.HeaderContainer>
-        <S.HeaderTitleWrapper>
-          <S.HeaderTitleText>구름톤 유니브 2기 모집 중!</S.HeaderTitleText>
-          <S.GoormBtn>학교 대표 신청</S.GoormBtn>
-        </S.HeaderTitleWrapper>
-        <S.HeaderUnivContainer>
-          <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
-          <S.HeaderUnivListContainer>
-            <Swiper
-              spaceBetween={0}
-              breakpoints={{
-                //크기별로 다르게 주기
-                1378: {
-                  slidesPerView: 10,
-                  slidesPerGroup: 10,
-                },
-                998: {
-                  slidesPerView: 10,
-                  slidesPerGroup: 10,
-                },
-                625: {
-                  slidesPerView: 5,
-                  slidesPerGroup: 5,
-                },
-                0: {
-                  slidesPerView: 3,
-                  slidesPerGroup: 3,
-                },
-              }}
-            >
-              {Universities.map((univ, index) => (
-                <SwiperSlide key={index}>
-                  <UniversityItem image={univ.image} name={univ.name} link={univ.link} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </S.HeaderUnivListContainer>
-        </S.HeaderUnivContainer>
-      </S.HeaderContainer>
+      <RecuritHeader />
+      <S.RecuritBody>
+        <S.TargetContainer>
+          <S.TargetTitle>학교 대표 지원 대상</S.TargetTitle>
+          <S.TargetDetail>: IT 서비스에 관심이 많고 교내 IT 확산을 하고자 하는 사람</S.TargetDetail>
+          <S.TargetRowDetailWrapper>
+            <S.TargetRowDetailBox>
+              {/* icon */}
+              <SchoolIcon width="2rem" className="SchoolIcon__icon" color="black" />
+              <S.TargetDetailBoxText>대학 재학 및 휴학중인 사람</S.TargetDetailBoxText>
+              {/* text */}
+            </S.TargetRowDetailBox>
+            <S.TargetRowDetailBox>
+              {/* icon */}
+              <CalendarIcon width="2rem" className="CalendarIcon__icon" color="black" />
+              <S.TargetDetailBoxText>2월부터 8월까지 활동이 가능한 사람</S.TargetDetailBoxText>
+              {/* text */}
+            </S.TargetRowDetailBox>
+            <S.TargetRowDetailBox>
+              {/* icon */}
+              <GroupIcon width="2rem" className="GroupIcon__icon" color="black" />
+              <S.TargetDetailBoxText>교내 운영 가능한 사람</S.TargetDetailBoxText>
+              {/* text */}
+            </S.TargetRowDetailBox>
+          </S.TargetRowDetailWrapper>
+        </S.TargetContainer>
+      </S.RecuritBody>
     </>
   );
 }
