@@ -11,6 +11,7 @@ import './style.css';
 import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
+import { GoormLoader } from '@goorm-dev/gds-components';
 
 const Container = styled.div`
   display: flex;
@@ -88,6 +89,7 @@ function RecuritHeader() {
         <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
         <S.HeaderUnivListContainer>
           <AutoScrollingImages />
+        {/* <GoormLoader */}
           {/* 스와이핑 방식 */}
           {/* <Swiper
             ref={swiperRef}
