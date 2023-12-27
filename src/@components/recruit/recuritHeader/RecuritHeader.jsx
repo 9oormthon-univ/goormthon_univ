@@ -54,6 +54,10 @@ function RecuritHeader() {
                 slidesPerView: 10,
                 slidesPerGroup: 10,
               },
+              900: {
+                slidesPerView: 8,
+                slidesPerGroup: 8,
+              },
               625: {
                 slidesPerView: 5,
                 slidesPerGroup: 5,
