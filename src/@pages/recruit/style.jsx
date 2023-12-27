@@ -17,3 +17,17 @@ export const BodyTitle = styled.h2`
   font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 2.25rem;
 `;
+
+export const RecuritCalendarImg = styled.img`
+  width: 100%;
+  flex-shrink: 0;
+`;
+export const RecuritCalendarWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 9.81rem;
+  border: 1px solid green;
+`;
