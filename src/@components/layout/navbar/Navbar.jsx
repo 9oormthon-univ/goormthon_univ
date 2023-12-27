@@ -9,28 +9,35 @@ function Navbar() {
   const sideBarBackground = useRef();
   const [isMobile, setisMobile] = useState(false);
 
+  //네브바 열릴떄
   const sideBarOpen = () => {
-    sideBar.current.style.display = 'flex';
+    sideBar.current.style.display = 'block';
     sideBarBackground.current.style.display = 'block';
+
+    //랜더링. 하기.
+    setTimeout(() => {
+      sideBar.current.style.opacity = '1';
+      sideBar.current.style.right = '0';
+      sideBarBackground.current.style.opacity = '1';
+    }, 10);
   };
 
-  //윈도우가 550px 이하면  모바일버전을 연다
-  const resizingHandler = () => {
-    if (window.innerWidth < 550) {
-      setisMobile(true);
-    } else {
-      setisMobile(false);
-    }
-  };
-
+  // 네브바 닫힐때
   const sideBarClose = () => {
-    sideBar.current.style.display = 'none';
-    sideBarBackground.current.style.display = 'none';
+    sideBar.current.style.opacity = '0';
+    sideBar.current.style.right = '-16rem';
+    sideBarBackground.current.style.opacity = '0';
+
+    // 에니메이션
+    setTimeout(() => {
+      sideBar.current.style.display = 'none';
+      sideBarBackground.current.style.display = 'none';
+    }, 300);
   };
 
   const menuContents = [
     {
-      link: `/about`,
+      link: `/`,
       title: 'About',
     },
     {
@@ -38,8 +45,8 @@ function Navbar() {
       title: 'Project',
     },
     {
-      link: `/recruite`,
-      title: 'recruite',
+    link: `/recruit`,
+      title: 'recruit',
     },
   ];
 
@@ -53,12 +60,33 @@ function Navbar() {
   }, [location]);
 
   const setMenu = () => {
-    return menuContents.map((menu, idx) => (
-      <S.NavMenuLink to={menu.link} key={idx} $isActive={location.pathname.startsWith(menu.link)}>
-        {menu.title}
-      </S.NavMenuLink>
-    ));
+    return menuContents.map((menu, idx) => {
+      const isActive = menu.link === '/' ? location.pathname === menu.link : location.pathname.startsWith(menu.link);
+      return (
+        <S.NavMenuLink to={menu.link} key={idx} $isActive={isActive}>
+          {menu.title}
+        </S.NavMenuLink>
+      );
+    });
   };
+
+  //윈도우가 550px 이하면  모바일버전을 연다
+  const resizingHandler = () => {
+    if (window.innerWidth < 550) {
+      setisMobile(true);
+    } else {
+      setisMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', resizingHandler);
+    resizingHandler();
+
+    return () => {
+      window.removeEventListener('resize', resizingHandler);
+    };
+  }, [isMobile]);
 
   useEffect(() => {
     if (window.innerWidth <= 550) {
@@ -87,7 +115,13 @@ function Navbar() {
             <S.NavSideBarWrapper ref={sideBar}>
               <S.NavSideBarMenu>
                 <S.NavSideBarHeader>
-                  <ChevronRightIcon width="1rem" className="ChevronRightIcon__icon" />
+                  <ChevronRightIcon
+                    height="2rem"
+                    width="2rem"
+                    className="ChevronRightIcon__icon"
+                    color="#000000"
+                    onClick={sideBarClose}
+                  />
                 </S.NavSideBarHeader>
                 <S.NavSideBarBody>{setMenu()}</S.NavSideBarBody>
               </S.NavSideBarMenu>
