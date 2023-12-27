@@ -58,7 +58,7 @@ const Universities = [
   {
     image: IncheonUnivImg,
     name: '인천대학교',
-    link: 'https://www.instagram.com/goormthon_univ_Kangwoon/',
+    link: 'https://www.instagram.com/groomthon_univ_inu',
   },
 ];
 

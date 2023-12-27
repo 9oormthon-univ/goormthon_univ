@@ -69,7 +69,9 @@ function Navbar() {
           <S.NavMenuLink to={menu.link} $isActive={isActive}>
             {menu.title}
           </S.NavMenuLink>
-          {menu.title === 'Recruit' && !isMobile ? <S.AlertMessage>2기 모집중 !</S.AlertMessage> : null}
+          {menu.title === 'Recruit' && !isMobile && location.pathname === '/' ? (
+            <S.AlertMessage>2기 모집중 !</S.AlertMessage>
+          ) : null}
         </React.Fragment>
       );
     });
