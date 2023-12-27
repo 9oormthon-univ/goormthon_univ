@@ -21,6 +21,9 @@ function RecuritHeader() {
         <S.HeaderUnivListContainer>
           <Swiper
             spaceBetween={0}
+            autoplay={{ delay: 3000 }} // 3초(3000 밀리초)마다 자동으로 넘어감
+            pagination={{ clickable: true }}
+            loop={true}
             breakpoints={{
               //크기별로 다르게 주기
               1378: {
