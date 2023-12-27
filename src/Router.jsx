@@ -6,7 +6,7 @@ import Layout from './@components/layout/Layout';
 
 // 레이지 로딩 적용
 const About = lazy(() => import('./@pages/about/About'));
-const Project = lazy(() => import('./@pages/Project'));
+const Project = lazy(() => import('./@pages/project/Project'));
 const Recruit = lazy(() => import('./@pages/recruit/Recruit'));
 const Apply = lazy(() => import('./@pages/apply/Apply'));
 const NotFound = lazy(() => import('./@pages/errors/NotFound'));
