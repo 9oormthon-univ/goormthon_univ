@@ -71,24 +71,27 @@ export default function Timeline() {
   });
 
   const getMonthTextOffset = (key) => {
+    let relativeLeft = -400;
+    let relativeTop = -200;
     const target = monthRefs.current[key].element;
-    console.log(target.getBoundingClientRect(), key);
-    const clientRect = target.getBoundingClientRect();
-    const relativeLeft = clientRect.left - (key === 1 ? 0 : key === 6 ? 266 : 137);
-    const relativeTop = clientRect.top + window.pageYOffset - 240;
-    console.log(relativeLeft, relativeTop);
+
+    if (target) {
+      const clientRect = target.getBoundingClientRect();
+      relativeLeft = clientRect.left - (key === 1 ? 0 : key === 6 ? 266 : 137);
+      relativeTop = clientRect.top + window.pageYOffset - 240;
+    }
+
     return { relativeLeft, relativeTop };
   };
 
   useEffect(() => {
     setMonthTextXOffset(getMonthTextOffset(month).relativeLeft);
     setMonthTextYOffset(getMonthTextOffset(month).relativeTop);
+    window.addEventListener('resize', () => {
+      setMonthTextXOffset(getMonthTextOffset(month).relativeLeft);
+      setMonthTextYOffset(getMonthTextOffset(month).relativeTop);
+    });
   }, [month]);
-
-  window.addEventListener('resize', () => {
-    setMonthTextXOffset(getMonthTextOffset(month).relativeLeft);
-    setMonthTextYOffset(getMonthTextOffset(month).relativeTop);
-  });
 
   const value = useScrollValue();
 
