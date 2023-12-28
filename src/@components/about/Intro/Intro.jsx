@@ -14,7 +14,7 @@ export default function Intro({ scrollTarget }) {
     <S.IntroWrapper ref={scrollTarget}>
       <S.HeaderTitleText>‘9oormthon univ’ 는</S.HeaderTitleText>
       <S.HeaderTextWrapper>
-        <S.HeaderDescriptionText>
+        <S.HeaderDescriptionText className="subtitle-1">
           봄과 가을을 기수로 하여 클라우드 교육 및 해커톤과
           <br />
           아이디어 실현의 장소를 제공해주는 전국 IT 연합 동아리 입니다.

@@ -3,11 +3,11 @@ import * as S from './style';
 
 import CardBar from '../../../assets/svgs/card_bar.svg';
 
-export default function Card({ data, $xOffset, $yOffset, $month }) {
+export default function Card({ data, $xOffset, $month }) {
   const { Icon, title, description } = data;
 
   return (
-    <S.CardWrapper $xOffset={$xOffset} $yOffset={$yOffset} $month={$month}>
+    <S.CardWrapper $xOffset={$xOffset} $month={$month}>
       <S.CardContentsWrapper>
         <S.IconWrapper>
           <Icon />

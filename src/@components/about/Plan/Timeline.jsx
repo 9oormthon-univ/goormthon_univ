@@ -12,7 +12,6 @@ import useScrollValue from '../../../hooks/useScrollValue';
 export default function Timeline() {
   const [month, setMonth] = useState(1);
   const [monthTextXOffset, setMonthTextXOffset] = useState(0);
-  const [monthTextYOffset, setMonthTextYOffset] = useState(0);
 
   const TIMELINE_DATA = {
     1: {
@@ -70,26 +69,22 @@ export default function Timeline() {
     },
   });
 
-  const getMonthTextOffset = (key) => {
+  const getMonthTextXOffset = (key) => {
     let relativeLeft = -400;
-    let relativeTop = -200;
     const target = monthRefs.current[key].element;
 
     if (target) {
       const clientRect = target.getBoundingClientRect();
       relativeLeft = clientRect.left - (key === 1 ? 0 : key === 6 ? 266 : 137);
-      relativeTop = clientRect.top + window.pageYOffset - 240;
     }
 
-    return { relativeLeft, relativeTop };
+    return relativeLeft;
   };
 
   useEffect(() => {
-    setMonthTextXOffset(getMonthTextOffset(month).relativeLeft);
-    setMonthTextYOffset(getMonthTextOffset(month).relativeTop);
+    setMonthTextXOffset(getMonthTextXOffset(month));
     window.addEventListener('resize', () => {
-      setMonthTextXOffset(getMonthTextOffset(month).relativeLeft);
-      setMonthTextYOffset(getMonthTextOffset(month).relativeTop);
+      setMonthTextXOffset(getMonthTextXOffset(month));
     });
   }, [month]);
 
@@ -122,7 +117,7 @@ export default function Timeline() {
 
   return (
     <>
-      <Card data={TIMELINE_DATA[month]} $xOffset={monthTextXOffset} $yOffset={monthTextYOffset} $month={month} />
+      <Card data={TIMELINE_DATA[month]} $xOffset={monthTextXOffset} $month={month} />
       <S.TimelineBar>
         <S.TimelineFillBar $fillRatio={TIMELINE_FILL_RATIO[month]} />
         <S.MonthTextWrapper>
