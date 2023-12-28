@@ -31,12 +31,12 @@ function RecruitCaution() {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       setVisibleBoxes({
-        box0: scrollY >= 1200,
-        box1: scrollY >= 1400,
-        box2: scrollY >= 1450,
-        box3: scrollY >= 1500,
-        box4: scrollY >= 1550,
-        box5: scrollY >= 1600,
+        box0: scrollY >= 900,
+        box1: scrollY >= 1100,
+        box2: scrollY >= 1150,
+        box3: scrollY >= 1200,
+        box4: scrollY >= 1250,
+        box5: scrollY >= 1300,
       });
     };
 

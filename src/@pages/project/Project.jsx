@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import { Button, ButtonGroup } from '@goorm-dev/gds-components';
 import * as S from './style';
-import DummyBannerImg from '../../assets/images/dummyBanner.png';
+import SeasonImg from '../../assets/images/season.png';
 import ProjectCard from '../../@components/project/ProjectCard';
 import DanpoongProject2023Data from '../../utilities/ProjectData';
-export default function Project() {
-  const [activeIndex, setActiveIndex] = useState(0);
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
+export default function Project() {
+  const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(0);
+  // Define the animation variants
+  const fadeInVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
   const handleButtonClick = (index) => {
     setActiveIndex(index);
   };
@@ -30,7 +38,7 @@ export default function Project() {
         {activeIndex === 0 && (
           <>
             {/* 1기 배너 */}
-            <S.ProjectBanner src={DummyBannerImg}></S.ProjectBanner>
+            {/* <S.ProjectBanner src={DummyBannerImg}></S.ProjectBanner> */}
             {/* 1기 프로젝트들 와다다 */}
             {/* 카드 컴포넌트 */}
             <S.ProjectCardGrid>
@@ -47,8 +55,21 @@ export default function Project() {
             </S.ProjectCardGrid>
           </>
         )}
-        {activeIndex === 1 && <div>2기 프로젝트</div>}
-        {activeIndex === 2 && <div>3기 프로젝트</div>}
+        {activeIndex === 1 && (
+          <S.SecondTabContainer
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1 }}
+            variants={fadeInVariants}
+          >
+            <S.SeasonthonImg src={SeasonImg} />
+            <h4 style={{ color: '#2B2D36', marginTop: '1.5rem' }}>
+              구름톤 유니브와 함께하여 <br />
+              2기 갤러리를 꾸며주세요 :)
+            </h4>
+            <S.GoormBtn2 onClick={() => navigate('/recruit')}>모집 페이지로 가기</S.GoormBtn2>
+          </S.SecondTabContainer>
+        )}
       </S.ProjectBody>
     </>
   );
