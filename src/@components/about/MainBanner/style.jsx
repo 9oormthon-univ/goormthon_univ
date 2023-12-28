@@ -53,8 +53,8 @@ export const MainImg = styled.img`
 `;
 
 export const AnimatedGoormieeEffect = styled(GoorimeeEffect)`
-  width: 31rem;
-  height: 13.3rem;
+  width: max-content;
+  height: max-content;
   position: absolute;
   bottom: 2.6rem;
   left: 50%;
@@ -62,9 +62,4 @@ export const AnimatedGoormieeEffect = styled(GoorimeeEffect)`
 
   stroke-dasharray: 500;
   transition: stroke-dashoffset 0.5s ease-in-out;
-
-  & > path#click {
-    fill: white;
-    transition: fill 0.5s ease-in-out;
-  }
 `;

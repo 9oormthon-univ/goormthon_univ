@@ -15,7 +15,6 @@ export default function MainBanner({ scrollTrigger }) {
         <S.MainImg src={GoormieeImg} />
         <S.AnimatedGoormieeEffect onClick={scrollTrigger} />
       </S.MainImgWrapper>
-      <SlidingText />
     </S.MainBannerWrapper>
   );
 }
