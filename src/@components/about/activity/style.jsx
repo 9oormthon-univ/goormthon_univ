@@ -45,7 +45,7 @@ export const ContentBox = styled.article`
 
   display: flex;
   flex-direction: column;
-  gap: 4.75rem;
+  justify-content: space-between;
 
   height: 14rem;
 `;
