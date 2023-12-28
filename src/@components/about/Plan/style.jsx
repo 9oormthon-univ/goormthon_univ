@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const PlanWrapper = styled.div`
   height: 100vh;
+
+  position: relative;
+  z-index: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -22,7 +25,7 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   position: absolute;
   left: ${({ $xOffset }) => $xOffset}px;
-  top: ${({ $yOffset }) => $yOffset}px;
+  margin-bottom: -4.5rem;
 `;
 
 export const CardContentsWrapper = styled.div`
