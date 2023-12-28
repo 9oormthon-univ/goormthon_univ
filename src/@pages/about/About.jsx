@@ -1,9 +1,10 @@
 import React from 'react';
-import Goal from '../../@components/about/goal/Intro';
-import Intro from '../../@components/about/Intro/Intro';
+import Benefit from '../../@components/about/benefit/Benefit';
+import Goal from '../../@components/about/goal/goal';
+import Intro from '../../@components/about/intro/Intro';
 
-import MainBanner from '../../@components/about/MainBanner/MainBanner';
-import Plan from '../../@components/about/Plan/Plan';
+import MainBanner from '../../@components/about/mainBanner/MainBanner';
+import Plan from '../../@components/about/plan/Plan';
 import useMoveScroll from '../../hooks/useMoveScroll.js';
 
 import * as S from './style';
@@ -17,6 +18,7 @@ export default function About() {
       <Intro scrollTarget={element} />
       <Goal />
       <Plan />
+      <Benefit />
     </S.AboutWrapper>
   );
 }
