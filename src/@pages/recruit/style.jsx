@@ -22,14 +22,6 @@ export const RecuritCalendarImg = styled.img`
   width: 100%;
   flex-shrink: 0;
 `;
-export const RecuritCalendarWrapper = styled(motion.div)`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  margin-bottom: 9.81rem;
-`;
 
 export const RecuritCautionWrapper = styled.div`
   width: 100%;

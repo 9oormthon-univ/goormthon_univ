@@ -30,7 +30,7 @@ function RecuritTarget() {
     <S.TargetContainer
       initial={{ opacity: 0, y: 100 }}
       animate={visibleBoxes.box0 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 0.85 }}
     >
       <S.TargetTitle>학교 대표 지원 대상</S.TargetTitle>
       <S.TargetDetail>: IT 서비스에 관심이 많고 교내 IT 확산을 하고자 하는 사람</S.TargetDetail>
@@ -38,7 +38,7 @@ function RecuritTarget() {
         <S.TargetRowDetailBox
           initial={{ opacity: 0, y: 100 }}
           animate={visibleBoxes.box1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.85 }}
         >
           {/* icon */}
           <SchoolIcon width="2rem" className="SchoolIcon__icon" color="black" />
@@ -48,7 +48,7 @@ function RecuritTarget() {
         <S.TargetRowDetailBox
           initial={{ opacity: 0, y: 100 }}
           animate={visibleBoxes.box2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.85 }}
         >
           {/* icon */}
           <CalendarIcon width="2rem" className="CalendarIcon__icon" color="black" />
@@ -58,7 +58,7 @@ function RecuritTarget() {
         <S.TargetRowDetailBox
           initial={{ opacity: 0, y: 100 }}
           animate={visibleBoxes.box3 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.85 }}
         >
           {/* icon */}
           <GroupIcon width="2rem" className="GroupIcon__icon" color="black" />

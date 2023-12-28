@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-
-
-
 export const CardContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;

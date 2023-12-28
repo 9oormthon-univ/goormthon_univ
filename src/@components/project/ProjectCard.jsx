@@ -16,7 +16,7 @@ function ProjectCard({ index, award, title, content, link, image }) {
       variants={variants}
       initial="hidden"
       animate="visible"
-      transition={{ duration: 0.5, delay: index * 0.2 }}
+      transition={{ duration: 0.85, delay: index * 0.2 }}
     >
       <S.CardImgWrapper>
         <S.CardImg src={image} />
