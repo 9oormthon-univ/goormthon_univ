@@ -39,6 +39,8 @@ export const Img = styled.img`
 
   position: absolute;
   bottom: 0;
+
+  /* media query로 right값 조절 필요 */
   right: 4.69rem;
 
   z-index: 1;
@@ -50,5 +52,6 @@ export const MovingImg = styled.img`
 
   position: absolute;
   bottom: 0;
-  right: 25.62rem;
+  /* media query로 right값 조절 필요 */
+  right: 25.4rem;
 `;

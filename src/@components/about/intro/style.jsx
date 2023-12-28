@@ -32,7 +32,13 @@ export const HeaderDescriptionText = styled.p`
   text-align: center;
 `;
 
-export const ImgsWrapper = styled.figure`
+export const ImgsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+export const Imgs = styled.figure`
   width: 40.875rem;
   height: 17.813rem;
   display: grid;
