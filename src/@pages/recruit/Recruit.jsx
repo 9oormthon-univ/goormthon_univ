@@ -22,7 +22,6 @@ export default function Recruit() {
         </S.RecuritCautionWrapper>
         {/* ---------------- 자주 묻는 질문 ---------------- */}
         <S.RecuritFAQContainer>
-          <S.BodyTitle>자주 묻는 질문</S.BodyTitle>
           <RecuritFAQ />
         </S.RecuritFAQContainer>
       </S.RecuritBody>

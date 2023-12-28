@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const RecuritFAQWrapper = styled.div`
+export const RecuritFAQWrapper = styled(motion.div)`
   width: 100%;
   border-radius: 0.5rem;
   border: 1px solid var(--basic-color-gray-gray-300, #e1e1e8);
@@ -11,6 +12,12 @@ export const QuestionText = styled.h6`
   color: var(--semantic-color-text-text-normal, #2b2d36);
   font-feature-settings: 'clig' off, 'liga' off;
   margin: 0px;
+`;
+
+export const BodyTitle = styled.h2`
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  margin-bottom: 2.25rem;
 `;
 
 export const FAQBox = styled.div`
