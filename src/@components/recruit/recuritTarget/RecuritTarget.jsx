@@ -41,7 +41,7 @@ function RecuritTarget() {
           transition={{ duration: 0.85 }}
         >
           {/* icon */}
-          <SchoolIcon width="2rem" className="SchoolIcon__icon" color="black" />
+          <SchoolIcon className="SchoolIcon__icon" color="black" />
           <S.TargetDetailBoxText>대학 재학 및 휴학중인 사람</S.TargetDetailBoxText>
           {/* text */}
         </S.TargetRowDetailBox>
@@ -51,7 +51,7 @@ function RecuritTarget() {
           transition={{ duration: 0.85 }}
         >
           {/* icon */}
-          <CalendarIcon width="2rem" className="CalendarIcon__icon" color="black" />
+          <CalendarIcon className="CalendarIcon__icon" color="black" />
           <S.TargetDetailBoxText>2월부터 8월까지 활동이 가능한 사람</S.TargetDetailBoxText>
           {/* text */}
         </S.TargetRowDetailBox>
@@ -61,7 +61,7 @@ function RecuritTarget() {
           transition={{ duration: 0.85 }}
         >
           {/* icon */}
-          <GroupIcon width="2rem" className="GroupIcon__icon" color="black" />
+          <GroupIcon className="GroupIcon__icon" color="black" />
           <S.TargetDetailBoxText>교내 운영 가능한 사람</S.TargetDetailBoxText>
           {/* text */}
         </S.TargetRowDetailBox>
