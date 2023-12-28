@@ -14,9 +14,8 @@ export default function Recruit() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-
       // 스크롤 위치에 따라 isVisible 상태를 설정
-      if (scrollY >= 400) {
+      if (scrollY >= 500) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -39,13 +38,13 @@ export default function Recruit() {
         {/* ---------------- 지원 대상 ---------------- */}
         <RecuritTarget />
         {/* ---------------- 모집일정 ---------------- */}
-        <S.RecuritCalendarWrapper>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-          >
-            <S.BodyTitle>모집일정</S.BodyTitle>
+        <S.RecuritCalendarWrapper
+          initial={{ opacity: 0, y: 100 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+          transition={{ duration: 0.5 }}
+        >
+          <S.BodyTitle>모집일정</S.BodyTitle>
+          <motion.div>
             <S.RecuritCalendarImg src={DefaultImg}></S.RecuritCalendarImg>
           </motion.div>
         </S.RecuritCalendarWrapper>
