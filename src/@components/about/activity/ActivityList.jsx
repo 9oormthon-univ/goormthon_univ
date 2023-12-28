@@ -6,6 +6,7 @@ import Img1 from '../../../assets/images/about/activity1.png';
 import Img2 from '../../../assets/images/about/activity2.png';
 import Img3 from '../../../assets/images/about/activity3.png';
 import Img4 from '../../../assets/images/about/activity4.png';
+import ActivityItem from './ActivityItem';
 
 export default function ActivityList() {
   const ACTIVITY_DATA = [
@@ -40,8 +41,17 @@ export default function ActivityList() {
   ];
 
   return (
-    <S.ActivityWrapper>
-      <S.HeaderTitleText>이런 활동들을 해요!</S.HeaderTitleText>
-    </S.ActivityWrapper>
+    <S.ActivityListWrapper>
+      {ACTIVITY_DATA.map((item, idx) => (
+        <ActivityItem
+          key={item.title}
+          idx={idx}
+          imgSrc={item.imgSrc}
+          title={item.title}
+          title_en={item.title_en}
+          description={item.description}
+        />
+      ))}
+    </S.ActivityListWrapper>
   );
 }
