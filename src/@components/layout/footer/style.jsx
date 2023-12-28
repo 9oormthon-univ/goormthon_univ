@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,6 +25,7 @@ export const FooterSlogan = styled.h3`
   font-feature-settings: 'clig' off, 'liga' off;
   margin-right: auto;
   margin-left: auto;
+
   @media (max-width: 768px) {
     font-size: 1rem;
   }

@@ -39,13 +39,14 @@ export const ImgsWrapper = styled.div`
 `;
 
 export const Imgs = styled.figure`
-  width: 40.875rem;
-  height: 17.813rem;
+  width: 55.75rem;
+  height: 24.313rem;
   display: grid;
   grid-template-areas:
     'beotkkot goorm'
     'beotkkot danpoong';
-  grid-template-columns: 288px 354px;
+  grid-template-columns: 24.625rem 30.125rem;
+  grid-template-rows: 10.25rem 13.0625rem;
   gap: 0.75rem;
   margin-top: 5rem;
 `;
