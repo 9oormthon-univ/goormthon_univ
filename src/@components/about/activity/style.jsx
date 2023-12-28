@@ -25,6 +25,11 @@ export const ActivityItemWrapper = styled.div`
   display: flex;
   gap: 1.5rem;
   flex-flow: ${({ $idx }) => ($idx % 2 == 0 ? 'unset' : 'row-reverse')};
+
+  @media screen and (max-width: 1278px) {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
 `;
 
 export const ActivityListWrapper = styled.div`
@@ -48,6 +53,11 @@ export const ContentBox = styled.article`
   justify-content: space-between;
 
   height: 14rem;
+  min-width: 21rem;
+
+  @media screen and (max-width: 1278px) {
+    height: 100%;
+  }
 `;
 
 export const ContentTitleWrapper = styled.div`
@@ -73,5 +83,9 @@ export const ContentDescriptionText = styled.p`
 `;
 
 export const ContentImg = styled.img`
-  width: 39.75rem;
+  @media screen and (max-width: 1278px) {
+    width: 100%;
+    max-width: 100%;
+  }
+  max-width: 39.75rem;
 `;
