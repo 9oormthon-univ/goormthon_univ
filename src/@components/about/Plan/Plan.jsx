@@ -4,7 +4,7 @@ import Timeline from './Timeline';
 
 export default function Plan({ scrollTarget }) {
   return (
-    <S.PlanWrapper ref={scrollTarget}>
+    <S.PlanWrapper>
       <S.TitleText>앞으로의 계획은요,</S.TitleText>
       <Timeline />
     </S.PlanWrapper>
