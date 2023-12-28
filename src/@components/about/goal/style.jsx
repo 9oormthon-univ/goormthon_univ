@@ -24,11 +24,13 @@ export const HeaderTextWrapper = styled.div`
 export const HeaderTitleText = styled.h3`
   color: var(--light-white-white-light, #fff);
   font-feature-settings: 'clig' off, 'liga' off;
+  z-index: 2;
 `;
 
 export const HeaderDescriptionText = styled.h6`
   color: var(--light-white-white-light, #fff);
   font-feature-settings: 'clig' off, 'liga' off;
+  z-index: 2;
 `;
 
 export const Img = styled.img`
