@@ -15,6 +15,8 @@ export const PlanWrapper = styled.div`
 `;
 
 export const TitleText = styled.h2`
+  text-align: center;
+  margin-bottom: 3.63rem;
   color: var(--light-black-black, #000);
   font-feature-settings: 'clig' off, 'liga' off;
 `;
@@ -25,7 +27,6 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   position: absolute;
   left: ${({ $xOffset }) => $xOffset}px;
-  margin-bottom: -4.5rem;
 `;
 
 export const CardContentsWrapper = styled.div`
@@ -62,7 +63,7 @@ export const CardDescriptionText = styled.p`
 export const TimelineBar = styled.figure`
   width: -webkit-fill-available;
   height: var(--size-size-500, 2.5rem);
-  margin: 19.31rem 9.44rem 0;
+  margin-top: 17rem;
   border-radius: 1.34375rem;
   background: var(--light-gray-gray-050, #f7f7fa);
   position: relative;
