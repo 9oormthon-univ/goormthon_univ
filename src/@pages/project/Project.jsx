@@ -30,7 +30,7 @@ export default function Project() {
         {activeIndex === 0 && (
           <>
             {/* 1기 배너 */}
-            <S.ProjectBanner src={DummyBannerImg}></S.ProjectBanner>
+            {/* <S.ProjectBanner src={DummyBannerImg}></S.ProjectBanner> */}
             {/* 1기 프로젝트들 와다다 */}
             {/* 카드 컴포넌트 */}
             <S.ProjectCardGrid>
@@ -47,8 +47,12 @@ export default function Project() {
             </S.ProjectCardGrid>
           </>
         )}
-        {activeIndex === 1 && <div>2기 프로젝트</div>}
-        {activeIndex === 2 && <div>3기 프로젝트</div>}
+        {activeIndex === 1 && (
+          <h4 style={{ color: '#2B2D36', marginTop: '5rem' }}>
+            구름톤 유니브와 함께하여 <br />
+            2기 갤러리를 꾸며주세요 :)
+          </h4>
+        )}
       </S.ProjectBody>
     </>
   );

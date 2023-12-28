@@ -8,7 +8,7 @@ export const ProjectBody = styled.div`
   justify-content: start;
   align-items: center;
   @media (max-width: 768px) {
-    width: 80%;
+    width: 90%;
   }
 `;
 
@@ -40,16 +40,16 @@ export const ProjectCardGrid = styled.div`
   width: 100%;
   margin: 2rem 0;
   display: grid;
-
+  grid-gap: 2.47rem 2rem;
   @media (max-width: 768px) {
     grid-template-rows: 2fr;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 1.2rem 1rem;
   }
   @media (min-width: 768px) {
     grid-template-rows: 3fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  grid-gap: 2.47rem 2rem;
   padding: 1rem;
 `;

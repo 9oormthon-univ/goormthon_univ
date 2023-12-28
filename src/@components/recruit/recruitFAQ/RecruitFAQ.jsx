@@ -25,8 +25,8 @@ function RecuritFAQ() {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       // 스크롤 위치에 따라 isVisible 상태를 설정
       setVisibleBoxes({
-        box0: scrollY >= 1900,
-        box1: scrollY >= 2000,
+        box0: scrollY >= 1450,
+        box1: scrollY >= 1550,
       });
     };
 

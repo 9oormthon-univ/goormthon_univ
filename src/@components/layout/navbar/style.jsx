@@ -62,7 +62,7 @@ export const NavMonitorMenu = styled.div`
 export const NavMenuLink = styled(Link)`
   padding: 0.56rem 1rem;
   color: var(--basic-color-gray-gray-900, #2b2d36);
-  font-size: 0.875rem;
+  font-size: 1rem;
   text-decoration: ${(props) => (props.$isActive ? 'underline' : 'none')};
   -webkit-text-decoration: ${(props) => (props.$isActive ? 'underline' : 'none')};
   &:hover {
@@ -72,6 +72,9 @@ export const NavMenuLink = styled(Link)`
   }
   &:focus {
     color: var(--basic-color-gray-gray-900, #2b2d36);
+  }
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
   }
 `;
 // 모바일
