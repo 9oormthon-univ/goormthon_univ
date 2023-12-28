@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const RecuritBody = styled.div`
   width: 70%;
@@ -20,14 +21,6 @@ export const BodyTitle = styled.h2`
 export const RecuritCalendarImg = styled.img`
   width: 100%;
   flex-shrink: 0;
-`;
-export const RecuritCalendarWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  margin-bottom: 9.81rem;
 `;
 
 export const RecuritCautionWrapper = styled.div`

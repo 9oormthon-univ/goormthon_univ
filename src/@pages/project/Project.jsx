@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Button, ButtonGroup } from '@goorm-dev/gds-components';
 import * as S from './style';
 import DummyBannerImg from '../../assets/images/dummyBanner.png';
-import ProjectDummyImg from '../../assets/images/projectDummy.png';
-
+import ProjectCard from '../../@components/project/ProjectCard';
+import DanpoongProject2023Data from '../../utilities/ProjectData';
 export default function Project() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -21,9 +21,9 @@ export default function Project() {
         <S.GoormBtn onClick={() => handleButtonClick(1)} active={activeIndex === 1}>
           2기
         </S.GoormBtn>
-        <S.GoormBtn onClick={() => handleButtonClick(2)} active={activeIndex === 2}>
+        {/* <S.GoormBtn onClick={() => handleButtonClick(2)} active={activeIndex === 2}>
           3기
-        </S.GoormBtn>
+        </S.GoormBtn> */}
       </S.BtnWrapper>
 
       <S.ProjectBody>
@@ -34,46 +34,16 @@ export default function Project() {
             {/* 1기 프로젝트들 와다다 */}
             {/* 카드 컴포넌트 */}
             <S.ProjectCardGrid>
-              <S.CardContainer>
-                <S.CardImgWrapper>
-                  <S.CardImg src={ProjectDummyImg} />
-                  <S.CardBedge>대상</S.CardBedge>
-                </S.CardImgWrapper>
-                <S.CardBodyWrapper>
-                  <S.CardTitle>무코(mooco)</S.CardTitle>
-                  <S.CardContent>일상의 순간들을 담은 바코드아트를 제공하는 웹서비스</S.CardContent>
-                </S.CardBodyWrapper>
-              </S.CardContainer>
-              <S.CardContainer>
-                <S.CardImgWrapper>
-                  <S.CardImg src={ProjectDummyImg} />
-                  <S.CardBedge>대상</S.CardBedge>
-                </S.CardImgWrapper>
-                <S.CardBodyWrapper>
-                  <S.CardTitle>무코(mooco)</S.CardTitle>
-                  <S.CardContent>일상의 순간들을 담은 바코드아트를 제공하는 웹서비스</S.CardContent>
-                </S.CardBodyWrapper>
-              </S.CardContainer>
-              <S.CardContainer>
-                <S.CardImgWrapper>
-                  <S.CardImg src={ProjectDummyImg} />
-                  <S.CardBedge>대상</S.CardBedge>
-                </S.CardImgWrapper>
-                <S.CardBodyWrapper>
-                  <S.CardTitle>무코(mooco)</S.CardTitle>
-                  <S.CardContent>일상의 순간들을 담은 바코드아트를 제공하는 웹서비스</S.CardContent>
-                </S.CardBodyWrapper>
-              </S.CardContainer>
-              <S.CardContainer>
-                <S.CardImgWrapper>
-                  <S.CardImg src={ProjectDummyImg} />
-                  <S.CardBedge>대상</S.CardBedge>
-                </S.CardImgWrapper>
-                <S.CardBodyWrapper>
-                  <S.CardTitle>무코(mooco)</S.CardTitle>
-                  <S.CardContent>일상의 순간들을 담은 바코드아트를 제공하는 웹서비스</S.CardContent>
-                </S.CardBodyWrapper>
-              </S.CardContainer>
+              {DanpoongProject2023Data.map((project, index) => (
+                <ProjectCard
+                  index={index}
+                  award={project.award}
+                  title={project.title}
+                  content={project.content}
+                  link={project.link}
+                  image={project.image}
+                />
+              ))}
             </S.ProjectCardGrid>
           </>
         )}

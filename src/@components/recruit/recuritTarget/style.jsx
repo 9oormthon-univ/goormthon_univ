@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const TargetContainer = styled.div`
+export const TargetContainer = styled(motion.div)`
   width: 100%;
   flex-direction: column;
   margin-top: 8.56rem;
@@ -28,7 +29,7 @@ export const TargetRowDetailWrapper = styled.div`
   }
 `;
 
-export const TargetRowDetailBox = styled.div`
+export const TargetRowDetailBox = styled(motion.div)`
   display: flex;
   flex-direction: row;
   align-items: center;
