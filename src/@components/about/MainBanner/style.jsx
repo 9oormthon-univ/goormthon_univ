@@ -18,7 +18,6 @@ export const HeaderTitleText = styled.h1`
   color: var(--light-black-black, #000);
   font-feature-settings: 'clig' off, 'liga' off;
   text-align: center;
-  margin-top: 10.63rem;
 `;
 
 export const HeaderDescriptionText = styled.h4`
@@ -29,7 +28,8 @@ export const HeaderDescriptionText = styled.h4`
 
 export const MainImgWrapper = styled.div`
   position: relative;
-  height: 100%;
+  width: 100%;
+  height: 17.25rem;
 
   cursor: pointer;
 
