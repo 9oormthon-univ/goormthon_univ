@@ -1,4 +1,5 @@
 import React from 'react';
+import Benefit from '../../@components/about/benefit/Benefit';
 import Goal from '../../@components/about/goal/goal';
 import Intro from '../../@components/about/intro/Intro';
 
@@ -17,6 +18,7 @@ export default function About() {
       <Intro scrollTarget={element} />
       <Goal />
       <Plan />
+      <Benefit />
     </S.AboutWrapper>
   );
 }
