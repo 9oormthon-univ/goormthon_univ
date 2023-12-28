@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './style';
 
 import GoormieeImg from '../../../assets/svgs/goormiee.svg';
-import SlidingText from '../SlidingText/SlidingText';
+import SlidingText from '../slidingText/SlidingText';
 
 export default function MainBanner({ scrollTrigger }) {
   return (
