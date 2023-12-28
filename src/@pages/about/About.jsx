@@ -1,4 +1,5 @@
 import React from 'react';
+import Intro from '../../@components/about/Intro/Intro';
 
 import MainBanner from '../../@components/about/MainBanner/MainBanner';
 import Plan from '../../@components/about/Plan/Plan';
@@ -12,7 +13,8 @@ export default function About() {
   return (
     <S.AboutWrapper>
       <MainBanner scrollTrigger={onMoveToElement} />
-      <Plan scrollTarget={element} />
+      <Intro scrollTarget={element} />
+      <Plan />
     </S.AboutWrapper>
   );
 }

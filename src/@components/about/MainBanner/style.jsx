@@ -3,10 +3,13 @@ import GoorimeeEffect from '../../../assets/svgs/GoormieeEffect';
 
 export const MainBannerWrapper = styled.div`
   height: calc(100vh - 3.53rem);
+  width:100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  background-color: #ffffff;
 `;
 
 export const HeaderTextWrapper = styled.div`
