@@ -1,6 +1,7 @@
 import React from 'react';
 import Activity from '../../@components/about/activity/Activity';
 import Benefit from '../../@components/about/benefit/Benefit';
+import FindingUniv from '../../@components/about/findingUniv/FindingUniv';
 import Goal from '../../@components/about/goal/goal';
 import Intro from '../../@components/about/intro/Intro';
 
@@ -21,6 +22,7 @@ export default function About() {
       <Plan />
       <Benefit />
       <Activity />
+      <FindingUniv />
     </S.AboutWrapper>
   );
 }
