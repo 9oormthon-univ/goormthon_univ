@@ -23,9 +23,10 @@ export const SocialContainer = styled.div`
 export const FooterSlogan = styled.h3`
   color: var(--light-gray-gray-700-alternative, #525463);
   font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Pretendard;
-  line-height: 2.25rem;
-  letter-spacing: -0.01875rem;
   margin-right: auto;
   margin-left: auto;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
