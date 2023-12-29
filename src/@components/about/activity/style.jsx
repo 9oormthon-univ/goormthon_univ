@@ -64,7 +64,7 @@ export const ContentBox = styled.article`
   flex-direction: column;
   justify-content: space-between;
 
-  height: 14rem;
+  height: 10.75rem;
   min-width: 21rem;
 
   @media screen and (max-width: 1278px) {
