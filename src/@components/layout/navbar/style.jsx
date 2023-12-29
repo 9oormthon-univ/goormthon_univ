@@ -38,7 +38,6 @@ export const AlertMessage = styled.div`
 export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
-  padding-right: 10rem;
   color: gray;
 `;
 
