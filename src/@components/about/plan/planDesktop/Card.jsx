@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './style';
 
-import CardBar from '../../../assets/svgs/card_bar.svg';
+import CardBar from '../../../../assets/svgs/card_bar.svg';
 
 export default function Card({ data, $xOffset, $month }) {
   const { Icon, title, description } = data;

@@ -3,9 +3,9 @@ import Card from './Card';
 
 import * as S from './style';
 
-import useScrollValue from '../../../hooks/useScrollValue';
+import useScrollValue from '../../../../hooks/useScrollValue';
 
-import { TIMELINE_DATA } from '../../../utilities/AboutData';
+import { TIMELINE_DATA } from '../../../../utilities/AboutData';
 
 export default function Timeline() {
   const [month, setMonth] = useState(1);

@@ -23,7 +23,7 @@ export const TIMELINE_DATA = {
   1: {
     xOffset: '2rem',
     Icon: GroupIcon,
-    title: '9oormthon univ 2기 모집!',
+    title: '9oormthon UNIV 2기 모집!',
     description: '벚꽃톤을 함께할 2기 운영진과 참가자를 모집하여\n2024년을 힘차게 시작해요',
   },
   2: {
