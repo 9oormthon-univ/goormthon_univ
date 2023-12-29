@@ -78,7 +78,7 @@ function Apply() {
         <p>대표 모집 기간 및 중앙행사는 아래와 같습니다.</p>
         <ul>
           <li>
-            <strong>신규대학 모집 신청:</strong> 12월 29일(금) ~ 1월 12일(금) - 총 14일
+            <strong>신규 유니브 모집 신청:</strong> 12월 29일(금) ~ 1월 12일(금) - 총 14일
           </li>
           <li>
             <strong>인터뷰 기간:</strong> 신청 후 상시 인터뷰 진행
@@ -124,7 +124,7 @@ function Apply() {
           </S.InputGroup>
           <FormText>제출해주신 메일로 연락갈 예정입니다.</FormText>
         </S.FormGroup>
-        <S.FormGroup style={{ width: '20rem' }}>
+        <S.FormGroup style={{ width: '30rem' }}>
           <S.InputGroup>
             <S.ApplyTitle>소속 대학</S.ApplyTitle>
             <S.ApplyInput

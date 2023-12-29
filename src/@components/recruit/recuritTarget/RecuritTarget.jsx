@@ -10,8 +10,6 @@ function RecuritTarget() {
     box3: false,
   });
 
-  
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
@@ -33,7 +31,7 @@ function RecuritTarget() {
       animate={visibleBoxes.box0 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
       transition={{ duration: 0.85 }}
     >
-      <S.TargetTitle>학교 대표 지원 대상</S.TargetTitle>
+      <S.TargetTitle>유니브 대표 지원 대상</S.TargetTitle>
       <S.TargetDetail>: IT 서비스에 관심이 많고 교내 IT 확산을 하고자 하는 사람</S.TargetDetail>
       <S.TargetRowDetailWrapper>
         <S.TargetRowDetailBox

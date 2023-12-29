@@ -81,13 +81,13 @@ function RecuritHeader() {
           <h4>D-{daysRemaining}</h4>
         </S.HeaderTitleText>
 
-        <S.GoormBtn onClick={() => navigate('/apply')}>학교 대표 신청</S.GoormBtn>
+        <S.GoormBtn onClick={() => navigate('/apply')}>유니브 대표 신청</S.GoormBtn>
       </S.HeaderTitleWrapper>
       <S.HeaderUnivContainer>
         <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
         <S.HeaderUnivListContainer>
           <AutoScrollingImages />
-        {/* <GoormLoader */}
+          {/* <GoormLoader */}
           {/* 스와이핑 방식 */}
           {/* <Swiper
             ref={swiperRef}
