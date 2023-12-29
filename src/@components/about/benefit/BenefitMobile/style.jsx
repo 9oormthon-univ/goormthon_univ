@@ -3,13 +3,14 @@ import styled from 'styled-components';
 export const BenefitWrapper = styled.div`
   position: relative;
   z-index: 1;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #fff;
 
   @media screen and (max-width: 479px) {
+    display: flex;
     padding-bottom: 5rem;
   }
 `;

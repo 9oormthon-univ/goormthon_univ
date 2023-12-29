@@ -58,6 +58,10 @@ export const MainImgWrapper = styled.div`
       fill: black;
     }
   }
+
+  @media screen and (max-width: 379px) {
+    width: 80%;
+  }
 `;
 
 export const MainImg = styled.img`
@@ -107,7 +111,7 @@ export const AnimatedGoormieeEffectSmall = styled(GoorimeeEffectSmall)`
   width: max-content;
   height: max-content;
   position: absolute;
-  bottom: 3rem;
+  bottom: 3girem;
   left: 50%;
   transform: translate(-50%);
 

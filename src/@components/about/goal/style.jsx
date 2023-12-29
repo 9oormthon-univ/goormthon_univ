@@ -109,7 +109,12 @@ export const MovingImg = styled.img`
 `;
 
 export const WholeImg = styled.img`
+  display: none;
   width: 26rem;
   position: absolute;
   bottom: 0;
+
+  @media screen and (max-width: 479px) {
+    display: block;
+  }
 `;
