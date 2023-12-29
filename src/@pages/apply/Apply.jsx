@@ -75,13 +75,13 @@ function Apply() {
     <S.RecuritBody>
       <S.BodyTitle>지원서 작성하기</S.BodyTitle>
       <S.FormDescription>
-        <S.CautionTitle>대표 모집 기간 및 중앙행사</S.CautionTitle>
+        <S.CautionTitle>유니브 대표 주요 일정</S.CautionTitle>
         <ul>
           <li>
             <strong>신규 유니브 모집 신청:</strong> 12월 29일 (금) ~ 1월 12일 (금) (총 14일)
           </li>
           <li>
-            <strong>인터뷰 기간:</strong> 별도 안내 예정
+            <strong>대표 인터뷰 기간:</strong> 별도 안내 예정
           </li>
           <li>
             <strong>합격 발표:</strong> 1월 17일(수)
@@ -93,28 +93,25 @@ function Apply() {
             <strong>운영진 모집 기간:</strong> 1월 11일 ~ 2월 11일
           </li>
         </ul>
+      </S.FormDescription>
+      <S.Caution2Wrapper>
         <S.CautionTitle2>유의 사항</S.CautionTitle2>
         <ul>
-          <li>기존 등록된 학교가 있다면 대표 신청이 불가합니다</li>
-          <li>미등록된 학교에 2명 이상의 대표 신청이 올 시 인터뷰 진행 후 대표 선정됩니다.</li>
+          <S.Caution2Li>현재 함께하는 유니브에서는 대표 신청이 불가합니다.</S.Caution2Li>
+          <S.Caution2Li>2명 이상 대표 신청을 할 시 인터뷰 진행 후 대표 선정됩니다.</S.Caution2Li>
+          <S.Caution2Li>제출해주신 메일로 인터뷰 안내 예정입니다.</S.Caution2Li>
         </ul>
-      </S.FormDescription>
+      </S.Caution2Wrapper>
 
       <S.FormContainer onSubmit={handleSubmit}>
-        <S.FormGroup style={{ width: '15rem' }}>
+        <S.FormGroup style={{ width: '20rem' }}>
           <S.InputGroup>
             <S.ApplyTitle>이름</S.ApplyTitle>
-            <S.ApplyInput
-              type="text"
-              name="name"
-              placeholder="이름을 입력하세요"
-              onChange={handleInputChange}
-              required
-            />
+            <S.ApplyInput type="text" name="name" placeholder="이름 입력" onChange={handleInputChange} required />
           </S.InputGroup>
         </S.FormGroup>
 
-        <S.FormGroup style={{ width: '15rem' }}>
+        <S.FormGroup style={{ width: '20rem' }}>
           <S.InputGroup>
             <S.ApplyTitle>전화번호</S.ApplyTitle>
             <S.ApplyInput type="tel" name="phone" placeholder="000-0000-0000" onChange={handleInputChange} required />
@@ -124,27 +121,31 @@ function Apply() {
         <S.FormGroup style={{ width: '20rem' }}>
           <S.InputGroup>
             <S.ApplyTitle>메일</S.ApplyTitle>
-            <S.ApplyInput type="email" name="email" placeholder="이메일 주소" onChange={handleInputChange} required />
+            <S.ApplyInput
+              type="email"
+              name="email"
+              placeholder="example@mail.com"
+              onChange={handleInputChange}
+              required
+            />
           </S.InputGroup>
-          <FormText>제출해주신 메일로 연락갈 예정입니다.</FormText>
         </S.FormGroup>
-        <S.FormGroup style={{ width: '30rem' }}>
+        <S.FormGroup style={{ width: '20rem' }}>
           <S.InputGroup>
             <S.ApplyTitle>소속 대학</S.ApplyTitle>
             <S.ApplyInput
               type="text"
               name="univ"
-              placeholder="00대학, 캠퍼스가 있는 경우 00대학(캠퍼스명)"
+              placeholder="구름대학교(구름캠퍼스)"
               onChange={handleInputChange}
               required
             />
           </S.InputGroup>
-          <FormText>중복 제출 대학 대표가 있을 경우 인터뷰를 통해 한 분이 결정될 예정입니다.</FormText>
         </S.FormGroup>
 
         <S.FormGroup>
           <S.InputGroup>
-            <S.ApplyTitle>1. 자기 소개 ({charCount.introduction}/300)</S.ApplyTitle>
+            <S.ApplyTitle>1. 본인을 소개해주세요! ({charCount.introduction}/300)</S.ApplyTitle>
             <S.ApplyTextArea
               name="introduction"
               maxLength="300"
@@ -157,7 +158,9 @@ function Apply() {
 
         <S.FormGroup>
           <S.InputGroup>
-            <S.ApplyTitle>2. 지원 동기 ({charCount.motivation}/500)</S.ApplyTitle>
+            <S.ApplyTitle>
+              2. 구름톤 유니브 대표로 지원하신 동기가 무엇인가요? ({charCount.motivation}/500)
+            </S.ApplyTitle>
             <S.ApplyTextArea
               name="motivation"
               maxLength={500}
@@ -171,9 +174,7 @@ function Apply() {
 
         <S.FormGroup>
           <S.InputGroup>
-            <S.ApplyTitle>
-              3. 본인 학교에 구름톤 유니브 필요 이유가 무엇인가요? ({charCount.necessity}/ 500)
-            </S.ApplyTitle>
+            <S.ApplyTitle>3. 대표로서 구름톤 유니브를 어떻게 운영하실건가요? ({charCount.necessity}/500)</S.ApplyTitle>
             <S.ApplyTextArea
               name="necessity"
               maxLength={500}
@@ -187,18 +188,18 @@ function Apply() {
 
         <S.FormGroup>
           <S.InputGroup>
-            <S.ApplyTitle>4. 질문 및 궁금한 점이 있다면 작성해주세요! ({charCount.questions}/1000)</S.ApplyTitle>
+            <S.ApplyTitle>4. 질문 및 궁금한 점이 있다면 작성해주세요!(선택) ({charCount.questions}/1000)</S.ApplyTitle>
             <S.ApplyTextArea
               name="questions"
               maxLength={500}
               placeholder="질문이나 궁금한 점을 작성해주세요"
               onChange={handleInputChange}
-              minLength={10}
-              required
             />
           </S.InputGroup>
         </S.FormGroup>
-        <S.SubmitButton type="submit">제출하기</S.SubmitButton>
+        <S.ButtonWrapper>
+          <S.SubmitButton type="submit">제출하기</S.SubmitButton>
+        </S.ButtonWrapper>
       </S.FormContainer>
     </S.RecuritBody>
   );

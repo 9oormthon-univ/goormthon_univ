@@ -1,9 +1,38 @@
 import React, { useEffect, useState, useRef } from 'react';
-import {useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import * as S from './style';
 import { ChevronRightIcon, MenuIcon } from '@goorm-dev/gds-icons';
 import GULogo from '../../../assets/images/goormthon_univ_BI-Bk.png';
+
+const useScrollDirection = () => {
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState('up');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollTop > lastScrollTop) {
+        setScrollDirection('down');
+      } else {
+        setScrollDirection('up');
+      }
+      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollTop]);
+
+  return scrollDirection;
+};
+
 function Navbar() {
+  const navbarRef = useRef();
+  const scrollDirection = useScrollDirection();
+
   //사이드바 열고 닫는 함수
   const sideBar = useRef();
   const sideBarBackground = useRef();
@@ -59,6 +88,14 @@ function Navbar() {
     window.scrollTo(0, 0);
   }, [location]);
 
+  useEffect(() => {
+    if (scrollDirection === 'down') {
+      navbarRef.current.style.top = '-7rem';
+    } else {
+      navbarRef.current.style.top = '0';
+    }
+  }, [scrollDirection]);
+
   const setMenu = () => {
     return menuContents.map((menu, idx) => {
       const isActive = menu.link === '/' ? location.pathname === menu.link : location.pathname.startsWith(menu.link);
@@ -106,7 +143,7 @@ function Navbar() {
 
   return (
     <>
-      <S.NavWrapper>
+      <S.NavWrapper ref={navbarRef}>
         <S.NavLogo to={'/'}>
           <S.NavLogoIcon src={GULogo} alt="9oormthon Univ" />
         </S.NavLogo>

@@ -10,6 +10,9 @@ export const NavWrapper = styled.div`
   height: 3.5rem;
   padding: 0 1.5rem;
   z-index: 2;
+  transition: top 0.3s ease-in-out;
+  position: fixed; // If not already set
+  width: 100%;
 `;
 
 export const AlertMessage = styled.div`
@@ -20,6 +23,7 @@ export const AlertMessage = styled.div`
   color: #fff;
   padding: 0.6rem 1.25rem;
   border-radius: 8px;
+
   &::before {
     content: '';
     position: absolute;
