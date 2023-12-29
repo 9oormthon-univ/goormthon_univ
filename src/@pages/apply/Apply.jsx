@@ -145,7 +145,7 @@ function Apply() {
 
         <S.FormGroup>
           <S.InputGroup>
-            <S.ApplyTitle>1. 본인을 소개해주세요! ({charCount.introduction}/300)</S.ApplyTitle>
+            <S.ApplyTitle>1. 본인을 소개해주세요! ({charCount.introduction}/500)</S.ApplyTitle>
             <S.ApplyTextArea
               name="introduction"
               maxLength="500"
@@ -191,7 +191,7 @@ function Apply() {
             <S.ApplyTitle>4. (선택)질문 및 궁금한 점이 있다면 작성해주세요! ({charCount.questions}/1000)</S.ApplyTitle>
             <S.ApplyTextArea
               name="questions"
-              maxLength={500}
+              maxLength={1000}
               placeholder="질문이나 궁금한 점을 작성해주세요"
               onChange={handleInputChange}
             />
