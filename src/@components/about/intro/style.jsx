@@ -13,6 +13,10 @@ export const IntroWrapper = styled.div`
   background-color: var(--light-gray-gray-100, #f0f0f5);
   border-top-left-radius: 3.25rem;
   border-top-right-radius: 3.25rem;
+
+  @media screen and (max-width: 479px) {
+    height: 120vh;
+  }
 `;
 
 export const HeaderTextWrapper = styled.div`
@@ -49,17 +53,39 @@ export const Imgs = styled.figure`
   grid-template-rows: 10.25rem 13.0625rem;
   gap: 0.75rem;
   margin-top: 5rem;
+
+  @media screen and (max-width: 479px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    height: 100%;
+  }
 `;
 
 export const ImgsSetWrapper = styled.div`
   &.beotkkot {
     grid-area: beotkkot;
+
+    @media screen and (max-width: 479px) {
+      width: 18.5625rem;
+      height: 18.3125rem;
+    }
   }
   &.goorm {
     grid-area: goorm;
+    @media screen and (max-width: 479px) {
+      width: 18.5625rem;
+      height: 6.375rem;
+      order: 1;
+    }
   }
   &.danpoong {
     grid-area: danpoong;
+    @media screen and (max-width: 479px) {
+      width: 18.5625rem;
+      height: 8rem;
+    }
   }
   position: relative;
 `;

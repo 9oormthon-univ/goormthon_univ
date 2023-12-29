@@ -114,7 +114,7 @@ function Navbar() {
 
   //윈도우가 479px 이하면  모바일버전을 연다
   const resizingHandler = () => {
-    if (window.innerWidth < 479) {
+    if (window.innerWidth <= 479) {
       setisMobile(true);
     } else {
       setisMobile(false);
