@@ -111,7 +111,7 @@ export const AnimatedGoormieeEffectSmall = styled(GoorimeeEffectSmall)`
   width: max-content;
   height: max-content;
   position: absolute;
-  bottom: 3girem;
+  bottom: 3rem;
   left: 50%;
   transform: translate(-50%);
 
