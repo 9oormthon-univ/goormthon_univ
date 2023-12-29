@@ -1,10 +1,10 @@
 import React from 'react';
-import GridContainer from '../../layout/GridContainer';
+import GridContainer from '../../../layout/GridContainer';
 import HorizontalScroll from './HorizontalScroll';
 
 import * as S from './style';
 
-export default function Benefit() {
+export default function BenefitDesktop() {
   return (
     <S.BenefitWrapper>
       <GridContainer>

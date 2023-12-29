@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 export const BenefitWrapper = styled.div`
   height: 100vh;
@@ -11,6 +10,10 @@ export const BenefitWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #fff;
+
+  @media screen and (max-width: 479px) {
+    display: none;
+  }
 `;
 
 export const HeaderTitleText = styled.h2`
@@ -77,13 +80,4 @@ export const BenefitDescription = styled.p`
 export const Icon = styled.img`
   width: var(--size-size-500, 2.5rem);
   height: var(--size-size-500, 2.5rem);
-`;
-
-export const BenefitListWrapper = styled(motion.div)`
-  display: flex;
-  gap: 2.06rem;
-  width: 100%;
-  padding: 0.44rem;
-  overflow-x: scroll;
-  margin-top: 3.69rem;
 `;

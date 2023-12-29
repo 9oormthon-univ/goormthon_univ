@@ -3,7 +3,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 import { motion, useViewportScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import styled from 'styled-components';
 import { useScrollPercentage } from 'react-scroll-percentage';
-import { BENEFIT_ITEM_DATA } from '../../../utilities/AboutData';
+import { BENEFIT_ITEM_DATA } from '../../../../utilities/AboutData';
 import BenefitItem from './BenefitItem';
 
 export default function HorizontalScroll() {

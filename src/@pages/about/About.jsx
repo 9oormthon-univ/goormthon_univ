@@ -1,6 +1,7 @@
 import React from 'react';
 import Activity from '../../@components/about/activity/Activity';
-import Benefit from '../../@components/about/benefit/Benefit';
+import BenefitDesktop from '../../@components/about/benefit/BenefitDesktop/BenefitDesktop';
+import BenefitMobile from '../../@components/about/benefit/BenefitMobile/BenefitMobile';
 import FindingUniv from '../../@components/about/findingUniv/FindingUniv';
 import Goal from '../../@components/about/goal/goal';
 import Intro from '../../@components/about/intro/Intro';
@@ -22,7 +23,8 @@ export default function About() {
       <Goal />
       <PlanDesktop />
       <PlanMobile />
-      <Benefit />
+      <BenefitDesktop />
+      <BenefitMobile />
       <Activity />
       <FindingUniv />
     </S.AboutWrapper>
