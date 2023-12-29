@@ -1,75 +1,50 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
 import * as S from './style';
-
-import useScrollValue from '../../../../hooks/useScrollValue';
 
 import { TIMELINE_DATA } from '../../../../utilities/AboutData';
 
 export default function Timeline() {
   const [month, setMonth] = useState(1);
-  const [monthTextYOffset, setMonthTextYOffset] = useState(0);
-
-  const monthRefs = useRef({
-    1: {
-      element: undefined,
-    },
-    2: {
-      element: undefined,
-    },
-    3: {
-      element: undefined,
-    },
-    4: {
-      element: undefined,
-    },
-    5: {
-      element: undefined,
-    },
-    6: {
-      element: undefined,
-    },
+  const [changePoint, setChangePoint] = useState({
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+    6: false,
   });
 
-  const getMonthTextYOffset = (key) => {
-    let relativeTop = -400;
-    const target = monthRefs.current[key].element;
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-    if (target) {
-      const clientRect = target.getBoundingClientRect();
-      console.log(clientRect);
-      relativeTop = clientRect.top;
-      // relativeTop = clientRect.top - (key === 1 ? 0 : key === 6 ? 266 : 137);
+      const startPoint = 2000;
+      const gap = 200;
+
+      setChangePoint({
+        1: scrollY >= startPoint + gap * 0,
+        2: scrollY >= startPoint + gap * 1,
+        3: scrollY >= startPoint + gap * 2,
+        4: scrollY >= startPoint + gap * 3,
+        5: scrollY >= startPoint + gap * 4,
+        6: scrollY >= startPoint + gap * 5,
+      });
+    };
+
+    let lastTrueKey = 1;
+
+    for (const key in changePoint) {
+      if (changePoint[key] === true) {
+        lastTrueKey = key;
+        setMonth(lastTrueKey);
+      }
     }
 
-    return relativeTop;
-  };
-
-  useEffect(() => {
-    setMonthTextYOffset(getMonthTextYOffset(month));
-    window.addEventListener('resize', () => {
-      setMonthTextYOffset(getMonthTextYOffset(month));
-    });
-  }, [month]);
-
-  const value = useScrollValue();
-
-  useEffect(() => {
-    if (value < 1234) {
-      setMonth(1);
-    } else if (value > 1233 && value < 1534) {
-      setMonth(2);
-    } else if (value > 1533 && value < 1834) {
-      setMonth(3);
-    } else if (value > 1833 && value < 2134) {
-      setMonth(4);
-    } else if (value > 2133 && value < 2434) {
-      setMonth(5);
-    } else if (value > 2433 && value < 2734) {
-      setMonth(6);
-    }
-  }, [value]);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [window.scrollY]);
 
   const TIMELINE_FILL_RATIO = {
     1: 0,
@@ -99,7 +74,6 @@ export default function Timeline() {
           {Object.keys(TIMELINE_DATA).map((key) => (
             <S.MonthTextClickable
               key={key}
-              ref={(el) => (monthRefs.current[key] = { element: el })}
               id={key}
               className={`${key == month && 'active'} ${Number(key) < month && 'prev'}`}
               onClick={() => setMonth(Number(key))}
