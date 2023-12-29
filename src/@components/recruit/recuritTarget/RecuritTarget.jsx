@@ -61,7 +61,7 @@ function RecuritTarget() {
         >
           {/* icon */}
           <GroupIcon className="GroupIcon__icon" color="black" />
-          <S.TargetDetailBoxText>교내 운영 가능한 사람</S.TargetDetailBoxText>
+          <S.TargetDetailBoxText>교내 모집 및 운영 가능한 사람</S.TargetDetailBoxText>
           {/* text */}
         </S.TargetRowDetailBox>
       </S.TargetRowDetailWrapper>

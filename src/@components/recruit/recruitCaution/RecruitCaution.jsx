@@ -37,6 +37,7 @@ function RecruitCaution() {
         box3: scrollY >= 1200,
         box4: scrollY >= 1250,
         box5: scrollY >= 1300,
+        box6: scrollY >= 1350,
       });
     };
 
@@ -77,8 +78,8 @@ function RecruitCaution() {
           transition={{ duration: 0.85 }}
         >
           <RecuritCautionRowBox
-            title="모집 마감일 준수"
-            detail="교내 학생 및 운영진 모집 마감일은 2월 11일까지입니다."
+            title="모집"
+            detail="최소 6명(기획1,디자인1,백엔드2,프론트2)에서 최대 12명(기획2,디자인2,백엔드4,프론트4) 모집 가능합니다."
           />
         </motion.div>
 
@@ -87,12 +88,22 @@ function RecruitCaution() {
           animate={visibleBoxes.box4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.85 }}
         >
-          <RecuritCautionRowBox title="중앙행사 참여" detail="OT와 벚꽃톤은 필수적으로 참여해야 합니다." />
+          <RecuritCautionRowBox
+            title="모집 마감일 준수"
+            detail="교내 학생 및 운영진 모집 마감일은 2월 11일까지입니다."
+          />
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={visibleBoxes.box5 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+          transition={{ duration: 0.85 }}
+        >
+          <RecuritCautionRowBox title="중앙행사 참여" detail="OT와 벚꽃톤은 필수적으로 참여해야 합니다." />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={visibleBoxes.box6 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.85 }}
         >
           <RecuritCautionRowBox
