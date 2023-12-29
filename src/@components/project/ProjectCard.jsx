@@ -21,6 +21,7 @@ function ProjectCard({ index, award, title, content, link, image }) {
       },
       {
         threshold: 0.01,
+        rootMargin: '400px 0px',
       },
     );
 

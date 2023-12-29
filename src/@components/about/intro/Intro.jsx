@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './style';
 
 import BeotkkotImg from '../../../assets/images/about/img-beotkkot-default.png';
@@ -11,6 +11,17 @@ import DanpoongHoverImg from '../../../assets/images/about/img-danpoong-hover.pn
 import GridContainer from '../../layout/GridContainer';
 
 export default function Intro({ scrollTarget }) {
+  const [beotkkotExploded, setBeotkkotExploded] = useState(false);
+  const [goormExploded, setGoormExploded] = useState(false);
+  const [danpoongExploded, setDanpoongExploded] = useState(false);
+
+  const handleImageClick = (setImageExploded) => {
+    setImageExploded(true);
+    setTimeout(() => {
+      setImageExploded(false);
+    }, 500);
+  };
+
   return (
     <S.IntroWrapper ref={scrollTarget}>
       <GridContainer>
@@ -24,17 +35,26 @@ export default function Intro({ scrollTarget }) {
         </S.HeaderTextWrapper>
         <S.ImgsWrapper>
           <S.Imgs>
-            <S.ImgsSetWrapper className="beotkkot">
+            <S.ImgsSetWrapper
+              className={`beotkkot ${beotkkotExploded ? 'exploded' : ''}`}
+              onClick={() => handleImageClick(setBeotkkotExploded)}
+            >
               <S.Img src={BeotkkotImg} />
-              <S.Img src={BeotkkotHoverImg} className="hover-img" />
+              <S.Img src={BeotkkotHoverImg} className={`hover-img ${beotkkotExploded ? 'exploded' : ''}`} />
             </S.ImgsSetWrapper>
-            <S.ImgsSetWrapper className="goorm">
+            <S.ImgsSetWrapper
+              className={`goorm ${goormExploded ? 'exploded' : ''}`}
+              onClick={() => handleImageClick(setGoormExploded)}
+            >
               <S.Img src={GoormImg} />
-              <S.Img src={GoormHoverImg} className="hover-img" />
+              <S.Img src={GoormHoverImg} className={`hover-img ${goormExploded ? 'exploded' : ''}`} />
             </S.ImgsSetWrapper>
-            <S.ImgsSetWrapper className="danpoong">
+            <S.ImgsSetWrapper
+              className={`danpoong ${danpoongExploded ? 'exploded' : ''}`}
+              onClick={() => handleImageClick(setDanpoongExploded)}
+            >
               <S.Img src={DanpoongImg} />
-              <S.Img src={DanpoongHoverImg} className="hover-img" />
+              <S.Img src={DanpoongHoverImg} className={`hover-img ${danpoongExploded ? 'exploded' : ''}`} />
             </S.ImgsSetWrapper>
           </S.Imgs>
         </S.ImgsWrapper>
