@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import RecuritHeader from '../../@components/recruit/recuritHeader/RecuritHeader';
 import RecuritTarget from '../../@components/recruit/recuritTarget/RecuritTarget';
 import * as S from './style';
-import { motion, useAnimation } from 'framer-motion';
 import RecuritFAQ from '../../@components/recruit/recruitFAQ/RecruitFAQ';
 import RecruitCaution from '../../@components/recruit/recruitCaution/RecruitCaution';
 import RecuritCalendar from '../../@components/recruit/recruitCalendar/RecuritCalendar';

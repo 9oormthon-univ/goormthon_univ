@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 export const RecuritBody = styled.div`
   width: 70%;
@@ -9,7 +8,7 @@ export const RecuritBody = styled.div`
   align-items: center;
   @media (max-width: 768px) {
     width: 80%;
-  }
+}
 `;
 
 export const BodyTitle = styled.h2`

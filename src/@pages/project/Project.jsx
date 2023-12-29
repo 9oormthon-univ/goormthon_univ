@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Button, ButtonGroup } from '@goorm-dev/gds-components';
 import * as S from './style';
 import SeasonImg from '../../assets/images/season.png';
 import ProjectCard from '../../@components/project/ProjectCard';
 import DanpoongProject2023Data from '../../utilities/ProjectData';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 export default function Project() {
   const navigate = useNavigate();
