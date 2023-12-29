@@ -4,11 +4,11 @@ import BenefitItem from './BenefitItem';
 
 import * as S from './style';
 
-import { BENEFIT_ITEM_DATA } from '../../../utilities/AboutData';
+import { BENEFIT_ITEM_DATA } from '../../../../utilities/AboutData';
 
-export default function BenefitList({ x }) {
+export default function BenefitList() {
   return (
-    <S.BenefitListWrapper style={x}>
+    <S.BenefitListWrapper>
       {BENEFIT_ITEM_DATA.map((item) => (
         <BenefitItem
           imgSrc={item.imgSrc}
