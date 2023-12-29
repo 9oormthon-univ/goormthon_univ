@@ -72,7 +72,11 @@ export const Img = styled.img`
   @media screen and (max-width: 479px) {
     width: 30rem;
     right: 50%;
+    bottom: 0;
     transform: translateX(50%);
+
+    /* 추후 수정 필요 */
+    display: none;
   }
 `;
 
@@ -96,6 +100,16 @@ export const MovingImg = styled.img`
   @media screen and (max-width: 479px) {
     width: 1rem;
     right: 46%;
+    height: 20rem;
     transform: translateX(46%);
+
+    /* 추후 수정 필요 */
+    display: none;
   }
+`;
+
+export const WholeImg = styled.img`
+  width: 26rem;
+  position: absolute;
+  bottom: 0;
 `;

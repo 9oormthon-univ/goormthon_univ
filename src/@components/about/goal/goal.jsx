@@ -4,6 +4,7 @@ import * as S from './style';
 import GoalImg from '../../../assets/svgs/goal-graphic.svg';
 import GoalRainImg from '../../../assets/svgs/goal-rain.svg';
 import GridContainer from '../../layout/GridContainer';
+import GoalImgWhole from '../../../assets/svgs/goal-graphic_whole.svg';
 
 export default function Goal() {
   return (
@@ -17,6 +18,7 @@ export default function Goal() {
         </S.HeaderTextWrapper>
         <S.Img src={GoalImg} />
         <S.MovingImg src={GoalRainImg} />
+        <S.WholeImg src={GoalImgWhole} />
       </GridContainer>
     </S.GoalWrapper>
   );
