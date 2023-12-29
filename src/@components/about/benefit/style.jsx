@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const BenefitWrapper = styled.div`
   height: 100vh;
@@ -10,8 +11,6 @@ export const BenefitWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #fff;
-
-  padding: 9.44rem;
 `;
 
 export const HeaderTitleText = styled.h2`
@@ -19,6 +18,8 @@ export const HeaderTitleText = styled.h2`
   font-feature-settings: 'clig' off, 'liga' off;
   width: 100%;
   text-align: start;
+  position: absolute;
+  top: 18%;
 `;
 
 export const BenefitItemWrapper = styled.div`
@@ -78,7 +79,7 @@ export const Icon = styled.img`
   height: var(--size-size-500, 2.5rem);
 `;
 
-export const BenefitListWrapper = styled.div`
+export const BenefitListWrapper = styled(motion.div)`
   display: flex;
   gap: 2.06rem;
   width: 100%;

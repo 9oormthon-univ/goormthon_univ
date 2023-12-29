@@ -1,6 +1,6 @@
 import React from 'react';
 import GridContainer from '../../layout/GridContainer';
-import BenefitList from './BenefitList';
+import HorizontalScroll from './HorizontalScroll';
 
 import * as S from './style';
 
@@ -9,7 +9,7 @@ export default function Benefit() {
     <S.BenefitWrapper>
       <GridContainer>
         <S.HeaderTitleText>9oormthonUNIV의 일원이 된다면,</S.HeaderTitleText>
-        <BenefitList />
+        <HorizontalScroll />
       </GridContainer>
     </S.BenefitWrapper>
   );
