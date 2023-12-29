@@ -92,6 +92,7 @@ export const BENEFIT_ITEM_DATA = [
     bgColor: 'var(--light-gray-gray-950, #252730)',
     title: '구름 IDE',
     description: '손쉽게 개발환경을 만들고\n효율적으로 협업해요',
+    url: 'https://ide.goorm.io/',
   },
   {
     imgSrc: ExpImg,
@@ -99,6 +100,7 @@ export const BENEFIT_ITEM_DATA = [
     bgColor: '#E1E1E8',
     title: '구름 EXP',
     description: '업무를 게임하듯 관리하고\n조직 생산성을 쌓아요',
+    url: 'https://exp.goorm.io/',
   },
   {
     imgSrc: EduImg,
@@ -106,6 +108,7 @@ export const BENEFIT_ITEM_DATA = [
     bgColor: 'var(--light-blue-blue-400, #74AAFB)',
     title: '구름 EDU',
     description: '교육 도구의 설치 없이\n수준 높은 IT교육을 받아요',
+    url: 'https://edu.goorm.io/',
   },
   {
     imgSrc: InflearnImg,
@@ -113,6 +116,7 @@ export const BENEFIT_ITEM_DATA = [
     bgColor: '#00CD72',
     title: '인프런 쿠폰',
     description: '인프런과 구름의 만남!\n더욱 다양한 강의를 만나요',
+    url: 'https://www.inflearn.com/',
   },
   {
     imgSrc: KakaoImg,
@@ -120,5 +124,6 @@ export const BENEFIT_ITEM_DATA = [
     bgColor: 'var(--light-yellow-yellow-300, #FFD54F)',
     title: '카카오 클라우드',
     description: '유연하고 확장성 높은\n클라우드 인프라를 누려요',
+    url: 'https://www.kakaocorp.com/page/service/service/KakaoCloud',
   },
 ];

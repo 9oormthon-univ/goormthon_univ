@@ -6,9 +6,9 @@ import * as S from './style';
 
 import { BENEFIT_ITEM_DATA } from '../../../utilities/AboutData';
 
-export default function BenefitList() {
+export default function BenefitList({ x }) {
   return (
-    <S.BenefitListWrapper>
+    <S.BenefitListWrapper style={x}>
       {BENEFIT_ITEM_DATA.map((item) => (
         <BenefitItem
           imgSrc={item.imgSrc}
@@ -16,6 +16,7 @@ export default function BenefitList() {
           bgColor={item.bgColor}
           title={item.title}
           description={item.description}
+          url={item.url}
         />
       ))}
     </S.BenefitListWrapper>
