@@ -6,12 +6,36 @@ export default function GridContainer({ children }) {
 }
 
 export const GridContainerWrapper = styled.div`
-  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  width: 100%;
+  padding: 0 5.469rem;
+
+  /* 노트북 (해상도 1279px ~)*/
   @media screen and (min-width: 1279px) {
     width: 1104px;
     padding: 0;
   }
 
-  width: 100%;
-  padding: 0 87.5px;
+  /* 노트북 & 테블릿 (해상도 1024px ~ 1278px)*/
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+    padding: 0 5.469rem;
+  }
+
+  /* 테블릿 (해상도 768px ~ 1023px)*/
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    padding: 0 5.469rem;
+  }
+
+  /* 모바일 & 테블릿 (해상도 480px ~ 767px)*/
+  @media screen and (min-width: 480px) {
+    width: 100%;
+    padding: 0 5.469rem;
+  }
+
+  /* 모바일 (해상도 ~479px) */
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    padding: 0 2.25rem;
+  }
 `;

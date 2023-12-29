@@ -39,6 +39,10 @@ export const ActivityListWrapper = styled.div`
   width: 100%;
   margin-top: 3.94rem;
   margin-bottom: 14.81rem;
+
+  @media screen and (max-width: 768px) {
+    gap: 3.94rem;
+  }
 `;
 
 export const ContentBox = styled.article`
