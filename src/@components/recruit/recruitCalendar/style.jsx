@@ -17,6 +17,9 @@ export const BodyTitle = styled.h2`
 `;
 
 export const RecuritCalendarImg = styled.img`
-  width: 100%;
+  width: 70%;
   flex-shrink: 0;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;

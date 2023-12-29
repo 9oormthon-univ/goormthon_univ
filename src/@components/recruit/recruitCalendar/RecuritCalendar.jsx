@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './style';
 import { motion } from 'framer-motion';
-import DefaultImg from '../../../assets/images/dummy.png';
+import DefaultImg from '../../../assets/images/calendar.png';
 
 function RecuritCalendar() {
   const [visibleBoxes, setVisibleBoxes] = useState({
