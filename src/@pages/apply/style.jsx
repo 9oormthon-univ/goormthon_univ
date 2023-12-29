@@ -172,6 +172,6 @@ export const ApplyInput = styled.input`
   font-weight: 500;
 
   :focus {
-    outline: 2px solid black;
+    outline: 2px solid #5094fa;
   }
 `;
