@@ -77,6 +77,7 @@ export const ImgsSetWrapper = styled.div`
     @media screen and (max-width: 479px) {
       width: 18.5625rem;
       height: 6.375rem;
+      order: 1;
     }
   }
   &.danpoong {
