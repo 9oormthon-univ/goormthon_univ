@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './style';
 
 import GoormieeImg from '../../../assets/svgs/goormiee.svg';
-import SlidingText from '../slidingText/SlidingText';
+import GoormieeSmallImg from '../../../assets/svgs/goormiee_small.svg';
 
 export default function MainBanner({ scrollTrigger }) {
   return (
@@ -14,6 +14,7 @@ export default function MainBanner({ scrollTrigger }) {
       </S.HeaderTextWrapper>
       <S.MainImgWrapper>
         <S.MainImg src={GoormieeImg} />
+        <S.MainImgSmall src={GoormieeImg} />
         <S.AnimatedGoormieeEffect onClick={scrollTrigger} />
         <S.AnimatedGoormieeEffectSmall onClick={scrollTrigger} />
       </S.MainImgWrapper>

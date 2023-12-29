@@ -68,7 +68,7 @@ export const MainImg = styled.img`
   transform: translate(-50%);
 
   @media screen and (max-width: 479px) {
-    width: 15.4rem;
+    display: none;
   }
 `;
 
@@ -88,12 +88,26 @@ export const AnimatedGoormieeEffect = styled(GoorimeeEffect)`
   }
 `;
 
+export const MainImgSmall = styled.img`
+  display: none;
+  width: 17.4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+
+  @media screen and (max-width: 479px) {
+    width: 12rem;
+    display: block;
+  }
+`;
+
 export const AnimatedGoormieeEffectSmall = styled(GoorimeeEffectSmall)`
   display: none;
   width: max-content;
   height: max-content;
   position: absolute;
-  bottom: 2.6rem;
+  bottom: 3rem;
   left: 50%;
   transform: translate(-50%);
 
