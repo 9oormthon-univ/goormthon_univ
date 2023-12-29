@@ -1,8 +1,9 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
-import Footer from './footer/Footer';
+import CustomFooter from '../layout/footer/CustomFooter';
 import Navbar from './navbar/Navbar';
+import { Footer } from '@goorm-dev/gds-components';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -20,8 +21,15 @@ const Layout = () => {
       <Wrapper>
         <Outlet />
       </Wrapper>
-      <Footer />
+      <CustomFooter />
+      <StyledFooter />
     </>
   );
 };
 export default Layout;
+
+const StyledFooter = styled(Footer)`
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+`;

@@ -19,12 +19,21 @@ export const HeaderTitleText = styled.h2`
   font-feature-settings: 'clig' off, 'liga' off;
   width: 100%;
   text-align: start;
+  margin-top: 10.19rem;
+  @media screen and (max-width: 479px) {
+    margin-top: 5.81rem;
+  }
 `;
 
 export const ActivityItemWrapper = styled.div`
   display: flex;
   gap: 1.5rem;
-  flex-flow: ${({ $idx }) => ($idx % 2 === 0 ? 'unset' : 'row-reverse')};
+  flex-flow: ${({ $idx }) => ($idx % 2 == 0 ? 'unset' : 'row-reverse')};
+
+  @media screen and (max-width: 1278px) {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
 `;
 
 export const ActivityListWrapper = styled.div`
@@ -34,6 +43,14 @@ export const ActivityListWrapper = styled.div`
   width: 100%;
   margin-top: 3.94rem;
   margin-bottom: 14.81rem;
+
+  @media screen and (max-width: 768px) {
+    gap: 3.94rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    margin-bottom: 5.81rem;
+  }
 `;
 
 export const ContentBox = styled.article`
@@ -48,6 +65,11 @@ export const ContentBox = styled.article`
   justify-content: space-between;
 
   height: 14rem;
+  min-width: 21rem;
+
+  @media screen and (max-width: 1278px) {
+    height: 100%;
+  }
 `;
 
 export const ContentTitleWrapper = styled.div`
@@ -73,5 +95,9 @@ export const ContentDescriptionText = styled.p`
 `;
 
 export const ContentImg = styled.img`
-  width: 39.75rem;
+  @media screen and (max-width: 1278px) {
+    width: 100%;
+    max-width: 100%;
+  }
+  max-width: 39.75rem;
 `;

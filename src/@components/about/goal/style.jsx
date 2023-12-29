@@ -11,7 +11,9 @@ export const GoalWrapper = styled.div`
   align-items: center;
   background-color: var(--light-gray-gray-900, #2b2d36);
 
-  padding: 9.44rem;
+  @media screen and (max-width: 1024px) {
+    justify-content: start;
+  }
 `;
 
 export const HeaderTextWrapper = styled.div`
@@ -19,12 +21,27 @@ export const HeaderTextWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: start;
+
+  @media screen and (max-width: 1024px) {
+    justify-content: start;
+    margin-top: 9.81rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    justify-content: start;
+    margin-top: 5.81rem;
+  }
 `;
 
 export const HeaderTitleText = styled.h3`
   color: var(--light-white-white-light, #fff);
   font-feature-settings: 'clig' off, 'liga' off;
   z-index: 2;
+  white-space: pre-wrap;
+
+  @media screen and (max-width: 479px) {
+    white-space: unset;
+  }
 `;
 
 export const HeaderDescriptionText = styled.h6`
@@ -40,10 +57,23 @@ export const Img = styled.img`
   position: absolute;
   bottom: 0;
 
-  /* media query로 right값 조절 필요 */
-  right: 4.69rem;
+  right: 8.69rem;
+  @media screen and (max-width: 1279px) {
+    right: 4.69rem;
+  }
 
   z-index: 1;
+
+  @media screen and (max-width: 1024px) {
+    width: 30rem;
+    right: 4rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 30rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
 `;
 
 export const MovingImg = styled.img`
@@ -52,6 +82,20 @@ export const MovingImg = styled.img`
 
   position: absolute;
   bottom: 0;
-  /* media query로 right값 조절 필요 */
-  right: 25.4rem;
+
+  right: 29.4rem;
+  @media screen and (max-width: 1279px) {
+    right: 25.4rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 1rem;
+    right: 17.3rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 1rem;
+    right: 46%;
+    transform: translateX(46%);
+  }
 `;

@@ -6,7 +6,8 @@ import Goal from '../../@components/about/goal/goal';
 import Intro from '../../@components/about/intro/Intro';
 
 import MainBanner from '../../@components/about/mainBanner/MainBanner';
-import Plan from '../../@components/about/plan/Plan';
+import PlanDesktop from '../../@components/about/plan/planDesktop/PlanDesktop';
+import PlanMobile from '../../@components/about/plan/planMobile/PlanMobile';
 import useMoveScroll from '../../hooks/useMoveScroll.js';
 
 import * as S from './style';
@@ -19,7 +20,8 @@ export default function About() {
       <MainBanner scrollTrigger={onMoveToElement} />
       <Intro scrollTarget={element} />
       <Goal />
-      <Plan />
+      <PlanDesktop />
+      <PlanMobile />
       <Benefit />
       <Activity />
       <FindingUniv />

@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './style';
 import { FacebookIcon, GithubIcon, InstagramIcon } from '@goorm-dev/gds-icons';
 
-function Footer() {
+function CustomFooter() {
   return (
     <S.FooterWrapper>
       <S.FooterSlogan>Being All Seasons with goorm</S.FooterSlogan>
@@ -14,4 +14,4 @@ function Footer() {
     </S.FooterWrapper>
   );
 }
-export default Footer;
+export default CustomFooter;

@@ -3,9 +3,9 @@ import Card from './Card';
 
 import * as S from './style';
 
-import useScrollValue from '../../../hooks/useScrollValue';
+import useScrollValue from '../../../../hooks/useScrollValue';
 
-import { TIMELINE_DATA } from '../../../utilities/AboutData';
+import { TIMELINE_DATA } from '../../../../utilities/AboutData';
 
 export default function Timeline() {
   const [month, setMonth] = useState(1);
@@ -92,7 +92,7 @@ export default function Timeline() {
               className={`${key == month && 'active'} ${Number(key) < month && 'prev'}`}
               onClick={() => setMonth(Number(key))}
             >
-              {key}월
+              {key == 6 ? '6-8' : key}월
             </S.MonthTextClickable>
           ))}
         </S.MonthTextWrapper>

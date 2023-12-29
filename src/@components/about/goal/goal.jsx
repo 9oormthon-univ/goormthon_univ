@@ -12,8 +12,7 @@ export default function Goal() {
         <S.HeaderTextWrapper>
           <S.HeaderDescriptionText>우리의 목표는 단 한 가지</S.HeaderDescriptionText>
           <S.HeaderTitleText>
-            직접 구현한 서비스가 작은 물방울이 되어
-            <br />큰 구름을 이루는 기회를 제공하는 것
+            {`직접 구현한 서비스가 작은 물방울이 되어\n큰 구름을 이루는 기회를 제공하는 것`}
           </S.HeaderTitleText>
         </S.HeaderTextWrapper>
         <S.Img src={GoalImg} />

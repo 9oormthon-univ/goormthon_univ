@@ -25,7 +25,7 @@ export default function Intro({ scrollTarget }) {
   return (
     <S.IntroWrapper ref={scrollTarget}>
       <GridContainer>
-        <S.HeaderTitleText>‘9oormthon univ’ 는</S.HeaderTitleText>
+        <S.HeaderTitleText>‘9oormthonUNIV’ 는</S.HeaderTitleText>
         <S.HeaderTextWrapper>
           <S.HeaderDescriptionText className="subtitle-1">
             봄과 가을을 기수로 하여 클라우드 교육 및 해커톤과
