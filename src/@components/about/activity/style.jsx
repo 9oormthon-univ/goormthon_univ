@@ -24,7 +24,7 @@ export const HeaderTitleText = styled.h2`
 export const ActivityItemWrapper = styled.div`
   display: flex;
   gap: 1.5rem;
-  flex-flow: ${({ $idx }) => ($idx % 2 == 0 ? 'unset' : 'row-reverse')};
+  flex-flow: ${({ $idx }) => ($idx % 2 === 0 ? 'unset' : 'row-reverse')};
 `;
 
 export const ActivityListWrapper = styled.div`

@@ -1,7 +1,7 @@
 // Router.jsx
 import { GoormLoader } from '@goorm-dev/gds-components';
 import React, { lazy, Suspense } from 'react';
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './@components/layout/Layout';
 
 // 레이지 로딩 적용

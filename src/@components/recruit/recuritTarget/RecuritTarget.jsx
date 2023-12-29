@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './style';
 import { SchoolIcon, CalendarIcon, GroupIcon } from '@goorm-dev/gds-icons';
-import { motion } from 'framer-motion';
 
 function RecuritTarget() {
   const [visibleBoxes, setVisibleBoxes] = useState({
@@ -10,6 +9,8 @@ function RecuritTarget() {
     box2: false,
     box3: false,
   });
+
+  
 
   useEffect(() => {
     const handleScroll = () => {

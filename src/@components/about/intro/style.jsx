@@ -74,6 +74,21 @@ export const Img = styled.img`
     opacity: 0;
   }
 
+  &.exploded {
+    animation: explode 0.5s ease-in-out;
+  }
+
+  @keyframes explode {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
   &:hover {
     &.hover-img {
       cursor: pointer;

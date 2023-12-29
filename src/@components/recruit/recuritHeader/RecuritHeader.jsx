@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import * as S from './style';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import UniversityItem from '../UniversityItem/UniversityItem';
 import Universities from '../../../utilities/UnivData';
 import 'swiper/swiper-bundle.min.css';
@@ -11,7 +10,6 @@ import './style.css';
 import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
-import { GoormLoader } from '@goorm-dev/gds-components';
 
 const Container = styled.div`
   display: flex;
