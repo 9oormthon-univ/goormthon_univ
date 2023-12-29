@@ -7,9 +7,21 @@ function CustomFooter() {
     <S.FooterWrapper>
       <S.FooterSlogan>Being All Seasons with goorm</S.FooterSlogan>
       <S.SocialContainer>
-        <InstagramIcon style={{ marginRight: '2rem' }} />
-        <GithubIcon style={{ marginRight: '2rem' }} />
-        <FacebookIcon />
+        <S.SocialContainer>
+          <S.SocialIcon href="https://github.com/goormthon-Univ" target="_blank" rel="noopener noreferrer">
+            <GithubIcon style={{ marginRight: '2rem' }} />
+          </S.SocialIcon>
+          <S.SocialIcon
+            href="https://www.instagram.com/9oormthonuniv.official/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InstagramIcon style={{ marginRight: '2rem' }} />
+          </S.SocialIcon>
+          <S.SocialIcon href="https://facebook.com/9oormthonuniv.official/" target="_blank" rel="noopener noreferrer">
+            <FacebookIcon />
+          </S.SocialIcon>
+        </S.SocialContainer>
       </S.SocialContainer>
     </S.FooterWrapper>
   );
