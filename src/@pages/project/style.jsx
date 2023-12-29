@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button, ButtonGroup } from '@goorm-dev/gds-components';
+import { Button } from '@goorm-dev/gds-components';
 import { motion } from 'framer-motion';
 
 export const ProjectBody = styled.div`

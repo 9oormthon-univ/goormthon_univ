@@ -12,7 +12,7 @@ import Team11 from '../assets/images/projects/team11.png';
 import Team12 from '../assets/images/projects/team12.png';
 import Team13 from '../assets/images/projects/team13.png';
 import Team14 from '../assets/images/projects/team14.png';
-
+// https://eunbeann.notion.site/eunbeann/9e3f7b4ecd9e4566a49370ad34dd9409
 const DanpoongProject2023Data = [
   {
     award: '대상',

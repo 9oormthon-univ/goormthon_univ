@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import { FileInput, FormText, Input, InputGroup, InputGroupText } from '@goorm-dev/gds-components';
+import { Alert, FormText } from '@goorm-dev/gds-components';
 import * as S from './style';
+import { dbService } from '../../fbase';
+import { addDoc, collection } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
+import { AlertMessage } from '../../@components/layout/navbar/style';
 
 function Apply() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
+    univ: '',
     introduction: '',
     motivation: '',
     necessity: '',
@@ -23,37 +29,46 @@ function Apply() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-
-    // Updating character count for text areas
     if (['introduction', 'motivation', 'necessity', 'questions'].includes(name)) {
       setCharCount({ ...charCount, [name]: value.length });
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Validate email and phone
-    if (!validateEmail(formData.email)) {
-      alert('Invalid email format');
-      return;
-    }
-    if (!validatePhone(formData.phone)) {
-      alert('Invalid phone format');
-      return;
-    }
-    console.log(formData);
-  };
+    // 이메일 유효성 검사
+    // if (!validateEmail(formData.email)) {
+    //   alert('잘못된 메일을 기입하셨습니다!');
+    //   return;
+    // }
+    // // 휴대전화 유효성 검사
+    // if (!validatePhone(formData.phone)) {
+    //   alert('전화번호를 다시 확인해주세요!');
+    //   return;
+    // }
 
-  const validateEmail = (email) => {
-    return String(email)
-      .toLowerCase()
-      .match(
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      );
-  };
-
-  const validatePhone = (phone) => {
-    return phone.match(/^\d{3}-\d{4}-\d{4}$/);
+    // confirm 대화 상자 추가
+    const isConfirmed = window.confirm('제출 후 수정이 불가합니다. 제출하시겠습니까?');
+    if (isConfirmed) {
+      if (isConfirmed) {
+        try {
+          await addDoc(collection(dbService, 'resume'), formData);
+          alert(
+            '제출해주셔서 감사합니다! 제출하신 이메일 주소로 후속 안내가 발송될 예정이니, 메일을 확인해 주시기 바랍니다 :)',
+          );
+          // 홈으로 이동
+          navigate('/');
+        } catch (error) {
+          console.error('Error adding document: ', error);
+          alert('제출 중 오류가 발생했습니다. 다시 시도해주세요.');
+        }
+      } else {
+        console.log('제출이 취소되었습니다.');
+      }
+    } else {
+      // 사용자가 아니오를 클릭했을 때의 처리
+      console.log('제출이 취소되었습니다.');
+    }
   };
 
   return (
@@ -63,7 +78,7 @@ function Apply() {
         <p>대표 모집 기간 및 중앙행사는 아래와 같습니다.</p>
         <ul>
           <li>
-            <strong>신규대학 모집 신청:</strong> 12월 29일(금) ~ 1월 12일(금) - 총 14일
+            <strong>신규 유니브 모집 신청:</strong> 12월 29일(금) ~ 1월 12일(금) - 총 14일
           </li>
           <li>
             <strong>인터뷰 기간:</strong> 신청 후 상시 인터뷰 진행
@@ -108,6 +123,19 @@ function Apply() {
             <S.ApplyInput type="email" name="email" placeholder="이메일 주소" onChange={handleInputChange} required />
           </S.InputGroup>
           <FormText>제출해주신 메일로 연락갈 예정입니다.</FormText>
+        </S.FormGroup>
+        <S.FormGroup style={{ width: '30rem' }}>
+          <S.InputGroup>
+            <S.ApplyTitle>소속 대학</S.ApplyTitle>
+            <S.ApplyInput
+              type="text"
+              name="univ"
+              placeholder="00대학, 캠퍼스가 있는 경우 00대학(캠퍼스명)"
+              onChange={handleInputChange}
+              required
+            />
+          </S.InputGroup>
+          <FormText>중복 제출 대학 대표가 있을 경우 인터뷰를 통해 한 분이 결정될 예정입니다.</FormText>
         </S.FormGroup>
 
         <S.FormGroup>
