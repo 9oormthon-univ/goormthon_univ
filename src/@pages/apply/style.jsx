@@ -5,13 +5,13 @@ export const RecuritBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: start;
   @media (max-width: 768px) {
     width: 80%;
   }
 `;
 
-export const BodyTitle = styled.h2`
+export const BodyTitle = styled.h1`
   color: #000;
   font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 2.25rem;
@@ -54,11 +54,22 @@ export const FormGroup = styled.div`
   margin-bottom: 1.5rem;
 `;
 
+export const CautionTitle = styled.h5`
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+`;
+
 export const FormDescription = styled.div`
+  width: 100%;
   font-size: 1rem;
   color: #333;
-  text-align: left; /* Align text to the left */
+  text-align: left;
+  border-radius: var(--Spacing-space-500, 1rem);
+  background: var(--light-gray-gray-050, #f7f7fa);
   margin-bottom: 1.5rem;
+  padding: 1.5rem;
 
   ul {
     padding-left: 20px; /* Add padding for bullet points */
@@ -73,6 +84,13 @@ export const FormDescription = styled.div`
     margin-bottom: 0.5rem; /* Space after the heading */
     font-weight: bold;
   }
+`;
+
+export const CautionTitle2 = styled.h6`
+  color: var(--light-gray-gray-600-hint, #858899);
+  font-feature-settings: 'clig' off, 'liga' off;
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
 `;
 
 export const InputGroup = styled.div`

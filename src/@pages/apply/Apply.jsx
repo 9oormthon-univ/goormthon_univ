@@ -73,15 +73,18 @@ function Apply() {
 
   return (
     <S.RecuritBody>
-      <S.BodyTitle>Apply</S.BodyTitle>
+      <S.BodyTitle>지원서 작성하기</S.BodyTitle>
       <S.FormDescription>
-        <p>대표 모집 기간 및 중앙행사는 아래와 같습니다.</p>
+        <S.CautionTitle>대표 모집 기간 및 중앙행사</S.CautionTitle>
         <ul>
           <li>
-            <strong>신규 유니브 모집 신청:</strong> 12월 29일(금) ~ 1월 12일(금) - 총 14일
+            <strong>신규 유니브 모집 신청:</strong> 12월 29일 (금) ~ 1월 12일 (금) (총 14일)
           </li>
           <li>
-            <strong>인터뷰 기간:</strong> 신청 후 상시 인터뷰 진행
+            <strong>인터뷰 기간:</strong> 별도 안내 예정
+          </li>
+          <li>
+            <strong>합격 발표:</strong> 1월 17일(수)
           </li>
           <li>
             <strong>대표 OT:</strong> 1월 00일(토)
@@ -90,10 +93,11 @@ function Apply() {
             <strong>운영진 모집 기간:</strong> 1월 11일 ~ 2월 11일
           </li>
         </ul>
-        <h4 style={{ color: '#FF4B4B' }}>유의사항</h4>
-        <p>기존 등록된 학교가 있다면 대표 신청이 불가합니다.</p>
-        <p>미등록된 학교에 2명 이상의 대표 신청이 올 시 인터뷰 진행 후 대표 선정됩니다.</p>
-        <p>이를 유의해서 확인 후 지원해주세요!</p>
+        <S.CautionTitle2>유의 사항</S.CautionTitle2>
+        <ul>
+          <li>기존 등록된 학교가 있다면 대표 신청이 불가합니다</li>
+          <li>미등록된 학교에 2명 이상의 대표 신청이 올 시 인터뷰 진행 후 대표 선정됩니다.</li>
+        </ul>
       </S.FormDescription>
 
       <S.FormContainer onSubmit={handleSubmit}>
