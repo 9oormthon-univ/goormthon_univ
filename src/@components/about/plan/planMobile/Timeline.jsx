@@ -9,7 +9,7 @@ import { TIMELINE_DATA } from '../../../../utilities/AboutData';
 
 export default function Timeline() {
   const [month, setMonth] = useState(1);
-  const [monthTextXOffset, setMonthTextXOffset] = useState(0);
+  const [monthTextYOffset, setMonthTextYOffset] = useState(0);
 
   const monthRefs = useRef({
     1: {
@@ -32,22 +32,24 @@ export default function Timeline() {
     },
   });
 
-  const getMonthTextXOffset = (key) => {
-    let relativeLeft = -400;
+  const getMonthTextYOffset = (key) => {
+    let relativeTop = -400;
     const target = monthRefs.current[key].element;
 
     if (target) {
       const clientRect = target.getBoundingClientRect();
-      relativeLeft = clientRect.left - (key === 1 ? 0 : key === 6 ? 266 : 137);
+      console.log(clientRect);
+      relativeTop = clientRect.top;
+      // relativeTop = clientRect.top - (key === 1 ? 0 : key === 6 ? 266 : 137);
     }
 
-    return relativeLeft;
+    return relativeTop;
   };
 
   useEffect(() => {
-    setMonthTextXOffset(getMonthTextXOffset(month));
+    setMonthTextYOffset(getMonthTextYOffset(month));
     window.addEventListener('resize', () => {
-      setMonthTextXOffset(getMonthTextXOffset(month));
+      setMonthTextYOffset(getMonthTextYOffset(month));
     });
   }, [month]);
 
@@ -78,9 +80,19 @@ export default function Timeline() {
     6: 100,
   };
 
+  const MONTH_TEXT_Y_OFFSET = {
+    1: 0,
+    2: 10.25,
+    3: 21.81,
+    4: 33.37,
+    5: 45.12,
+    6: 56.87,
+  };
+
   return (
-    <>
-      {/* <Card data={TIMELINE_DATA[month]} $xOffset={monthTextXOffset} $month={month} /> */}
+    <S.TimelineWrapper>
+      <Card data={TIMELINE_DATA[month]} $yOffset={MONTH_TEXT_Y_OFFSET[month]} $month={month} />
+
       <S.TimelineBar>
         <S.TimelineFillBar $fillRatio={TIMELINE_FILL_RATIO[month]} />
         <S.MonthTextWrapper>
@@ -92,11 +104,11 @@ export default function Timeline() {
               className={`${key == month && 'active'} ${Number(key) < month && 'prev'}`}
               onClick={() => setMonth(Number(key))}
             >
-              {key}월
+              {key == 6 ? '6-8' : key}월
             </S.MonthTextClickable>
           ))}
         </S.MonthTextWrapper>
       </S.TimelineBar>
-    </>
+    </S.TimelineWrapper>
   );
 }

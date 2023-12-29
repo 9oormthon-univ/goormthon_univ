@@ -14,24 +14,38 @@ export const PlanWrapper = styled.div`
   background-color: var(--light-gray-gray-100, #f0f0f5);
 `;
 
-export const TitleText = styled.h2`
+export const TitleText = styled.h3`
   text-align: center;
-  margin-bottom: 3.63rem;
+  margin-bottom: 3.75rem;
+  margin-top: 4rem;
   color: var(--light-black-black, #000);
   font-feature-settings: 'clig' off, 'liga' off;
 `;
 
+export const TimelineWrapper = styled.div`
+  display: flex;
+  width: 20.938rem;
+  justify-content: space-between;
+  position: relative;
+`;
+
+export const EmptySpace = styled.div`
+  width: 18.065rem;
+  height: 100%;
+`;
+
 export const CardWrapper = styled.div`
-  transition: left 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: ${({ $xOffset }) => $xOffset}px;
+  left: 3.688rem;
+  top: ${({ $yOffset }) => $yOffset}rem;
 `;
 
 export const CardContentsWrapper = styled.div`
-  width: 22.75rem;
-  height: 10.375rem;
+  width: 16.375rem;
+  height: 100%;
   background: var(--light-white-white-light, #fff);
   border-radius: 1rem;
   display: flex;
@@ -49,7 +63,7 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const CardTitleText = styled.h4`
+export const CardTitleText = styled.h5`
   color: var(--light-black-black, #000);
   font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 1.25rem;
@@ -57,7 +71,6 @@ export const CardTitleText = styled.h4`
 
 export const CardDescriptionText = styled.p`
   color: var(--light-black-black, #000);
-  white-space: pre-wrap;
 `;
 
 export const TimelineBar = styled.figure`
@@ -66,6 +79,7 @@ export const TimelineBar = styled.figure`
   border-radius: 1rem;
   background: var(--light-gray-gray-050, #f7f7fa);
   position: relative;
+  margin-bottom: 12rem;
 `;
 
 export const TimelineFillBar = styled.div`
@@ -110,11 +124,4 @@ export const MonthTextClickable = styled.h5`
     background-color: var(--blue-500);
     border-radius: 50%;
   }
-`;
-
-export const CardBar = styled.img`
-  transition: margin 0.5s ease-in-out;
-  width: max-content;
-  height: 5.5rem;
-  ${({ $month }) => ($month === 1 ? 'margin-left: 30px' : $month === 6 ? 'margin-left: 296px' : 'margin-left:169px')};
 `;

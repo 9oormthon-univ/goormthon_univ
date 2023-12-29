@@ -92,7 +92,7 @@ export default function Timeline() {
               className={`${key == month && 'active'} ${Number(key) < month && 'prev'}`}
               onClick={() => setMonth(Number(key))}
             >
-              {key}월
+              {key == 6 ? '6-8' : key}월
             </S.MonthTextClickable>
           ))}
         </S.MonthTextWrapper>
