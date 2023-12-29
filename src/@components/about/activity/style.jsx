@@ -19,6 +19,10 @@ export const HeaderTitleText = styled.h2`
   font-feature-settings: 'clig' off, 'liga' off;
   width: 100%;
   text-align: start;
+  margin-top: 10.19rem;
+  @media screen and (max-width: 479px) {
+    margin-top: 5.81rem;
+  }
 `;
 
 export const ActivityItemWrapper = styled.div`
@@ -42,6 +46,10 @@ export const ActivityListWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     gap: 3.94rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    margin-bottom: 5.81rem;
   }
 `;
 
