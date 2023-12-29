@@ -37,15 +37,15 @@ function Apply() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // 이메일 유효성 검사
-    if (!validateEmail(formData.email)) {
-      alert('잘못된 메일을 기입하셨습니다!');
-      return;
-    }
-    // 휴대전화 유효성 검사
-    if (!validatePhone(formData.phone)) {
-      alert('전화번호를 다시 확인해주세요!');
-      return;
-    }
+    // if (!validateEmail(formData.email)) {
+    //   alert('잘못된 메일을 기입하셨습니다!');
+    //   return;
+    // }
+    // // 휴대전화 유효성 검사
+    // if (!validatePhone(formData.phone)) {
+    //   alert('전화번호를 다시 확인해주세요!');
+    //   return;
+    // }
 
     // confirm 대화 상자 추가
     const isConfirmed = window.confirm('제출 후 수정이 불가합니다. 제출하시겠습니까?');
@@ -69,18 +69,6 @@ function Apply() {
       // 사용자가 아니오를 클릭했을 때의 처리
       console.log('제출이 취소되었습니다.');
     }
-  };
-
-  const validateEmail = (email) => {
-    return String(email)
-      .toLowerCase()
-      .match(
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      );
-  };
-
-  const validatePhone = (phone) => {
-    return phone.match(/^\d{3}-\d{4}-\d{4}$/);
   };
 
   return (
