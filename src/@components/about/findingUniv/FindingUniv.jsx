@@ -55,7 +55,7 @@ function FindingUniv() {
   }, []);
 
   const AutoScrollingImages = () => {
-    const doubledUniversities = [...Universities, ...Universities];
+    const doubledUniversities = [...Universities, ...Universities, ...Universities];
 
     return (
       <Container>

@@ -33,12 +33,12 @@ export const TIMELINE_DATA = {
   },
   3: {
     Icon: Lightbulb,
-    title: '무박 2일, 팀 빌딩',
+    title: '팀 빌딩',
     description: '타 학교 미르미에게 자신의 아이디어를 공유하고\n함께 성장할 시너지있는 팀을 꾸려보아요.',
   },
   4: {
     Icon: BeotkkotSmall,
-    title: '2024 벚꽃톤',
+    title: '무박 2일, 벚꽃톤',
     description: '구름톤유니브의 하이라이트, 벚꽃톤!\n모든 미르미가 밤을 새워 아이디어를 실현하는 장이에요.',
   },
   5: {

@@ -78,6 +78,13 @@ export default function Timeline() {
     6: 92,
   };
 
+  const getMonthText = (key) => {
+    if (key === 3) return '3월 초';
+    if (key === 4) return '3월 말';
+    if (key === 6) return '6-8월';
+    return `${key}월`;
+  };
+
   return (
     <>
       <Card data={TIMELINE_DATA[month]} $xOffset={monthTextXOffset} $month={month} />
@@ -92,7 +99,7 @@ export default function Timeline() {
               className={`${key == month && 'active'} ${Number(key) < month && 'prev'}`}
               onClick={() => setMonth(Number(key))}
             >
-              {key == 6 ? '6-8' : key}월
+              {getMonthText(Number(key))}
             </S.MonthTextClickable>
           ))}
         </S.MonthTextWrapper>
