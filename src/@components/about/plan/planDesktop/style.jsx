@@ -33,12 +33,21 @@ export const CardWrapper = styled.div`
 export const CardContentsWrapper = styled.div`
   width: 22.75rem;
   height: 10.375rem;
-  background: var(--light-white-white-light, #fff);
+  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--light-gray-gray-050, #f7f7fa)')};
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+
+  & > h4,
+  & > p {
+    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+  }
+
+  & svg > path {
+    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+  }
 `;
 
 export const IconWrapper = styled.div`
