@@ -37,7 +37,7 @@ export const CardWrapper = styled.div`
 export const CardContentsWrapper = styled.div`
   width: 16.375rem;
   height: 100%;
-  background: var(--light-white-white-light, #fff);
+  background-color: var(--light-gray-gray-050, #f7f7fa);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -46,22 +46,25 @@ export const CardContentsWrapper = styled.div`
 `;
 
 export const IconWrapper = styled.div`
-  color: var(--light-black-black, #000);
   margin-bottom: 0.44rem;
   & > svg {
+    & path {
+      fill: var(--light-gray-gray-500-info, #a9abb8);
+    }
+
     width: 1.5rem;
     height: 1.5rem;
   }
 `;
 
 export const CardTitleText = styled.h5`
-  color: var(--light-black-black, #000);
+  color: var(--light-gray-gray-500-info, #a9abb8);
   font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 1.25rem;
 `;
 
 export const CardDescriptionText = styled.p`
-  color: var(--light-black-black, #000);
+  color: var(--light-gray-gray-500-info, #a9abb8);
 `;
 
 export const TimelineBar = styled.figure`
