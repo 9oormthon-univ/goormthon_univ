@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const IntroWrapper = styled.div`
-  height: 100vh;
-  margin-top: calc(100vh - 3.53rem);
+  height: 100dvh;
+  margin-top: calc(100dvh - 3.53rem);
 
   position: relative;
   z-index: 1;

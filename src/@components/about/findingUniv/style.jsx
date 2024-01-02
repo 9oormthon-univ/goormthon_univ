@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Button } from '@goorm-dev/gds-components';
 
 export const FindingUnivWrapper = styled.div`
-  height: 100vh;
+  height: 100dvh;
 
   position: relative;
   z-index: 1;

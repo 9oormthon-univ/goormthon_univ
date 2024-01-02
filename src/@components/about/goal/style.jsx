@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const GoalWrapper = styled.div`
-  height: 100vh;
+  height: 100dvh;
 
   position: relative;
   z-index: 1;

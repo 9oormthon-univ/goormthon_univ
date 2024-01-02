@@ -75,7 +75,7 @@ const ScrollContainer = styled.div`
   left: 0;
   right: 0;
   will-change: transform;
-  height: calc(100vh - 3.69rem);
+  height: calc(100dvh - 3.69rem);
   margin-top: 3.69rem;
 
   .ghost {
@@ -84,12 +84,12 @@ const ScrollContainer = styled.div`
 `;
 
 const SmoothScrollWrapper = styled.div`
-  height: 100vh;
+  height: 100dvh;
 `;
 
 const ThumbnailsContainer = styled(motion.section)`
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   display: flex;
   flex-direction: column;

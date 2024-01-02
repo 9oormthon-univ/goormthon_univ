@@ -8,7 +8,7 @@ import { Footer } from '@goorm-dev/gds-components';
 const Wrapper = styled.div`
   margin: 0 auto;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
