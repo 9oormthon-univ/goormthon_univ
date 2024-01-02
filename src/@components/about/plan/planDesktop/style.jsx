@@ -35,6 +35,7 @@ export const CardContentsWrapper = styled.div`
   height: 10.375rem;
   background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--light-gray-gray-050, #f7f7fa)')};
   border-radius: 1rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,6 +49,8 @@ export const CardContentsWrapper = styled.div`
   & svg > path {
     fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
   }
+
+  border: ${({ $isSelected }) => $isSelected && '2px solid #5094FA'};
 `;
 
 export const IconWrapper = styled.div`
