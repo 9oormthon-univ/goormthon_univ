@@ -79,8 +79,6 @@ export default function Timeline() {
   };
 
   const getMonthText = (key) => {
-    if (key === 3) return '3월 초';
-    if (key === 4) return '3월 말';
     if (key === 6) return '6-8월';
     return `${key}월`;
   };
