@@ -67,6 +67,7 @@ export const TimelineBar = styled.figure`
   border-radius: 1.34375rem;
   background: var(--light-gray-gray-050, #f7f7fa);
   position: relative;
+  margin: 0;
 `;
 
 export const TimelineFillBar = styled.div`
@@ -114,9 +115,15 @@ export const MonthTextClickable = styled.h5`
   }
 `;
 
-export const CardList = styled.div`
+export const CardListUpperWrapper = styled.div`
   display: flex;
   gap: 2.19rem;
+`;
+
+export const CardListLowerWrapper = styled.div`
+  gap: 1.38rem;
+  display: flex;
+  margin-left: 2.88rem;
 `;
 
 export const TimelineWrapper = styled.div`

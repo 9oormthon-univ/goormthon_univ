@@ -6,7 +6,7 @@ import Card from './Card';
 export default function CardListLower({ month }) {
   console.log(Object.keys(TIMELINE_DATA));
   return (
-    <S.CardList>
+    <S.CardListLowerWrapper>
       {Object.keys(TIMELINE_DATA)
         .filter((item) => !(item % 2))
         .map((key, idx) => {
@@ -22,6 +22,6 @@ export default function CardListLower({ month }) {
             />
           );
         })}
-    </S.CardList>
+    </S.CardListLowerWrapper>
   );
 }
