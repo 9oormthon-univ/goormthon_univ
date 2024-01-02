@@ -28,8 +28,6 @@ export const CardWrapper = styled.div`
   transition: left 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: ${({ $xOffset }) => $xOffset}px;
 `;
 
 export const CardContentsWrapper = styled.div`
@@ -115,11 +113,4 @@ export const MonthTextClickable = styled.h5`
   &.prev {
     color: var(--light-white-white-light, #fff);
   }
-`;
-
-export const CardBar = styled.img`
-  transition: margin 0.5s ease-in-out;
-  width: max-content;
-  height: 5.5rem;
-  ${({ $month }) => ($month === 1 ? 'margin-left: 30px' : $month === 6 ? 'margin-left: 296px' : 'margin-left:169px')};
 `;
