@@ -4,8 +4,8 @@ import * as S from './style';
 
 export default function BenefitItem({ imgSrc, iconSrc, bgColor, title, description, url }) {
   return (
-    <Link to={url} target="\_blank">
-      <S.BenefitItemWrapper>
+    <S.BenefitItemWrapper>
+      <Link to={url} target="\_blank">
         <S.BenefitImgWrapper $bgColor={bgColor}>
           <S.BenefitImg src={imgSrc} />
         </S.BenefitImgWrapper>
@@ -16,7 +16,7 @@ export default function BenefitItem({ imgSrc, iconSrc, bgColor, title, descripti
           </S.BenefitTextWrapper>
           <S.Icon src={iconSrc} />
         </S.BenefitContentsWrapper>
-      </S.BenefitItemWrapper>
-    </Link>
+      </Link>
+    </S.BenefitItemWrapper>
   );
 }
