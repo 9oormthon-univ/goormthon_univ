@@ -10,7 +10,7 @@ export const GhostDiv = styled.div`
 `;
 
 export const MainBannerWrapper = styled.div`
-  height: calc(100dvh - 3.53rem);
+  height: 100dvh;
   width: 100%;
   display: flex;
   flex-direction: column;

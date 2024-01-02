@@ -75,7 +75,7 @@ const ScrollContainer = styled.div`
   left: 0;
   right: 0;
   will-change: transform;
-  height: calc(100dvh - 3.69rem);
+  height: 100dvh;
   margin-top: 3.69rem;
 
   .ghost {

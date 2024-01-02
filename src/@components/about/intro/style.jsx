@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const IntroWrapper = styled.div`
   height: 100dvh;
-  margin-top: calc(100dvh - 3.53rem);
+  margin-top: 100vh;
 
   position: relative;
   z-index: 1;
