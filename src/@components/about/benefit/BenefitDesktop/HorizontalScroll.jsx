@@ -1,6 +1,6 @@
 import React, { useRef, useState, useLayoutEffect, useCallback, useEffect } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
-import { motion, useViewportScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
+import { motion, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import styled from 'styled-components';
 import { useScrollPercentage } from 'react-scroll-percentage';
 import { BENEFIT_ITEM_DATA } from '../../../../utilities/AboutData';
@@ -29,9 +29,6 @@ export default function HorizontalScroll() {
     resizeObserver.observe(ghostRef.current);
     return () => resizeObserver.disconnect();
   }, [onResize]);
-
-  const { scrollYProgress } = useViewportScroll();
-
   const [containerRef, percentage] = useScrollPercentage({
     /* Optional options */
     threshold: 0.9,
@@ -52,6 +49,7 @@ export default function HorizontalScroll() {
           <div className="thumbnails">
             {BENEFIT_ITEM_DATA.map((item) => (
               <BenefitItem
+                key={item.title}
                 className="thumbnail"
                 imgSrc={item.imgSrc}
                 iconSrc={item.iconSrc}
