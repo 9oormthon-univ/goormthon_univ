@@ -42,7 +42,7 @@ export const CardContentsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.25rem;
+  padding: 1rem;
 
   & > h5,
   & > p {
@@ -55,7 +55,7 @@ export const CardContentsWrapper = styled.div`
 `;
 
 export const IconWrapper = styled.div`
-  margin-bottom: 0.44rem;
+  margin-bottom: 0.25rem;
   & > svg {
     width: 1.5rem;
     height: 1.5rem;
@@ -64,10 +64,12 @@ export const IconWrapper = styled.div`
 
 export const CardTitleText = styled.h5`
   font-feature-settings: 'clig' off, 'liga' off;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 `;
 
-export const CardDescriptionText = styled.p``;
+export const CardDescriptionText = styled.p`
+  margin: 0;
+`;
 
 export const TimelineBar = styled.figure`
   width: 2rem;
@@ -92,11 +94,19 @@ export const ProgressBar = styled.div`
 `;
 
 export const MonthTextWrapper = styled.div`
-  height: -webkit-fill-available;
+  height: 61.125rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  & > h5 {
+    margin-top: 8rem;
+  }
+  & > h5:first-child {
+    margin-top: 0;
+  }
+  & > h5:nth-child(2) {
+    margin-top: 6.62rem;
+  }
 `;
 
 export const MonthTextClickable = styled.h5`
