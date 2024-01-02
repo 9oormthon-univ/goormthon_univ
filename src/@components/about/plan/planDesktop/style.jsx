@@ -113,12 +113,7 @@ export const MonthTextClickable = styled.h5`
   align-items: center;
   z-index: 1;
 
-  &.active {
-    color: var(--light-white-white-light, #fff);
-    background-color: var(--blue-500);
-    border-radius: 50%;
-  }
-
+  &.active,
   &.prev {
     color: var(--light-white-white-light, #fff);
   }
