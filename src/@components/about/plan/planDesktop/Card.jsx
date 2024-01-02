@@ -2,9 +2,10 @@ import React from 'react';
 import * as S from './style';
 
 export default function Card({ Icon, title, description, month, idx }) {
+  console.log(month, idx);
   return (
-    <S.CardWrapper $month={month}>
-      <S.CardContentsWrapper>
+    <S.CardWrapper>
+      <S.CardContentsWrapper $isSelected={month === Number(idx)}>
         <S.IconWrapper>
           <Icon />
         </S.IconWrapper>

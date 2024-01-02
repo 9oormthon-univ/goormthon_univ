@@ -4,7 +4,6 @@ import * as S from './style';
 import Card from './Card';
 
 export default function CardListLower({ month }) {
-  console.log(Object.keys(TIMELINE_DATA));
   return (
     <S.CardListLowerWrapper>
       {Object.keys(TIMELINE_DATA)
@@ -14,7 +13,7 @@ export default function CardListLower({ month }) {
           return (
             <Card
               key={key}
-              idx={idx}
+              idx={key}
               month={month}
               Icon={item.Icon}
               title={item.title}
