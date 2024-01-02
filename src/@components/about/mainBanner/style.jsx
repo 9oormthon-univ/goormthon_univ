@@ -3,6 +3,7 @@ import GoorimeeEffect from '../../../assets/svgs/GoormieeEffect';
 import GoorimeeEffectSmall from '../../../assets/svgs/GoormieeEffectSmall';
 
 import MainBannerImg from '../../../assets/svgs/MainBannerImg';
+import MainBannerSmallImg from '../../../assets/svgs/MainBannerSmallImg';
 
 export const GhostDiv = styled.div`
   @media screen and (max-width: 479px) {
@@ -81,42 +82,11 @@ export const MainImg = styled(MainBannerImg)`
   }
 `;
 
-export const AnimatedGoormieeEffect = styled(GoorimeeEffect)`
-  width: max-content;
-  height: max-content;
-  position: absolute;
-  bottom: 2.6rem;
-  left: 50%;
-  transform: translate(-50%);
-
-  stroke-dasharray: 500;
-  transition: stroke-dashoffset 0.5s ease-in-out;
-
-  @media screen and (max-width: 479px) {
-    display: none;
-  }
-`;
-
-export const MainImgSmall = styled.img`
+export const MainSmallImg = styled(MainBannerSmallImg)`
   display: none;
-  width: 17.4rem;
+  width: max-content;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
-
-  @media screen and (max-width: 479px) {
-    width: 12rem;
-    display: block;
-  }
-`;
-
-export const AnimatedGoormieeEffectSmall = styled(GoorimeeEffectSmall)`
-  display: none;
-  width: max-content;
-  height: max-content;
-  position: absolute;
-  bottom: 3rem;
   left: 50%;
   transform: translate(-50%);
 
