@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const PlanWrapper = styled.div`
   height: 100dvh;
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
 
   position: relative;
   z-index: 1;

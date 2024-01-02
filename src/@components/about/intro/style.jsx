@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const IntroWrapper = styled.div`
   height: 100dvh;
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
   margin-top: 100vh;
 
   position: relative;
