@@ -6,6 +6,8 @@ import * as S from './style';
 import useScrollValue from '../../../../hooks/useScrollValue';
 
 import { TIMELINE_DATA } from '../../../../utilities/AboutData';
+import CardListUpper from './CardListUpper';
+import CardListLower from './CardListLower';
 
 export default function Timeline() {
   const [month, setMonth] = useState(1);
@@ -43,8 +45,8 @@ export default function Timeline() {
   };
 
   return (
-    <>
-      <Card data={TIMELINE_DATA[month]} $month={month} />
+    <S.TimelineWrapper>
+      <CardListUpper month={month} />
       <S.TimelineBar>
         <S.TimelineFillBar $fillRatio={TIMELINE_FILL_RATIO[month]} />
         <S.MonthTextWrapper>
@@ -60,6 +62,7 @@ export default function Timeline() {
           ))}
         </S.MonthTextWrapper>
       </S.TimelineBar>
-    </>
+      <CardListLower month={month} />
+    </S.TimelineWrapper>
   );
 }

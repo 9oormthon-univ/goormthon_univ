@@ -64,7 +64,6 @@ export const CardDescriptionText = styled.p`
 export const TimelineBar = styled.figure`
   width: -webkit-fill-available;
   height: var(--size-size-500, 2.5rem);
-  margin-top: 17rem;
   border-radius: 1.34375rem;
   background: var(--light-gray-gray-050, #f7f7fa);
   position: relative;
@@ -113,4 +112,15 @@ export const MonthTextClickable = styled.h5`
   &.prev {
     color: var(--light-white-white-light, #fff);
   }
+`;
+
+export const CardList = styled.div`
+  display: flex;
+  gap: 2.19rem;
+`;
+
+export const TimelineWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
 `;
