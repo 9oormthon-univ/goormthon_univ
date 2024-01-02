@@ -72,7 +72,7 @@ export const CardDescriptionText = styled.p`
 
 export const TimelineBar = styled.figure`
   width: -webkit-fill-available;
-  height: var(--size-size-500, 2.5rem);
+  height: 2.75rem;
   border-radius: 1.34375rem;
   background: var(--light-gray-gray-050, #f7f7fa);
   position: relative;
