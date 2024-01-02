@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import GoorimeeEffect from '../../../assets/svgs/GoormieeEffect';
 import GoorimeeEffectSmall from '../../../assets/svgs/GoormieeEffectSmall';
 
+import MainBannerImg from '../../../assets/svgs/MainBannerImg';
+
 export const GhostDiv = styled.div`
   @media screen and (max-width: 479px) {
     height: 10rem;
@@ -64,12 +66,15 @@ export const MainImgWrapper = styled.div`
   }
 `;
 
-export const MainImg = styled.img`
-  width: 17.4rem;
+export const MainImg = styled(MainBannerImg)`
+  width: max-content;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
+
+  stroke-dasharray: 500;
+  transition: stroke-dashoffset 0.5s ease-in-out;
 
   @media screen and (max-width: 479px) {
     display: none;
