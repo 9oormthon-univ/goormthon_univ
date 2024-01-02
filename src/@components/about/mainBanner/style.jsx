@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import GoorimeeEffect from '../../../assets/svgs/GoormieeEffect';
-import GoorimeeEffectSmall from '../../../assets/svgs/GoormieeEffectSmall';
 
 import MainBannerImg from '../../../assets/svgs/MainBannerImg';
 import MainBannerSmallImg from '../../../assets/svgs/MainBannerSmallImg';
