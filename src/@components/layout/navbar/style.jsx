@@ -127,10 +127,11 @@ export const NavSideBarBackground = styled.div`
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   @supports (height: 100dvh) {
     height: 100dvh;
   }
+
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.3);
   transition: opacity 0.3s ease, display 0.3s ease;
@@ -141,10 +142,11 @@ export const NavSideBarWrapper = styled.div`
   display: flex;
   opacity: 0;
   width: 16rem;
-  height: 100dvh;
+  height: 100vh;
   @supports (height: 100dvh) {
     height: 100dvh;
   }
+
   padding: 2rem 2.5rem;
   z-index: 3;
   position: fixed;

@@ -9,9 +9,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   width: 100%;
   min-height: 100dvh;
-  @supports (height: 100dvh) {
-    height: 100dvh;
-  }
+
   display: flex;
   flex-direction: column;
   align-items: center;

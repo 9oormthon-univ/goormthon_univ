@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const IntroWrapper = styled.div`
-  height: 100dvh;
+  height: 100vh;
+  margin-top: 100vh;
   @supports (height: 100dvh) {
     height: 100dvh;
+    margin-top: 100dvh;
   }
-  margin-top: 100vh;
 
   position: relative;
   z-index: 1;
