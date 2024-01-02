@@ -1,18 +1,15 @@
 import React from 'react';
 import * as S from './style';
+import { TIMELINE_DATA } from '../../../../utilities/AboutData';
+import Card from './Card';
 
-export default function Card({ data, $yOffset, $month }) {
-  const { Icon, title, description } = data;
-
+export default function CardList() {
   return (
-    <S.CardWrapper $yOffset={$yOffset} $month={$month}>
-      <S.CardContentsWrapper>
-        <S.IconWrapper>
-          <Icon />
-        </S.IconWrapper>
-        <S.CardTitleText>{title}</S.CardTitleText>
-        <S.CardDescriptionText className="subtitle-1">{description}</S.CardDescriptionText>
-      </S.CardContentsWrapper>
-    </S.CardWrapper>
+    <S.CardListWrapper>
+      {Object.keys(TIMELINE_DATA).map((key) => {
+        const item = TIMELINE_DATA[key];
+        return <Card key={key} Icon={item.Icon} title={item.title} description={item.description} />;
+      })}
+    </S.CardListWrapper>
   );
 }

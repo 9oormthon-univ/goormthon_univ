@@ -4,6 +4,7 @@ import Card from './Card';
 import * as S from './style';
 
 import { TIMELINE_DATA } from '../../../../utilities/AboutData';
+import CardList from './CardList';
 
 export default function Timeline() {
   const [month, setMonth] = useState(1);
@@ -71,12 +72,10 @@ export default function Timeline() {
 
   return (
     <S.TimelineWrapper>
-      {/* <Card data={TIMELINE_DATA[month]} $yOffset={MONTH_TEXT_Y_OFFSET[month]} $month={month} /> */}
-
       <S.TimelineBar>
         <S.TimelineFillBar $fillRatio={TIMELINE_FILL_RATIO[month]} />
         <S.MonthTextWrapper>
-          {Object.keys(TIMELINE_DATA).map((key) => (
+          {Array.from({ length: 6 }, (_, index) => index + 1).map((key) => (
             <S.MonthTextClickable
               key={key}
               id={key}
@@ -88,6 +87,7 @@ export default function Timeline() {
           ))}
         </S.MonthTextWrapper>
       </S.TimelineBar>
+      <CardList />
     </S.TimelineWrapper>
   );
 }

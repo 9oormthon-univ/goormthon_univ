@@ -1,13 +1,9 @@
 import React from 'react';
 import * as S from './style';
 
-import CardBar from '../../../../assets/svgs/card_bar.svg';
-
-export default function Card({ data, $yOffset, $month }) {
-  const { Icon, title, description } = data;
-
+export default function Card({ Icon, title, description }) {
   return (
-    <S.CardWrapper $yOffset={$yOffset} $month={$month}>
+    <S.CardWrapper>
       <S.CardContentsWrapper>
         <S.IconWrapper>
           <Icon />

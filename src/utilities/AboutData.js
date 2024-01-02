@@ -21,7 +21,6 @@ import KakaoImg from '../assets/svgs/benefit-kakao.svg';
 
 export const TIMELINE_DATA = {
   1: {
-    xOffset: '2rem',
     Icon: GroupIcon,
     title: '9oormthonUNIV 2기 모집!',
     description: '벚꽃톤을 함께할 2기 운영진과 참가자를 모집하여\n2024년을 힘차게 시작해요',

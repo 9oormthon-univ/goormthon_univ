@@ -24,23 +24,14 @@ export const TitleText = styled.h3`
 
 export const TimelineWrapper = styled.div`
   display: flex;
-  width: 20.938rem;
   justify-content: space-between;
-  position: relative;
-`;
-
-export const EmptySpace = styled.div`
-  width: 18.065rem;
-  height: 100%;
+  gap: 1.69rem;
 `;
 
 export const CardWrapper = styled.div`
   transition: top 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 3.688rem;
-  top: ${({ $yOffset }) => $yOffset}rem;
 `;
 
 export const CardContentsWrapper = styled.div`
@@ -78,8 +69,8 @@ export const TimelineBar = styled.figure`
   height: 61.125rem;
   border-radius: 1rem;
   background: var(--light-gray-gray-050, #f7f7fa);
-  position: relative;
   margin-bottom: 12rem;
+  position: relative;
 `;
 
 export const TimelineFillBar = styled.div`
@@ -124,4 +115,11 @@ export const MonthTextClickable = styled.h5`
     background-color: var(--blue-500);
     border-radius: 50%;
   }
+`;
+
+export const CardListWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
