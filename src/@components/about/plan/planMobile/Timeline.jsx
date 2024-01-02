@@ -21,7 +21,7 @@ export default function Timeline() {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-      const startPoint = 2000;
+      const startPoint = 1950;
       const gap = 200;
 
       setChangePoint({
@@ -54,15 +54,6 @@ export default function Timeline() {
     4: 59,
     5: 77,
     6: 100,
-  };
-
-  const MONTH_TEXT_Y_OFFSET = {
-    1: 0,
-    2: 10.25,
-    3: 21.81,
-    4: 33.37,
-    5: 45.12,
-    6: 56.87,
   };
 
   const getMonthText = (key) => {
