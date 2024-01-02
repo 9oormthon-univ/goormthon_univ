@@ -37,35 +37,37 @@ export const CardWrapper = styled.div`
 export const CardContentsWrapper = styled.div`
   width: 16.375rem;
   height: 100%;
-  background-color: var(--light-gray-gray-050, #f7f7fa);
+  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--light-gray-gray-050, #f7f7fa)')};
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1.25rem;
+
+  & > h5,
+  & > p {
+    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+  }
+
+  & svg > path {
+    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+  }
 `;
 
 export const IconWrapper = styled.div`
   margin-bottom: 0.44rem;
   & > svg {
-    & path {
-      fill: var(--light-gray-gray-500-info, #a9abb8);
-    }
-
     width: 1.5rem;
     height: 1.5rem;
   }
 `;
 
 export const CardTitleText = styled.h5`
-  color: var(--light-gray-gray-500-info, #a9abb8);
   font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 1.25rem;
 `;
 
-export const CardDescriptionText = styled.p`
-  color: var(--light-gray-gray-500-info, #a9abb8);
-`;
+export const CardDescriptionText = styled.p``;
 
 export const TimelineBar = styled.figure`
   width: 2rem;

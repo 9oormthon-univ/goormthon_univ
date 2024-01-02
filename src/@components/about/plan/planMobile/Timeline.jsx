@@ -87,7 +87,7 @@ export default function Timeline() {
           ))}
         </S.MonthTextWrapper>
       </S.TimelineBar>
-      <CardList />
+      <CardList month={month} />
     </S.TimelineWrapper>
   );
 }

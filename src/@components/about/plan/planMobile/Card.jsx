@@ -1,10 +1,10 @@
 import React from 'react';
 import * as S from './style';
 
-export default function Card({ Icon, title, description }) {
+export default function Card({ Icon, title, description, month, idx }) {
   return (
     <S.CardWrapper>
-      <S.CardContentsWrapper>
+      <S.CardContentsWrapper $isSelected={Number(month) === idx + 1}>
         <S.IconWrapper>
           <Icon />
         </S.IconWrapper>
