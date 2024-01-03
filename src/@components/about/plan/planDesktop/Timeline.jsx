@@ -30,12 +30,12 @@ export default function Timeline() {
   }, [value]);
 
   const TIMELINE_FILL_RATIO = {
-    1: 10,
-    2: 25,
-    3: 42,
-    4: 59,
-    5: 75,
-    6: 92,
+    1: 17,
+    2: 30,
+    3: 47,
+    4: 64,
+    5: 80,
+    6: 100,
   };
 
   const getMonthText = (key) => {
