@@ -28,19 +28,26 @@ export const CardWrapper = styled.div`
   transition: left 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: ${({ $xOffset }) => $xOffset}px;
 `;
 
 export const CardContentsWrapper = styled.div`
   width: 22.75rem;
   height: 10.375rem;
-  background: var(--light-white-white-light, #fff);
+  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--light-gray-gray-050, #f7f7fa)')};
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+
+  & > h4,
+  & > p {
+    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+  }
+
+  & svg > path {
+    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -66,10 +73,10 @@ export const CardDescriptionText = styled.p`
 export const TimelineBar = styled.figure`
   width: -webkit-fill-available;
   height: var(--size-size-500, 2.5rem);
-  margin-top: 17rem;
   border-radius: 1.34375rem;
   background: var(--light-gray-gray-050, #f7f7fa);
   position: relative;
+  margin: 0;
 `;
 
 export const TimelineFillBar = styled.div`
@@ -117,9 +124,19 @@ export const MonthTextClickable = styled.h5`
   }
 `;
 
-export const CardBar = styled.img`
-  transition: margin 0.5s ease-in-out;
-  width: max-content;
-  height: 5.5rem;
-  ${({ $month }) => ($month === 1 ? 'margin-left: 30px' : $month === 6 ? 'margin-left: 296px' : 'margin-left:169px')};
+export const CardListUpperWrapper = styled.div`
+  display: flex;
+  gap: 2.19rem;
+`;
+
+export const CardListLowerWrapper = styled.div`
+  gap: 1.38rem;
+  display: flex;
+  margin-left: 2.88rem;
+`;
+
+export const TimelineWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
 `;
