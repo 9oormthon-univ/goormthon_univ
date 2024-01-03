@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import GoorimeeEffect from '../../../assets/svgs/GoormieeEffect';
-import GoorimeeEffectSmall from '../../../assets/svgs/GoormieeEffectSmall';
+
+import MainBannerImg from '../../../assets/svgs/MainBannerImg';
+import MainBannerSmallImg from '../../../assets/svgs/MainBannerSmallImg';
 
 export const GhostDiv = styled.div`
   @media screen and (max-width: 479px) {
@@ -64,23 +65,10 @@ export const MainImgWrapper = styled.div`
   }
 `;
 
-export const MainImg = styled.img`
-  width: 17.4rem;
+export const MainImg = styled(MainBannerImg)`
+  width: max-content;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
-
-  @media screen and (max-width: 479px) {
-    display: none;
-  }
-`;
-
-export const AnimatedGoormieeEffect = styled(GoorimeeEffect)`
-  width: max-content;
-  height: max-content;
-  position: absolute;
-  bottom: 2.6rem;
   left: 50%;
   transform: translate(-50%);
 
@@ -92,26 +80,11 @@ export const AnimatedGoormieeEffect = styled(GoorimeeEffect)`
   }
 `;
 
-export const MainImgSmall = styled.img`
-  display: none;
-  width: 17.4rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
-
-  @media screen and (max-width: 479px) {
-    width: 12rem;
-    display: block;
-  }
-`;
-
-export const AnimatedGoormieeEffectSmall = styled(GoorimeeEffectSmall)`
+export const MainSmallImg = styled(MainBannerSmallImg)`
   display: none;
   width: max-content;
-  height: max-content;
   position: absolute;
-  bottom: 3rem;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%);
 
