@@ -30,7 +30,7 @@ export default function Intro({ scrollTarget }) {
           <S.HeaderDescriptionText className="subtitle-1">
             봄과 가을을 기수로 하여 클라우드 교육 및 해커톤과
             <br />
-            아이디어 실현의 장소를 제공해주는 전국 IT 연합 동아리 입니다.
+            아이디어 실현의 장을 제공해주는 전국 IT 연합 동아리 입니다.
           </S.HeaderDescriptionText>
         </S.HeaderTextWrapper>
         <S.ImgsWrapper>

@@ -31,11 +31,6 @@ const ImageSlider = styled.div`
   }
 `;
 
-const Image = styled.img`
-  width: 100px;
-  margin-right: 10px;
-`;
-
 function FindingUniv() {
   const [daysRemaining, setDaysRemaining] = useState(0);
   const navigate = useNavigate();

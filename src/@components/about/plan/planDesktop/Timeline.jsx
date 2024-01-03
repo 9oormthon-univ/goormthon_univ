@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Card from './Card';
+import React, { useEffect, useState } from 'react';
 
 import * as S from './style';
 
@@ -54,7 +53,7 @@ export default function Timeline() {
             <S.MonthTextClickable
               key={key}
               id={key}
-              className={`${key == month && 'active'} ${Number(key) < month && 'prev'}`}
+              className={`${Number(key) === month && 'active'} ${Number(key) < month && 'prev'}`}
               onClick={() => setMonth(Number(key))}
             >
               {getMonthText(Number(key))}

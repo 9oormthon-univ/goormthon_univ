@@ -11,6 +11,7 @@ export default function BenefitList() {
     <S.BenefitListWrapper>
       {BENEFIT_ITEM_DATA.map((item) => (
         <BenefitItem
+          key={item.title}
           imgSrc={item.imgSrc}
           iconSrc={item.iconSrc}
           bgColor={item.bgColor}

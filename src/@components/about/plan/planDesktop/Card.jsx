@@ -2,7 +2,6 @@ import React from 'react';
 import * as S from './style';
 
 export default function Card({ Icon, title, description, month, idx }) {
-  console.log(month, idx);
   return (
     <S.CardWrapper>
       <S.CardContentsWrapper $isSelected={month === Number(idx)}>
