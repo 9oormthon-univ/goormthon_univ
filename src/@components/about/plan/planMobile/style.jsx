@@ -24,39 +24,38 @@ export const TitleText = styled.h3`
 
 export const TimelineWrapper = styled.div`
   display: flex;
-  width: 20.938rem;
   justify-content: space-between;
-  position: relative;
-`;
-
-export const EmptySpace = styled.div`
-  width: 18.065rem;
-  height: 100%;
+  gap: 1.69rem;
 `;
 
 export const CardWrapper = styled.div`
   transition: top 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 3.688rem;
-  top: ${({ $yOffset }) => $yOffset}rem;
 `;
 
 export const CardContentsWrapper = styled.div`
   width: 16.375rem;
   height: 100%;
-  background: var(--light-white-white-light, #fff);
+  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--light-gray-gray-050, #f7f7fa)')};
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.25rem;
+  padding: 1rem;
+
+  & > h5,
+  & > p {
+    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+  }
+
+  & svg > path {
+    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+  }
 `;
 
 export const IconWrapper = styled.div`
-  color: var(--light-black-black, #000);
-  margin-bottom: 0.44rem;
+  margin-bottom: 0.25rem;
   & > svg {
     width: 1.5rem;
     height: 1.5rem;
@@ -64,13 +63,12 @@ export const IconWrapper = styled.div`
 `;
 
 export const CardTitleText = styled.h5`
-  color: var(--light-black-black, #000);
   font-feature-settings: 'clig' off, 'liga' off;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 `;
 
 export const CardDescriptionText = styled.p`
-  color: var(--light-black-black, #000);
+  margin: 0;
 `;
 
 export const TimelineBar = styled.figure`
@@ -78,8 +76,8 @@ export const TimelineBar = styled.figure`
   height: 61.125rem;
   border-radius: 1rem;
   background: var(--light-gray-gray-050, #f7f7fa);
-  position: relative;
   margin-bottom: 12rem;
+  position: relative;
 `;
 
 export const TimelineFillBar = styled.div`
@@ -96,11 +94,19 @@ export const ProgressBar = styled.div`
 `;
 
 export const MonthTextWrapper = styled.div`
-  height: -webkit-fill-available;
+  height: 61.125rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  & > h5 {
+    margin-top: 8rem;
+  }
+  & > h5:first-child {
+    margin-top: 0;
+  }
+  & > h5:nth-child(2) {
+    margin-top: 6.62rem;
+  }
 `;
 
 export const MonthTextClickable = styled.h5`
@@ -124,4 +130,11 @@ export const MonthTextClickable = styled.h5`
     background-color: var(--blue-500);
     border-radius: 50%;
   }
+`;
+
+export const CardListWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
