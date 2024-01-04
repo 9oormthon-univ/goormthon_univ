@@ -55,7 +55,7 @@ export const ContentBox = styled.article`
   padding: 1.5rem;
   border-radius: 0.5rem;
 
-  border: 1px solid var(--light-gray-gray-300, #e1e1e8);
+  border: 1px solid var(--gray-300);
   background: #fff;
 
   display: flex;

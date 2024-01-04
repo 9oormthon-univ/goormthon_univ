@@ -47,9 +47,9 @@ export const BenefitImg = styled.img`
 `;
 
 export const BenefitContentsWrapper = styled.div`
-  background-color: var(--light-white-white-light, #fff);
-  border-radius: 0rem 0rem var(--Spacing-space-500, 1rem) var(--Spacing-space-500, 1rem);
-  border: 1px solid var(--light-gray-gray-300, #e1e1e8);
+  background-color: var(--light);
+  border-radius: 0rem 0rem var(--Spacing-space-500) var(--Spacing-space-500);
+  border: 1px solid var(--gray-300);
   width: 19rem;
   display: flex;
   justify-content: space-between;
@@ -77,6 +77,6 @@ export const BenefitDescription = styled.p`
 `;
 
 export const Icon = styled.img`
-  width: var(--size-size-500, 2.5rem);
-  height: var(--size-size-500, 2.5rem);
+  width: var(--size-500);
+  height: var(--size-500);
 `;

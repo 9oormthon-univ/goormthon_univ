@@ -39,7 +39,6 @@ export const RowPosters = styled.div`
   overflow-y: hidden;
   overflow-x: scroll;
   scroll-behavior: smooth;
-  /* z-index: 500; */
 `;
 
 export const HeaderTitleText = styled.h2`

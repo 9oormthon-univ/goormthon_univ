@@ -64,17 +64,17 @@ export const NavMonitorMenu = styled.div`
 // 네브링크
 export const NavMenuLink = styled(Link)`
   padding: 0.56rem 1rem;
-  color: var(--basic-color-gray-gray-900, #2b2d36);
+  color: var(--gray-900);
   font-size: 1rem;
   text-decoration: ${(props) => (props.$isActive ? 'underline' : 'none')};
   -webkit-text-decoration: ${(props) => (props.$isActive ? 'underline' : 'none')};
   &:hover {
-    border-radius: var(--border-radius-300, 0.5rem);
-    background: var(--semantic-color-theme-link-transparent-8, rgba(133, 136, 153, 0.08));
-    color: var(--basic-color-gray-gray-900, #2b2d36);
+    border-radius: var(--border-radius-300);
+    background: var(--transparent-8);
+    color: var(--gray-900);
   }
   &:focus {
-    color: var(--basic-color-gray-gray-900, #2b2d36);
+    color: var(--gray-900);
   }
   @media (max-width: 768px) {
     font-size: 1.3rem;

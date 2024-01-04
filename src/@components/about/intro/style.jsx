@@ -14,7 +14,7 @@ export const IntroWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--light-gray-gray-100, #f0f0f5);
+  background-color: var(--gray-100);
   border-top-left-radius: 3.25rem;
   border-top-right-radius: 3.25rem;
 

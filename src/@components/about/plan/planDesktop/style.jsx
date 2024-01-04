@@ -80,7 +80,7 @@ export const TimelineBar = styled.figure`
 
 export const TimelineFillBar = styled.div`
   width: ${({ $fillRatio }) => $fillRatio}%;
-  height: var(--size-size-500, 2.5rem);
+  height: var(--size-500);
   background-color: var(--blue-500);
   border-radius: 1.34375rem;
   position: absolute;
@@ -93,7 +93,7 @@ export const ProgressBar = styled.div`
 
 export const MonthTextWrapper = styled.div`
   width: -webkit-fill-available;
-  height: var(--size-size-500, 2.5rem);
+  height: var(--size-500);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -114,7 +114,7 @@ export const MonthTextClickable = styled.h5`
 
   &.active,
   &.prev {
-    color: var(--white-light, #fff);
+    color: var(--light);
   }
 `;
 

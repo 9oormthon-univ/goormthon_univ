@@ -110,7 +110,7 @@ export const MonthTextWrapper = styled.div`
 export const MonthTextClickable = styled.h5`
   margin: 0;
   cursor: pointer;
-  color: var(--light-gray-gray-400, #cdced6);
+  color: var(--gray-400);
 
   font-feature-settings: 'clig' off, 'liga' off;
   width: 3.75rem;
@@ -120,11 +120,11 @@ export const MonthTextClickable = styled.h5`
   align-items: center;
   z-index: 1;
 
-  background-color: var(--light-gray-gray-050, #f7f7fa);
+  background-color: var(--gray-050);
   border-radius: 50%;
   &.active,
   &.prev {
-    color: var(--light-white-white-light, #fff);
+    color: var(--light);
     background-color: var(--blue-500);
     border-radius: 50%;
   }

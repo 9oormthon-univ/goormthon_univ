@@ -15,8 +15,6 @@ export const QuestionText = styled.h6`
 `;
 
 export const BodyTitle = styled.h2`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 2.25rem;
 `;
 
