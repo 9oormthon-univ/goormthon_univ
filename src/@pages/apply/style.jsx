@@ -75,7 +75,8 @@ export const FormDescription = styled.div`
 `;
 
 export const CautionWrapper = styled.div`
-  margin-top: 2.2rem;
+  margin-top: 2.5rem;
+  line-height: 1.25rem;
 `;
 export const Caution2Li = styled.li`
   color: var(--hint);
@@ -87,22 +88,22 @@ export const InputGroup = styled.div`
   width: 100%;
 `;
 
-export const ApplyTitle = styled.h5`
-  margin-bottom: 0.5rem;
+export const ApplyTitle = styled.h3`
+  margin-bottom: 1rem;
 `;
 
 export const ApplyTextArea = styled(Input)`
   padding: 0.88rem 1.5rem;
   color: var(--hint);
-font-feature-settings: 'clig' off, 'liga' off;
+  font-feature-settings: 'clig' off, 'liga' off;
 
-/* KOR/paragraph-lgㅣ1rem */
-font-family: Pretendard;
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-line-height: 1.5rem; /* 150% */
-letter-spacing: -0.00625rem;ㄴ
+  /* KOR/paragraph-lgㅣ1rem */
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+  letter-spacing: -0.00625rem;
 `;
 
 export const ApplyInput = styled(Input)`
