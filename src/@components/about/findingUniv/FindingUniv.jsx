@@ -15,7 +15,6 @@ const Container = styled.div`
 
 const ImageSlider = styled.div`
   display: flex;
-  /* ImageSlider 컴포넌트의 스타일에서 애니메이션 속성을 이렇게 수정합니다 */
   animation: slide 20s linear infinite;
 
   &:hover {

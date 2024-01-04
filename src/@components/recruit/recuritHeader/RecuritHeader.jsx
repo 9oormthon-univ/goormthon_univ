@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './style';
 import UniversityItem from '../UniversityItem/UniversityItem';
 import Universities from '../../../utilities/UnivData';
@@ -10,7 +10,6 @@ import './style.css';
 import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
-import { Button } from '@goorm-dev/gds-components';
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +19,6 @@ const Container = styled.div`
 
 const ImageSlider = styled.div`
   display: flex;
-  /* ImageSlider 컴포넌트의 스타일에서 애니메이션 속성을 이렇게 수정합니다 */
   animation: slide 20s linear infinite;
 
   &:hover {
@@ -36,15 +34,9 @@ const ImageSlider = styled.div`
   }
 `;
 
-const Image = styled.img`
-  width: 100px;
-  margin-right: 10px;
-`;
-
 function RecuritHeader() {
   const [daysRemaining, setDaysRemaining] = useState(0);
   const navigate = useNavigate();
-  const swiperRef = useRef(null);
 
   useEffect(() => {
     // 목표 날짜 설정 (24년 1월 12일)
