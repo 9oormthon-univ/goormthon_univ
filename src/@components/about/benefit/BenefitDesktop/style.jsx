@@ -64,8 +64,6 @@ export const BenefitTextWrapper = styled.div`
 `;
 
 export const BenefitTitle = styled.h3`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   width: 100%;
   text-align: left;
 `;

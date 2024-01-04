@@ -35,7 +35,7 @@ export const CardWrapper = styled.div`
 export const CardContentsWrapper = styled.div`
   width: 16.375rem;
   height: 100%;
-  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--light-gray-gray-050, #f7f7fa)')};
+  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--gray-050)')};
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
