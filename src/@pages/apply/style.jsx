@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Input } from '@goorm-dev/gds-components';
 
 export const RecuritBody = styled.div`
   width: 60%;
@@ -12,9 +13,7 @@ export const RecuritBody = styled.div`
 `;
 
 export const BodyTitle = styled.h1`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
-  margin-bottom: 2.25rem;
+  margin-bottom: 4rem;
   margin-top: 6.5rem;
 `;
 
@@ -61,12 +60,9 @@ export const FormGroup = styled.div`
   margin-bottom: 4rem;
 `;
 
-export const CautionTitle = styled.h5`
-  text-align: center;
+export const CautionTitle = styled.h3`
   margin-left: 1.5rem;
   margin-bottom: 1.25rem;
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
 `;
 
 export const FormDescription = styled.div`
@@ -75,8 +71,9 @@ export const FormDescription = styled.div`
   color: #333;
   text-align: left;
   border-radius: var(--Spacing-space-500, 1rem);
+  border: 1px solid var(--light-gray-gray-300, #e1e1e8);
   background: var(--light-gray-gray-050, #f7f7fa);
-  margin-bottom: 1.5rem;
+  margin-bottom: 8rem;
   padding: 1.5rem;
 
   ul {
@@ -94,12 +91,6 @@ export const FormDescription = styled.div`
   }
 `;
 
-export const CautionTitle2 = styled.h6`
-  color: var(--light-gray-gray-600-hint, #858899);
-  font-feature-settings: 'clig' off, 'liga' off;
-  margin-bottom: 1.25rem;
-`;
-
 export const Caution2Wrapper = styled.div`
   padding-left: 2.75rem;
   width: 100%;
@@ -109,9 +100,12 @@ export const Caution2Wrapper = styled.div`
     flex-direction: column;
   }
 `;
+
+export const CautionWrapper = styled.div`
+  margin-top: 2.2rem;
+`;
 export const Caution2Li = styled.li`
-  color: var(--light-gray-gray-600-hint, #858899);
-  font-feature-settings: 'clig' off, 'liga' off;
+  color: var(--hint);
 `;
 
 export const InputGroup = styled.div`
@@ -127,8 +121,6 @@ export const InputGroupText = styled.span`
 `;
 
 export const ApplyTitle = styled.h4`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 0.5rem;
 `;
 export const FormText = styled.p`
@@ -136,42 +128,10 @@ export const FormText = styled.p`
   color: #666;
   margin-top: 0.5rem;
 `;
-export const ApplyTextArea = styled.textarea`
-  width: 100%;
-  flex-grow: 1;
-  height: 9rem;
-  padding: 1rem;
-  padding-left: 1.5rem;
-  resize: none;
-  border-radius: 8px;
-  border: 1px solid #aeafb9;
-  font-size: 1rem;
-  margin-right: 1rem;
-  font-family: inherit;
-  ::placeholder {
-    color: #acacac;
-  }
-  font-weight: 500;
-  @media screen and (max-width: 768px) {
-    height: 11rem;
-  }
+export const ApplyTextArea = styled(Input)`
+  padding: 0.88rem 1.5rem;
 `;
 
-export const ApplyInput = styled.input`
-  flex-grow: 1;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  border: 1px solid #aeafb9;
-  font-size: 1rem;
-  margin-right: 1rem;
-  font-family: inherit;
-
-  ::placeholder {
-    color: #acacac;
-  }
-  font-weight: 500;
-
-  :focus {
-    outline: 2px solid #5094fa;
-  }
+export const ApplyInput = styled(Input)`
+  width: 20rem;
 `;
