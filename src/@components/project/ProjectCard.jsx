@@ -8,7 +8,6 @@ function ProjectCard({ index, award, title, content, link, image }) {
     hidden: { opacity: 0, y: 0 },
     visible: { opacity: 1, y: 0 },
   };
-  // const isView = useInview
   const cardRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
