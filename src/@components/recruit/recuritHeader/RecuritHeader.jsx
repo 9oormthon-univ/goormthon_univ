@@ -10,6 +10,7 @@ import './style.css';
 import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
+import { Button } from '@goorm-dev/gds-components';
 
 const Container = styled.div`
   display: flex;
@@ -80,8 +81,9 @@ function RecuritHeader() {
           구름톤 유니브 2기 모집 중!
           <h4>D-{daysRemaining}</h4>
         </S.HeaderTitleText>
-
-        <S.GoormBtn onClick={() => navigate('/apply')}>유니브 대표 신청</S.GoormBtn>
+        <S.GoormBtn color="primary" size="xl" tag="button" onClick={() => navigate('/apply')}>
+          유니브 대표 신청
+        </S.GoormBtn>
       </S.HeaderTitleWrapper>
       <S.HeaderUnivContainer>
         <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
