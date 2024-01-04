@@ -25,7 +25,7 @@ export const SocialContainer = styled.div`
 
 export const FooterSlogan = styled.h3`
   color: var(--alternative);
-  font-feature-settings: 'clig' off, 'liga' off;
+
   margin: 0;
   white-space: nowrap;
   display: flex;

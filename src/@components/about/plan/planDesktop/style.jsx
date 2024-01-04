@@ -104,7 +104,6 @@ export const MonthTextClickable = styled.h5`
   cursor: pointer;
   color: var(--gray-400);
 
-  font-feature-settings: 'clig' off, 'liga' off;
   width: 3.875rem;
   height: 3.875rem;
   display: flex;

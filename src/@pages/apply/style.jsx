@@ -95,8 +95,6 @@ export const ApplyTitle = styled.h3`
 export const ApplyTextArea = styled(Input)`
   padding: 0.88rem 1.5rem;
   color: var(--hint);
-  font-feature-settings: 'clig' off, 'liga' off;
-
   /* KOR/paragraph-lgㅣ1rem */
   font-family: Pretendard;
   font-size: 1rem;

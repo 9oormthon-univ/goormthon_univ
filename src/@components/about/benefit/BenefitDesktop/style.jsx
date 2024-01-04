@@ -70,7 +70,7 @@ export const BenefitTitle = styled.h3`
 
 export const BenefitDescription = styled.p`
   color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
+
   width: 100%;
   text-align: left;
   white-space: pre-wrap;

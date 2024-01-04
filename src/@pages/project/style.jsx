@@ -28,7 +28,7 @@ export const GoormBtn2 = styled(Button)`
   background: var(--light-blue-blue-500-primary, #5094fa);
   color: var(--light-gray-gray-000, #fff);
   text-align: center;
-  font-feature-settings: 'clig' off, 'liga' off;
+
   /* KOR/H6ㅣ1rem */
   font-family: Pretendard;
   font-size: 1rem;

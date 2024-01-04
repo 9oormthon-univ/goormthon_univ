@@ -14,7 +14,7 @@ export const TargetTitle = styled.h2`
 
 export const TargetDetail = styled.h5`
   color: var(--gray-900);
-  font-feature-settings: 'clig' off, 'liga' off;
+
   margin-bottom: 1.5rem;
 `;
 
@@ -40,7 +40,6 @@ export const TargetRowDetailBox = styled(motion.div)`
 
 export const TargetDetailBoxText = styled.p`
   color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
 
   /* KOR/subtitle-1ㅣ0.875rem */
   font-family: Pretendard;

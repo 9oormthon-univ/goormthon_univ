@@ -61,7 +61,6 @@ export const IconWrapper = styled.div`
 `;
 
 export const CardTitleText = styled.h5`
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 1rem;
 `;
 
@@ -112,7 +111,6 @@ export const MonthTextClickable = styled.h5`
   cursor: pointer;
   color: var(--gray-400);
 
-  font-feature-settings: 'clig' off, 'liga' off;
   width: 3.75rem;
   height: 3.75rem;
   display: flex;
