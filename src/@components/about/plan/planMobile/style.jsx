@@ -11,15 +11,13 @@ export const PlanWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  background-color: var(--light-gray-gray-100, #f0f0f5);
+  background-color: var(--gray-100);
 `;
 
 export const TitleText = styled.h3`
   text-align: center;
   margin-bottom: 3.75rem;
   margin-top: 4rem;
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
 `;
 
 export const TimelineWrapper = styled.div`
@@ -46,11 +44,11 @@ export const CardContentsWrapper = styled.div`
 
   & > h5,
   & > p {
-    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
   }
 
   & svg > path {
-    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
   }
 `;
 

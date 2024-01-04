@@ -20,8 +20,6 @@ export const BenefitWrapper = styled.div`
 `;
 
 export const HeaderTitleText = styled.h2`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   width: 100%;
   text-align: start;
   position: absolute;

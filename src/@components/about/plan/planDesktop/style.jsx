@@ -20,8 +20,6 @@ export const PlanWrapper = styled.div`
 export const TitleText = styled.h2`
   text-align: center;
   margin-bottom: 3.63rem;
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
 `;
 
 export const CardWrapper = styled.div`
@@ -63,8 +61,6 @@ export const IconWrapper = styled.div`
 `;
 
 export const CardTitleText = styled.h4`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 1.25rem;
 `;
 
