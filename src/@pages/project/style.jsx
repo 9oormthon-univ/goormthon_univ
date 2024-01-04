@@ -39,15 +39,13 @@ export const GoormBtn2 = styled(Button)`
 `;
 
 export const BodyTitle = styled.h2`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-top: 5rem;
   margin-bottom: 3.88rem;
 `;
 
 export const GoormBtn = styled(Button)`
-  background: var(--semantic-color-theme-primary-transparent-24, rgba(80, 148, 250, 0.24));
-  color: var(--semantic-color-text-text-alternative, #525463);
+  background: var(--primary-transparent-24);
+  color: var(--semantic-color-text-text-alternative);
 `;
 
 export const BtnWrapper = styled.div`
@@ -58,14 +56,11 @@ export const BtnWrapper = styled.div`
 
 export const ProjectBanner = styled.img`
   margin-top: 2.75rem;
-
   width: 70%;
   flex-shrink: 0;
 `;
 
 export const ProjectCardGrid = styled.div`
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(250px, 3fr)); */
   width: 100%;
   margin: 2rem 0;
   display: grid;

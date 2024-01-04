@@ -6,7 +6,7 @@ export const CardContainer = styled(motion.div)`
   flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 
   &:hover {
@@ -18,7 +18,7 @@ export const CardContainer = styled(motion.div)`
 export const CardImgWrapper = styled.div`
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%;
   overflow: hidden;
 `;
 
@@ -46,15 +46,8 @@ export const CardBodyWrapper = styled.div`
   padding: 1rem;
 `;
 
-export const CardTitle = styled.h5`
-  margin: 0;
-  color: #333;
-  font-size: 1.2rem;
-  font-weight: bold;
-`;
+export const CardTitle = styled.h5``;
 
 export const CardContent = styled.p`
-  color: #666;
-  font-size: 1rem;
   margin-top: 0.5rem;
 `;
