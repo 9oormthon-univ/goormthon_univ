@@ -70,7 +70,7 @@ export const NavMenuLink = styled(Link)`
   -webkit-text-decoration: ${(props) => (props.$isActive ? 'underline' : 'none')};
   &:hover {
     border-radius: var(--border-radius-300);
-    background: var(--transparent-8);
+    background: var(--link-transparent-8);
     color: var(--gray-900);
   }
   &:focus {
