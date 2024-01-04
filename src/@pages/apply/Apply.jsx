@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Alert, Button, FormText, Input } from '@goorm-dev/gds-components';
+import { Button } from '@goorm-dev/gds-components';
 import * as S from './style';
 import { dbService } from '../../fbase';
 import { addDoc, collection } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-import { AlertMessage } from '../../@components/layout/navbar/style';
 
 function Apply() {
   const navigate = useNavigate();
@@ -143,7 +142,6 @@ function Apply() {
             <S.ApplyTitle>소속 대학</S.ApplyTitle>
             <S.ApplyInput
               bsSize="xl"
-              containerClassName=""
               maxLength={null}
               type="text"
               name="univ"

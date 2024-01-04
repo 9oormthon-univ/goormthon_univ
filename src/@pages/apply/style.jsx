@@ -32,22 +32,6 @@ export const FormContainer = styled.form`
   padding: 1rem;
 `;
 
-// In your './style' file
-export const SubmitButton = styled.button`
-  background-color: #007bff; // Example color
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 1rem;
-
-  &:hover {
-    background-color: #0056b3; // Example hover color
-  }
-`;
-
 export const ButtonWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -70,34 +54,23 @@ export const FormDescription = styled.div`
   font-size: 1rem;
   color: #333;
   text-align: left;
-  border-radius: var(--Spacing-space-500, 1rem);
-  border: 1px solid var(--light-gray-gray-300, #e1e1e8);
-  background: var(--light-gray-gray-050, #f7f7fa);
+  border-radius: var(--space-500);
+  border: 1px solid var(--gray-300);
+  background: var(--gray-050);
   margin-bottom: 8rem;
   padding: 1.5rem;
 
   ul {
-    padding-left: 20px; /* Add padding for bullet points */
+    padding-left: 20px;
   }
 
   li {
-    margin-bottom: 0.5rem; /* Space between list items */
+    margin-bottom: 0.5rem;
   }
 
   h4 {
-    margin-top: 1rem; /* Space before the heading */
-    margin-bottom: 0.5rem; /* Space after the heading */
-    font-weight: bold;
-  }
-`;
-
-export const Caution2Wrapper = styled.div`
-  padding-left: 2.75rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -114,22 +87,22 @@ export const InputGroup = styled.div`
   width: 100%;
 `;
 
-export const InputGroupText = styled.span`
-  font-size: 1rem;
-  color: #333;
+export const ApplyTitle = styled.h5`
   margin-bottom: 0.5rem;
 `;
 
-export const ApplyTitle = styled.h4`
-  margin-bottom: 0.5rem;
-`;
-export const FormText = styled.p`
-  font-size: 0.875rem;
-  color: #666;
-  margin-top: 0.5rem;
-`;
 export const ApplyTextArea = styled(Input)`
   padding: 0.88rem 1.5rem;
+  color: var(--hint);
+font-feature-settings: 'clig' off, 'liga' off;
+
+/* KOR/paragraph-lgㅣ1rem */
+font-family: Pretendard;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem; /* 150% */
+letter-spacing: -0.00625rem;ㄴ
 `;
 
 export const ApplyInput = styled(Input)`
