@@ -14,7 +14,7 @@ export const IntroWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--light-gray-gray-100, #f0f0f5);
+  background-color: var(--gray-100);
   border-top-left-radius: 3.25rem;
   border-top-right-radius: 3.25rem;
 
@@ -29,14 +29,10 @@ export const HeaderTextWrapper = styled.div`
 `;
 
 export const HeaderTitleText = styled.h2`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   text-align: center;
 `;
 
 export const HeaderDescriptionText = styled.p`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   text-align: center;
 `;
 

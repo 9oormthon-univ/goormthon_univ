@@ -16,8 +16,6 @@ export const BenefitWrapper = styled.div`
 `;
 
 export const HeaderTitleText = styled.h2`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   text-align: start;
   margin-top: 5rem;
 `;
@@ -49,9 +47,9 @@ export const BenefitImg = styled.img`
 
 export const BenefitContentsWrapper = styled.div`
   width: 100%;
-  background-color: var(--light-white-white-light, #fff);
-  border-radius: 0rem 0rem var(--Spacing-space-500, 1rem) var(--Spacing-space-500, 1rem);
-  border: 1px solid var(--light-gray-gray-300, #e1e1e8);
+  background-color: var(--light);
+  border-radius: 0rem 0rem var(--Spacing-space-500) var(--Spacing-space-500);
+  border: 1px solid var(--gray-300);
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -66,23 +64,21 @@ export const BenefitTextWrapper = styled.div`
 `;
 
 export const BenefitTitle = styled.h3`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   width: 100%;
   text-align: left;
 `;
 
 export const BenefitDescription = styled.p`
   color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
+
   width: 100%;
   text-align: left;
   white-space: pre-wrap;
 `;
 
 export const Icon = styled.img`
-  width: var(--size-size-500, 2.5rem);
-  height: var(--size-size-500, 2.5rem);
+  width: var(--size-500);
+  height: var(--size-500);
 `;
 
 export const BenefitListWrapper = styled.div`

@@ -11,8 +11,6 @@ export const RecuritCalendarWrapper = styled(motion.div)`
 `;
 
 export const BodyTitle = styled.h2`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 2.25rem;
 `;
 

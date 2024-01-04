@@ -14,14 +14,12 @@ export const PlanWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  background-color: var(--light-gray-gray-100, #f0f0f5);
+  background-color: var(--gray-100);
 `;
 
 export const TitleText = styled.h2`
   text-align: center;
   margin-bottom: 3.63rem;
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
 `;
 
 export const CardWrapper = styled.div`
@@ -33,7 +31,7 @@ export const CardWrapper = styled.div`
 export const CardContentsWrapper = styled.div`
   width: 22.75rem;
   height: 10.375rem;
-  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--light-gray-gray-050, #f7f7fa)')};
+  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--gray-050)')};
   border-radius: 1rem;
 
   display: flex;
@@ -43,18 +41,18 @@ export const CardContentsWrapper = styled.div`
 
   & > h4,
   & > p {
-    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
   }
 
   & svg > path {
-    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
   }
 
   border: ${({ $isSelected }) => $isSelected && '2px solid #5094FA'};
 `;
 
 export const IconWrapper = styled.div`
-  color: var(--light-black-black, #000);
+  color: var(--black);
   margin-bottom: 0.44rem;
   & > svg {
     width: 1.5rem;
@@ -63,13 +61,11 @@ export const IconWrapper = styled.div`
 `;
 
 export const CardTitleText = styled.h4`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 1.25rem;
 `;
 
 export const CardDescriptionText = styled.p`
-  color: var(--light-black-black, #000);
+  color: var(--black);
   white-space: pre-wrap;
 `;
 
@@ -77,14 +73,14 @@ export const TimelineBar = styled.figure`
   width: -webkit-fill-available;
   height: 2.75rem;
   border-radius: 1.34375rem;
-  background: var(--light-gray-gray-050, #f7f7fa);
+  background: var(--gray-050);
   position: relative;
   margin: 0;
 `;
 
 export const TimelineFillBar = styled.div`
   width: ${({ $fillRatio }) => $fillRatio}%;
-  height: var(--size-size-500, 2.5rem);
+  height: var(--size-500);
   background-color: var(--blue-500);
   border-radius: 1.34375rem;
   position: absolute;
@@ -97,7 +93,7 @@ export const ProgressBar = styled.div`
 
 export const MonthTextWrapper = styled.div`
   width: -webkit-fill-available;
-  height: var(--size-size-500, 2.5rem);
+  height: var(--size-500);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -106,9 +102,8 @@ export const MonthTextWrapper = styled.div`
 export const MonthTextClickable = styled.h5`
   margin: 0;
   cursor: pointer;
-  color: var(--light-gray-gray-400, #cdced6);
+  color: var(--gray-400);
 
-  font-feature-settings: 'clig' off, 'liga' off;
   width: 3.875rem;
   height: 3.875rem;
   display: flex;
@@ -118,7 +113,7 @@ export const MonthTextClickable = styled.h5`
 
   &.active,
   &.prev {
-    color: var(--light-white-white-light, #fff);
+    color: var(--light);
   }
 `;
 

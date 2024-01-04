@@ -8,12 +8,10 @@ export const RecuritBody = styled.div`
   align-items: center;
   @media (max-width: 768px) {
     width: 80%;
-}
+  }
 `;
 
 export const BodyTitle = styled.h2`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 2.25rem;
 `;
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SlidingTextWrapper = styled.aside`
-  background-color: var(--light-black-black, #000);
+  background-color: var(--black);
   width: 100%;
   display: flex;
   align-items: center;
@@ -9,9 +9,7 @@ export const SlidingTextWrapper = styled.aside`
 `;
 
 export const Text = styled.h1`
-  color: #fff;
   text-align: center;
-  font-feature-settings: 'clig' off, 'liga' off;
   font-family: Poppins;
   font-size: 2.375rem;
   font-style: normal;

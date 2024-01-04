@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Input } from '@goorm-dev/gds-components';
 
 export const RecuritBody = styled.div`
   width: 60%;
@@ -12,9 +13,7 @@ export const RecuritBody = styled.div`
 `;
 
 export const BodyTitle = styled.h1`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
-  margin-bottom: 2.25rem;
+  margin-bottom: 4rem;
   margin-top: 6.5rem;
 `;
 
@@ -33,22 +32,6 @@ export const FormContainer = styled.form`
   padding: 1rem;
 `;
 
-// In your './style' file
-export const SubmitButton = styled.button`
-  background-color: #007bff; // Example color
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 1rem;
-
-  &:hover {
-    background-color: #0056b3; // Example hover color
-  }
-`;
-
 export const ButtonWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -61,12 +44,9 @@ export const FormGroup = styled.div`
   margin-bottom: 4rem;
 `;
 
-export const CautionTitle = styled.h5`
-  text-align: center;
+export const CautionTitle = styled.h3`
   margin-left: 1.5rem;
   margin-bottom: 1.25rem;
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
 `;
 
 export const FormDescription = styled.div`
@@ -74,44 +54,32 @@ export const FormDescription = styled.div`
   font-size: 1rem;
   color: #333;
   text-align: left;
-  border-radius: var(--Spacing-space-500, 1rem);
-  background: var(--light-gray-gray-050, #f7f7fa);
-  margin-bottom: 1.5rem;
+  border-radius: var(--space-500);
+  border: 1px solid var(--gray-300);
+  background: var(--gray-050);
+  margin-bottom: 8rem;
   padding: 1.5rem;
 
   ul {
-    padding-left: 20px; /* Add padding for bullet points */
+    padding-left: 20px;
   }
 
   li {
-    margin-bottom: 0.5rem; /* Space between list items */
+    margin-bottom: 0.5rem;
   }
 
   h4 {
-    margin-top: 1rem; /* Space before the heading */
-    margin-bottom: 0.5rem; /* Space after the heading */
-    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
-export const CautionTitle2 = styled.h6`
-  color: var(--light-gray-gray-600-hint, #858899);
-  font-feature-settings: 'clig' off, 'liga' off;
-  margin-bottom: 1.25rem;
-`;
-
-export const Caution2Wrapper = styled.div`
-  padding-left: 2.75rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
+export const CautionWrapper = styled.div`
+  margin-top: 2.5rem;
+  line-height: 1.25rem;
 `;
 export const Caution2Li = styled.li`
-  color: var(--light-gray-gray-600-hint, #858899);
-  font-feature-settings: 'clig' off, 'liga' off;
+  color: var(--hint);
 `;
 
 export const InputGroup = styled.div`
@@ -120,58 +88,22 @@ export const InputGroup = styled.div`
   width: 100%;
 `;
 
-export const InputGroupText = styled.span`
+export const ApplyTitle = styled.h3`
+  margin-bottom: 1rem;
+`;
+
+export const ApplyTextArea = styled(Input)`
+  padding: 0.88rem 1.5rem;
+  color: var(--hint);
+  /* KOR/paragraph-lgㅣ1rem */
+  font-family: Pretendard;
   font-size: 1rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+  letter-spacing: -0.00625rem;
 `;
 
-export const ApplyTitle = styled.h4`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
-  margin-bottom: 0.5rem;
-`;
-export const FormText = styled.p`
-  font-size: 0.875rem;
-  color: #666;
-  margin-top: 0.5rem;
-`;
-export const ApplyTextArea = styled.textarea`
-  width: 100%;
-  flex-grow: 1;
-  height: 9rem;
-  padding: 1rem;
-  padding-left: 1.5rem;
-  resize: none;
-  border-radius: 8px;
-  border: 1px solid #aeafb9;
-  font-size: 1rem;
-  margin-right: 1rem;
-  font-family: inherit;
-  ::placeholder {
-    color: #acacac;
-  }
-  font-weight: 500;
-  @media screen and (max-width: 768px) {
-    height: 11rem;
-  }
-`;
-
-export const ApplyInput = styled.input`
-  flex-grow: 1;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  border: 1px solid #aeafb9;
-  font-size: 1rem;
-  margin-right: 1rem;
-  font-family: inherit;
-
-  ::placeholder {
-    color: #acacac;
-  }
-  font-weight: 500;
-
-  :focus {
-    outline: 2px solid #5094fa;
-  }
+export const ApplyInput = styled(Input)`
+  width: 20rem;
 `;

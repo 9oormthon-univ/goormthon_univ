@@ -16,7 +16,7 @@ export const CautionRowBox = styled.div`
 
 export const CautionTitle = styled.sub`
   color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +38,7 @@ export const CautionTitle = styled.sub`
 
 export const CautionDetail = styled.sub`
   color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
+
   font-family: Pretendard;
   font-size: 1rem;
   font-style: normal;

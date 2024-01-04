@@ -12,8 +12,6 @@ const CautionWrapper = styled.div`
 `;
 
 const BodyTitle = styled.h2`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 2.25rem;
 `;
 

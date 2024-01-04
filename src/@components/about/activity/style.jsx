@@ -15,8 +15,6 @@ export const ActivityWrapper = styled.div`
 `;
 
 export const HeaderTitleText = styled.h2`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   width: 100%;
   text-align: start;
   margin-top: 10.19rem;
@@ -57,7 +55,7 @@ export const ContentBox = styled.article`
   padding: 1.5rem;
   border-radius: 0.5rem;
 
-  border: 1px solid var(--light-gray-gray-300, #e1e1e8);
+  border: 1px solid var(--gray-300);
   background: #fff;
 
   display: flex;
@@ -78,19 +76,11 @@ export const ContentTitleWrapper = styled.div`
   align-items: center;
 `;
 
-export const ContentTitleText = styled.h3`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
-`;
+export const ContentTitleText = styled.h3``;
 
-export const ContentEnTitleText = styled.h6`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
-`;
+export const ContentEnTitleText = styled.h6``;
 
 export const ContentDescriptionText = styled.p`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   max-width: 30rem;
 `;
 

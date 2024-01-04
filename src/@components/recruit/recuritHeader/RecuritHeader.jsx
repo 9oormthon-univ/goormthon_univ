@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './style';
 import UniversityItem from '../UniversityItem/UniversityItem';
 import Universities from '../../../utilities/UnivData';
@@ -19,7 +19,6 @@ const Container = styled.div`
 
 const ImageSlider = styled.div`
   display: flex;
-  /* ImageSlider 컴포넌트의 스타일에서 애니메이션 속성을 이렇게 수정합니다 */
   animation: slide 20s linear infinite;
 
   &:hover {
@@ -35,15 +34,9 @@ const ImageSlider = styled.div`
   }
 `;
 
-const Image = styled.img`
-  width: 100px;
-  margin-right: 10px;
-`;
-
 function RecuritHeader() {
   const [daysRemaining, setDaysRemaining] = useState(0);
   const navigate = useNavigate();
-  const swiperRef = useRef(null);
 
   useEffect(() => {
     // 목표 날짜 설정 (24년 1월 12일)
@@ -80,8 +73,9 @@ function RecuritHeader() {
           구름톤 유니브 2기 모집 중!
           <h4>D-{daysRemaining}</h4>
         </S.HeaderTitleText>
-
-        <S.GoormBtn onClick={() => navigate('/apply')}>유니브 대표 신청</S.GoormBtn>
+        <S.GoormBtn color="primary" size="xl" tag="button" onClick={() => navigate('/apply')}>
+          유니브 대표 신청
+        </S.GoormBtn>
       </S.HeaderTitleWrapper>
       <S.HeaderUnivContainer>
         <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>

@@ -11,15 +11,13 @@ export const PlanWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  background-color: var(--light-gray-gray-100, #f0f0f5);
+  background-color: var(--gray-100);
 `;
 
 export const TitleText = styled.h3`
   text-align: center;
   margin-bottom: 3.75rem;
   margin-top: 4rem;
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
 `;
 
 export const TimelineWrapper = styled.div`
@@ -37,7 +35,7 @@ export const CardWrapper = styled.div`
 export const CardContentsWrapper = styled.div`
   width: 16.375rem;
   height: 100%;
-  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--light-gray-gray-050, #f7f7fa)')};
+  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--gray-050)')};
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -46,11 +44,11 @@ export const CardContentsWrapper = styled.div`
 
   & > h5,
   & > p {
-    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
   }
 
   & svg > path {
-    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--light-gray-gray-500-info, #a9abb8)')};
+    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
   }
 `;
 
@@ -63,7 +61,6 @@ export const IconWrapper = styled.div`
 `;
 
 export const CardTitleText = styled.h5`
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 1rem;
 `;
 
@@ -112,9 +109,8 @@ export const MonthTextWrapper = styled.div`
 export const MonthTextClickable = styled.h5`
   margin: 0;
   cursor: pointer;
-  color: var(--light-gray-gray-400, #cdced6);
+  color: var(--gray-400);
 
-  font-feature-settings: 'clig' off, 'liga' off;
   width: 3.75rem;
   height: 3.75rem;
   display: flex;
@@ -122,11 +118,11 @@ export const MonthTextClickable = styled.h5`
   align-items: center;
   z-index: 1;
 
-  background-color: var(--light-gray-gray-050, #f7f7fa);
+  background-color: var(--gray-050);
   border-radius: 50%;
   &.active,
   &.prev {
-    color: var(--light-white-white-light, #fff);
+    color: var(--light);
     background-color: var(--blue-500);
     border-radius: 50%;
   }

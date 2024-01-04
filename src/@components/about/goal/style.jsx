@@ -12,7 +12,7 @@ export const GoalWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--light-gray-gray-900, #2b2d36);
+  background-color: var(--gray-900);
 
   @media screen and (max-width: 1024px) {
     justify-content: start;
@@ -37,8 +37,7 @@ export const HeaderTextWrapper = styled.div`
 `;
 
 export const HeaderTitleText = styled.h3`
-  color: var(--light-white-white-light, #fff);
-  font-feature-settings: 'clig' off, 'liga' off;
+  color: var(--light);
   z-index: 2;
   white-space: pre-wrap;
 
@@ -48,8 +47,7 @@ export const HeaderTitleText = styled.h3`
 `;
 
 export const HeaderDescriptionText = styled.h6`
-  color: var(--light-white-white-light, #fff);
-  font-feature-settings: 'clig' off, 'liga' off;
+  color: var(--light);
   z-index: 2;
 `;
 

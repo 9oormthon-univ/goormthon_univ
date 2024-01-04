@@ -10,7 +10,7 @@ export const FooterWrapper = styled.div`
   width: 100%;
   height: 8rem;
   padding: 0.5rem 2rem;
-  background: var(--basic-color-gray-gray-950, #252730);
+  background: var(--gray-950);
 `;
 
 export const SocialContainer = styled.div`
@@ -24,8 +24,8 @@ export const SocialContainer = styled.div`
 `;
 
 export const FooterSlogan = styled.h3`
-  color: var(--light-gray-gray-700-alternative, #525463);
-  font-feature-settings: 'clig' off, 'liga' off;
+  color: var(--alternative);
+
   margin: 0;
   white-space: nowrap;
   display: flex;
@@ -40,7 +40,7 @@ export const FooterSlogan = styled.h3`
 `;
 
 export const SocialIcon = styled.a`
-  color: var(--light-gray-gray-700-alternative, #525463);
+  color: var(--alternative);
   text-decoration: none;
   font-size: 1.5rem;
 

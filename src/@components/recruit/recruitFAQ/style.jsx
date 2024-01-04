@@ -10,13 +10,11 @@ export const RecuritFAQWrapper = styled(motion.div)`
 
 export const QuestionText = styled.h6`
   color: var(--semantic-color-text-text-normal, #2b2d36);
-  font-feature-settings: 'clig' off, 'liga' off;
+
   margin: 0px;
 `;
 
 export const BodyTitle = styled.h2`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 2.25rem;
 `;
 
@@ -27,7 +25,7 @@ export const FAQBox = styled.div`
 
 export const AnswerText = styled.p`
   color: var(--semantic-color-text-text-normal, #2b2d36);
-  font-feature-settings: 'clig' off, 'liga' off;
+
   margin-top: 1.5rem;
   @media (max-width: 768px) {
     font-size: 0.85rem;

@@ -161,7 +161,7 @@ function Navbar() {
                     height="2rem"
                     width="2rem"
                     className="ChevronRightIcon__icon"
-                    color="#000000"
+                    color="#000"
                     onClick={sideBarClose}
                   />
                 </S.NavSideBarHeader>

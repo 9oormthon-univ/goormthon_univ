@@ -33,8 +33,6 @@ export const HeaderTextWrapper = styled.div`
 `;
 
 export const HeaderTitleText = styled.h1`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   text-align: center;
   @media screen and (max-width: 479px) {
     width: 22rem;
@@ -42,8 +40,6 @@ export const HeaderTitleText = styled.h1`
 `;
 
 export const HeaderDescriptionText = styled.h4`
-  color: var(--light-black-black, #000);
-  font-feature-settings: 'clig' off, 'liga' off;
   text-align: center;
 `;
 

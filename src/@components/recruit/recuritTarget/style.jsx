@@ -9,14 +9,12 @@ export const TargetContainer = styled(motion.div)`
 `;
 
 export const TargetTitle = styled.h2`
-  color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
   margin-bottom: 2.25rem;
 `;
 
 export const TargetDetail = styled.h5`
-  color: var(--light-gray-gray-900, #2b2d36);
-  font-feature-settings: 'clig' off, 'liga' off;
+  color: var(--gray-900);
+
   margin-bottom: 1.5rem;
 `;
 
@@ -37,12 +35,11 @@ export const TargetRowDetailBox = styled(motion.div)`
   gap: 0.5rem;
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
-  background: var(--light-gray-gray-100, #f0f0f5);
+  background: var(--gray-100);
 `;
 
 export const TargetDetailBoxText = styled.p`
   color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
 
   /* KOR/subtitle-1ㅣ0.875rem */
   font-family: Pretendard;
