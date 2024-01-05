@@ -65,6 +65,12 @@ export const ModalOverview = styled.h6`
   color: var(--alternative);
 `;
 
+export const BadgeWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+`;
+
 export const ModalMemberWrapper = styled.div`
   display: flex;
   flex-direction: row;

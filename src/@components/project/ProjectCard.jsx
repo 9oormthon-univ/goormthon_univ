@@ -87,6 +87,7 @@ function ProjectCard({
       </S.CardContainer>
       {isModalOpen && (
         <ProjectModal
+          award={award}
           title={title}
           content={content}
           image={image}

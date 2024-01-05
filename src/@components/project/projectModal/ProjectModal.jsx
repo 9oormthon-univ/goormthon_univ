@@ -1,9 +1,10 @@
-import { Button } from '@goorm-dev/gds-components';
+import { Badge, Button } from '@goorm-dev/gds-components';
 import { GithubIcon } from '@goorm-dev/gds-icons';
 import React, { useEffect, useRef } from 'react';
 import * as S from './style';
 
 export default function ProjectModal({
+  award,
   title,
   content,
   image,
@@ -37,6 +38,15 @@ export default function ProjectModal({
         <S.ModalCloseBtn onClick={() => setModalOpen(false)}>X</S.ModalCloseBtn>
         <S.ModalTitle>{title}</S.ModalTitle>
         <S.ModalOverview>{content}</S.ModalOverview>
+        <S.BadgeWrapper>
+          <Badge color="dark" size="md" toggle={null}>
+            {award}
+          </Badge>
+          <Badge color="primary" size="md" toggle={null}>
+            {releaseLink === '' ? '' : '서비스 중'}
+          </Badge>
+        </S.BadgeWrapper>
+
         <S.ModalPosterImg src={image} alt="project__poster-img" />
         <S.ModalContent>
           <S.ModalMemberWrapper>
