@@ -12,7 +12,6 @@ export default function ActivityList() {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const isMobile = window.innerWidth <= 768; // 768px 미만을 모바일로 간주
-      console.log(scrollY);
       // 모바일 및 데스크탑 환경에 따른 스크롤 위치 조정
       const mobileBreakpoints = [5400, 6300, 6500]; // 모바일용 브레이크포인트
       const desktopBreakpoints = [3800, 4100, 4500]; // 데스크탑용 브레이크포인트
