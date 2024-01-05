@@ -3,6 +3,14 @@ import React from 'react';
 import * as S from './style';
 
 export default function ActivityItem({ idx, imgSrc, title, title_en, description }) {
+  const renderContent = (answer) => {
+    return answer.split('\n').map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ));
+  };
   return (
     <S.ActivityItemWrapper $idx={idx}>
       <S.ContentBox>
@@ -10,7 +18,7 @@ export default function ActivityItem({ idx, imgSrc, title, title_en, description
           <S.ContentTitleText>{title}</S.ContentTitleText>
           <S.ContentEnTitleText>{title_en}</S.ContentEnTitleText>
         </S.ContentTitleWrapper>
-        <S.ContentDescriptionText>{description}</S.ContentDescriptionText>
+        <S.ContentDescriptionText>{renderContent(description)}</S.ContentDescriptionText>
       </S.ContentBox>
       <S.ContentImg src={imgSrc} />
     </S.ActivityItemWrapper>

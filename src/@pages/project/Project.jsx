@@ -46,8 +46,14 @@ export default function Project() {
                   award={project.award}
                   title={project.title}
                   content={project.content}
-                  link={project.link}
+                  backendLink={project.backendLink}
+                  frontendLink={project.frontendLink}
+                  releaseLink={project.releaseLink}
                   image={project.image}
+                  pm={project.pm}
+                  design={project.design}
+                  frontend={project.frontend}
+                  backend={project.backend}
                 />
               ))}
             </S.ProjectCardGrid>

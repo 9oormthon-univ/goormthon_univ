@@ -8,7 +8,7 @@ export default function BenefitDesktop() {
   return (
     <S.BenefitWrapper>
       <GridContainer>
-        <S.HeaderTitleText>9oormthonUNIV의 일원이 된다면,</S.HeaderTitleText>
+        <S.HeaderTitleText>구름톤유니브에서 마음껏 누려요!</S.HeaderTitleText>
         <HorizontalScroll />
       </GridContainer>
     </S.BenefitWrapper>

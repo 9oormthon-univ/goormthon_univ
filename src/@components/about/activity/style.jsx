@@ -16,7 +16,7 @@ export const ActivityWrapper = styled.div`
 
 export const HeaderTitleText = styled.h2`
   width: 100%;
-  text-align: start;
+  text-align: center;
   margin-top: 10.19rem;
   @media screen and (max-width: 479px) {
     margin-top: 5.81rem;
@@ -25,24 +25,30 @@ export const HeaderTitleText = styled.h2`
 
 export const ActivityItemWrapper = styled.div`
   display: flex;
-  gap: 1.5rem;
-  flex-flow: ${({ $idx }) => ($idx % 2 === 0 ? 'unset' : 'row-reverse')};
+  gap: 1rem;
 
-  @media screen and (max-width: 1278px) {
+  /* flex-flow: ${({ $idx }) => ($idx === 2 ? 'unset' : '')}; */
     flex-direction: column;
     flex-flow: column-reverse;
-  }
+  /* @media screen and (max-width: 1278px) {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  } */
 `;
 
 export const ActivityListWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 15.31rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
   width: 100%;
   margin-top: 3.94rem;
   margin-bottom: 14.81rem;
 
+  /* Adjust the gap as needed for responsiveness */
   @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
     gap: 3.94rem;
   }
 
@@ -50,44 +56,43 @@ export const ActivityListWrapper = styled.div`
     margin-bottom: 5.81rem;
   }
 `;
-
 export const ContentBox = styled.article`
-  padding: 1.5rem;
   border-radius: 0.5rem;
-
-  border: 1px solid var(--gray-300);
-  background: #fff;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
-  height: 10.75rem;
+  height: 8.75rem;
   min-width: 21rem;
 
-  @media screen and (max-width: 1278px) {
+  /* @media screen and (max-width: 1278px) {
     height: 100%;
-  }
+  } */
 `;
 
 export const ContentTitleWrapper = styled.div`
   display: flex;
   gap: 1.06rem;
-  align-items: center;
+  align-items: flex-end;
 `;
 
 export const ContentTitleText = styled.h3``;
 
-export const ContentEnTitleText = styled.h6``;
+export const ContentEnTitleText = styled.h6`
+  color: var(--info);
+`;
 
 export const ContentDescriptionText = styled.p`
-  max-width: 30rem;
+  align-self: flex-start;
+
+  max-width: 100%;
 `;
 
 export const ContentImg = styled.img`
-  @media screen and (max-width: 1278px) {
+  width: 100%;
+  max-width: 100%;
+  /* @media screen and (max-width: 1278px) {
     width: 100%;
     max-width: 100%;
   }
-  max-width: 39.75rem;
+  max-width: 30.75rem; */
 `;
