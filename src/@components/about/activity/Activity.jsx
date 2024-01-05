@@ -8,7 +8,7 @@ export default function Activity() {
   return (
     <S.ActivityWrapper>
       <GridContainer>
-        <S.HeaderTitleText>이런 활동들을 해요!</S.HeaderTitleText>
+        <S.HeaderTitleText>구름톤유니브의 일원이 된다면,</S.HeaderTitleText>
         <ActivityList />
       </GridContainer>
     </S.ActivityWrapper>
