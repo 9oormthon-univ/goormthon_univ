@@ -24,6 +24,15 @@ export const Modal = styled.div`
   margin: 1.5rem;
 `;
 
+export const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 2.5em;
+`;
+
 export const ModalCloseBtn = styled.button`
   position: absolute;
 
@@ -48,13 +57,38 @@ export const ModalContent = styled.div`
   text-align: center;
 `;
 
-export const ModalTitle = styled.h2`
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  color: #333;
+export const ModalTitle = styled.h3`
+  margin-bottom: 0.5rem;
 `;
 
-export const ModalOverview = styled.p`
-  font-size: 1.1.rem;
-  color: #666;
+export const ModalOverview = styled.h6`
+  color: var(--alternative);
+`;
+
+export const ModalMemberWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1rem;
+`;
+
+export const ModalMemberRowContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  justify-content: start;
+  align-items: flex-start;
+`;
+
+export const ModalMemberRowContentDetail = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const PartText = styled.h5``;
+export const NameText = styled.h6`
+  color: var(--hint);
 `;
