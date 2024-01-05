@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import * as S from './style';
 
 export default function BenefitItem({ imgSrc, iconSrc, bgColor, title, description, url }) {
   return (
-    <Link to={url} target="\_blank">
+    <S.BenefitLink to={url} target="\_blank">
       <S.BenefitItemWrapper>
         <S.BenefitImgWrapper $bgColor={bgColor}>
           <S.BenefitImg src={imgSrc} />
@@ -17,6 +17,6 @@ export default function BenefitItem({ imgSrc, iconSrc, bgColor, title, descripti
           <S.Icon src={iconSrc} />
         </S.BenefitContentsWrapper>
       </S.BenefitItemWrapper>
-    </Link>
+    </S.BenefitLink>
   );
 }

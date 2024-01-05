@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const BenefitWrapper = styled.div`
   height: 100vh;
@@ -44,6 +45,10 @@ export const BenefitImgWrapper = styled.div`
 export const BenefitImg = styled.img`
   width: max-content;
   height: max-content;
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const BenefitContentsWrapper = styled.div`
@@ -70,7 +75,6 @@ export const BenefitTitle = styled.h3`
 
 export const BenefitDescription = styled.p`
   color: #000;
-
   width: 100%;
   text-align: left;
   white-space: pre-wrap;
@@ -79,4 +83,10 @@ export const BenefitDescription = styled.p`
 export const Icon = styled.img`
   width: var(--size-500);
   height: var(--size-500);
+`;
+
+export const BenefitLink = styled(Link)`
+  &:hover {
+    text-decoration: none;
+  }
 `;

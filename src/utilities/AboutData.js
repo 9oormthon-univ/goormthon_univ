@@ -95,7 +95,7 @@ export const BENEFIT_ITEM_DATA = [
   {
     imgSrc: IdeImg,
     iconSrc: IdeIcon,
-    bgColor: 'var(--light-gray-gray-950, #252730)',
+    bgColor: 'var(--gray-950)',
     title: '구름 IDE',
     description: '손쉽게 개발환경을 만들고\n효율적으로 협업해요',
     url: 'https://ide.goorm.io/',
@@ -111,7 +111,7 @@ export const BENEFIT_ITEM_DATA = [
   {
     imgSrc: EduImg,
     iconSrc: EduIcon,
-    bgColor: 'var(--light-blue-blue-400, #74AAFB)',
+    bgColor: 'var(--blue-400, #74AAFB)',
     title: '구름 EDU',
     description: '교육 도구의 설치 없이\n수준 높은 IT교육을 받아요',
     url: 'https://edu.goorm.io/',
@@ -127,7 +127,7 @@ export const BENEFIT_ITEM_DATA = [
   {
     imgSrc: KakaoImg,
     iconSrc: KakaoIcon,
-    bgColor: 'var(--light-yellow-yellow-300, #FFD54F)',
+    bgColor: 'var(--yellow-300, #FFD54F)',
     title: '카카오 클라우드',
     description: '유연하고 확장성 높은\n클라우드 인프라를 누려요',
     url: 'https://www.kakaocorp.com/page/service/service/KakaoCloud',
