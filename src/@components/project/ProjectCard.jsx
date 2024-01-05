@@ -3,7 +3,20 @@ import ProjectModal from './projectModal/ProjectModal';
 
 import * as S from './style';
 
-function ProjectCard({ index, award, title, content, link, image }) {
+function ProjectCard({
+  index,
+  award,
+  title,
+  content,
+  backendLink,
+  frontendLink,
+  releaseLink,
+  image,
+  pm,
+  design,
+  frontend,
+  backend,
+}) {
   // 애니메이션 설정
   const variants = {
     hidden: { opacity: 0, y: 0 },
@@ -68,7 +81,21 @@ function ProjectCard({ index, award, title, content, link, image }) {
           <S.CardContent>{content}</S.CardContent>
         </S.CardBodyWrapper>
       </S.CardContainer>
-      {isModalOpen && <ProjectModal title={title} content={content} image={image} setModalOpen={setModalOpen} />}
+      {isModalOpen && (
+        <ProjectModal
+          title={title}
+          content={content}
+          image={image}
+          backendLink={backendLink}
+          frontendLink={frontendLink}
+          releaseLink={releaseLink}
+          pm={pm}
+          design={design}
+          frontend={frontend}
+          backend={backend}
+          setModalOpen={setModalOpen}
+        />
+      )}
     </>
   );
 }

@@ -1,7 +1,19 @@
 import React, { useEffect, useRef } from 'react';
 import * as S from './style';
 
-export default function ProjectModal({ title, content, image, setModalOpen }) {
+export default function ProjectModal({
+  title,
+  content,
+  image,
+  backendLink,
+  frontendLink,
+  releaseLink,
+  pm,
+  design,
+  frontend,
+  backend,
+  setModalOpen,
+}) {
   const modalRef = useRef();
 
   useEffect(() => {
@@ -25,6 +37,40 @@ export default function ProjectModal({ title, content, image, setModalOpen }) {
         <S.ModalContent>
           <S.ModalTitle>{title}</S.ModalTitle>
           <S.ModalOverview>{content}</S.ModalOverview>
+          {/* Display URLs */}
+          <div>
+            {backendLink && (
+              <p>
+                Backend GitHub:{' '}
+                <a href={backendLink} target="_blank" rel="noopener noreferrer">
+                  {backendLink}
+                </a>
+              </p>
+            )}
+            {frontendLink && (
+              <p>
+                Frontend GitHub:{' '}
+                <a href={frontendLink} target="_blank" rel="noopener noreferrer">
+                  {frontendLink}
+                </a>
+              </p>
+            )}
+            {releaseLink && (
+              <p>
+                Release URL:{' '}
+                <a href={releaseLink} target="_blank" rel="noopener noreferrer">
+                  {releaseLink}
+                </a>
+              </p>
+            )}
+          </div>
+          {/* Team Members */}
+          <div>
+            <p>PM: {pm}</p>
+            <p>Design: {design}</p>
+            <p>Frontend: {frontend.join(', ')}</p>
+            <p>Backend: {backend.join(', ')}</p>
+          </div>
         </S.ModalContent>
       </S.Modal>
     </S.ModalContainer>
