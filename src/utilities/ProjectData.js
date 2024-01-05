@@ -96,7 +96,7 @@ const DanpoongProject2023Data = [
       '‘뜬구름’은 당신의 뜬구름잡는 생각, 고민, 아이디어 등을 메모해두었다가 타래를 적어가며 발전시킬 수 있는 서비스입니다. 거기에, 소중한 생각을 당신이 잊어버리지 않도록 알림도 보내드려요.',
     backendLink: 'https://github.com/goormthon-Univ/TEAM_4_BE.git',
     frontendLink: 'https://github.com/goormthon-Univ/TEAM_4.git',
-    releaseLink: 'www.ddngoorm.xyz',
+    releaseLink: 'http://www.ddngoorm.xyz',
     image: Team4,
     pm: '최윤서',
     design: '박현서',

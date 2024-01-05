@@ -46,8 +46,21 @@ export const CardBedge = styled.span`
   font-size: 0.9rem;
 `;
 
+export const BadgeWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+`;
+export const cardBodyHeader = styled.div`
+  margin-bottom: 1rem;
+`;
+
 export const CardBodyWrapper = styled.div`
   padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const CardTitle = styled.h5``;

@@ -1,3 +1,4 @@
+import { Badge } from '@goorm-dev/gds-components';
 import React, { useRef, useEffect, useState } from 'react';
 import ProjectModal from './projectModal/ProjectModal';
 
@@ -68,17 +69,20 @@ function ProjectCard({
       >
         <S.CardImgWrapper>
           <S.CardImg src={image} />
-          {award ? (
-            <>
-              <S.CardBedge>{award}</S.CardBedge>
-            </>
-          ) : (
-            <></>
-          )}
         </S.CardImgWrapper>
         <S.CardBodyWrapper>
-          <S.CardTitle>{title}</S.CardTitle>
-          <S.CardContent>{content}</S.CardContent>
+          <S.cardBodyHeader>
+            <S.CardTitle>{title}</S.CardTitle>
+            <S.CardContent>{content}</S.CardContent>
+          </S.cardBodyHeader>
+          <S.BadgeWrapper>
+            <Badge color="dark" size="md" toggle={null}>
+              {award}
+            </Badge>
+            <Badge color="primary" size="md" toggle={null}>
+              {releaseLink === '' ? '' : '서비스 중'}
+            </Badge>
+          </S.BadgeWrapper>
         </S.CardBodyWrapper>
       </S.CardContainer>
       {isModalOpen && (
