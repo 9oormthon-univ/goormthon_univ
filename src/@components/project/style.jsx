@@ -29,6 +29,10 @@ export const CardImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const CardBedge = styled.span`

@@ -44,8 +44,8 @@ export const BodyTitle = styled.h2`
 `;
 
 export const GoormBtn = styled(Button)`
-  background: var(--primary-transparent-24);
-  color: var(--semantic-color-text-text-alternative);
+  /* background: var(--primary-transparent-24);
+  color: var(--semantic-color-text-text-alternative); */
 `;
 
 export const BtnWrapper = styled.div`

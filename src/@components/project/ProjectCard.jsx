@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import ProjectModal from './projectModal/ProjectModal';
 
 import * as S from './style';
 
@@ -8,8 +9,13 @@ function ProjectCard({ index, award, title, content, link, image }) {
     hidden: { opacity: 0, y: 0 },
     visible: { opacity: 1, y: 0 },
   };
+  //
   const cardRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+
+  // 모달 오픈
+  const [isModalOpen, setModalOpen] = useState(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -36,30 +42,34 @@ function ProjectCard({ index, award, title, content, link, image }) {
   }, []);
 
   return (
-    <S.CardContainer
-      ref={cardRef}
-      onClick={() => window.open(link, '_blank')}
-      key={index}
-      variants={variants}
-      initial="hidden"
-      animate={isVisible ? 'visible' : 'hidden'}
-      transition={{ duration: 0.4, delay: index * 0.3 }}
-    >
-      <S.CardImgWrapper>
-        <S.CardImg src={image} />
-        {award ? (
-          <>
-            <S.CardBedge>{award}</S.CardBedge>
-          </>
-        ) : (
-          <></>
-        )}
-      </S.CardImgWrapper>
-      <S.CardBodyWrapper>
-        <S.CardTitle>{title}</S.CardTitle>
-        <S.CardContent>{content}</S.CardContent>
-      </S.CardBodyWrapper>
-    </S.CardContainer>
+    <>
+      <S.CardContainer
+        ref={cardRef}
+        onClick={() => setModalOpen(true)}
+        // onClick={() => window.open(link, '_blank')}
+        key={index}
+        variants={variants}
+        initial="hidden"
+        animate={isVisible ? 'visible' : 'hidden'}
+        transition={{ duration: 0.4, delay: index * 0.3 }}
+      >
+        <S.CardImgWrapper>
+          <S.CardImg src={image} />
+          {award ? (
+            <>
+              <S.CardBedge>{award}</S.CardBedge>
+            </>
+          ) : (
+            <></>
+          )}
+        </S.CardImgWrapper>
+        <S.CardBodyWrapper>
+          <S.CardTitle>{title}</S.CardTitle>
+          <S.CardContent>{content}</S.CardContent>
+        </S.CardBodyWrapper>
+      </S.CardContainer>
+      {isModalOpen && <ProjectModal title={title} content={content} image={image} setModalOpen={setModalOpen} />}
+    </>
   );
 }
 
