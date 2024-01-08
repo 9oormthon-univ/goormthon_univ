@@ -76,7 +76,7 @@ export const NavMenuLink = styled(Link)`
   &:focus {
     color: var(--gray-900);
   }
-  @media (max-width: 768px) {
+  @media (max-width: 479px) {
     font-size: 1.3rem;
   }
 `;
