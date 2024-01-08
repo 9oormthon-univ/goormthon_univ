@@ -10,23 +10,24 @@ function RecuritHeader() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // 탁겟일 
-    const targetDate = new Date('2024-01-08');
-    // 현재일 
+    // 탁겟일
+    const targetDate = new Date('2024-01-13T00:00:00+09:00');
+
+    // 현재일
     const currentDate = new Date();
-    // 남은 시간 
+    // 남은 시간
     const timeRemaining = targetDate - currentDate;
     setDaysRemaining(Math.floor(timeRemaining / (1000 * 60 * 60 * 24)));
-    setIsRecruitmentOver(currentDate >= targetDate);
+    setIsRecruitmentOver(currentDate > targetDate);
   }, []);
 
   // 버튼 클릭시
   const handleButtonClick = () => {
-    // 모집기간 지났을때 구글폼으로 
+    // 모집기간 지났을때 구글폼으로
     if (isRecruitmentOver) {
       window.open('https://forms.gle/dn3EWJtAK1VWtzTu6', '_blank');
     } else {
-      // 그 외에는 모집 페이지로 
+      // 그 외에는 모집 페이지로
       navigate('/apply');
     }
   };
