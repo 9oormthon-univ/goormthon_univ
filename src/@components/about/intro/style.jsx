@@ -23,10 +23,9 @@ export const MainCloudDownImg = styled.div`
 `;
 
 export const IntroWrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   margin-top: 100vh;
-  @supports (height: 100dvh) {
-    height: 100dvh;
+  @supports (margin-top: 100dvh) {
     margin-top: 100dvh;
   }
 
@@ -39,10 +38,6 @@ export const IntroWrapper = styled.div`
   background-color: var(--gray-000);
   border-top: 1px solid var(--gray-000);
   border-bottom: 1px solid var(--gray-000);
-
-  @media screen and (max-width: 479px) {
-    height: 120vh;
-  }
 `;
 
 export const HeaderTextWrapper = styled.div`
@@ -53,6 +48,7 @@ export const HeaderTextWrapper = styled.div`
 export const HeaderTitleText = styled.h5`
   text-align: center;
   color: var(--gray-600);
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
 `;
 

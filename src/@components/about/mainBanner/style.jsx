@@ -36,7 +36,7 @@ export const HeaderTextWrapper = styled.div`
 
   /* container-xl */
   @media screen and (min-width: 1200px) {
-    margin-top: 13.13rem;
+    margin-top: 10rem;
     gap: var(--size-500);
   }
 `;
