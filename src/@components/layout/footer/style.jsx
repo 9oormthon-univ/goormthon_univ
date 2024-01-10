@@ -10,13 +10,13 @@ export const FooterWrapper = styled.div`
   width: 100%;
   height: 8rem;
   padding: 0.5rem 2rem;
-  background: var(--gray-950);
+  background: var(--gray-100);
 `;
 
 export const SocialContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1.5rem;
 
   @media screen and (max-width: 379px) {
     gap: 1rem;
@@ -24,7 +24,7 @@ export const SocialContainer = styled.div`
 `;
 
 export const FooterSlogan = styled.h3`
-  color: var(--alternative);
+  color: var(--gray-400);
 
   margin: 0;
   white-space: nowrap;
