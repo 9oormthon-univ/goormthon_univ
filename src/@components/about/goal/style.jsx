@@ -1,120 +1,138 @@
 import styled from 'styled-components';
 
 export const GoalWrapper = styled.div`
-  height: 100vh;
+  height: calc(100vh + 12.9375rem);
   @supports (height: 100dvh) {
-    height: 100dvh;
+    height: calc(100dvh + 12.9375rem);
   }
 
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   background-color: var(--gray-900);
-
-  @media screen and (max-width: 1024px) {
-    justify-content: start;
-  }
 `;
 
 export const HeaderTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: start;
 
-  @media screen and (max-width: 1024px) {
-    justify-content: start;
-    margin-top: 9.81rem;
+  /* container-xs */
+  @media screen and (min-width: 0px) {
+    margin-bottom: 6.25rem;
   }
 
-  @media screen and (max-width: 479px) {
-    justify-content: start;
-    margin-top: 5.81rem;
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    gap: 1.5rem;
+    margin-bottom: 6.67rem;
+  }
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    gap: var(--space-700);
+    align-items: start;
+    margin-bottom: 0;
   }
 `;
 
 export const HeaderTitleText = styled.h3`
-  color: var(--light);
-  z-index: 2;
-  var(--gray-000)-space: pre-wrap;
+  color: var(--gray-000);
+  white-space: pre-wrap;
+  text-align: start;
 
-  @media screen and (max-width: 479px) {
-    var(--gray-000)-space: unset;
+  /* container-xs */
+  @media screen and (min-width: 0px) {
+    display: none;
+  }
+
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    display: block;
+    text-align: center;
+  }
+
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    display: block;
+    text-align: start;
   }
 `;
 
-export const HeaderDescriptionText = styled.h6`
-  color: var(--light);
-  z-index: 2;
+export const HeaderTitleTextSmall = styled.h4`
+  color: var(--gray-000);
+  white-space: pre-wrap;
+  text-align: center;
+
+  /* container-xs */
+  @media screen and (min-width: 0px) {
+    display: block;
+  }
+
+  /* container-md, xl */
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const HeaderDescriptionText = styled.h5`
+  color: var(--gray-500);
+
+  /* container-xs */
+  @media screen and (min-width: 0px) {
+    display: none;
+  }
+
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    display: block;
+    text-align: center;
+    margin-top: 12.9375rem;
+  }
+
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    display: block;
+    text-align: start;
+  }
+`;
+
+export const HeaderDescriptionTextSmall = styled.h6`
+  color: var(--gray-500);
+  text-align: center;
+
+  /* container-xs */
+  @media screen and (min-width: 0px) {
+    display: block;
+  }
+
+  /* container-md, xl */
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const ContentsWrapper = styled.div`
+  display: flex;
+
+  /* container-xs, md */
+  flex-direction: column;
+
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 `;
 
 export const Img = styled.img`
-  width: max-content;
-  height: max-content;
+  /* container-xs,md */
+  width: 34.25rem;
+  height: 31.375rem;
 
-  position: absolute;
-  bottom: 0;
-
-  right: 8.69rem;
-  @media screen and (max-width: 1279px) {
-    right: 4.69rem;
-  }
-
-  z-index: 1;
-
-  @media screen and (max-width: 1024px) {
-    width: 30rem;
-    right: 4rem;
-  }
-
-  @media screen and (max-width: 479px) {
-    width: 30rem;
-    right: 50%;
-    bottom: 0;
-    transform: translateX(50%);
-
-    /* 추후 수정 필요 */
-    display: none;
-  }
-`;
-
-export const MovingImg = styled.img`
-  width: max-content;
-  height: max-content;
-
-  position: absolute;
-  bottom: 0;
-
-  right: 29.4rem;
-  @media screen and (max-width: 1279px) {
-    right: 25.4rem;
-  }
-
-  @media screen and (max-width: 1024px) {
-    width: 1rem;
-    right: 17.3rem;
-  }
-
-  @media screen and (max-width: 479px) {
-    width: 1rem;
-    right: 46%;
-    height: 20rem;
-    transform: translateX(46%);
-
-    /* 추후 수정 필요 */
-    display: none;
-  }
-`;
-
-export const WholeImg = styled.img`
-  display: none;
-  width: 26rem;
-  position: absolute;
-  bottom: 0;
-
-  @media screen and (max-width: 479px) {
-    display: block;
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    width: 48.9375rem;
+    height: 44.8125rem;
   }
 `;

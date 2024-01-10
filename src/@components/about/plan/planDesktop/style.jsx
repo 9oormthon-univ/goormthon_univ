@@ -66,7 +66,7 @@ export const CardTitleText = styled.h4`
 
 export const CardDescriptionText = styled.p`
   color: var(--black);
-  var(--gray-000)-space: pre-wrap;
+  white-space: pre-wrap;
 `;
 
 export const TimelineBar = styled.figure`

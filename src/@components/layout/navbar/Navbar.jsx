@@ -114,9 +114,9 @@ function Navbar() {
     });
   };
 
-  //윈도우가 479px 이하면  모바일버전을 연다
+  //윈도우가 576px 이하면  모바일버전을 연다
   const resizingHandler = () => {
-    if (window.innerWidth <= 479) {
+    if (window.innerWidth <= 576) {
       setisMobile(true);
     } else {
       setisMobile(false);

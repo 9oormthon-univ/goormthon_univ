@@ -73,7 +73,7 @@ export const BenefitDescription = styled.p`
 
   width: 100%;
   text-align: left;
-  var(--gray-000)-space: pre-wrap;
+  white-space: pre-wrap;
 `;
 
 export const Icon = styled.img`

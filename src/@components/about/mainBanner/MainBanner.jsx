@@ -7,6 +7,7 @@ export default function MainBanner({ scrollTrigger }) {
     <S.MainBannerWrapper className="-container-xl-">
       <S.HeaderTextWrapper>
         <S.HeaderDescriptionText>사계절, 구름과 함께</S.HeaderDescriptionText>
+        <S.HeaderDescriptionTextSmall>사계절, 구름과 함께</S.HeaderDescriptionTextSmall>
         <S.HeaderTitle src={MainBannerSlogan} />
       </S.HeaderTextWrapper>
       <S.MainImgWrapper>
