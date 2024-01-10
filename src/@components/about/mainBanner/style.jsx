@@ -64,6 +64,31 @@ export const HeaderTitle = styled.img`
 export const HeaderDescriptionText = styled.h3`
   text-align: center;
   color: var(--gray-300);
+
+  /* container-xs */
+  @media screen and (min-width: 0px) {
+    display: none;
+  }
+
+  /* container-md, xl */
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+`;
+
+export const HeaderDescriptionTextSmall = styled.h5`
+  text-align: center;
+  color: var(--gray-300);
+
+  /* container-xs */
+  @media screen and (min-width: 0px) {
+    display: block;
+  }
+
+  /* container-md, xl */
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const MainImgWrapper = styled.div`
@@ -98,7 +123,7 @@ export const MainImg = styled(MainBannerImg)`
   stroke-dasharray: 500;
   transition: stroke-dashoffset 0.5s ease-in-out;
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 `;
@@ -114,7 +139,7 @@ export const MainSmallImg = styled(MainBannerSmallImg)`
   stroke-dasharray: 500;
   transition: stroke-dashoffset 0.5s ease-in-out;
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 576px) {
     display: block;
   }
 `;
