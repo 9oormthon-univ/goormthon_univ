@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { MenuIcon } from '@goorm-dev/gds-icons';
 
 export const NavWrapper = styled.div`
-  background-color: #fff;
+  background-color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-950)' : 'var(--gray-000)')};
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -63,18 +64,18 @@ export const NavMonitorMenu = styled.div`
 
 // 네브링크
 export const NavMenuLink = styled(Link)`
+  margin: 0;
   padding: 0.56rem 1rem;
-  color: var(--gray-900);
-  font-size: 1rem;
+  color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-300)' : 'var(--gray-900)')};
   text-decoration: ${(props) => (props.$isActive ? 'underline' : 'none')};
   -webkit-text-decoration: ${(props) => (props.$isActive ? 'underline' : 'none')};
   &:hover {
     border-radius: var(--border-radius-300);
     background: var(--link-transparent-8);
-    color: var(--gray-900);
+    color: var(--gray-600);
   }
   &:focus {
-    color: var(--gray-900);
+    color: var(--gray-600);
   }
   @media (max-width: 479px) {
     font-size: 1.3rem;
@@ -86,6 +87,11 @@ export const NavMobileMenu = styled.div`
   justify-content: end;
   align-items: center;
   z-index: 1;
+`;
+
+export const StyledMenuIcon = styled(MenuIcon)`
+  width: 2rem;
+  color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-300)' : 'var(--gray-900)')};
 `;
 
 // NavLink

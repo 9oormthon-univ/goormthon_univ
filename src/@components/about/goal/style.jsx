@@ -39,10 +39,10 @@ export const HeaderTextWrapper = styled.div`
 export const HeaderTitleText = styled.h3`
   color: var(--light);
   z-index: 2;
-  white-space: pre-wrap;
+  var(--gray-000)-space: pre-wrap;
 
   @media screen and (max-width: 479px) {
-    white-space: unset;
+    var(--gray-000)-space: unset;
   }
 `;
 

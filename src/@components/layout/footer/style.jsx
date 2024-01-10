@@ -27,14 +27,14 @@ export const FooterSlogan = styled.h3`
   color: var(--gray-400);
 
   margin: 0;
-  white-space: nowrap;
+  var(--gray-000)-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-self: center;
   @media screen and (max-width: 768px) {
     font-size: 1rem;
-    white-space: pre-wrap;
+    var(--gray-000)-space: pre-wrap;
     line-height: 1.4rem;
   }
 `;

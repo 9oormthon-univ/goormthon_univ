@@ -34,7 +34,7 @@ export const TextContentWrapper = styled.div`
   display: flex;
   gap: 0.56rem;
   flex: 0 0 auto;
-  white-space: nowrap;
+  var(--gray-000)-space: nowrap;
   overflow: hidden;
   transition: 0.3s;
 

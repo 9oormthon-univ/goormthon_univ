@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import * as S from './style';
-import { ChevronRightIcon, MenuIcon } from '@goorm-dev/gds-icons';
-import GULogo from '../../../assets/images/goormthon_univ_BI-Bk.png';
+import { ChevronRightIcon } from '@goorm-dev/gds-icons';
+import LogoDark from '../../../assets/images/goormthon_univ_BI-Bk.png';
+import LogoLight from '../../../assets/images/goormthon_univ_BI-W.png';
 
 const useScrollDirection = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -30,6 +31,8 @@ const useScrollDirection = () => {
 };
 
 function Navbar() {
+  const location = useLocation();
+
   const navbarRef = useRef();
   const scrollDirection = useScrollDirection();
 
@@ -80,7 +83,6 @@ function Navbar() {
   ];
 
   //위치가 바뀔때마다
-  const location = useLocation();
   useEffect(() => {
     if (isMobile) {
       sideBarClose();
@@ -101,11 +103,11 @@ function Navbar() {
       const isActive = menu.link === '/' ? location.pathname === menu.link : location.pathname.startsWith(menu.link);
       return (
         <React.Fragment key={idx}>
-          <S.NavMenuLink to={menu.link} $isActive={isActive}>
+          <S.NavMenuLink className="subtitle-1" $isAbout={isAbout} to={menu.link} $isActive={isActive}>
             {menu.title}
           </S.NavMenuLink>
           {menu.title === 'Recruit' && !isMobile && location.pathname === '/' ? (
-            <S.AlertMessage>2기 모집중 !</S.AlertMessage>
+            <S.AlertMessage> 모집중 !</S.AlertMessage>
           ) : null}
         </React.Fragment>
       );
@@ -141,17 +143,19 @@ function Navbar() {
     };
   }, []);
 
+  const isAbout = location.pathname === '/';
+
   return (
     <>
-      <S.NavWrapper ref={navbarRef}>
+      <S.NavWrapper ref={navbarRef} $isAbout={isAbout}>
         <S.NavLogo to={'/'}>
-          <S.NavLogoIcon src={GULogo} alt="9oormthon Univ" />
+          <S.NavLogoIcon src={isAbout ? LogoLight : LogoDark} alt="9oormthon Univ" />
         </S.NavLogo>
 
         {isMobile ? (
           <>
             <S.NavMobileMenu>
-              <MenuIcon width="2rem" className="MenuIcon__icon" onClick={sideBarOpen} color="black" />
+              <S.StyledMenuIcon className="MenuIcon__icon" onClick={sideBarOpen} $isAbout={isAbout} />
             </S.NavMobileMenu>
             {/* 사이드바 */}
             <S.NavSideBarWrapper ref={sideBar}>

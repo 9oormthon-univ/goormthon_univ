@@ -10,6 +10,8 @@ import GoormHoverImg from '../../../assets/images/about/img-goorm-hover.png';
 import DanpoongHoverImg from '../../../assets/images/about/img-danpoong-hover.png';
 import GridContainer from '../../layout/GridContainer';
 
+import MainCloudImg from '../../../assets/svgs/main-cloud-up.svg';
+
 export default function Intro({ scrollTarget }) {
   const [beotkkotExploded, setBeotkkotExploded] = useState(false);
   const [goormExploded, setGoormExploded] = useState(false);
@@ -24,6 +26,7 @@ export default function Intro({ scrollTarget }) {
 
   return (
     <S.IntroWrapper ref={scrollTarget}>
+      <S.MainCloudImg url={MainCloudImg} />
       <GridContainer>
         <S.HeaderTitleText>‘9oormthonUNIV’ 는</S.HeaderTitleText>
         <S.HeaderTextWrapper>
