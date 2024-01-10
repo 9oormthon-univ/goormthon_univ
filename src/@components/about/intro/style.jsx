@@ -1,11 +1,22 @@
 import styled from 'styled-components';
 
-export const MainCloudImg = styled.div`
+export const MainCloudUpImg = styled.div`
   background-image: url(${({ url }) => url});
   width: 100%;
   height: 12.937rem;
   position: absolute;
   top: -12.937rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-position-x: center;
+`;
+
+export const MainCloudDownImg = styled.div`
+  background-image: url(${({ url }) => url});
+  width: 100%;
+  height: 12.937rem;
+  position: absolute;
+  bottom: -12.937rem;
   left: 50%;
   transform: translateX(-50%);
   background-position-x: center;
@@ -27,6 +38,7 @@ export const IntroWrapper = styled.div`
   align-items: center;
   background-color: var(--gray-000);
   border-top: 1px solid var(--gray-000);
+  border-bottom: 1px solid var(--gray-000);
 
   @media screen and (max-width: 479px) {
     height: 120vh;
