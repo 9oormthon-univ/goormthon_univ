@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const MainCloudImg = styled.div`
+  background-image: url(${({ url }) => url});
+  width: 100%;
+  height: 12.937rem;
+  position: absolute;
+  top: -12.937rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-position-x: center;
+`;
+
 export const IntroWrapper = styled.div`
   height: 100vh;
   margin-top: 100vh;
@@ -14,9 +25,8 @@ export const IntroWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--gray-100);
-  border-top-left-radius: 3.25rem;
-  border-top-right-radius: 3.25rem;
+  background-color: var(--gray-000);
+  border-top: 1px solid var(--gray-000);
 
   @media screen and (max-width: 479px) {
     height: 120vh;

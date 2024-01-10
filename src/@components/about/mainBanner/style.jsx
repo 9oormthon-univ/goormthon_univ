@@ -3,12 +3,6 @@ import styled from 'styled-components';
 import MainBannerImg from '../../../assets/svgs/MainBannerImg';
 import MainBannerSmallImg from '../../../assets/svgs/MainBannerSmallImg';
 
-export const GhostDiv = styled.div`
-  @media screen and (max-width: 479px) {
-    height: 10rem;
-  }
-`;
-
 export const MainBannerWrapper = styled.div`
   height: 100vh;
   @supports (height: 100dvh) {
@@ -21,26 +15,21 @@ export const MainBannerWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  background-color: #ffffff;
+  background-color: var(--gray-950);
 `;
 
 export const HeaderTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 479px) {
-    margin-bottom: 2rem;
-  }
+  gap: var(--size-500);
+  margin-top: 9.62rem;
 `;
 
-export const HeaderTitleText = styled.h1`
-  text-align: center;
-  @media screen and (max-width: 479px) {
-    width: 22rem;
-  }
-`;
+export const HeaderTitle = styled.img``;
 
-export const HeaderDescriptionText = styled.h4`
+export const HeaderDescriptionText = styled.h3`
   text-align: center;
+  color: var(--gray-300);
 `;
 
 export const MainImgWrapper = styled.div`
@@ -68,7 +57,7 @@ export const MainImgWrapper = styled.div`
 export const MainImg = styled(MainBannerImg)`
   width: max-content;
   position: absolute;
-  bottom: 0;
+  bottom: 6.75rem;
   left: 50%;
   transform: translate(-50%);
 
