@@ -9,17 +9,15 @@ import GoalImgWhole from '../../../assets/svgs/goal-graphic_whole.svg';
 export default function Goal() {
   return (
     <S.GoalWrapper>
-      <GridContainer>
+      <S.ContentsWrapper>
         <S.HeaderTextWrapper>
           <S.HeaderDescriptionText>우리의 목표는 단 한 가지</S.HeaderDescriptionText>
           <S.HeaderTitleText>
             {`직접 구현한 서비스가 작은 물방울이 되어\n큰 구름을 이루는 기회를 제공하는 것`}
           </S.HeaderTitleText>
         </S.HeaderTextWrapper>
-        <S.Img src={GoalImg} />
-        <S.MovingImg src={GoalRainImg} />
-        <S.WholeImg src={GoalImgWhole} />
-      </GridContainer>
+        <S.Img src={GoalImgWhole} />
+      </S.ContentsWrapper>
     </S.GoalWrapper>
   );
 }

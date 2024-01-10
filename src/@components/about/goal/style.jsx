@@ -9,37 +9,32 @@ export const GoalWrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   background-color: var(--gray-900);
-
-  @media screen and (max-width: 1024px) {
-    justify-content: start;
-  }
 `;
 
 export const HeaderTextWrapper = styled.div`
   display: flex;
-  gap: var(--space-700);
   flex-direction: column;
   width: 100%;
-  align-items: start;
-  margin-top: 12.9375rem;
 
-  @media screen and (max-width: 1024px) {
-    justify-content: start;
-    margin-top: 9.81rem;
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    gap: var(--space-700);
+    align-items: start;
+    margin-top: 12.9375rem;
   }
 
-  @media screen and (max-width: 479px) {
-    justify-content: start;
-    margin-top: 5.81rem;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    gap: 1.5rem;
   }
 `;
 
 export const HeaderTitleText = styled.h3`
-  color: var(--light);
-  z-index: 2;
+  color: var(--gray-000);
+  text-align: start;
   white-space: pre-wrap;
 
   @media screen and (max-width: 479px) {
@@ -51,34 +46,13 @@ export const HeaderDescriptionText = styled.h6`
   color: var(--gray-500);
 `;
 
+export const ContentsWrapper = styled.div`
+  display: flex;
+`;
+
 export const Img = styled.img`
   width: max-content;
   height: max-content;
-
-  position: absolute;
-  bottom: 0;
-
-  right: 8.69rem;
-  @media screen and (max-width: 1279px) {
-    right: 4.69rem;
-  }
-
-  z-index: 1;
-
-  @media screen and (max-width: 1024px) {
-    width: 30rem;
-    right: 4rem;
-  }
-
-  @media screen and (max-width: 479px) {
-    width: 30rem;
-    right: 50%;
-    bottom: 0;
-    transform: translateX(50%);
-
-    /* 추후 수정 필요 */
-    display: none;
-  }
 `;
 
 export const MovingImg = styled.img`
