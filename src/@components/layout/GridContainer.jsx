@@ -32,4 +32,22 @@ export const GridContainerWrapper = styled.div`
     width: 100%;
     padding: 0 2.25rem;
   }
+
+  /*
+  //container-xl (1200px~)
+  width: 1139px;
+  padding: 0;
+
+  //container-md (~1200px)
+  @media screen and (min-width: 1200px) {
+    width: 688px;
+    padding: 0;
+  }
+
+  //conatiner-xs (~768px)
+  @media screen and (max-width: 768px) {
+    width: 335px;
+    padding: 0;
+  }
+  */
 `;

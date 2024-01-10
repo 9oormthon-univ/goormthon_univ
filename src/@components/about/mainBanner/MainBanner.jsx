@@ -4,7 +4,7 @@ import MainBannerSlogan from '../../../assets/svgs/main_banner_slogan.svg';
 
 export default function MainBanner({ scrollTrigger }) {
   return (
-    <S.MainBannerWrapper>
+    <S.MainBannerWrapper className="-container-xl-">
       <S.HeaderTextWrapper>
         <S.HeaderDescriptionText>사계절, 구름과 함께</S.HeaderDescriptionText>
         <S.HeaderTitle src={MainBannerSlogan} />
