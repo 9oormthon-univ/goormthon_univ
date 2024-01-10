@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { MenuIcon } from '@goorm-dev/gds-icons';
 
 export const NavWrapper = styled.div`
   background-color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-950)' : 'var(--gray-000)')};
@@ -86,6 +87,11 @@ export const NavMobileMenu = styled.div`
   justify-content: end;
   align-items: center;
   z-index: 1;
+`;
+
+export const StyledMenuIcon = styled(MenuIcon)`
+  width: 2rem;
+  color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-300)' : 'var(--gray-900)')};
 `;
 
 // NavLink

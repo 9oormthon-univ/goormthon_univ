@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import * as S from './style';
-import { ChevronRightIcon, MenuIcon } from '@goorm-dev/gds-icons';
+import { ChevronRightIcon } from '@goorm-dev/gds-icons';
 import LogoDark from '../../../assets/images/goormthon_univ_BI-Bk.png';
 import LogoLight from '../../../assets/images/goormthon_univ_BI-W.png';
 
@@ -144,7 +144,6 @@ function Navbar() {
   }, []);
 
   const isAbout = location.pathname === '/';
-  console.log(isAbout);
 
   return (
     <>
@@ -156,7 +155,7 @@ function Navbar() {
         {isMobile ? (
           <>
             <S.NavMobileMenu>
-              <MenuIcon width="2rem" className="MenuIcon__icon" onClick={sideBarOpen} color="black" />
+              <S.StyledMenuIcon className="MenuIcon__icon" onClick={sideBarOpen} $isAbout={isAbout} />
             </S.NavMobileMenu>
             {/* 사이드바 */}
             <S.NavSideBarWrapper ref={sideBar}>
