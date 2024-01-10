@@ -34,11 +34,16 @@ export const HeaderTextWrapper = styled.div`
 
 export const HeaderTitleText = styled.h3`
   color: var(--gray-000);
-  text-align: start;
   white-space: pre-wrap;
 
-  @media screen and (max-width: 479px) {
-    white-space: unset;
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    text-align: start;
   }
 `;
 
@@ -48,11 +53,28 @@ export const HeaderDescriptionText = styled.h6`
 
 export const ContentsWrapper = styled.div`
   display: flex;
+
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
+
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 `;
 
 export const Img = styled.img`
-  width: max-content;
-  height: max-content;
+  @media screen and (min-width: 1200px) {
+    width: max-content;
+    height: max-content;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 34.25rem;
+    height: 31.375rem;
+  }
 `;
 
 export const MovingImg = styled.img`
