@@ -20,9 +20,11 @@ export const GoalWrapper = styled.div`
 
 export const HeaderTextWrapper = styled.div`
   display: flex;
+  gap: var(--space-700);
   flex-direction: column;
   width: 100%;
   align-items: start;
+  margin-top: 12.9375rem;
 
   @media screen and (max-width: 1024px) {
     justify-content: start;
@@ -38,16 +40,15 @@ export const HeaderTextWrapper = styled.div`
 export const HeaderTitleText = styled.h3`
   color: var(--light);
   z-index: 2;
-  var(--gray-000)-space: pre-wrap;
+  white-space: pre-wrap;
 
   @media screen and (max-width: 479px) {
-    var(--gray-000)-space: unset;
+    white-space: unset;
   }
 `;
 
 export const HeaderDescriptionText = styled.h6`
-  color: var(--light);
-  z-index: 2;
+  color: var(--gray-500);
 `;
 
 export const Img = styled.img`

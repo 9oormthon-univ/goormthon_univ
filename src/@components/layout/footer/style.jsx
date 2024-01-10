@@ -34,7 +34,7 @@ export const FooterSlogan = styled.h3`
   justify-self: center;
   @media screen and (max-width: 768px) {
     font-size: 1rem;
-    var(--gray-000)-space: pre-wrap;
+    white-space: pre-wrap;
     line-height: 1.4rem;
   }
 `;
