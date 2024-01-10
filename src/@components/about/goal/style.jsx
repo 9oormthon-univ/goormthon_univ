@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const GoalWrapper = styled.div`
-  height: 100vh;
+  height: calc(100vh + 12.9375rem);
   @supports (height: 100dvh) {
-    height: 100dvh;
+    height: calc(100dvh + 12.9375rem);
   }
 
   position: relative;
