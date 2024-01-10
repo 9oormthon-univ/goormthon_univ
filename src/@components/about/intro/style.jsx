@@ -38,12 +38,15 @@ export const HeaderTextWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const HeaderTitleText = styled.h2`
+export const HeaderTitleText = styled.h5`
   text-align: center;
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
 `;
 
-export const HeaderDescriptionText = styled.p`
+export const HeaderDescriptionText = styled.h3`
   text-align: center;
+  color: var(--gray-800);
 `;
 
 export const ImgsWrapper = styled.div`
