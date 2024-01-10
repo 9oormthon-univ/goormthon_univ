@@ -1,11 +1,22 @@
 import styled from 'styled-components';
 
-export const MainCloudImg = styled.div`
+export const MainCloudUpImg = styled.div`
   background-image: url(${({ url }) => url});
   width: 100%;
   height: 12.937rem;
   position: absolute;
   top: -12.937rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-position-x: center;
+`;
+
+export const MainCloudDownImg = styled.div`
+  background-image: url(${({ url }) => url});
+  width: 100%;
+  height: 12.937rem;
+  position: absolute;
+  bottom: -12.937rem;
   left: 50%;
   transform: translateX(-50%);
   background-position-x: center;
@@ -27,6 +38,7 @@ export const IntroWrapper = styled.div`
   align-items: center;
   background-color: var(--gray-000);
   border-top: 1px solid var(--gray-000);
+  border-bottom: 1px solid var(--gray-000);
 
   @media screen and (max-width: 479px) {
     height: 120vh;
@@ -38,12 +50,15 @@ export const HeaderTextWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const HeaderTitleText = styled.h2`
+export const HeaderTitleText = styled.h5`
   text-align: center;
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
 `;
 
-export const HeaderDescriptionText = styled.p`
+export const HeaderDescriptionText = styled.h3`
   text-align: center;
+  color: var(--gray-800);
 `;
 
 export const ImgsWrapper = styled.div`
@@ -53,48 +68,66 @@ export const ImgsWrapper = styled.div`
 `;
 
 export const Imgs = styled.figure`
-  width: 55.75rem;
-  height: 24.313rem;
-  display: grid;
+  gap: 0.75rem;
+  margin-top: 5rem;
   grid-template-areas:
     'beotkkot goorm'
     'beotkkot danpoong';
-  grid-template-columns: 24.625rem 30.125rem;
-  grid-template-rows: 10.25rem 13.0625rem;
-  gap: 0.75rem;
-  margin-top: 5rem;
 
-  @media screen and (max-width: 479px) {
+  /* container-xs */
+  @media screen and (min-width: 0px) {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
     align-items: center;
-    height: 100%;
+    gap: 1rem;
+  }
+
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    display: grid;
+    width: 43rem;
+    height: 18.4375rem;
+    grid-template-columns: 18.6rem 23.5rem;
+    grid-template-rows: 7.6rem 10.0625rem;
+  }
+
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    width: 55.75rem;
+    height: 24.313rem;
+    grid-template-columns: 24.625rem 30.125rem;
+    grid-template-rows: 10.25rem 13.0625rem;
   }
 `;
 
 export const ImgsSetWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+
   &.beotkkot {
     grid-area: beotkkot;
 
-    @media screen and (max-width: 479px) {
-      width: 18.5625rem;
-      height: 18.3125rem;
+    @media screen and (max-width: 767px) {
+      width: 20.93081rem;
+      height: 20.71925rem;
     }
   }
   &.goorm {
     grid-area: goorm;
-    @media screen and (max-width: 479px) {
-      width: 18.5625rem;
-      height: 6.375rem;
-      order: 1;
+    @media screen and (max-width: 767px) {
+      width: 20.92619rem;
+      height: 6.82456rem;
+      order: -1;
     }
   }
   &.danpoong {
     grid-area: danpoong;
-    @media screen and (max-width: 479px) {
-      width: 18.5625rem;
-      height: 8rem;
+    @media screen and (max-width: 767px) {
+      width: 20.9375rem;
+      height: 8.9375rem;
     }
   }
   position: relative;

@@ -10,7 +10,8 @@ import GoormHoverImg from '../../../assets/images/about/img-goorm-hover.png';
 import DanpoongHoverImg from '../../../assets/images/about/img-danpoong-hover.png';
 import GridContainer from '../../layout/GridContainer';
 
-import MainCloudImg from '../../../assets/svgs/main-cloud-up.svg';
+import MainCloudUpImg from '../../../assets/svgs/main-cloud-up.svg';
+import MainCloudDownImg from '../../../assets/svgs/main-cloud-down.svg';
 
 export default function Intro({ scrollTarget }) {
   const [beotkkotExploded, setBeotkkotExploded] = useState(false);
@@ -26,14 +27,15 @@ export default function Intro({ scrollTarget }) {
 
   return (
     <S.IntroWrapper ref={scrollTarget}>
-      <S.MainCloudImg url={MainCloudImg} />
+      <S.MainCloudUpImg url={MainCloudUpImg} />
+      <S.MainCloudDownImg url={MainCloudDownImg} />
       <GridContainer>
-        <S.HeaderTitleText>‘9oormthonUNIV’ 는</S.HeaderTitleText>
+        <S.HeaderTitleText>9oormthonUNIV 는</S.HeaderTitleText>
         <S.HeaderTextWrapper>
-          <S.HeaderDescriptionText className="subtitle-1">
-            봄과 가을을 기수로 하여 클라우드 교육 및 해커톤과
+          <S.HeaderDescriptionText>
+            봄과 가을을 기수로 하여
             <br />
-            아이디어 실현의 장을 제공해주는 전국 IT 연합 동아리 입니다.
+            아이디어 실현의 장을 제공 해주는 IT 연합 동아리 입니다.
           </S.HeaderDescriptionText>
         </S.HeaderTextWrapper>
         <S.ImgsWrapper>
