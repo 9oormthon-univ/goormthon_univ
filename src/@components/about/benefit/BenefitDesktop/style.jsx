@@ -67,7 +67,7 @@ export const BenefitImg = styled.img`
 
 export const BenefitContentsWrapper = styled.div`
   background-color: var(--light);
-  border-radius: 0rem 0rem var(--Spacing-space-500) var(--Spacing-space-500);
+  border-radius: 0rem 0rem var(--space-500) var(--space-500);
   border: 1px solid var(--gray-300);
   width: 19rem;
   display: flex;
