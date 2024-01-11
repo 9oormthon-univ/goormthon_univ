@@ -46,11 +46,11 @@ export default function Timeline() {
   }, [window.scrollY]);
 
   const TIMELINE_FILL_RATIO = {
-    1: 0,
-    2: 22,
-    3: 40,
-    4: 59,
-    5: 77,
+    1: 17,
+    2: 33.2,
+    3: 49.4,
+    4: 65.6,
+    5: 81.6,
     6: 100,
   };
 
