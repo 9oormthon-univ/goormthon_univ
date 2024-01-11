@@ -18,9 +18,11 @@ export default function Timeline() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      console.log(scrollY);
-      const startPoint = 2300;
-      const gap = 200;
+
+      const isMobile = window.innerWidth < 768; // 768px 미만은 container-xs
+      // 모바일, 테블릿에 따른 스크롤 위치 조정
+      const startPoint = isMobile ? 2300 : 1960;
+      const gap = isMobile ? 200 : 100;
 
       setChangePoint({
         1: scrollY >= startPoint + gap * 0,
