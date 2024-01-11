@@ -18,8 +18,7 @@ export default function Timeline() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-
-      const startPoint = 1950;
+      const startPoint = 3000;
       const gap = 200;
 
       setChangePoint({
@@ -68,7 +67,7 @@ export default function Timeline() {
             <S.MonthTextClickable
               key={key}
               id={key}
-              className={`${Number(key) === month && 'active'} ${Number(key) < month && 'prev'}`}
+              className={`${Number(key) === month && 'active'} ${Number(key) <= month && 'prev'}`}
               onClick={() => setMonth(Number(key))}
             >
               {getMonthText(Number(key))}

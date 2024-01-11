@@ -53,6 +53,8 @@ export const CardContentsWrapper = styled.div`
   & svg > path {
     fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
   }
+
+  border: ${({ $isSelected }) => $isSelected && '2px solid var(--blue-500)'};
 `;
 
 export const IconWrapper = styled.div`

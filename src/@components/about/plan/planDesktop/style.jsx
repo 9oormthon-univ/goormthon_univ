@@ -5,7 +5,7 @@ export const PlanWrapper = styled.div`
   @supports (height: 100dvh) {
     height: 100dvh;
   }
-padding: 0 1.91rem;
+  padding: 0 1.91rem;
 
   position: relative;
   z-index: 1;
@@ -33,7 +33,7 @@ export const CardWrapper = styled.div`
 
 export const CardContentsWrapper = styled.div`
   height: 10.375rem;
-  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--gray-050)')};
+  background-color: ${({ $isSelected }) => ($isSelected ? 'var(--gray-000)' : 'var(--gray-050)')};
   border-radius: 1rem;
 
   display: flex;
@@ -43,14 +43,14 @@ export const CardContentsWrapper = styled.div`
 
   & > h4,
   & > p {
-    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
+    color: ${({ $isSelected }) => ($isSelected ? 'var(--gray-900)' : 'var(--info)')};
   }
 
   & svg > path {
-    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
+    fill: ${({ $isSelected }) => ($isSelected ? 'var(--gray-900)' : 'var(--info)')};
   }
 
-  border: ${({ $isSelected }) => $isSelected && '2px solid #5094FA'};
+  border: ${({ $isSelected }) => $isSelected && '2px solid var(--blue-500)'};
 `;
 
 export const IconWrapper = styled.div`
