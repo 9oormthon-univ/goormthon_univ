@@ -3,22 +3,39 @@ import * as S from './style';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
 import RecruitUnivScrolling from '../recruitUnivScrolling/RecruitUnivScrolling';
+import { Spinner } from 'reactstrap';
 
 function RecuritHeader() {
   const [isRecruitmentOver, setIsRecruitmentOver] = useState(false);
-  const [daysRemaining, setDaysRemaining] = useState(0);
+  const [timeRemaining, setTimeRemaining] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [isInit, setIsInit] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // 탁겟일
     const targetDate = new Date('2024-01-13T00:00:00+09:00');
 
-    // 현재일
-    const currentDate = new Date();
-    // 남은 시간
-    const timeRemaining = targetDate - currentDate;
-    setDaysRemaining(Math.floor(timeRemaining / (1000 * 60 * 60 * 24)));
-    setIsRecruitmentOver(currentDate > targetDate);
+    const updateRemainingTime = () => {
+      const currentDate = new Date();
+      const timeDifference = targetDate - currentDate;
+
+      if (timeDifference > 0) {
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        setTimeRemaining({ days, hours, minutes, seconds });
+      } else {
+        setIsRecruitmentOver(true);
+      }
+
+      setIsInit(true);
+    };
+
+    const intervalId = setInterval(updateRemainingTime, 1000);
+
+    // 컴포넌트가 언마운트될 때 clearInterval을 통해 interval 정리
+    return () => clearInterval(intervalId);
   }, []);
 
   // 버튼 클릭시
@@ -36,7 +53,18 @@ function RecuritHeader() {
   const RecruitmentContent = () => (
     <>
       <S.HeaderTitleText>
-        구름톤유니브 2기 모집 중! <h4>D-{daysRemaining}</h4>
+        구름톤유니브 2기 모집 중!
+        <h4>
+          {isInit ? (
+            <>
+              {timeRemaining.hours + timeRemaining.days * 24}시간 {timeRemaining.minutes}분 {timeRemaining.seconds}초
+            </>
+          ) : (
+            <>
+              <Spinner />
+            </>
+          )}
+        </h4>
       </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
         유니브 대표 신청
