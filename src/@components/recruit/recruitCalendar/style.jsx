@@ -2,11 +2,6 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const RecuritCalendarWrapper = styled(motion.div)`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
   margin-bottom: 9.81rem;
 `;
 

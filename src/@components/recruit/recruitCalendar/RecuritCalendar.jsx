@@ -29,7 +29,7 @@ function RecuritCalendar() {
   }, []);
   return (
     <>
-      <S.RecuritCalendarWrapper>
+      <S.RecuritCalendarWrapper className="w-100 d-flex flex-column justify-content-center align-items-start ">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={visibleBoxes.calendarTitle ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
@@ -43,7 +43,7 @@ function RecuritCalendar() {
           animate={visibleBoxes.calendarImg ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.85 }}
         >
-          <S.RecuritCalendarImg src={DefaultImg}></S.RecuritCalendarImg>
+          <S.RecuritCalendarImg src={DefaultImg} />
         </motion.div>
       </S.RecuritCalendarWrapper>
     </>
