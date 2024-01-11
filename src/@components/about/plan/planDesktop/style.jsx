@@ -80,7 +80,7 @@ export const TimelineBar = styled.figure`
 
 export const TimelineFillBar = styled.div`
   width: ${({ $fillRatio }) => $fillRatio}%;
-  height: var(--size-500);
+  height: 2.75rem;
   background-color: var(--blue-500);
   border-radius: 1.34375rem;
   position: absolute;
