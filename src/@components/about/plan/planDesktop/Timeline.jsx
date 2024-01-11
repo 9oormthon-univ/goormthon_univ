@@ -30,11 +30,11 @@ export default function Timeline() {
   }, [value]);
 
   const TIMELINE_FILL_RATIO = {
-    1: 17,
-    2: 30,
-    3: 47,
-    4: 64,
-    5: 80,
+    1: 9.5,
+    2: 27.2,
+    3: 44.9,
+    4: 62.7,
+    5: 80.5,
     6: 100,
   };
 

@@ -114,7 +114,6 @@ export const MainImgWrapper = styled.div`
 `;
 
 export const MainImg = styled(MainBannerImg)`
-  width: max-content;
   position: absolute;
   bottom: 6.75rem;
   left: 50%;
@@ -130,7 +129,6 @@ export const MainImg = styled(MainBannerImg)`
 
 export const MainSmallImg = styled(MainBannerSmallImg)`
   display: none;
-  width: max-content;
   position: absolute;
   bottom: 6.5rem;
   left: 50%;

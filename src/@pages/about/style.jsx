@@ -4,16 +4,23 @@ export const AboutWrapper = styled.div`
   width: 100%;
   overflow: hidden;
 
-  & #plan-mobile {
-    display: none;
-  }
-
-  @media screen and (max-width: 768px) {
+  /* container-md, xs */
+  @media screen and (min-width: 0px) {
     & #plan-desktop {
       display: none;
     }
     & #plan-mobile {
       display: flex;
+    }
+  }
+
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    & #plan-desktop {
+      display: flex;
+    }
+    & #plan-mobile {
+      display: none;
     }
   }
 `;

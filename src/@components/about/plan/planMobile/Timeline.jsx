@@ -19,8 +19,10 @@ export default function Timeline() {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-      const startPoint = 1950;
-      const gap = 200;
+      const isMobile = window.innerWidth < 768; // 768px 미만은 container-xs
+      // 모바일, 테블릿에 따른 스크롤 위치 조정
+      const startPoint = isMobile ? 2300 : 1960;
+      const gap = isMobile ? 200 : 100;
 
       setChangePoint({
         1: scrollY >= startPoint + gap * 0,
@@ -45,12 +47,21 @@ export default function Timeline() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [window.scrollY]);
 
-  const TIMELINE_FILL_RATIO = {
-    1: 0,
-    2: 22,
-    3: 40,
-    4: 59,
-    5: 77,
+  const TIMELINE_FILL_RATIO_MD = {
+    1: 17,
+    2: 33.2,
+    3: 49.4,
+    4: 65.6,
+    5: 81.6,
+    6: 100,
+  };
+
+  const TIMELINE_FILL_RATIO_XS = {
+    1: 14,
+    2: 31.2,
+    3: 48.4,
+    4: 65.4,
+    5: 82.5,
     6: 100,
   };
 
@@ -62,13 +73,13 @@ export default function Timeline() {
   return (
     <S.TimelineWrapper>
       <S.TimelineBar>
-        <S.TimelineFillBar $fillRatio={TIMELINE_FILL_RATIO[month]} />
+        <S.TimelineFillBar $fillRatioMd={TIMELINE_FILL_RATIO_MD[month]} $fillRatioXs={TIMELINE_FILL_RATIO_XS[month]} />
         <S.MonthTextWrapper>
           {Array.from({ length: 6 }, (_, index) => index + 1).map((key) => (
             <S.MonthTextClickable
               key={key}
               id={key}
-              className={`${Number(key) === month && 'active'} ${Number(key) < month && 'prev'}`}
+              className={`${Number(key) === month && 'active'} ${Number(key) <= month && 'prev'}`}
               onClick={() => setMonth(Number(key))}
             >
               {getMonthText(Number(key))}

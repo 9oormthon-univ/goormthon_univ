@@ -69,13 +69,14 @@ export const NavMenuLink = styled(Link)`
   color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-300)' : 'var(--gray-900)')};
   text-decoration: ${(props) => (props.$isActive ? 'underline' : 'none')};
   -webkit-text-decoration: ${(props) => (props.$isActive ? 'underline' : 'none')};
+  border-radius: var(--border-radius-300);
   &:hover {
-    border-radius: var(--border-radius-300);
-    background: var(--link-transparent-8);
-    color: var(--gray-600);
+    color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-300)' : 'var(--gray-900)')};
+    background-color: ${({ $isAbout }) => ($isAbout ? 'var(--link-transparent-16)' : 'var(--link-transparent-8)')};
   }
   &:focus {
-    color: var(--gray-600);
+    color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-300)' : 'var(--gray-900)')};
+    background-color: var(--link-transparent-8);
   }
   @media (max-width: 479px) {
     font-size: 1.3rem;

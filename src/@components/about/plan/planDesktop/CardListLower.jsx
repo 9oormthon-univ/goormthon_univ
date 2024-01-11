@@ -7,7 +7,7 @@ export default function CardListLower({ month }) {
   return (
     <S.CardListLowerWrapper>
       {Object.keys(TIMELINE_DATA)
-        .filter((item) => !(item % 2))
+        .filter((item) => item >= 4)
         .map((key, idx) => {
           const item = TIMELINE_DATA[key];
           return (

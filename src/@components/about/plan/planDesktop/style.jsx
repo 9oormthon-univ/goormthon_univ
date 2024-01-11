@@ -5,6 +5,7 @@ export const PlanWrapper = styled.div`
   @supports (height: 100dvh) {
     height: 100dvh;
   }
+  padding: 0 1.91rem;
 
   position: relative;
   z-index: 1;
@@ -26,12 +27,13 @@ export const CardWrapper = styled.div`
   transition: left 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
 `;
 
 export const CardContentsWrapper = styled.div`
-  width: 22.75rem;
   height: 10.375rem;
-  background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--gray-050)')};
+  background-color: ${({ $isSelected }) => ($isSelected ? 'var(--gray-000)' : 'var(--gray-200)')};
   border-radius: 1rem;
 
   display: flex;
@@ -41,14 +43,14 @@ export const CardContentsWrapper = styled.div`
 
   & > h4,
   & > p {
-    color: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
+    color: ${({ $isSelected }) => ($isSelected ? 'var(--gray-900)' : 'var(--info)')};
   }
 
   & svg > path {
-    fill: ${({ $isSelected }) => ($isSelected ? '#000' : 'var(--info)')};
+    fill: ${({ $isSelected }) => ($isSelected ? 'var(--gray-900)' : 'var(--info)')};
   }
 
-  border: ${({ $isSelected }) => $isSelected && '2px solid #5094FA'};
+  border: ${({ $isSelected }) => $isSelected && '2px solid var(--blue-500)'};
 `;
 
 export const IconWrapper = styled.div`
@@ -80,7 +82,7 @@ export const TimelineBar = styled.figure`
 
 export const TimelineFillBar = styled.div`
   width: ${({ $fillRatio }) => $fillRatio}%;
-  height: var(--size-500);
+  height: 2.75rem;
   background-color: var(--blue-500);
   border-radius: 1.34375rem;
   position: absolute;
@@ -93,10 +95,11 @@ export const ProgressBar = styled.div`
 
 export const MonthTextWrapper = styled.div`
   width: -webkit-fill-available;
-  height: var(--size-500);
+  height: 2.75rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2.5rem;
 `;
 
 export const MonthTextClickable = styled.h5`
@@ -104,8 +107,6 @@ export const MonthTextClickable = styled.h5`
   cursor: pointer;
   color: var(--gray-400);
 
-  width: 3.875rem;
-  height: 3.875rem;
   display: flex;
   justify-content: center;
   align-items: center;

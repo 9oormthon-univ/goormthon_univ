@@ -7,7 +7,7 @@ export default function CardListUpper({ month }) {
   return (
     <S.CardListUpperWrapper>
       {Object.keys(TIMELINE_DATA)
-        .filter((item) => item % 2)
+        .filter((item) => item <= 3)
         .map((key, idx) => {
           const item = TIMELINE_DATA[key];
           return (
