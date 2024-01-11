@@ -18,7 +18,8 @@ export default function Timeline() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const startPoint = 3000;
+      console.log(scrollY);
+      const startPoint = 2300;
       const gap = 200;
 
       setChangePoint({
@@ -70,7 +71,7 @@ export default function Timeline() {
   return (
     <S.TimelineWrapper>
       <S.TimelineBar>
-        <S.TimelineFillBar $fillRatioMd={TIMELINE_FILL_RATIO_MD[month]} $fillRatioXs={TIMELINE_FILL_RATIO_XS[month]}/>
+        <S.TimelineFillBar $fillRatioMd={TIMELINE_FILL_RATIO_MD[month]} $fillRatioXs={TIMELINE_FILL_RATIO_XS[month]} />
         <S.MonthTextWrapper>
           {Array.from({ length: 6 }, (_, index) => index + 1).map((key) => (
             <S.MonthTextClickable
