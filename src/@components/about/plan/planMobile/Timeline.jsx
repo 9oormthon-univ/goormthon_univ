@@ -44,12 +44,21 @@ export default function Timeline() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [window.scrollY]);
 
-  const TIMELINE_FILL_RATIO = {
+  const TIMELINE_FILL_RATIO_MD = {
     1: 17,
     2: 33.2,
     3: 49.4,
     4: 65.6,
     5: 81.6,
+    6: 100,
+  };
+
+  const TIMELINE_FILL_RATIO_XS = {
+    1: 14,
+    2: 31.2,
+    3: 48.4,
+    4: 65.4,
+    5: 82.5,
     6: 100,
   };
 
@@ -61,7 +70,7 @@ export default function Timeline() {
   return (
     <S.TimelineWrapper>
       <S.TimelineBar>
-        <S.TimelineFillBar $fillRatio={TIMELINE_FILL_RATIO[month]} />
+        <S.TimelineFillBar $fillRatioMd={TIMELINE_FILL_RATIO_MD[month]} $fillRatioXs={TIMELINE_FILL_RATIO_XS[month]}/>
         <S.MonthTextWrapper>
           {Array.from({ length: 6 }, (_, index) => index + 1).map((key) => (
             <S.MonthTextClickable
