@@ -13,8 +13,8 @@ export default function ActivityList() {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const isMobile = window.innerWidth <= 768; // 768px 미만을 모바일로 간주
       // 모바일 및 데스크탑 환경에 따른 스크롤 위치 조정
-      const mobileBreakpoints = [5400, 6300, 6500]; // 모바일용 브레이크포인트
-      const desktopBreakpoints = [3800, 4100, 4500]; // 데스크탑용 브레이크포인트
+      const mobileBreakpoints = [5600, 6500, 6700]; // 모바일용 브레이크포인트
+      const desktopBreakpoints = [3500, 3900, 4200]; // 데스크탑용 브레이크포인트
 
       const newVisibleItems = visibleItems.map((_, idx) => {
         let breakpoint;
@@ -53,8 +53,11 @@ export default function ActivityList() {
     <S.ActivityListWrapper>
       {ACTIVITY_DATA.map((item, idx) => {
         let customStyle = {};
-        if (idx === 2) {
-          customStyle = { gridColumn: '1 / -1', width: '100%' };
+
+        if (idx === 2 && window.innerWidth < 1200) {
+          customStyle = { gridColumn: '1 / -1', width: '100%', height: '18.625rem' };
+        } else if (idx === 2 && window.innerWidth >= 1200) {
+          customStyle = { gridColumn: '1 / -1', width: '100%', height: '26.75rem' };
         }
 
         return (
