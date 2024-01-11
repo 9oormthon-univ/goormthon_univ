@@ -5,6 +5,7 @@ export const PlanWrapper = styled.div`
   @supports (height: 100dvh) {
     height: 100dvh;
   }
+padding: 0 1.91rem;
 
   position: relative;
   z-index: 1;
@@ -26,10 +27,11 @@ export const CardWrapper = styled.div`
   transition: left 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
 `;
 
 export const CardContentsWrapper = styled.div`
-  width: 22.75rem;
   height: 10.375rem;
   background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--gray-050)')};
   border-radius: 1rem;
