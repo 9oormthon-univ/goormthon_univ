@@ -65,7 +65,10 @@ function RecuritFAQ() {
       >
         {FAQData.map(({ id, question, answer }) => (
           <S.FAQBox key={id}>
-            <S.QuestionWrapper onClick={() => toggle(id)}>
+            <S.QuestionWrapper
+              onClick={() => toggle(id)}
+              className="w-100 d-flex flex-direction-row justify-content-between align-items-center"
+            >
               <S.QuestionText>{question}</S.QuestionText>
               {isOpen === id ? (
                 <ChevronUpIcon className="ChevronUpIcon__icon" color="#525463" />

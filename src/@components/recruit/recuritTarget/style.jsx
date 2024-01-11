@@ -2,24 +2,15 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const TargetContainer = styled(motion.div)`
-  width: 100%;
-  flex-direction: column;
   margin-top: 8.56rem;
   margin-bottom: 9.06rem;
 `;
 
-export const TargetTitle = styled.h2`
-  margin-bottom: 2.25rem;
-`;
+export const TargetTitle = styled.h2``;
 
-export const TargetDetail = styled.h5`
-  color: var(--gray-900);
-
-  margin-bottom: 1.5rem;
-`;
+export const TargetDetail = styled.h5``;
 
 export const TargetRowDetailWrapper = styled.div`
-  display: flex;
   flex-direction: row;
   gap: 1rem;
   @media (max-width: 768px) {
@@ -40,8 +31,6 @@ export const TargetRowDetailBox = styled(motion.div)`
 
 export const TargetDetailBoxText = styled.p`
   color: #000;
-
-  /* KOR/subtitle-1ㅣ0.875rem */
   font-family: Pretendard;
   font-size: 0.875rem;
   font-style: normal;
