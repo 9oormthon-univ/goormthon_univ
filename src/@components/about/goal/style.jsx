@@ -126,9 +126,23 @@ export const ContentsWrapper = styled.div`
 `;
 
 export const Img = styled.img`
-  /* container-xs,md */
-  width: 34.25rem;
-  height: 31.375rem;
+  /* container-xs */
+  @media screen and (min-width: 0px) {
+    width: 20.9375rem;
+    height: 19.625rem;
+  }
+
+  /* container-s */
+  @media screen and (min-width: 576px) {
+    width: 33.4375rem;
+    height: 31.375rem;
+  }
+
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    width: 34.25rem;
+    height: 31.375rem;
+  }
 
   /* container-xl */
   @media screen and (min-width: 1200px) {

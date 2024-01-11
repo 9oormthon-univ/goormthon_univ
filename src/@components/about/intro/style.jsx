@@ -115,6 +115,7 @@ export const ImgsSetWrapper = styled.div`
   &.beotkkot {
     grid-area: beotkkot;
 
+    /* container-xs에서 width height를 고정한다. */
     @media screen and (max-width: 575px) {
       width: 20.93081rem;
       height: 20.71925rem;
@@ -122,6 +123,8 @@ export const ImgsSetWrapper = styled.div`
   }
   &.goorm {
     grid-area: goorm;
+
+    /* container-xs에서 width height를 고정한다. */
     @media screen and (max-width: 575px) {
       width: 20.92619rem;
       height: 6.82456rem;
@@ -130,6 +133,8 @@ export const ImgsSetWrapper = styled.div`
   }
   &.danpoong {
     grid-area: danpoong;
+
+    /* container-xs에서 width height를 고정한다. */
     @media screen and (max-width: 575px) {
       width: 20.9375rem;
       height: 8.9375rem;
