@@ -9,15 +9,22 @@ export const BenefitWrapper = styled.div`
   align-items: center;
   background-color: #fff;
 
-  @media screen and (max-width: 479px) {
+  /* container-xs */
+  @media screen and (min-width: 0px) {
     display: flex;
     padding-bottom: 5rem;
   }
+
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
-export const HeaderTitleText = styled.h2`
+export const HeaderTitleText = styled.h3`
   text-align: start;
   margin-top: 5rem;
+  width: 19.0625rem;
 `;
 
 export const BenefitItemWrapper = styled.div`
@@ -48,7 +55,7 @@ export const BenefitImg = styled.img`
 export const BenefitContentsWrapper = styled.div`
   width: 100%;
   background-color: var(--light);
-  border-radius: 0rem 0rem var(--Spacing-space-500) var(--Spacing-space-500);
+  border-radius: 0rem 0rem var(--space-500) var(--space-500);
   border: 1px solid var(--gray-300);
   display: flex;
   justify-content: space-between;
@@ -86,7 +93,7 @@ export const BenefitListWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  width: 100%;
+  gap: 2rem;
+  width: 19.0625rem;
   margin-top: 2.39rem;
 `;
