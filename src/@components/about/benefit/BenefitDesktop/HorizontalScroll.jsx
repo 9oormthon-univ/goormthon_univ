@@ -78,6 +78,16 @@ const ScrollContainer = styled.div`
     height: 100dvh;
   }
 
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    width: 43rem;
+  }
+
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    width: 71.25rem;
+  }
+
   margin-top: 3.69rem;
 
   .ghost {
@@ -109,7 +119,7 @@ const ThumbnailsContainer = styled(motion.section)`
     display: flex;
     margin-top: 3.69rem;
     & > *:not(:last-child) {
-      margin-right: 45px;
+      margin-right: 2rem;
     }
   }
 `;

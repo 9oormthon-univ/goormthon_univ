@@ -15,13 +15,27 @@ export const BenefitWrapper = styled.div`
   align-items: center;
   background-color: #fff;
 
-  @media screen and (max-width: 479px) {
+  /* container-xs */
+  @media screen and (min-width: 0px) {
     display: none;
+  }
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 `;
 
 export const HeaderTitleText = styled.h2`
-  width: 100%;
+  /* container-md */
+  @media screen and (min-width: 768px) {
+    width: 43rem;
+  }
+
+  /* container-xl */
+  @media screen and (min-width: 1200px) {
+    width: 71.25rem;
+  }
+
   text-align: start;
   position: absolute;
   top: 18%;
@@ -53,7 +67,7 @@ export const BenefitImg = styled.img`
 
 export const BenefitContentsWrapper = styled.div`
   background-color: var(--light);
-  border-radius: 0rem 0rem var(--Spacing-space-500) var(--Spacing-space-500);
+  border-radius: 0rem 0rem var(--space-500) var(--space-500);
   border: 1px solid var(--gray-300);
   width: 19rem;
   display: flex;

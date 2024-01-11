@@ -54,8 +54,20 @@ export const CardWrapper = styled.div`
 `;
 
 export const CardContentsWrapper = styled.div`
-  width: 16.375rem;
-  height: 100%;
+  @media screen and (min-width: 0px) {
+    width: 16.375rem;
+    height: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 18.875rem;
+    height: 9.875rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+  }
+
   background-color: ${({ $isSelected }) => ($isSelected ? '#fff' : 'var(--gray-200)')};
   border-radius: 1rem;
   display: flex;
@@ -96,16 +108,6 @@ export const TimelineBar = styled.figure`
   background: var(--gray-050);
   position: relative;
   margin: 0;
-
-  /* container-xs */
-  @media screen and (min-width: 0px) {
-    height: 67.5rem;
-  }
-
-  /* container-md */
-  @media screen and (min-width: 768px) {
-    height: 32.9375rem;
-  }
 `;
 
 export const TimelineFillBar = styled.div`
