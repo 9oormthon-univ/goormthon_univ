@@ -93,10 +93,11 @@ export const ProgressBar = styled.div`
 
 export const MonthTextWrapper = styled.div`
   width: -webkit-fill-available;
-  height: var(--size-500);
+  height: 2.75rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2.5rem;
 `;
 
 export const MonthTextClickable = styled.h5`
@@ -104,8 +105,6 @@ export const MonthTextClickable = styled.h5`
   cursor: pointer;
   color: var(--gray-400);
 
-  width: 3.875rem;
-  height: 3.875rem;
   display: flex;
   justify-content: center;
   align-items: center;
