@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 import { Button } from '@goorm-dev/gds-components';
 import * as S from './style';
 import { dbService } from '../../fbase';
@@ -7,31 +7,29 @@ import { useNavigate } from 'react-router-dom';
 
 function Apply() {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    univ: '',
-    introduction: '',
-    motivation: '',
-    necessity: '',
-    questions: '',
-  });
-
-  const [charCount, setCharCount] = useState({
-    introduction: 0,
-    motivation: 0,
-    necessity: 0,
-    questions: 0,
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    if (['introduction', 'motivation', 'necessity', 'questions'].includes(name)) {
-      setCharCount({ ...charCount, [name]: value.length });
-    }
-  };
+  const [formData, dispatch] = useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case 'change':
+          return {
+            ...state,
+            [action.field]: action.value,
+          };
+        default:
+          return state;
+      }
+    },
+    {
+      name: '',
+      phone: '',
+      email: '',
+      univ: '',
+      introduction: '',
+      motivation: '',
+      necessity: '',
+      questions: '',
+    },
+  );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,19 +37,16 @@ function Apply() {
     // confirm 대화 상자 추가
     const isConfirmed = window.confirm('제출 후 수정이 불가합니다. 제출하시겠습니까?');
     if (isConfirmed) {
-      if (isConfirmed) {
-        try {
-          await addDoc(collection(dbService, 'resume'), formData);
-          alert(
-            '제출해주셔서 감사합니다! 제출하신 이메일 주소로 후속 안내가 발송될 예정이니, 메일을 확인해 주시기 바랍니다 :)',
-          );
-          // 홈으로 이동
-          navigate('/');
-        } catch (error) {
-          console.error('Error adding document: ', error);
-          alert('제출 중 오류가 발생했습니다. 다시 시도해주세요.');
-        }
-      } else {
+      try {
+        await addDoc(collection(dbService, 'resume'), formData);
+        alert(
+          '제출해주셔서 감사합니다! 제출하신 이메일 주소로 후속 안내가 발송될 예정이니, 메일을 확인해 주시기 바랍니다 :)',
+        );
+        // 홈으로 이동
+        navigate('/');
+      } catch (error) {
+        console.error('Error adding document: ', error);
+        alert('제출 중 오류가 발생했습니다. 다시 시도해주세요.');
       }
     } else {
     }
@@ -97,7 +92,7 @@ function Apply() {
               type="text"
               name="name"
               placeholder="이름 입력"
-              onChange={handleInputChange}
+              onChange={(e) => dispatch({ type: 'change', field: 'name', value: e.target.value })}
               required
             />
           </S.InputGroup>
@@ -113,7 +108,7 @@ function Apply() {
               type="tel"
               name="phone"
               placeholder="000-0000-0000"
-              onChange={handleInputChange}
+              onChange={(e) => dispatch({ type: 'change', field: 'phone', value: e.target.value })}
               required
             />
           </S.InputGroup>
@@ -129,7 +124,7 @@ function Apply() {
               type="email"
               name="email"
               placeholder="example@mail.com"
-              onChange={handleInputChange}
+              onChange={(e) => dispatch({ type: 'change', field: 'email', value: e.target.value })}
               required
             />
           </S.InputGroup>
@@ -143,7 +138,7 @@ function Apply() {
               type="text"
               name="univ"
               placeholder="구름대학교(구름캠퍼스)"
-              onChange={handleInputChange}
+              onChange={(e) => dispatch({ type: 'change', field: 'univ', value: e.target.value })}
               required
             />
           </S.InputGroup>
@@ -151,14 +146,14 @@ function Apply() {
 
         <S.FormGroup>
           <S.InputGroup>
-            <S.ApplyTitle>1. 본인을 소개해주세요! ({charCount.introduction}/500)</S.ApplyTitle>
+            <S.ApplyTitle>1. 본인을 소개해주세요! ({formData.introduction.length}/500)</S.ApplyTitle>
             <S.ApplyTextArea
               type="textarea"
               bgSize="xl"
               name="introduction"
               maxLength="500"
               placeholder="500자 이하로 작성해주세요"
-              onChange={handleInputChange}
+              onChange={(e) => dispatch({ type: 'change', field: 'introduction', value: e.target.value })}
               minLength={10}
               required
               style={{ height: '8rem' }}
@@ -169,7 +164,7 @@ function Apply() {
         <S.FormGroup>
           <S.InputGroup>
             <S.ApplyTitle>
-              2. 구름톤 유니브 대표로 지원하신 동기가 무엇인가요? ({charCount.motivation}/500)
+              2. 구름톤 유니브 대표로 지원하신 동기가 무엇인가요? ({formData.motivation.length}/500)
             </S.ApplyTitle>
             <S.ApplyTextArea
               type="textarea"
@@ -177,7 +172,7 @@ function Apply() {
               name="motivation"
               maxLength={500}
               placeholder="500자 이하로 작성해주세요"
-              onChange={handleInputChange}
+              onChange={(e) => dispatch({ type: 'change', field: 'motivation', value: e.target.value })}
               minLength={10}
               required
               style={{ height: '8rem' }}
@@ -187,14 +182,16 @@ function Apply() {
 
         <S.FormGroup>
           <S.InputGroup>
-            <S.ApplyTitle>3. 대표로서 구름톤 유니브를 어떻게 운영하실건가요? ({charCount.necessity}/500)</S.ApplyTitle>
+            <S.ApplyTitle>
+              3. 대표로서 구름톤 유니브를 어떻게 운영하실건가요? ({formData.necessity.length}/500)
+            </S.ApplyTitle>
             <S.ApplyTextArea
               type="textarea"
               bgSize="xl"
               name="necessity"
               maxLength={500}
               placeholder="500자 이하로 작성해주세요"
-              onChange={handleInputChange}
+              onChange={(e) => dispatch({ type: 'change', field: 'necessity', value: e.target.value })}
               minLength={10}
               required
               style={{ height: '8rem' }}
@@ -204,14 +201,16 @@ function Apply() {
 
         <S.FormGroup>
           <S.InputGroup>
-            <S.ApplyTitle>4. (선택)질문 및 궁금한 점이 있다면 작성해주세요! ({charCount.questions}/1000)</S.ApplyTitle>
+            <S.ApplyTitle>
+              4. (선택)질문 및 궁금한 점이 있다면 작성해주세요! ({formData.questions.length}/1000)
+            </S.ApplyTitle>
             <S.ApplyTextArea
               type="textarea"
               bgSize="xl"
               name="questions"
               maxLength={1000}
               placeholder="질문이나 궁금한 점을 작성해주세요"
-              onChange={handleInputChange}
+              onChange={(e) => dispatch({ type: 'change', field: 'questions', value: e.target.value })}
               style={{ height: '8rem' }}
             />
           </S.InputGroup>
