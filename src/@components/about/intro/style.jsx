@@ -80,6 +80,15 @@ export const Imgs = styled.figure`
     gap: 1rem;
   }
 
+  /* container-s */
+  @media screen and (min-width: 576px) {
+    display: grid;
+    width: 33.4375rem;
+    height: 14.3125rem;
+    grid-template-columns: 14.49538rem 18.30263rem;
+    grid-template-rows: 5.88538rem 7.8125rem;
+  }
+
   /* container-md */
   @media screen and (min-width: 768px) {
     display: grid;
@@ -106,14 +115,14 @@ export const ImgsSetWrapper = styled.div`
   &.beotkkot {
     grid-area: beotkkot;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 575px) {
       width: 20.93081rem;
       height: 20.71925rem;
     }
   }
   &.goorm {
     grid-area: goorm;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 575px) {
       width: 20.92619rem;
       height: 6.82456rem;
       order: -1;
@@ -121,7 +130,7 @@ export const ImgsSetWrapper = styled.div`
   }
   &.danpoong {
     grid-area: danpoong;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 575px) {
       width: 20.9375rem;
       height: 8.9375rem;
     }
