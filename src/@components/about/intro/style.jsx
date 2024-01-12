@@ -13,67 +13,39 @@ export const IntroWrapper = styled.div`
 
 export const MainCloudUpImg = styled.div`
   background-image: url(${({ url }) => url});
-  width: 100%;
   height: 12.937rem;
-  position: absolute;
   top: -12.937rem;
   left: 50%;
   transform: translateX(-50%);
   background-position-x: center;
 `;
 
-export const HeaderTextWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+export const HeaderTextWrapper = styled.div``;
 
 export const HeaderTitleText = styled.h5`
-  text-align: center;
   color: var(--gray-600);
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
 `;
 
 export const HeaderTitleTextSmall = styled.h6`
-  text-align: center;
   color: var(--gray-600);
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 `;
 
 export const HeaderDescriptionText = styled.h3`
   text-align: center;
   color: var(--gray-800);
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
 `;
 
 export const HeaderDescriptionTextSmall = styled.h4`
   text-align: center;
   color: var(--gray-800);
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
+  padding: 0 4.37rem;
 `;
 
-export const ImgsWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;
+export const ImgsWrapper = styled.div``;
 
 export const Imgs = styled.figure`
   gap: 0.75rem;
@@ -152,14 +124,9 @@ export const ImgsSetWrapper = styled.div`
       height: 8.9375rem;
     }
   }
-  position: relative;
 `;
 
 export const Img = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
   transition: opacity 0.5s ease-in-out;
   &.hover-img {
     opacity: 0;
