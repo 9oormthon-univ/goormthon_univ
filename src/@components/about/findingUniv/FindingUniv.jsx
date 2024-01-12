@@ -75,6 +75,7 @@ function FindingUniv() {
         </S.HeaderTitleWrapper>
         <S.HeaderUnivContainer>
           <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
+          <S.HeaderUnivTitleTextSmall>현재 함께하는 유니브 10개</S.HeaderUnivTitleTextSmall>
           <S.HeaderUnivListContainer>
             <AutoScrollingImages />
           </S.HeaderUnivListContainer>
