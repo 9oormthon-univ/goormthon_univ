@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const IntroWrapper = styled.div`
+  margin-top: 100vh;
+  @supports (margin-top: 100dvh) {
+    margin-top: 100dvh;
+  }
+
+  background-color: var(--gray-000);
+  border-top: 1px solid var(--gray-000);
+  border-bottom: 1px solid var(--gray-000);
+`;
+
 export const MainCloudUpImg = styled.div`
   background-image: url(${({ url }) => url});
   width: 100%;
@@ -9,35 +20,6 @@ export const MainCloudUpImg = styled.div`
   left: 50%;
   transform: translateX(-50%);
   background-position-x: center;
-`;
-
-export const MainCloudDownImg = styled.div`
-  background-image: url(${({ url }) => url});
-  width: 100%;
-  height: 12.937rem;
-  position: absolute;
-  bottom: -12.937rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-position-x: center;
-`;
-
-export const IntroWrapper = styled.div`
-  height: 100%;
-  margin-top: 100vh;
-  @supports (margin-top: 100dvh) {
-    margin-top: 100dvh;
-  }
-
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--gray-000);
-  border-top: 1px solid var(--gray-000);
-  border-bottom: 1px solid var(--gray-000);
 `;
 
 export const HeaderTextWrapper = styled.div`
@@ -181,21 +163,6 @@ export const Img = styled.img`
   transition: opacity 0.5s ease-in-out;
   &.hover-img {
     opacity: 0;
-  }
-
-  &.exploded {
-    animation: explode 0.5s ease-in-out;
-  }
-
-  @keyframes explode {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1.5);
-      opacity: 0;
-    }
   }
 
   &:hover {

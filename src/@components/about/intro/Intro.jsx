@@ -11,24 +11,15 @@ import DanpoongHoverImg from '../../../assets/images/about/img-danpoong-hover.pn
 import GridContainer from '../../layout/GridContainer';
 
 import MainCloudUpImg from '../../../assets/svgs/main-cloud-up.svg';
-import MainCloudDownImg from '../../../assets/svgs/main-cloud-down.svg';
 
 export default function Intro({ scrollTarget }) {
-  const [beotkkotExploded, setBeotkkotExploded] = useState(false);
-  const [goormExploded, setGoormExploded] = useState(false);
-  const [danpoongExploded, setDanpoongExploded] = useState(false);
-
-  const handleImageClick = (setImageExploded) => {
-    setImageExploded(true);
-    setTimeout(() => {
-      setImageExploded(false);
-    }, 500);
-  };
-
   return (
-    <S.IntroWrapper ref={scrollTarget}>
+    <S.IntroWrapper
+      ref={scrollTarget}
+      className="h-100 position-relative d-flex flex-column justify-contents-center align-items-center"
+    >
       <S.MainCloudUpImg url={MainCloudUpImg} />
-      <S.MainCloudDownImg url={MainCloudDownImg} />
+
       <GridContainer>
         <S.HeaderTitleText>9oormthonUNIV 는</S.HeaderTitleText>
         <S.HeaderTitleTextSmall>9oormthonUNIV 는</S.HeaderTitleTextSmall>
@@ -46,26 +37,17 @@ export default function Intro({ scrollTarget }) {
         </S.HeaderTextWrapper>
         <S.ImgsWrapper>
           <S.Imgs>
-            <S.ImgsSetWrapper
-              className={`beotkkot ${beotkkotExploded ? 'exploded' : ''}`}
-              onClick={() => handleImageClick(setBeotkkotExploded)}
-            >
+            <S.ImgsSetWrapper className={`beotkkot `}>
               <S.Img src={BeotkkotImg} />
-              <S.Img src={BeotkkotHoverImg} className={`hover-img ${beotkkotExploded ? 'exploded' : ''}`} />
+              <S.Img src={BeotkkotHoverImg} className={`hover-img`} />
             </S.ImgsSetWrapper>
-            <S.ImgsSetWrapper
-              className={`goorm ${goormExploded ? 'exploded' : ''}`}
-              onClick={() => handleImageClick(setGoormExploded)}
-            >
+            <S.ImgsSetWrapper className={`goorm`}>
               <S.Img src={GoormImg} />
-              <S.Img src={GoormHoverImg} className={`hover-img ${goormExploded ? 'exploded' : ''}`} />
+              <S.Img src={GoormHoverImg} className={`hover-img`} />
             </S.ImgsSetWrapper>
-            <S.ImgsSetWrapper
-              className={`danpoong ${danpoongExploded ? 'exploded' : ''}`}
-              onClick={() => handleImageClick(setDanpoongExploded)}
-            >
+            <S.ImgsSetWrapper className={`danpoong `}>
               <S.Img src={DanpoongImg} />
-              <S.Img src={DanpoongHoverImg} className={`hover-img ${danpoongExploded ? 'exploded' : ''}`} />
+              <S.Img src={DanpoongHoverImg} className={`hover-img`} />
             </S.ImgsSetWrapper>
           </S.Imgs>
         </S.ImgsWrapper>

@@ -1,16 +1,9 @@
 import styled from 'styled-components';
 
 export const GoalWrapper = styled.div`
-  @media screen and (min-width: 0px) {
-    height: 100%;
-  }
-  @media screen and (min-width: 576px) {
-    height: calc(100vh + 12.9375rem);
-    @supports (height: 100dvh) {
-      height: calc(100dvh + 12.9375rem);
-    }
-  }
+  height: 100%;
 
+  margin-top: 12.937rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,6 +12,16 @@ export const GoalWrapper = styled.div`
   background-color: var(--gray-900);
 `;
 
+export const MainCloudDownImg = styled.div`
+  background-image: url(${({ url }) => url});
+  width: 100%;
+  height: 12.937rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-position-x: center;
+  background-color: var(--gray-900);
+`;
 export const HeaderTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,6 +41,7 @@ export const HeaderTextWrapper = styled.div`
   @media screen and (min-width: 1200px) {
     gap: var(--space-700);
     align-items: start;
+    justify-content: center;
     margin-bottom: 0;
   }
 `;
@@ -93,7 +97,6 @@ export const HeaderDescriptionText = styled.h5`
   @media screen and (min-width: 768px) {
     display: block;
     text-align: center;
-    margin-top: 12.9375rem;
   }
 
   /* container-xl */
@@ -122,14 +125,9 @@ export const ContentsWrapper = styled.div`
   display: flex;
 
   /* container-xs, md */
-  flex-direction: column;
-
   @media screen and (min-width: 0px) {
-    margin-top: calc(12.9375rem + 7.5rem);
-  }
-
-  @media screen and (min-width: 576px) {
     margin-top: 7.5rem;
+    flex-direction: column;
   }
 
   /* container-xl */
