@@ -39,11 +39,11 @@ export const TIMELINE_DATA = {
   4: {
     Icon: BeotkkotSmall,
     title: '무박 2일, 벚꽃톤',
-    description: '구름톤유니브의 하이라이트, 벚꽃톤!\n모든 미르미가 밤을 새워 아이디어를 실현하는 장이에요.',
+    description: '구름톤 유니브의 하이라이트, 벚꽃톤!\n모든 미르미가 밤을 새워 아이디어를 실현하는 장이에요.',
   },
   5: {
     Icon: CakeIcon,
-    title: '구름톤유니브 에프터 파티, GUAP',
+    title: '구름톤 유니브 에프터 파티, GUAP',
     description: '해커톤의 여운을 이어갈 수 있도록 현직자와 수상자의 세미나, 그리고 마무리 회고를 진행해요.',
   },
   6: {

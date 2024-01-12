@@ -53,7 +53,7 @@ function RecuritHeader() {
   const RecruitmentContent = () => (
     <>
       <S.HeaderTitleText>
-        구름톤유니브 2기 모집 중!
+        구름톤 유니브 2기 모집 중!
         <h4>
           {isInit ? (
             <>
