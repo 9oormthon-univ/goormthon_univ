@@ -67,6 +67,7 @@ function FindingUniv() {
       <S.HeaderContainer>
         <S.HeaderTitleWrapper>
           <S.HeaderTitleText>새로운 유니브를 찾고 있어요!</S.HeaderTitleText>
+          <S.HeaderTitleTextSmall>새로운 유니브를 찾고 있어요!</S.HeaderTitleTextSmall>
 
           <S.GoormBtn color="primary" size="xl" tag="button" onClick={() => navigate('/recruit')}>
             자세히 보기

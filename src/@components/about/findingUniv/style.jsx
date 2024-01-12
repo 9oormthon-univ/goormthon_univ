@@ -44,6 +44,20 @@ export const RowPosters = styled.div`
 export const HeaderTitleText = styled.h2`
   text-align: center;
   margin-bottom: 1.5rem;
+
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+`;
+
+export const HeaderTitleTextSmall = styled.h3`
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const HeaderUnivContainer = styled.div`
