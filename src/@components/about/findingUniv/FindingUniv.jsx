@@ -67,6 +67,7 @@ function FindingUniv() {
       <S.HeaderContainer>
         <S.HeaderTitleWrapper>
           <S.HeaderTitleText>새로운 유니브를 찾고 있어요!</S.HeaderTitleText>
+          <S.HeaderTitleTextSmall>새로운 유니브를 찾고 있어요!</S.HeaderTitleTextSmall>
 
           <S.GoormBtn color="primary" size="xl" tag="button" onClick={() => navigate('/recruit')}>
             자세히 보기
@@ -74,6 +75,7 @@ function FindingUniv() {
         </S.HeaderTitleWrapper>
         <S.HeaderUnivContainer>
           <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
+          <S.HeaderUnivTitleTextSmall>현재 함께하는 유니브 10개</S.HeaderUnivTitleTextSmall>
           <S.HeaderUnivListContainer>
             <AutoScrollingImages />
           </S.HeaderUnivListContainer>

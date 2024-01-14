@@ -26,19 +26,28 @@ export const BenefitWrapper = styled.div`
 `;
 
 export const HeaderTitleText = styled.h2`
-  /* container-md */
-  @media screen and (min-width: 768px) {
-    width: 43rem;
-  }
-
-  /* container-xl */
-  @media screen and (min-width: 1200px) {
-    width: 71.25rem;
-  }
+  width: 71.25rem;
 
   text-align: start;
   position: absolute;
   top: 18%;
+
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+`;
+
+export const HeaderTitleTextSmall = styled.h3`
+  width: 43rem;
+
+  text-align: start;
+  position: absolute;
+  top: 18%;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const BenefitItemWrapper = styled.div`
