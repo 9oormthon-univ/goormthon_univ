@@ -1,21 +1,25 @@
 import React from 'react';
-import * as S from './style';
 import MainBannerSlogan from '../../../assets/svgs/main_banner_slogan.svg';
+import MainBannerImg from '../../../assets/svgs/MainBannerImg';
+import MainBannerSmallImg from '../../../assets/svgs/MainBannerSmallImg';
+
+import './MainBanner.scss';
 
 export default function MainBanner({ scrollTrigger }) {
   return (
-    <S.MainBannerWrapper className="d-flex flex-column justify-content-between align-items-center position-fixed w-100">
-      <S.HeaderTextWrapper className="d-flex flex-column">
-        <S.HeaderDescriptionText className="d-none d-md-block text-center">사계절, 구름과 함께</S.HeaderDescriptionText>
-        <S.HeaderDescriptionTextSmall className="d-block d-md-none text-center">
-          사계절, 구름과 함께
-        </S.HeaderDescriptionTextSmall>
-        <S.HeaderTitle src={MainBannerSlogan} />
-      </S.HeaderTextWrapper>
-      <S.MainImgWrapper className="p-relative">
-        <S.MainImg onClick={scrollTrigger} className="d-none d-sm-block position-absolute" />
-        <S.MainSmallImg onClick={scrollTrigger} className="d-block d-sm-none position-absolute" />
-      </S.MainImgWrapper>
-    </S.MainBannerWrapper>
+    <div className="main-banner d-flex flex-column justify-content-between align-items-center position-fixed w-100">
+      <div className="header-text d-flex flex-column">
+        <h3 className="d-none d-md-block text-center">사계절, 구름과 함께</h3>
+        <h5 className="d-block d-md-none text-center">사계절, 구름과 함께</h5>
+        <img className="header-text__title" src={MainBannerSlogan} />
+      </div>
+      <div>
+        <MainBannerImg onClick={scrollTrigger} className="main-banner__img d-none d-sm-block position-absolute" />
+        <MainBannerSmallImg
+          onClick={scrollTrigger}
+          className="main-banner__img__small d-block d-sm-none position-absolute"
+        />
+      </div>
+    </div>
   );
 }
