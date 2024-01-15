@@ -1,6 +1,6 @@
 @import '../../../style/mixin.scss';
 
-.main-banner {
+.mainBanner {
   height: 100vh;
   @supports (height: 100dvh) {
     height: 100dvh;
@@ -9,7 +9,7 @@
   background-color: var(--gray-950);
 }
 
-.header-text {
+.headerText {
   margin-top: 8.5rem;
   gap: 2rem;
 
@@ -29,7 +29,7 @@
   }
 }
 
-.header-text__title {
+.title {
   width: 20.9375rem;
   height: 3.5rem;
 
@@ -44,7 +44,7 @@
   }
 }
 
-.main-banner__img {
+.mainImg {
   cursor: pointer;
 
   stroke-dashoffset: -65;
@@ -61,7 +61,7 @@
   transition: stroke-dashoffset 0.5s ease-in-out;
 }
 
-.main-banner__img__small {
+.mainImgSmall {
   cursor: pointer;
 
   stroke-dashoffset: -65;
