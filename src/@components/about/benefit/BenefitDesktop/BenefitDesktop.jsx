@@ -7,7 +7,8 @@ import * as S from './style';
 export default function BenefitDesktop() {
   return (
     <S.BenefitWrapper>
-      <S.HeaderTitleText>구름톤유니브에서 마음껏 누려요!</S.HeaderTitleText>
+      <S.HeaderTitleText>구름톤 유니브에서 마음껏 누려요!</S.HeaderTitleText>
+      <S.HeaderTitleTextSmall>구름톤 유니브에서 마음껏 누려요!</S.HeaderTitleTextSmall>
       <HorizontalScroll />
     </S.BenefitWrapper>
   );

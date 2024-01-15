@@ -5,15 +5,22 @@ import { MenuIcon } from '@goorm-dev/gds-icons';
 export const NavWrapper = styled.div`
   background-color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-950)' : 'var(--gray-000)')};
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
   height: 3.5rem;
   padding: 0 1.5rem;
   z-index: 2;
   transition: top 0.3s ease-in-out;
   position: fixed; // If not already set
-  width: 100%;
+`;
+
+export const NavContents = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
 `;
 
 export const AlertMessage = styled.div`

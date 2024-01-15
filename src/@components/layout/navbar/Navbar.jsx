@@ -106,9 +106,9 @@ function Navbar() {
           <S.NavMenuLink className="subtitle-1" $isAbout={isAbout} to={menu.link} $isActive={isActive}>
             {menu.title}
           </S.NavMenuLink>
-          {menu.title === 'Recruit' && !isMobile && location.pathname === '/' ? (
+          {/* {menu.title === 'Recruit' && !isMobile && location.pathname === '/' ? (
             <S.AlertMessage> 모집중 !</S.AlertMessage>
-          ) : null}
+          ) : null} */}
         </React.Fragment>
       );
     });
@@ -146,8 +146,8 @@ function Navbar() {
   const isAbout = location.pathname === '/';
 
   return (
-    <>
-      <S.NavWrapper ref={navbarRef} $isAbout={isAbout}>
+    <S.NavWrapper ref={navbarRef} $isAbout={isAbout}>
+      <S.NavContents>
         <S.NavLogo to={'/'}>
           <S.NavLogoIcon src={isAbout ? LogoLight : LogoDark} alt="9oormthon Univ" />
         </S.NavLogo>
@@ -177,8 +177,8 @@ function Navbar() {
         ) : (
           <S.NavMonitorMenu>{setMenu()}</S.NavMonitorMenu>
         )}
-      </S.NavWrapper>
-    </>
+      </S.NavContents>
+    </S.NavWrapper>
   );
 }
 

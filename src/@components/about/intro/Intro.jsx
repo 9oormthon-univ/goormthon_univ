@@ -31,12 +31,18 @@ export default function Intro({ scrollTarget }) {
       <S.MainCloudDownImg url={MainCloudDownImg} />
       <GridContainer>
         <S.HeaderTitleText>9oormthonUNIV 는</S.HeaderTitleText>
+        <S.HeaderTitleTextSmall>9oormthonUNIV 는</S.HeaderTitleTextSmall>
         <S.HeaderTextWrapper>
           <S.HeaderDescriptionText>
             봄과 가을을 기수로 하여
             <br />
             아이디어 실현의 장을 제공 해주는 IT 연합 동아리 입니다.
           </S.HeaderDescriptionText>
+          <S.HeaderDescriptionTextSmall>
+            봄과 가을을 기수로 하여
+            <br />
+            아이디어 실현의 장을 제공 해주는 IT 연합 동아리 입니다.
+          </S.HeaderDescriptionTextSmall>
         </S.HeaderTextWrapper>
         <S.ImgsWrapper>
           <S.Imgs>

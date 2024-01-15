@@ -50,11 +50,41 @@ export const HeaderTitleText = styled.h5`
   color: var(--gray-600);
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+`;
+
+export const HeaderTitleTextSmall = styled.h6`
+  text-align: center;
+  color: var(--gray-600);
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const HeaderDescriptionText = styled.h3`
   text-align: center;
   color: var(--gray-800);
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+`;
+
+export const HeaderDescriptionTextSmall = styled.h4`
+  text-align: center;
+  color: var(--gray-800);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ImgsWrapper = styled.div`

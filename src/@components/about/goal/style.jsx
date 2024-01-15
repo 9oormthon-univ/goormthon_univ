@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
 export const GoalWrapper = styled.div`
-  height: calc(100vh + 12.9375rem);
-  @supports (height: 100dvh) {
-    height: calc(100dvh + 12.9375rem);
+  @media screen and (min-width: 0px) {
+    height: 100%;
+  }
+  @media screen and (min-width: 576px) {
+    height: calc(100vh + 12.9375rem);
+    @supports (height: 100dvh) {
+      height: calc(100dvh + 12.9375rem);
+    }
   }
 
   position: relative;
@@ -119,8 +124,17 @@ export const ContentsWrapper = styled.div`
   /* container-xs, md */
   flex-direction: column;
 
+  @media screen and (min-width: 0px) {
+    margin-top: calc(12.9375rem + 7.5rem);
+  }
+
+  @media screen and (min-width: 576px) {
+    margin-top: 7.5rem;
+  }
+
   /* container-xl */
   @media screen and (min-width: 1200px) {
+    margin-top: 0;
     flex-direction: row;
   }
 `;
