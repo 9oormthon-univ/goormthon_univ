@@ -90,10 +90,11 @@ function RecuritHeader() {
   return (
     <S.HeaderContainer>
       <S.HeaderTitleWrapper>
-        {isRecruitmentOver ? <RecruitmentClosedContent /> : <RecruitmentContent />}
+        <RecruitmentClosedContent />
       </S.HeaderTitleWrapper>
       <S.HeaderUnivContainer>
         <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
+		  <h6>☁️ 추가 2기 지원 21개 유니브가 인터뷰 진행 중 ☁️</h6>
         <S.HeaderUnivListContainer>
           <RecruitUnivScrolling />
         </S.HeaderUnivListContainer>
