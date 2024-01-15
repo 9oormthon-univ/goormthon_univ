@@ -1,11 +1,16 @@
 import React from 'react';
 import { TIMELINE_DATA } from '../../../../utilities/AboutData';
-import * as S from './style';
+
 import Card from './Card';
+
+import styles from './PlanDesktop.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 export default function CardListLower({ month }) {
   return (
-    <S.CardListLowerWrapper>
+    <div className={cx('cardListLower', 'd-flex')}>
       {Object.keys(TIMELINE_DATA)
         .filter((item) => item >= 4)
         .map((key, idx) => {
@@ -21,6 +26,6 @@ export default function CardListLower({ month }) {
             />
           );
         })}
-    </S.CardListLowerWrapper>
+    </div>
   );
 }
