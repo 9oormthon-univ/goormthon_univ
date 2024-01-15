@@ -1,0 +1,78 @@
+@import '../../../style/mixin.scss';
+
+.cloudDown {
+  background-image: url(../../../assets/svgs/main-cloud-down.svg);
+  height: 12.937rem;
+
+  left: 50%;
+  transform: translateX(-50%);
+  background-position-x: center;
+  background-color: var(--gray-900);
+}
+
+.goal {
+  margin-top: 12.937rem;
+  background-color: var(--gray-900);
+
+  padding-top: 7.5rem;
+
+  @include container-xl {
+    padding-top: 0;
+  }
+}
+
+.headerText {
+  margin-bottom: 6.25rem;
+
+  @include container-md {
+    gap: 1.5rem;
+    margin-bottom: 6.67rem;
+  }
+
+  @include container-xl {
+    gap: var(--space-700);
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  color: var(--gray-000);
+  white-space: pre-wrap;
+  text-align: center;
+
+  @include container-xl {
+    display: block;
+    text-align: start;
+  }
+}
+
+.description {
+  color: var(--gray-500);
+  text-align: center;
+
+  @include container-xl {
+    text-align: start;
+  }
+}
+
+.img {
+  width: 20.9375rem;
+  height: 19.625rem;
+
+  @include container-sm {
+    width: 33.4375rem;
+    height: 31.375rem;
+  }
+
+  @include container-md {
+    width: 34.25rem;
+    height: 31.375rem;
+  }
+
+  @include container-xl {
+    width: 48.9375rem;
+    height: 44.8125rem;
+  }
+}
