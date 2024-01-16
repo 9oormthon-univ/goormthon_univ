@@ -9,7 +9,13 @@ const cx = classNames.bind(styles);
 export default function Card({ Icon, title, description, month, idx }) {
   return (
     <div className={cx('card', 'd-flex flex-column w-100')}>
-      <div className={cx('cardContent', `${month === Number(idx) && 'selected'}`)}>
+      <div
+        className={cx(
+          'cardContent',
+          'd-flex flex-column justify-content-center',
+          `${month === Number(idx) && 'selected'}`,
+        )}
+      >
         <div className={cx('icon')}>
           <Icon />
         </div>

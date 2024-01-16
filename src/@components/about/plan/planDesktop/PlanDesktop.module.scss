@@ -27,14 +27,6 @@
   margin: 0;
 }
 
-.timelineFillBar {
-  height: 2.75rem;
-  background-color: var(--blue-500);
-  border-radius: 1.34375rem;
-  position: absolute;
-  transition: width 0.5s ease-in-out;
-}
-
 $timeline-fill-ratio: (
   1: 9.5%,
   2: 27.2%,
@@ -86,7 +78,6 @@ $timeline-fill-ratio: (
 }
 
 .card {
-  transition: left 0.5s ease-in-out;
   flex-grow: 1;
 }
 
@@ -94,10 +85,6 @@ $timeline-fill-ratio: (
   height: 10.375rem;
   background-color: var(--gray-200);
   border-radius: 1rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding: 1.25rem 1.25rem 1.5rem 1.25rem;
 
   & > h4,

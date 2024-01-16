@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-import * as S from './style';
+import styles from './PlanMobile.module.scss';
+import classNames from 'classnames/bind';
 
 import CardList from './CardList';
+
+const cx = classNames.bind(styles);
 
 export default function Timeline() {
   const [month, setMonth] = useState(1);
@@ -47,47 +50,34 @@ export default function Timeline() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [window.scrollY]);
 
-  const TIMELINE_FILL_RATIO_MD = {
-    1: 17,
-    2: 33.2,
-    3: 49.4,
-    4: 65.6,
-    5: 81.6,
-    6: 100,
-  };
-
-  const TIMELINE_FILL_RATIO_XS = {
-    1: 14,
-    2: 31.2,
-    3: 48.4,
-    4: 65.4,
-    5: 82.5,
-    6: 100,
-  };
-
   const getMonthText = (key) => {
     if (key === 6) return '6-8월';
     return `${key}월`;
   };
 
   return (
-    <S.TimelineWrapper>
-      <S.TimelineBar>
-        <S.TimelineFillBar $fillRatioMd={TIMELINE_FILL_RATIO_MD[month]} $fillRatioXs={TIMELINE_FILL_RATIO_XS[month]} />
-        <S.MonthTextWrapper>
+    <div className={cx('timeline', 'd-flex justify-content-between')}>
+      <div className={cx('timelineBar', 'position-relative')}>
+        <div className={cx('timelineFillBar', `fillRatio${month}`, 'position-absolute')} />
+        <div className={cx('monthText', 'w-100 h-100 d-flex flex-column align-items-center justify-content-between')}>
           {Array.from({ length: 6 }, (_, index) => index + 1).map((key) => (
-            <S.MonthTextClickable
+            <h5
               key={key}
               id={key}
-              className={`${Number(key) === month && 'active'} ${Number(key) <= month && 'prev'}`}
+              className={cx(
+                'monthTextClickable',
+                'd-flex justify-content-center align-items-center',
+                `${Number(key) === month && 'active'}`,
+                `${Number(key) <= month && 'prev'}`,
+              )}
               onClick={() => setMonth(Number(key))}
             >
               {getMonthText(Number(key))}
-            </S.MonthTextClickable>
+            </h5>
           ))}
-        </S.MonthTextWrapper>
-      </S.TimelineBar>
+        </div>
+      </div>
       <CardList month={month} />
-    </S.TimelineWrapper>
+    </div>
   );
 }
