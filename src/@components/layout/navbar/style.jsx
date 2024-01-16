@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { MenuIcon } from '@goorm-dev/gds-icons';
+import { GoormNavbar } from '@goorm-dev/gds-components';
 
 export const NavWrapper = styled.div`
   background-color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-950)' : 'var(--gray-000)')};
@@ -103,12 +104,12 @@ export const StyledMenuIcon = styled(MenuIcon)`
 `;
 
 // NavLink
-export const NavLink = styled(Link)`
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding: 0.8rem 1rem;
-  border-radius: 0.5rem;
-`;
+// export const NavLink = styled(Link)`
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   padding: 0.8rem 1rem;
+//   border-radius: 0.5rem;
+// `;
 
 // 한글 영어
 export const NavBarTranslate = styled.div`
@@ -195,4 +196,33 @@ export const NavSideBarBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`;
+
+/////* customNavbar */////
+
+export const NavLink = styled(Link)`
+  color: ${({ $isOpened, $isAbout }) =>
+    $isAbout && !$isOpened
+      ? 'var(--gray-300)'
+      : $isAbout && $isOpened
+      ? 'var(--gray-900)'
+      : !$isAbout && $isOpened
+      ? 'var(--gray-900)'
+      : 'var(--gray-900)'};
+
+  &:hover {
+    color: ${({ $isAbout, $isOpened }) => ($isAbout && !$isOpened ? 'var(--gray-300)' : 'var(--gray-900)')};
+    background-color: ${({ $isAbout, $isOpened }) =>
+      $isAbout && !$isOpened ? 'var(--link-transparent-16)' : 'var(--link-transparent-8)'};
+  }
+  &:focus {
+    color: ${({ $isAbout }) => ($isAbout ? 'var(--gray-300)' : 'var(--gray-900)')};
+    background-color: var(--link-transparent-8);
+  }
+`;
+
+export const Toggler = styled(GoormNavbar.Toggler)`
+  & > span > span {
+    background: ${({ $isAbout, isOpened }) => !$isAbout && !isOpened && 'var(--gray-900)!important'};
+  }
 `;
