@@ -4,7 +4,7 @@ import { motion, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import { useScrollPercentage } from 'react-scroll-percentage';
 import { BENEFIT_ITEM_DATA } from '../../../../utilities/AboutData';
 import BenefitItem from './BenefitItem';
-import * as S from './style';
+
 import classNames from 'classnames/bind';
 
 import styles from './BenefitDesktop.module.scss';

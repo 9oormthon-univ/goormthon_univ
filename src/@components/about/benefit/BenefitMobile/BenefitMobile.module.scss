@@ -1,0 +1,76 @@
+@import '../../../../style/mixin.scss';
+
+.benefitMobile {
+  background-color: #fff;
+
+  padding-bottom: 5rem;
+
+  @include container-md {
+    margin: 0;
+  }
+}
+
+.headerTitle {
+  text-align: start;
+  margin-top: 5rem;
+  width: 19.0625rem;
+}
+
+.benefitList {
+  gap: 2rem;
+  width: 19.0625rem;
+  margin-top: 2.39rem;
+}
+
+.benefitImgContainer {
+  &.gray800 {
+    background-color: var(--gray-800);
+  }
+  &.gray300 {
+    background-color: var(--gray-300);
+  }
+  &.blue400 {
+    background-color: var(--blue-400);
+  }
+  &.inflearnGreen {
+    background-color: #00cd72;
+  }
+  &.yellow300 {
+    background-color: var(--yellow-300);
+  }
+
+  height: 13.6875rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.benefitImg {
+  width: max-content;
+  height: max-content;
+}
+
+.benefitContents {
+  background-color: var(--light);
+  border-radius: 0rem 0rem var(--space-500) var(--space-500);
+  border: 1px solid var(--gray-300);
+  padding: 1.25rem;
+}
+
+.benefitText {
+  gap: 0.5rem;
+}
+
+.benefitTitle {
+  text-align: left;
+}
+
+.benefitDescription {
+  color: var(--gray-900);
+  text-align: left;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.icon {
+  width: var(--size-500);
+  height: var(--size-500);
+}
