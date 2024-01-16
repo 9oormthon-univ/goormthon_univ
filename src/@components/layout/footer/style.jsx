@@ -3,36 +3,32 @@ import styled from 'styled-components';
 export const FooterWrapper = styled.div`
   position: relative;
   z-index: 1;
-
   width: 100%;
-
   background: var(--gray-000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--gray-300);
 `;
 
 export const FooterContents = styled.div`
-  height: 8rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid var(--gray-300);
+  justify-content: center;
+  gap: 1.88rem;
 
-  /* gds footer와 동일한 반응형 레이아웃으로 맞춤 */
-  max-width: 90rem;
-  margin: auto;
+  width: 335px;
+  flex-direction: column;
+  padding: 2.88rem 0;
 
-  @media (min-width: 1200px) and (max-width: 1439.98px) {
-    max-width: 75rem;
-    padding: 0 1.875rem;
+  @media screen and (min-width: 768px) {
+    width: 688px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
   }
-
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    max-width: 62rem;
-    padding: 0 2.625rem;
-  }
-
-  @media (max-width: 991.98px) {
-    padding: 0 1rem;
+  @media screen and (min-width: 1200px) {
+    width: 1138px;
   }
 `;
 
@@ -55,11 +51,6 @@ export const FooterSlogan = styled.h3`
   align-items: center;
   justify-content: center;
   justify-self: center;
-  @media screen and (max-width: 768px) {
-    font-size: 1rem;
-    white-space: pre-wrap;
-    line-height: 1.4rem;
-  }
 `;
 
 export const SocialIcon = styled.a`
@@ -72,12 +63,12 @@ export const SocialIcon = styled.a`
   }
 
   & > svg {
-    margin-right: 2rem;
+    margin-right: 0;
   }
 
-  @media screen and (max-width: 479px) {
+  @media screen and (min-width: 768px) {
     & > svg {
-      margin-right: 0;
+      margin-right: 2rem;
     }
   }
 `;
