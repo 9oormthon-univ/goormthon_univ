@@ -3,7 +3,7 @@ import { GoormNavbar, Nav, NavItem } from '@goorm-dev/gds-components';
 import LogoDark from '../../../assets/images/goormthon_univ_BI-Bk.png';
 import LogoLight from '../../../assets/images/goormthon_univ_BI-W.png';
 import * as S from './style';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function CustomNavbar() {
   const [isOpened, setIsOpened] = useState(false);

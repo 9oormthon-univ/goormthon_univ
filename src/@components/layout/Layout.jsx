@@ -17,7 +17,6 @@ const Wrapper = styled.div`
 const Layout = () => {
   return (
     <>
-      {/* <Navbar /> */}
       <CustomNavbar />
       <Wrapper>
         <Outlet />
