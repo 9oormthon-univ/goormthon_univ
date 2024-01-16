@@ -1,0 +1,130 @@
+@import '../../../../style/mixin.scss';
+
+.benefitDesktop {
+  height: 100vh;
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+
+  z-index: 1;
+
+  background-color: #fff;
+}
+
+.headerTitle {
+  width: 71.25rem;
+
+  text-align: start;
+  top: 18%;
+}
+
+.headerTitleSmall {
+  width: 43rem;
+
+  text-align: start;
+  top: 18%;
+}
+
+.horizontalScroll {
+  height: 100vh;
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+}
+
+.scroll {
+  @include container-md {
+    width: 43rem;
+  }
+
+  @include container-xl {
+    width: 71.25rem;
+  }
+
+  margin-top: 3.69rem;
+}
+
+.motionContainer {
+  height: 100vh;
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+}
+
+.itemList {
+  margin-top: 3.69rem;
+  & > *:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+.ghost {
+  width: 100vw;
+}
+
+.benefitLink {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.benefitImgContainer {
+  &.gray800 {
+    background-color: var(--gray-800);
+  }
+  &.gray300 {
+    background-color: var(--gray-300);
+  }
+  &.blue400 {
+    background-color: var(--blue-400);
+  }
+  &.inflearnGreen {
+    background-color: #00cd72;
+  }
+  &.yellow300 {
+    background-color: var(--yellow-300);
+  }
+
+  width: 19rem;
+  height: 13.6rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.benefitImg {
+  width: max-content;
+  height: max-content;
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.benefitContents {
+  background-color: var(--light);
+  border-radius: 0rem 0rem var(--space-500) var(--space-500);
+  border: 1px solid var(--gray-300);
+  width: 19rem;
+
+  padding: 1.25rem;
+}
+
+.benefitText {
+  gap: 0.5rem;
+}
+
+.benefitTitle {
+  text-align: left;
+}
+
+.benefitDescription {
+  color: var(--gray-900);
+
+  text-align: left;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.icon {
+  width: var(--size-500);
+  height: var(--size-500);
+}

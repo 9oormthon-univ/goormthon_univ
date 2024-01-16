@@ -1,10 +1,15 @@
 import React, { useRef, useState, useLayoutEffect, useCallback, useEffect } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import { motion, useTransform, useSpring, useMotionValue } from 'framer-motion';
-import styled from 'styled-components';
 import { useScrollPercentage } from 'react-scroll-percentage';
 import { BENEFIT_ITEM_DATA } from '../../../../utilities/AboutData';
 import BenefitItem from './BenefitItem';
+import * as S from './style';
+import classNames from 'classnames/bind';
+
+import styles from './BenefitDesktop.module.scss';
+
+const cx = classNames.bind(styles);
 
 export default function HorizontalScroll() {
   const scrollRef = useRef(null);
@@ -43,14 +48,17 @@ export default function HorizontalScroll() {
   const spring = useSpring(transform, physics);
 
   return (
-    <SmoothScrollWrapper ref={containerRef}>
-      <ScrollContainer>
-        <ThumbnailsContainer ref={scrollRef} style={{ x: spring }}>
-          <div className="thumbnails">
+    <div className={cx('horizontalScroll')} ref={containerRef}>
+      <div className={cx('scroll', 'position-sticky')}>
+        <motion.section
+          className={cx('motionContainer', 'position-relative w-100 d-flex flex-column justify-content-center')}
+          ref={scrollRef}
+          style={{ x: spring }}
+        >
+          <div className={cx('itemList', 'position-relative d-flex')}>
             {BENEFIT_ITEM_DATA.map((item) => (
               <BenefitItem
                 key={item.title}
-                className="thumbnail"
                 imgSrc={item.imgSrc}
                 iconSrc={item.iconSrc}
                 bgColor={item.bgColor}
@@ -60,66 +68,9 @@ export default function HorizontalScroll() {
               />
             ))}
           </div>
-        </ThumbnailsContainer>
-      </ScrollContainer>
-      <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" />
-    </SmoothScrollWrapper>
+        </motion.section>
+      </div>
+      <div ref={ghostRef} />
+    </div>
   );
 }
-
-const ScrollContainer = styled.div`
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  will-change: transform;
-  height: 100vh;
-  @supports (height: 100dvh) {
-    height: 100dvh;
-  }
-
-  /* container-md */
-  @media screen and (min-width: 768px) {
-    width: 43rem;
-  }
-
-  /* container-xl */
-  @media screen and (min-width: 1200px) {
-    width: 71.25rem;
-  }
-
-  margin-top: 3.69rem;
-
-  .ghost {
-    width: 100vw;
-  }
-`;
-
-const SmoothScrollWrapper = styled.div`
-  height: 100vh;
-  @supports (height: 100dvh) {
-    height: 100dvh;
-  }
-`;
-
-const ThumbnailsContainer = styled(motion.section)`
-  position: relative;
-  height: 100vh;
-  @supports (height: 100dvh) {
-    height: 100dvh;
-  }
-
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .thumbnails {
-    position: relative;
-    display: flex;
-    margin-top: 3.69rem;
-    & > *:not(:last-child) {
-      margin-right: 2rem;
-    }
-  }
-`;

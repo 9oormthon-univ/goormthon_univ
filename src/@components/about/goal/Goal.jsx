@@ -1,7 +1,6 @@
 import React from 'react';
 
 import GoalImgWhole from '../../../assets/svgs/goal-graphic_whole.svg';
-import MainCloudDownImg from '../../../assets/svgs/main-cloud-down.svg';
 import classNames from 'classnames/bind';
 
 import styles from './Goal.module.scss';
