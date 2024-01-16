@@ -22,7 +22,7 @@ const Layout = () => {
         <Outlet />
       </Wrapper>
       <CustomFooter />
-      <StyledFooter />
+      <StyledFooter localeListGroup={[]} />
     </>
   );
 };
