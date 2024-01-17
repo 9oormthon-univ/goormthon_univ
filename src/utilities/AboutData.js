@@ -87,7 +87,7 @@ export const ACTIVITY_DATA = [
     title: '애프터파티',
     title_en: '9UAP',
     description:
-      '9UAP는 9oormthonUNIV After Party의 약자로, 해커톤 대상 및 최우수 수상자들과 현직 전문가들이 세미나를 진행합니다. 또한 지금까지의 과정을 회고하는 시간을 갖습니다..',
+      '9UAP는 9oormthonUNIV After Party의 약자로, 해커톤 대상 및 최우수 수상자들과 현직 전문가들이 세미나를 진행합니다. 또한 지금까지의 과정을 회고하는 시간을 갖습니다.',
   },
 ];
 
