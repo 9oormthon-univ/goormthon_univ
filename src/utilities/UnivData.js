@@ -1,13 +1,13 @@
-import KoreaSaeJongUnivImg from '../assets/images/university/koreaSaejong.png';
-import KangwoonUnivImg from '../assets/images/university/kangwoon.png';
-import ChungangUnivImg from '../assets/images/university/chungang.png';
-import SungkonghoeUnivImg from '../assets/images/university/sungkonghoe.png';
-import SangmyeongUnivImg from '../assets/images/university/sangmyeong.png';
-import DongdukUnivImg from '../assets/images/university/dongduk.png';
-import DonggukUnivImg from '../assets/images/university/dongguk.png';
-import DuckseongUnivImg from '../assets/images/university/duckseong.png';
-import KoominUnivImg from '../assets/images/university/koomin.png';
-import IncheonUnivImg from '../assets/images/university/incheon.png';
+import KoreaSaeJongUnivImg from '../assets/images/university_row/koreaSaejong.png';
+import KangwoonUnivImg from '../assets/images/university_row/kangwoon.png';
+import ChungangUnivImg from '../assets/images/university_row/chungang.png';
+import SungkonghoeUnivImg from '../assets/images/university_row/sungkonghoe.png';
+import SangmyeongUnivImg from '../assets/images/university_row/sangmyeong.png';
+import DongdukUnivImg from '../assets/images/university_row/dongduk.png';
+import DonggukUnivImg from '../assets/images/university_row/dongguk.png';
+import DucksungUnivImg from '../assets/images/university_row/ducksung.png';
+import KoominUnivImg from '../assets/images/university_row/koomin.png';
+import IncheonUnivImg from '../assets/images/university_row/incheon.png';
 
 const Universities = [
   {
@@ -26,7 +26,7 @@ const Universities = [
     link: 'https://www.instagram.com/goormthon_univ_ku/',
   },
   {
-    image: DuckseongUnivImg,
+    image: DucksungUnivImg,
     name: '덕성여자대학교',
     link: 'https://www.instagram.com/9oormthon_univ_duksung/',
   },
