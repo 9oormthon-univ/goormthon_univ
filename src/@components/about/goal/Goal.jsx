@@ -23,7 +23,12 @@ export default function Goal() {
               {`직접 구현한 서비스가 작은 물방울이 되어\n큰 구름을 이루는 기회를 제공하는 것`}
             </h4>
           </div>
-          <img src={GoalImgWhole} className={cx('img')} />
+          <img
+            src={GoalImgWhole}
+            className={cx('img')}
+            alt="직접 구현한 서비스가 작은 물방울이 되어
+큰 구름을 이루는 기회를 제공하는 것"
+          />
         </div>
       </div>
     </>

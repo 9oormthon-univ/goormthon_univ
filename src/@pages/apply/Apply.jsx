@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import { Button } from '@goorm-dev/gds-components';
 import * as S from './style';
 import { dbService } from '../../fbase';

@@ -13,7 +13,7 @@ const NotFound = lazy(() => import('./@pages/errors/NotFound'));
 
 // GoormLoader 컴포넌트에 전달할 props 설정
 const loaderProps = {
-  color: 'blue', // 예시 색상
+  color: 'black', // 예시 색상
   lottieProps: {
     // Lottie 관련 props 설정
     loop: true,
