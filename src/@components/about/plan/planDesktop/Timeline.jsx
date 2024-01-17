@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import useScrollValue from '../../../../hooks/useScrollValue';
 
@@ -30,15 +30,6 @@ export default function Timeline({ month, handleMonthClick }) {
       handleMonthClick(6);
     }
   }, [value]);
-
-  const TIMELINE_FILL_RATIO = {
-    1: 9.5,
-    2: 27.2,
-    3: 44.9,
-    4: 62.7,
-    5: 80.5,
-    6: 100,
-  };
 
   const getMonthText = (key) => {
     if (key === 6) return '6-8월';
