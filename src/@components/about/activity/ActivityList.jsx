@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import * as S from './style';
+import classNames from 'classnames/bind';
+import styles from './Activity.module.scss';
+
 import ActivityItem from './ActivityItem';
 import { ACTIVITY_DATA } from '../../../utilities/AboutData';
+
+const cx = classNames.bind(styles);
 
 export default function ActivityList() {
   const [visibleItems, setVisibleItems] = useState(new Array(ACTIVITY_DATA.length).fill(false));
@@ -50,7 +54,7 @@ export default function ActivityList() {
   };
 
   return (
-    <S.ActivityListWrapper>
+    <div className={cx('activityList')}>
       {ACTIVITY_DATA.map((item, idx) => {
         let customStyle = {};
 
@@ -79,6 +83,6 @@ export default function ActivityList() {
           </motion.div>
         );
       })}
-    </S.ActivityListWrapper>
+    </div>
   );
 }

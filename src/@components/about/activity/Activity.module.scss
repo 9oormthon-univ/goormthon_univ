@@ -1,0 +1,102 @@
+@import '../../../style/mixin.scss';
+
+.activity {
+  background-color: var(--gray-000);
+}
+
+.titleText {
+  text-align: center;
+  margin-top: 10.19rem;
+}
+
+.titleTextSmall {
+  text-align: center;
+  margin-top: 10.19rem;
+}
+
+.activityList {
+  width: 20.5rem;
+  margin-top: 3.94rem;
+  margin-bottom: 14.81rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  @include container-md {
+    width: 43rem;
+    display: grid;
+    grid-template-areas:
+      'activity1 activity2'
+      'activity3 activity3'
+      'activity4 activity5';
+
+    grid-template-columns: 20.5rem 20.5rem;
+    grid-template-rows: 20.25rem 18.625rem 20.25rem;
+
+    &::nth-child(1) {
+      grid-area: activity1;
+    }
+    &::nth-child(2) {
+      grid-area: activity2;
+    }
+    &::nth-child(3) {
+      grid-area: activity3;
+    }
+    &::nth-child(4) {
+      grid-area: activity4;
+    }
+    &::nth-child(5) {
+      grid-area: activity5;
+    }
+  }
+
+  @include container-xl {
+    width: 71.125rem;
+    justify-content: center;
+
+    grid-template-columns: 34.5625rem 34.5625rem;
+    grid-template-rows: 28.25rem 26.75rem 28.25rem;
+  }
+}
+
+.activityItem {
+  gap: 1rem;
+
+  &.hackathonItem img {
+    height: 12.125rem;
+  }
+
+  @include container-xl {
+    &.hackathonItem img {
+      height: 20rem;
+    }
+  }
+}
+
+.contentBox {
+  height: 8.75rem;
+  min-width: 21rem;
+}
+
+.contentTitle {
+  gap: 1.06rem;
+}
+
+.titleTextEn {
+  color: var(--gray-500);
+}
+
+.descriptionText {
+  align-self: flex-start;
+
+  @include container-xl {
+    white-space: pre-wrap;
+  }
+
+  max-width: 100%;
+}
+
+.contentImg {
+  object-fit: cover;
+  border-radius: 1rem;
+}
