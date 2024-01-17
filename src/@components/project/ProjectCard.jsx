@@ -1,6 +1,6 @@
 import { Badge } from '@goorm-dev/gds-components';
 import React, { useRef, useEffect, useState } from 'react';
-import ProjectModal from './projectModal/ProjectModal';
+import ProjectModal from './Modal/ProjectModal';
 
 import * as S from './style';
 
@@ -29,6 +29,10 @@ function ProjectCard({
 
   // 모달 오픈
   const [isModalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -85,8 +89,11 @@ function ProjectCard({
           </S.BadgeWrapper>
         </S.CardBodyWrapper>
       </S.CardContainer>
+
       {isModalOpen && (
         <ProjectModal
+          isModalOpen={isModalOpen}
+          toggleModal={toggleModal}
           award={award}
           title={title}
           content={content}
@@ -98,7 +105,6 @@ function ProjectCard({
           design={design}
           frontend={frontend}
           backend={backend}
-          setModalOpen={setModalOpen}
         />
       )}
     </>
