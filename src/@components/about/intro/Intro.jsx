@@ -37,16 +37,28 @@ export default function Intro({ scrollTarget }) {
       <div className="w-100 d-flex justify-content-center">
         <figure className={cx('imgs')}>
           <div className={cx('imgsSet', 'beotkkot', 'position-relative')}>
-            <img src={BeotkkotImg} className={cx('img', 'position-absolute w-100 h-100')} />
-            <img src={BeotkkotHoverImg} className={cx('img', 'hover-img', 'position-absolute w-100 h-100')} />
+            <img src={BeotkkotImg} className={cx('img', 'position-absolute w-100 h-100')} alt="벚꽃이 일러스트" />
+            <img
+              src={BeotkkotHoverImg}
+              className={cx('img', 'hover-img', 'position-absolute w-100 h-100')}
+              alt="색칠된 벚꽃이 일러스트"
+            />
           </div>
           <div className={cx('imgsSet', 'goorm', 'position-relative')}>
-            <img src={GoormImg} className={cx('img', 'position-absolute w-100 h-100')} />
-            <img src={GoormHoverImg} className={cx('img', 'hover-img', 'position-absolute w-100 h-100')} />
+            <img src={GoormImg} className={cx('img', 'position-absolute w-100 h-100')} alt="구르미 일러스트" />
+            <img
+              src={GoormHoverImg}
+              className={cx('img', 'hover-img', 'position-absolute w-100 h-100')}
+              alt="색칠된 구르미 일러스트"
+            />
           </div>
           <div className={cx('imgsSet', 'danpoong', 'position-relative')}>
-            <img src={DanpoongImg} className={cx('img', 'position-absolute w-100 h-100')} />
-            <img src={DanpoongHoverImg} className={cx('img', 'hover-img', 'position-absolute w-100 h-100')} />
+            <img src={DanpoongImg} className={cx('img', 'position-absolute w-100 h-100')} alt="단풍이 일러스트" />
+            <img
+              src={DanpoongHoverImg}
+              className={cx('img', 'hover-img', 'position-absolute w-100 h-100')}
+              alt="색칠된 단풍이 일러스트"
+            />
           </div>
         </figure>
       </div>
