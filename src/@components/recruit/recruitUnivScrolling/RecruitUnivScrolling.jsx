@@ -11,7 +11,7 @@ const Container = styled.div`
 
 const ImageSlider = styled.div`
   display: flex;
-  animation: slide 23s linear infinite;
+  animation: slide 15s linear infinite;
 
   &:hover {
     animation-play-state: paused;
@@ -21,14 +21,14 @@ const ImageSlider = styled.div`
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     } // 목록의 절반만큼만 이동
   }
 `;
 
 const ImageSlider2 = styled.div`
   display: flex;
-  animation: slide2 23s linear infinite;
+  animation: slide2 15s linear infinite;
 
   &:hover {
     animation-play-state: paused;
@@ -38,34 +38,38 @@ const ImageSlider2 = styled.div`
       transform: translateX(0);
     }
     100% {
-      transform: translateX(50%);
+      transform: translateX(100%);
     } // 목록의 절반만큼만 이동
   }
+`;
+const ShadowBgCotianer = styled.div`
+  filter: drop-shadow(rgba(50, 83, 198, 0.14) 0px 18px 40px);
 `;
 
 function RecruitUnivScrolling() {
   const firstHalfUniversities = Universities.slice(0, Universities.length / 2);
   const secondHalfUniversities = Universities.slice(Universities.length / 2);
-  const double1 = [...firstHalfUniversities];
-  const double2 = [...secondHalfUniversities];
   return (
-    <div className="d-flex flex-column">
+    <ShadowBgCotianer className="d-flex flex-column">
       <Container>
-        <ImageSlider>
-          {double1.map((univ, index) => (
-            <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
-          ))}
-        </ImageSlider>
+        {[...Array(3)].map((_, idx) => (
+          <ImageSlider>
+            {firstHalfUniversities.map((univ, index) => (
+              <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
+            ))}
+          </ImageSlider>
+        ))}
       </Container>
-
       <Container className="mt-3">
-        <ImageSlider2>
-          {double2.map((univ, index) => (
-            <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
-          ))}
-        </ImageSlider2>
+        {[...Array(3)].map((_, idx) => (
+          <ImageSlider2>
+            {secondHalfUniversities.map((univ, index) => (
+              <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
+            ))}
+          </ImageSlider2>
+        ))}
       </Container>
-    </div>
+    </ShadowBgCotianer>
   );
 }
 
