@@ -1,6 +1,6 @@
 import { Badge } from '@goorm-dev/gds-components';
 import React, { useRef, useEffect, useState } from 'react';
-import ProjectModal from './Modal/ProjectModal';
+import ProjectModal from './projectModal/ProjectModal';
 
 import * as S from './style';
 
@@ -64,7 +64,6 @@ function ProjectCard({
       <S.CardContainer
         ref={cardRef}
         onClick={() => setModalOpen(true)}
-        // onClick={() => window.open(link, '_blank')}
         key={index}
         variants={variants}
         initial="hidden"
@@ -89,7 +88,6 @@ function ProjectCard({
           </S.BadgeWrapper>
         </S.CardBodyWrapper>
       </S.CardContainer>
-
       {isModalOpen && (
         <ProjectModal
           isModalOpen={isModalOpen}
