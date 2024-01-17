@@ -18,7 +18,7 @@ export default function ActivityItem({ idx, imgSrc, title, title_en, description
         <p className={cx('descriptionText', 'd-block d-xl-none')}>{description}</p>
         <p className={cx('descriptionText', 'paragraph-lg d-none d-xl-block')}>{description}</p>
       </article>
-      <img className={cx('contentImg')} src={imgSrc} />
+      <img className={cx('contentImg')} src={imgSrc} alt={title} />
     </div>
   );
 }
