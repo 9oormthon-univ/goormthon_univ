@@ -20,9 +20,13 @@ export const Title = styled.h4``;
 export const Description = styled.p``;
 
 export const ProjectImg = styled.img`
-  width: 28.25rem;
-  height: 15.875rem;
   border-radius: var(--space-300);
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 28.25rem;
+    height: 15.875rem;
+  }
 `;
 
 export const ContributorContent = styled.div`
