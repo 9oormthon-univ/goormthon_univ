@@ -17,7 +17,7 @@ export default function NotFound() {
   return (
     <S.MainWrapper>
       <S.NotFoundImg src={NotFoundImg} />
-      <S.MainTitle>잘못된 페이지에요!</S.MainTitle>
+      <S.MainTitle>잘못된 페이지예요!</S.MainTitle>
       <S.MainSubDescription>{errorDetail}</S.MainSubDescription>
     </S.MainWrapper>
   );
