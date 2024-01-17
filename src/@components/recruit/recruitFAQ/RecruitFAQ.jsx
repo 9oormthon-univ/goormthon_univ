@@ -69,11 +69,15 @@ function RecuritFAQ() {
               onClick={() => toggle(id)}
               className="w-100 d-flex flex-direction-row justify-content-between align-items-center"
             >
-              <S.QuestionText>{question}</S.QuestionText>
+              <div className="d-flex flex-direction-row" style={{ gap: '0.75rem' }}>
+                <S.QuestionText>Q.</S.QuestionText>
+                <S.QuestionText>{question}</S.QuestionText>
+              </div>
+
               {isOpen === id ? (
-                <ChevronUpIcon className="ChevronUpIcon__icon" color="#525463" />
+                <ChevronUpIcon className="ChevronUpIcon__icon" color="#525463" width="1.5rem" height="1.5rem" />
               ) : (
-                <ChevronDownIcon className="ChevronDownIcon__icon" color="#525463" />
+                <ChevronDownIcon className="ChevronDownIcon__icon" color="#525463" width="1.5rem" height="1.5rem" />
               )}
             </S.QuestionWrapper>
             <Collapse isOpen={isOpen === id}>
