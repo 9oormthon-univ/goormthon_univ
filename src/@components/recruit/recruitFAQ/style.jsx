@@ -23,7 +23,7 @@ export const FAQBox = styled.div`
 
 export const AnswerText = styled.p`
   color: var(--text-normal);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-left: 2rem;
   @media (max-width: 768px) {
     font-size: 0.85rem;
