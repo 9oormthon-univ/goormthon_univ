@@ -8,7 +8,7 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-export default function CardListUpper({ month }) {
+export default function CardListUpper({ month, handleMonthClick }) {
   return (
     <div className={cx('cardListUpper', 'd-flex')}>
       {Object.keys(TIMELINE_DATA)
@@ -17,6 +17,7 @@ export default function CardListUpper({ month }) {
           const item = TIMELINE_DATA[key];
           return (
             <Card
+              handleMonthClick={handleMonthClick}
               key={key}
               idx={key}
               month={month}

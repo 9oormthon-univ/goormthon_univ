@@ -12,24 +12,22 @@ import styles from './PlanDesktop.module.scss';
 
 const cx = classNames.bind(styles);
 
-export default function Timeline() {
-  const [month, setMonth] = useState(1);
-
+export default function Timeline({ month, handleMonthClick }) {
   const value = useScrollValue();
 
   useEffect(() => {
     if (value < 1234) {
-      setMonth(1);
+      handleMonthClick(1);
     } else if (value > 1233 && value < 1534) {
-      setMonth(2);
+      handleMonthClick(2);
     } else if (value > 1533 && value < 1834) {
-      setMonth(3);
+      handleMonthClick(3);
     } else if (value > 1833 && value < 2134) {
-      setMonth(4);
+      handleMonthClick(4);
     } else if (value > 2133 && value < 2434) {
-      setMonth(5);
+      handleMonthClick(5);
     } else if (value > 2433 && value < 2734) {
-      setMonth(6);
+      handleMonthClick(6);
     }
   }, [value]);
 
@@ -49,7 +47,7 @@ export default function Timeline() {
 
   return (
     <div className={cx('timeline', 'd-flex flex-column')}>
-      <CardListUpper month={month} />
+      <CardListUpper month={month} handleMonthClick={handleMonthClick} />
       <figure className={cx('timelineBar', 'position-relative')}>
         <div className={cx(`fillBar${month}`, 'position-absolute')} />
         <div className={cx('monthText', 'd-flex align-items-center justify-content-between')}>
@@ -62,14 +60,14 @@ export default function Timeline() {
                 `${Number(key) === month && 'active'}`,
                 `${Number(key) < month && 'prev'}`,
               )}
-              onClick={() => setMonth(Number(key))}
+              onClick={() => handleMonthClick(Number(key))}
             >
               {getMonthText(Number(key))}
             </h5>
           ))}
         </div>
       </figure>
-      <CardListLower month={month} />
+      <CardListLower month={month} handleMonthClick={handleMonthClick} />
     </div>
   );
 }
