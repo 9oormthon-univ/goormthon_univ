@@ -5,14 +5,14 @@ export const HeaderUnivlWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  width: 8rem;
+  gap: 1rem;
+  margin-left: 1rem;
   cursor: pointer;
 `;
 
 export const UnivImg = styled.img`
-  width: 5.75rem;
-  height: 5.75rem;
+  width: 17.875rem;
+  height: 6rem;
 `;
 
 export const UnivName = styled.p`
