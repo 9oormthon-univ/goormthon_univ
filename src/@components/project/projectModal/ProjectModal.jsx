@@ -17,7 +17,6 @@ function ProjectModal({
   frontend,
   backend,
 }) {
-  console.log(frontend, backend);
   return (
     <>
       <Modal isOpen={isModalOpen} direction="vertical" size="md" toggle={toggleModal} type="center">
