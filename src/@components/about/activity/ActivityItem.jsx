@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 export default function ActivityItem({ idx, imgSrc, title, title_en, description }) {
   return (
     <div
-      className={cx('activityItem', `${idx == 2 && 'hackathonItem'}`, 'd-flex flex-column flex-column-reverse h-100')}
+      className={cx('activityItem', `${idx === 2 && 'hackathonItem'}`, 'd-flex flex-column flex-column-reverse h-100')}
     >
       <article className={cx('contentBox', 'd-flex flex-column')}>
         <div className={cx('contentTitle', 'd-flex align-items-end')}>
