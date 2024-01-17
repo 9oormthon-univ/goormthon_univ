@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-import * as S from './style';
-
 import useScrollValue from '../../../../hooks/useScrollValue';
 
 import { TIMELINE_DATA } from '../../../../utilities/AboutData';
 import CardListUpper from './CardListUpper';
 import CardListLower from './CardListLower';
+
+import classNames from 'classnames/bind';
+
+import styles from './PlanDesktop.module.scss';
+
+const cx = classNames.bind(styles);
 
 export default function Timeline() {
   const [month, setMonth] = useState(1);
@@ -44,24 +48,28 @@ export default function Timeline() {
   };
 
   return (
-    <S.TimelineWrapper>
+    <div className={cx('timeline', 'd-flex flex-column')}>
       <CardListUpper month={month} />
-      <S.TimelineBar>
-        <S.TimelineFillBar $fillRatio={TIMELINE_FILL_RATIO[month]} />
-        <S.MonthTextWrapper>
+      <figure className={cx('timelineBar', 'position-relative')}>
+        <div className={cx(`fillBar${month}`, 'position-absolute')} />
+        <div className={cx('monthText', 'd-flex align-items-center justify-content-between')}>
           {Object.keys(TIMELINE_DATA).map((key) => (
-            <S.MonthTextClickable
+            <h5
               key={key}
               id={key}
-              className={`${Number(key) === month && 'active'} ${Number(key) < month && 'prev'}`}
+              className={cx(
+                `monthTextClickable`,
+                `${Number(key) === month && 'active'}`,
+                `${Number(key) < month && 'prev'}`,
+              )}
               onClick={() => setMonth(Number(key))}
             >
               {getMonthText(Number(key))}
-            </S.MonthTextClickable>
+            </h5>
           ))}
-        </S.MonthTextWrapper>
-      </S.TimelineBar>
+        </div>
+      </figure>
       <CardListLower month={month} />
-    </S.TimelineWrapper>
+    </div>
   );
 }

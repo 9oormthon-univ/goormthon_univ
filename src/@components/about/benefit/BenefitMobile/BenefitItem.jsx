@@ -1,22 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as S from './style';
+
+import classNames from 'classnames/bind';
+import styles from './BenefitMobile.module.scss';
+
+const cx = classNames.bind(styles);
 
 export default function BenefitItem({ imgSrc, iconSrc, bgColor, title, description, url }) {
   return (
-    <S.BenefitItemWrapper>
+    <div className="d-flex flex-column w-100">
       <Link to={url} target="\_blank">
-        <S.BenefitImgWrapper $bgColor={bgColor}>
-          <S.BenefitImg src={imgSrc} />
-        </S.BenefitImgWrapper>
-        <S.BenefitContentsWrapper>
-          <S.BenefitTextWrapper>
-            <S.BenefitTitle>{title}</S.BenefitTitle>
-            <S.BenefitDescription className="paragraph-lg">{description}</S.BenefitDescription>
-          </S.BenefitTextWrapper>
-          <S.Icon src={iconSrc} />
-        </S.BenefitContentsWrapper>
+        <div
+          className={cx('benefitImgContainer', 'w-100 d-flex justify-content-center align-items-center', `${bgColor}`)}
+        >
+          <img className={cx('benefitImg')} src={imgSrc} />
+        </div>
+        <div className={cx('benefitContents', 'w-100 d-flex justify-content-between align-items-end')}>
+          <div className={cx('benefitText', 'd-flex flex-column w-100')}>
+            <h3 className={cx('benefitTitle', 'w-100')}>{title}</h3>
+            <p className={cx('benefitDescription', 'w-100 paragraph-lg')}>{description}</p>
+          </div>
+          <img className={cx('icon')} src={iconSrc} />
+        </div>
       </Link>
-    </S.BenefitItemWrapper>
+    </div>
   );
 }

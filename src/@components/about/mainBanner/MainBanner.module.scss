@@ -1,0 +1,79 @@
+@import '../../../style/mixin.scss';
+
+.mainBanner {
+  height: 100vh;
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+
+  background-color: var(--gray-950);
+}
+
+.headerText {
+  margin-top: 8.5rem;
+  gap: 2rem;
+
+  & > h3,
+  & > h5 {
+    color: var(--gray-300);
+  }
+
+  @include container-md {
+    margin-top: 9.75rem;
+    gap: var(--size-500);
+  }
+
+  @include container-xl {
+    margin-top: 10rem;
+    gap: var(--size-500);
+  }
+}
+
+.title {
+  width: 20.9375rem;
+  height: 3.5rem;
+
+  @include container-md {
+    width: 35.5rem;
+    height: 6rem;
+  }
+
+  @include container-xl {
+    width: 53rem;
+    height: 9.0625rem;
+  }
+}
+
+.mainImg {
+  cursor: pointer;
+
+  stroke-dashoffset: -65;
+
+  &:hover {
+    stroke-dashoffset: 0;
+  }
+
+  bottom: 6.75rem;
+  left: 50%;
+  transform: translate(-50%);
+
+  stroke-dasharray: 500;
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.mainImgSmall {
+  cursor: pointer;
+
+  stroke-dashoffset: -65;
+
+  &:hover {
+    stroke-dashoffset: 0;
+  }
+
+  bottom: 6.5rem;
+  left: 50%;
+  transform: translate(-50%);
+
+  stroke-dasharray: 500;
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}

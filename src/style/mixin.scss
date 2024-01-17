@@ -1,0 +1,19 @@
+@import './_breakpoints.scss';
+
+@mixin container-sm {
+  @media (min-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin container-md {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin container-xl {
+  @media (min-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}

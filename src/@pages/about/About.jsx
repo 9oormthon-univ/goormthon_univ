@@ -3,7 +3,7 @@ import Activity from '../../@components/about/activity/Activity';
 import BenefitDesktop from '../../@components/about/benefit/BenefitDesktop/BenefitDesktop';
 import BenefitMobile from '../../@components/about/benefit/BenefitMobile/BenefitMobile';
 import FindingUniv from '../../@components/about/findingUniv/FindingUniv';
-import Goal from '../../@components/about/goal/goal';
+import Goal from '../../@components/about/goal/Goal';
 import Intro from '../../@components/about/intro/Intro';
 
 import MainBanner from '../../@components/about/mainBanner/MainBanner';

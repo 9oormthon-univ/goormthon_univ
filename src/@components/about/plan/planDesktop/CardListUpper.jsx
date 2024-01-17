@@ -1,11 +1,16 @@
 import React from 'react';
 import { TIMELINE_DATA } from '../../../../utilities/AboutData';
-import * as S from './style';
+
 import Card from './Card';
+
+import styles from './PlanDesktop.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 export default function CardListUpper({ month }) {
   return (
-    <S.CardListUpperWrapper>
+    <div className={cx('cardListUpper', 'd-flex')}>
       {Object.keys(TIMELINE_DATA)
         .filter((item) => item <= 3)
         .map((key, idx) => {
@@ -21,6 +26,6 @@ export default function CardListUpper({ month }) {
             />
           );
         })}
-    </S.CardListUpperWrapper>
+    </div>
   );
 }

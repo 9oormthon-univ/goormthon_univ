@@ -1,16 +1,27 @@
 import React from 'react';
-import * as S from './style';
+
+import classNames from 'classnames/bind';
+
+import styles from './PlanDesktop.module.scss';
+
+const cx = classNames.bind(styles);
 
 export default function Card({ Icon, title, description, month, idx }) {
   return (
-    <S.CardWrapper>
-      <S.CardContentsWrapper $isSelected={month === Number(idx)}>
-        <S.IconWrapper>
+    <div className={cx('card', 'd-flex flex-column w-100')}>
+      <div
+        className={cx(
+          'cardContent',
+          'd-flex flex-column justify-content-center',
+          `${month === Number(idx) && 'selected'}`,
+        )}
+      >
+        <div className={cx('icon')}>
           <Icon />
-        </S.IconWrapper>
-        <S.CardTitleText>{title}</S.CardTitleText>
-        <S.CardDescriptionText className="subtitle-1">{description}</S.CardDescriptionText>
-      </S.CardContentsWrapper>
-    </S.CardWrapper>
+        </div>
+        <h4 className={cx('cardTitle')}>{title}</h4>
+        <p className={cx('cardDescription', 'subtitle-1')}>{description}</p>
+      </div>
+    </div>
   );
 }

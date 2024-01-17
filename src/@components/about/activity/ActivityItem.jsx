@@ -1,26 +1,25 @@
 import React from 'react';
 
-import * as S from './style';
+import classNames from 'classnames/bind';
+import styles from './Activity.module.scss';
+
+const cx = classNames.bind(styles);
 
 export default function ActivityItem({ idx, imgSrc, title, title_en, description }) {
-  const renderContent = (answer) => {
-    return answer.split('\n').map((line, index) => (
-      <span key={index}>
-        {line}
-        <br />
-      </span>
-    ));
-  };
   return (
-    <S.ActivityItemWrapper $idx={idx}>
-      <S.ContentBox>
-        <S.ContentTitleWrapper>
-          <S.ContentTitleText>{title}</S.ContentTitleText>
-          <S.ContentEnTitleText>{title_en}</S.ContentEnTitleText>
-        </S.ContentTitleWrapper>
-        <S.ContentDescriptionText>{renderContent(description)}</S.ContentDescriptionText>
-      </S.ContentBox>
-      <S.ContentImg src={imgSrc} />
-    </S.ActivityItemWrapper>
+    <div
+      className={cx('activityItem', `${idx == 2 && 'hackathonItem'}`, 'd-flex flex-column flex-column-reverse h-100')}
+      $idx={idx}
+    >
+      <article className={cx('contentBox', 'd-flex flex-column')}>
+        <div className={cx('contentTitle', 'd-flex align-items-end')}>
+          <h3>{title}</h3>
+          <h6 className={cx('titleTextEn')}>{title_en}</h6>
+        </div>
+        <p className={cx('descriptionText', 'd-block d-xl-none')}>{description}</p>
+        <p className={cx('descriptionText', 'paragraph-lg d-none d-xl-block')}>{description}</p>
+      </article>
+      <img className={cx('contentImg')} src={imgSrc} />
+    </div>
   );
 }

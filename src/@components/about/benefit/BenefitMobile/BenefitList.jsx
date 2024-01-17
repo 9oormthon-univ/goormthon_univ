@@ -1,14 +1,16 @@
 import React from 'react';
 
 import BenefitItem from './BenefitItem';
-
-import * as S from './style';
-
 import { BENEFIT_ITEM_DATA } from '../../../../utilities/AboutData';
+
+import classNames from 'classnames/bind';
+import styles from './BenefitMobile.module.scss';
+
+const cx = classNames.bind(styles);
 
 export default function BenefitList() {
   return (
-    <S.BenefitListWrapper>
+    <div className={cx('benefitList', 'd-flex flex-column align-items-center justify-content-center')}>
       {BENEFIT_ITEM_DATA.map((item) => (
         <BenefitItem
           key={item.title}
@@ -20,6 +22,6 @@ export default function BenefitList() {
           url={item.url}
         />
       ))}
-    </S.BenefitListWrapper>
+    </div>
   );
 }

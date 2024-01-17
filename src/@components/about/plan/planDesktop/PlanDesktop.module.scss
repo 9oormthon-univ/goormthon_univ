@@ -1,0 +1,128 @@
+@import '../../../../style/mixin.scss';
+
+.planDesktop {
+  height: 100vh;
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+  padding: 0 1.91rem;
+
+  background-color: var(--gray-100);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3.63rem;
+}
+
+.timeline {
+  gap: 3.5rem;
+}
+
+.timelineBar {
+  width: -webkit-fill-available;
+  height: 2.75rem;
+  border-radius: 1.34375rem;
+  background: var(--gray-050);
+  margin: 0;
+}
+
+$timeline-fill-ratio: (
+  1: 9.5%,
+  2: 27.2%,
+  3: 44.9%,
+  4: 62.7%,
+  5: 80.5%,
+  6: 100%,
+);
+
+@each $month, $fillRatio in $timeline-fill-ratio {
+  .fillBar#{$month} {
+    width: $fillRatio;
+    height: 2.75rem;
+    background-color: var(--blue-500);
+    border-radius: 1.34375rem;
+    transition: width 0.5s ease-in-out;
+  }
+}
+
+.monthText {
+  width: -webkit-fill-available;
+  height: 2.75rem;
+  padding: 0 2.5rem;
+}
+
+.monthTextClickable {
+  margin: 0;
+  cursor: pointer;
+  color: var(--gray-400);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  &.active,
+  &.prev {
+    color: var(--light);
+  }
+}
+
+.cardListUpper {
+  gap: 2.19rem;
+}
+
+.cardListLower {
+  gap: 1.38rem;
+  margin-left: 2.88rem;
+}
+
+.card {
+  flex-grow: 1;
+}
+
+.cardContent {
+  height: 10.375rem;
+  background-color: var(--gray-200);
+  border-radius: 1rem;
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+
+  & > h4,
+  & > p {
+    color: var(--info);
+  }
+
+  & svg > path {
+    fill: var(--info);
+  }
+
+  &.selected {
+    background-color: var(--gray-000);
+    border: 2px solid var(--blue-500);
+    & > p,
+    & > h4 {
+      color: var(--gray-900);
+    }
+    & svg > path {
+      fill: var(--gray-900);
+    }
+  }
+}
+
+.icon {
+  color: var(--black);
+  margin-bottom: 0.44rem;
+  & > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.cardTitle {
+  margin-bottom: 1.25rem;
+}
+
+.cardDescription {
+  color: var(--black);
+  white-space: pre-wrap;
+}
