@@ -43,7 +43,7 @@ export const TIMELINE_DATA = {
   },
   5: {
     Icon: CakeIcon,
-    title: '구름톤 유니브 에프터 파티, GUAP',
+    title: '구름톤 유니브 애프터 파티, 9UAP',
     description: '해커톤의 여운을 이어갈 수 있도록 현직자와 수상자의 세미나, 그리고 마무리 회고를 진행해요.',
   },
   6: {
