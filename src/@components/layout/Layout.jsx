@@ -2,8 +2,8 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import CustomFooter from '../layout/footer/CustomFooter';
-import Navbar from './navbar/Navbar';
 import { Footer } from '@goorm-dev/gds-components';
+import CustomNavbar from './navbar/CustomNavbar';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      <CustomNavbar />
       <Wrapper>
         <Outlet />
       </Wrapper>
