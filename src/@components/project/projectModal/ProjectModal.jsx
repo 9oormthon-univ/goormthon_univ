@@ -1,4 +1,4 @@
-import * as S from './style';
+import * as S from './style.js';
 import React from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@goorm-dev/gds-components';
 

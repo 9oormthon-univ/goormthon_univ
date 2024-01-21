@@ -22,7 +22,6 @@ export const Description = styled.p``;
 export const ProjectImg = styled.img`
   border-radius: var(--space-300);
   width: 100%;
-
   @media screen and (min-width: 768px) {
     width: 28.25rem;
     height: 15.875rem;
@@ -35,7 +34,6 @@ export const ContributorContent = styled.div`
   gap: 0.5rem;
   flex-direction: column;
   width: 100%;
-
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
@@ -48,7 +46,6 @@ export const ContributorInfo = styled.div`
   border-radius: var(--space-300);
   border: 1px solid var(--gray-300);
   flex-basis: 49%;
-
   &.developer {
     flex-direction: column;
     gap: var(--space-100);
