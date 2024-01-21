@@ -28,8 +28,8 @@ export const TIMELINE_DATA = {
   },
   2: {
     Icon: SchoolIcon,
-    title: 'OT & Onboarding',
-    description: 'OT를 통해 구름톤 유니브에 대해 알아가고,\n온보딩을 통해 해커톤을 하는 방법에 대해 알아가보아요!',
+    title: 'OT & ',
+    description: '학교별로 팀을 구성하여 당일 해커톤을 진행해요.\n교내 미르미들과 끈끈한 네트워크를 만드세요!',
   },
   3: {
     Icon: Lightbulb,
@@ -64,7 +64,7 @@ export const ACTIVITY_DATA = [
   {
     imgSrc: Img2,
     title: '온보딩',
-    title_en: 'Onboarding',
+    title_en: 'ONBOARDING',
     description:
       '벚꽃톤/단풍톤 진행이전에 \n온보딩을 통해 해커톤에 대해 다양한 인사이트를 얻어가세요!\n한 단계 더 성장할 수 있는 도약대가 될 거예요!',
   },

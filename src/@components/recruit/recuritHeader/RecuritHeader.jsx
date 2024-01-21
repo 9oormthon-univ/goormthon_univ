@@ -75,12 +75,8 @@ function RecuritHeader() {
   // 마감 후 콘텐츠
   const RecruitmentClosedContent = () => (
     <>
-      <S.HeaderTitleText>
-        대표 모집이 마감되었어요!
-        <br />
-        아래 유니브에서 미르미 지원이 가능합니다!
-        <h5>미르미 : 구름톤 유니브 일원</h5>
-      </S.HeaderTitleText>
+      <S.HeaderTitleText>1월 22일 미르미 모집이 시작됩니다!</S.HeaderTitleText>
+      <p className="mb-5">미르미 : 구름톤 유니브 일원</p>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
         3기 사전 알림 신청
       </S.GoormBtn>
@@ -93,8 +89,11 @@ function RecuritHeader() {
         <RecruitmentClosedContent />
       </S.HeaderTitleWrapper>
       <S.HeaderUnivContainer>
-        <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
-		  <h6>☁️ 추가 2기 지원 21개 유니브가 인터뷰 진행 중 ☁️</h6>
+        <S.HeaderUnivTitleText>
+          2기 함께하는 유니브 25개
+          <br />
+          (이미지 업데이트 예정)
+        </S.HeaderUnivTitleText>
         <S.HeaderUnivListContainer>
           <RecruitUnivScrolling />
         </S.HeaderUnivListContainer>

@@ -29,7 +29,6 @@ export const RowPosters = styled.div`
 
 export const HeaderTitleText = styled.h2`
   text-align: center;
-  margin-bottom: 1.5rem;
 `;
 
 export const HeaderUnivContainer = styled.div`
@@ -42,6 +41,8 @@ export const HeaderUnivContainer = styled.div`
 `;
 
 export const HeaderUnivTitleText = styled.h5`
+  text-align: center;
+
   margin-bottom: 1.5rem;
 `;
 
