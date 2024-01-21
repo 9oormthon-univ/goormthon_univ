@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './style';
-import './style.css';
 import { useNavigate } from 'react-router-dom';
 import RecruitUnivScrolling from '../recruitUnivScrolling/RecruitUnivScrolling';
 import { Spinner } from 'reactstrap';
+import { TextButton } from '@goorm-dev/gds-components';
+import { ChevronRightIcon } from '@goorm-dev/gds-icons';
 
 function RecuritHeader() {
   const [isRecruitmentOver, setIsRecruitmentOver] = useState(false);
@@ -76,10 +77,8 @@ function RecuritHeader() {
   const RecruitmentClosedContent = () => (
     <>
       <S.HeaderTitleText>
-        대표 모집이 마감되었어요!
-        <br />
-        아래 유니브에서 미르미 지원이 가능합니다!
-        <h5>미르미 : 구름톤 유니브 일원</h5>
+        <h1>대표 모집이 마감되었어요!</h1>
+        <h6>아래 유니브에서 구름톤 유니브 일원인 ‘미르미’ 지원이 가능합니다.</h6>
       </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
         3기 사전 알림 신청
@@ -88,17 +87,33 @@ function RecuritHeader() {
   );
 
   return (
-    <S.HeaderContainer>
-      <S.HeaderTitleWrapper>
-        <RecruitmentClosedContent />
-      </S.HeaderTitleWrapper>
+    <S.HeaderContainer className="container">
+      <div className="col-8" style={{ border: '1px solid orange' }}>
+        <div className="row">
+          <S.HeaderTitleWrapper
+            className="col-8 d-flex justify-content-center align-items-start flex-column"
+            style={{ border: '1px solid orange' }}
+          >
+            <RecruitmentClosedContent />
+          </S.HeaderTitleWrapper>
+          <S.HEaderOpenDayWrapper
+            className="clo-4 d-flex"
+            style={{ border: '1px solid blue' }}
+          ></S.HEaderOpenDayWrapper>
+        </div>
+      </div>
+
       <S.HeaderUnivContainer>
-        <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
-		  <h6>☁️ 추가 2기 지원 21개 유니브가 인터뷰 진행 중 ☁️</h6>
+        <S.HeaderUnivTitleText>현재 함께하는 유니브 27개</S.HeaderUnivTitleText>
+        {/* <p>추가21개 유니브 인터뷰 진행 중 ☁️</p> */}
         <S.HeaderUnivListContainer>
           <RecruitUnivScrolling />
         </S.HeaderUnivListContainer>
       </S.HeaderUnivContainer>
+      <TextButton color="dark">
+        유니브 전체 보기
+        <ChevronRightIcon />
+      </TextButton>
     </S.HeaderContainer>
   );
 }
