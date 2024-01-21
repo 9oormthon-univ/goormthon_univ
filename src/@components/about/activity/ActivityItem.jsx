@@ -8,8 +8,7 @@ const cx = classNames.bind(styles);
 export default function ActivityItem({ idx, imgSrc, title, title_en, description }) {
   return (
     <div
-      className={cx('activityItem', `${idx == 2 && 'hackathonItem'}`, 'd-flex flex-column flex-column-reverse h-100')}
-      $idx={idx}
+      className={cx('activityItem', `${idx === 2 && 'hackathonItem'}`, 'd-flex flex-column flex-column-reverse h-100')}
     >
       <article className={cx('contentBox', 'd-flex flex-column')}>
         <div className={cx('contentTitle', 'd-flex align-items-end')}>
@@ -19,7 +18,7 @@ export default function ActivityItem({ idx, imgSrc, title, title_en, description
         <p className={cx('descriptionText', 'd-block d-xl-none')}>{description}</p>
         <p className={cx('descriptionText', 'paragraph-lg d-none d-xl-block')}>{description}</p>
       </article>
-      <img className={cx('contentImg')} src={imgSrc} />
+      <img className={cx('contentImg')} src={imgSrc} alt={title} />
     </div>
   );
 }

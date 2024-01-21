@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import { Button } from '@goorm-dev/gds-components';
 import * as S from './style';
 import { dbService } from '../../fbase';
@@ -55,7 +55,7 @@ function Apply() {
   return (
     <S.RecuritBody>
       <S.BodyTitle>지원서 작성하기</S.BodyTitle>
-      <S.FormDescription>
+      {/* <S.FormDescription>
         <S.CautionTitle>유니브 대표 주요 일정</S.CautionTitle>
         <ul>
           <li>
@@ -79,7 +79,7 @@ function Apply() {
             <S.Caution2Li>제출해주신 메일로 인터뷰 안내 예정입니다.</S.Caution2Li>
           </S.CautionWrapper>
         </ul>
-      </S.FormDescription>
+      </S.FormDescription> */}
 
       <S.FormContainer onSubmit={handleSubmit}>
         <S.FormGroup>

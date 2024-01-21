@@ -15,7 +15,7 @@ export default function MainBanner({ scrollTrigger }) {
       <div className={cx('headerText', 'd-flex flex-column')}>
         <h3 className="d-none d-md-block text-center">사계절, 구름과 함께</h3>
         <h5 className="d-block d-md-none text-center">사계절, 구름과 함께</h5>
-        <img className={cx('title')} src={MainBannerSlogan} />
+        <img className={cx('title')} src={MainBannerSlogan} alt="being all seasons with goorm" />
       </div>
       <div>
         <MainBannerImg onClick={scrollTrigger} className={cx('mainImg', 'd-none d-sm-block position-absolute')} />

@@ -6,9 +6,9 @@ import styles from './PlanDesktop.module.scss';
 
 const cx = classNames.bind(styles);
 
-export default function Card({ Icon, title, description, month, idx }) {
+export default function Card({ Icon, title, description, month, idx, handleMonthClick }) {
   return (
-    <div className={cx('card', 'd-flex flex-column w-100')}>
+    <div className={cx('card', 'd-flex flex-column w-100')} onClick={() => handleMonthClick(Number(idx))}>
       <div
         className={cx(
           'cardContent',

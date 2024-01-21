@@ -53,7 +53,12 @@ function CustomNavbar() {
           </NavItem>
         </Nav>
       </GoormNavbar.Collapse>
-      <S.Toggler isOpened={isOpened} $isAbout={isAbout} onClick={() => setIsOpened((prev) => !prev)} />
+      <S.Toggler
+        toggle={setIsOpened}
+        isOpened={isOpened}
+        $isAbout={isAbout}
+        onClick={() => setIsOpened((prev) => !prev)}
+      />
     </GoormNavbar>
   );
 }

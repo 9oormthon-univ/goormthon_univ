@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './style';
-import './style.css';
 import { useNavigate } from 'react-router-dom';
 import RecruitUnivScrolling from '../recruitUnivScrolling/RecruitUnivScrolling';
 import { Spinner } from 'reactstrap';
+import { TextButton } from '@goorm-dev/gds-components';
+import { ChevronRightIcon } from '@goorm-dev/gds-icons';
 
 function RecuritHeader() {
   const [isRecruitmentOver, setIsRecruitmentOver] = useState(false);
@@ -75,8 +76,10 @@ function RecuritHeader() {
   // 마감 후 콘텐츠
   const RecruitmentClosedContent = () => (
     <>
-      <S.HeaderTitleText>1월 22일 미르미 모집이 시작됩니다!</S.HeaderTitleText>
-      <p className="mb-5">미르미 : 구름톤 유니브 일원</p>
+      <S.HeaderTitleText>
+        <h1>대표 모집이 마감되었어요!</h1>
+        <h6>아래 유니브에서 구름톤 유니브 일원인 ‘미르미’ 지원이 가능합니다.</h6>
+      </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
         3기 사전 알림 신청
       </S.GoormBtn>
@@ -84,10 +87,22 @@ function RecuritHeader() {
   );
 
   return (
-    <S.HeaderContainer>
-      <S.HeaderTitleWrapper>
-        <RecruitmentClosedContent />
-      </S.HeaderTitleWrapper>
+    <S.HeaderContainer className="container">
+      <div className="col-8" style={{ border: '1px solid orange' }}>
+        <div className="row">
+          <S.HeaderTitleWrapper
+            className="col-8 d-flex justify-content-center align-items-start flex-column"
+            style={{ border: '1px solid orange' }}
+          >
+            <RecruitmentClosedContent />
+          </S.HeaderTitleWrapper>
+          <S.HEaderOpenDayWrapper
+            className="clo-4 d-flex"
+            style={{ border: '1px solid blue' }}
+          ></S.HEaderOpenDayWrapper>
+        </div>
+      </div>
+
       <S.HeaderUnivContainer>
         <S.HeaderUnivTitleText>
           2기 함께하는 유니브 25개
@@ -98,6 +113,10 @@ function RecuritHeader() {
           <RecruitUnivScrolling />
         </S.HeaderUnivListContainer>
       </S.HeaderUnivContainer>
+      <TextButton color="dark">
+        유니브 전체 보기
+        <ChevronRightIcon />
+      </TextButton>
     </S.HeaderContainer>
   );
 }

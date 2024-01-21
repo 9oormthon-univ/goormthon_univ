@@ -13,14 +13,14 @@ export default function BenefitItem({ imgSrc, iconSrc, bgColor, title, descripti
         <div
           className={cx('benefitImgContainer', 'w-100 d-flex justify-content-center align-items-center', `${bgColor}`)}
         >
-          <img className={cx('benefitImg')} src={imgSrc} />
+          <img className={cx('benefitImg')} src={imgSrc} alt={title} />
         </div>
         <div className={cx('benefitContents', 'w-100 d-flex justify-content-between align-items-end')}>
           <div className={cx('benefitText', 'd-flex flex-column w-100')}>
             <h3 className={cx('benefitTitle', 'w-100')}>{title}</h3>
             <p className={cx('benefitDescription', 'w-100 paragraph-lg')}>{description}</p>
           </div>
-          <img className={cx('icon')} src={iconSrc} />
+          <img className={cx('icon')} src={iconSrc} alt={title} />
         </div>
       </Link>
     </div>
