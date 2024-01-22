@@ -88,27 +88,17 @@ function RecuritHeader() {
 
   return (
     <S.HeaderContainer className="container">
-      <div className="col-8" style={{ border: '1px solid orange' }}>
+      <div className="col-8">
         <div className="row">
-          <S.HeaderTitleWrapper
-            className="col-8 d-flex justify-content-center align-items-start flex-column"
-            style={{ border: '1px solid orange' }}
-          >
+          <S.HeaderTitleWrapper className="col-8 d-flex justify-content-center align-items-start flex-column">
             <RecruitmentClosedContent />
           </S.HeaderTitleWrapper>
-          <S.HEaderOpenDayWrapper
-            className="clo-4 d-flex"
-            style={{ border: '1px solid blue' }}
-          ></S.HEaderOpenDayWrapper>
+          {/* <S.HEaderOpenDayWrapper className="clo-4 d-flex"></S.HEaderOpenDayWrapper> */}
         </div>
       </div>
 
       <S.HeaderUnivContainer>
-        <S.HeaderUnivTitleText>
-          2기 함께하는 유니브 25개
-          <br />
-          (이미지 업데이트 예정)
-        </S.HeaderUnivTitleText>
+        <S.HeaderUnivTitleText>2기 함께하는 유니브 25개</S.HeaderUnivTitleText>
         <S.HeaderUnivListContainer>
           <RecruitUnivScrolling />
         </S.HeaderUnivListContainer>
