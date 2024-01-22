@@ -8,7 +8,7 @@ import RecuritCalendar from '../../@components/recruit/recruitCalendar/RecuritCa
 
 export default function Recruit() {
   return (
-    <>
+    <S.RecruitContainer>
       <RecuritHeader />
       <S.RecuritBody className="col-10 d-flex flex-column justify-content-start align-items-center">
         {/* ---------------- 지원 대상 ---------------- */}
@@ -24,6 +24,6 @@ export default function Recruit() {
           <RecuritFAQ />
         </S.RecuritFAQContainer>
       </S.RecuritBody>
-    </>
+    </S.RecruitContainer>
   );
 }
