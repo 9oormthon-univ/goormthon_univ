@@ -8,7 +8,7 @@ export const HeaderUnivlWrapper = styled.div`
   gap: 1rem;
   margin-left: 1rem;
   cursor: pointer;
-  filter: drop-shadow(rgba(0, 0, 0, 0.04) 0px 2px 11px);
+  filter: drop-shadow(var(--gray-300) 2px 8px 11px);
 `;
 
 export const UnivImg = styled.img`

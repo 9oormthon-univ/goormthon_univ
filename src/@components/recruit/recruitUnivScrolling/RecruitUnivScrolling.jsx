@@ -43,7 +43,7 @@ const ImageSlider2 = styled.div`
   }
 `;
 const ShadowBgCotianer = styled.div`
-  filter: drop-shadow(rgba(50, 83, 198, 0.14) 0px 18px 40px);
+  filter: drop-shadow(var(--gray-200) 0px 8px 40px);
 `;
 
 function RecruitUnivScrolling() {
