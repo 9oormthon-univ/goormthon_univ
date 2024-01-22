@@ -30,6 +30,10 @@ function ProjectCard({
   // 모달 오픈
   const [isModalOpen, setModalOpen] = useState(false);
 
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -60,7 +64,6 @@ function ProjectCard({
       <S.CardContainer
         ref={cardRef}
         onClick={() => setModalOpen(true)}
-        // onClick={() => window.open(link, '_blank')}
         key={index}
         variants={variants}
         initial="hidden"
@@ -87,6 +90,8 @@ function ProjectCard({
       </S.CardContainer>
       {isModalOpen && (
         <ProjectModal
+          isModalOpen={isModalOpen}
+          toggleModal={toggleModal}
           award={award}
           title={title}
           content={content}
@@ -98,7 +103,6 @@ function ProjectCard({
           design={design}
           frontend={frontend}
           backend={backend}
-          setModalOpen={setModalOpen}
         />
       )}
     </>

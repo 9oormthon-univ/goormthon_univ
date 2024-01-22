@@ -104,8 +104,11 @@ function RecuritHeader() {
       </div>
 
       <S.HeaderUnivContainer>
-        <S.HeaderUnivTitleText>현재 함께하는 유니브 27개</S.HeaderUnivTitleText>
-        {/* <p>추가21개 유니브 인터뷰 진행 중 ☁️</p> */}
+        <S.HeaderUnivTitleText>
+          2기 함께하는 유니브 25개
+          <br />
+          (이미지 업데이트 예정)
+        </S.HeaderUnivTitleText>
         <S.HeaderUnivListContainer>
           <RecruitUnivScrolling />
         </S.HeaderUnivListContainer>
