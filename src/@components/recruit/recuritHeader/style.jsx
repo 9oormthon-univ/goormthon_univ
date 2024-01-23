@@ -75,3 +75,16 @@ export const GoormBtn = styled(Button)`
   gap: 0.625rem;
   height: 3rem;
 `;
+
+export const DateBigText = styled.div`
+  color: var(--alternative);
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.5625rem; /* 89.063% */
+  letter-spacing: -0.025rem;
+`;
+
+export const DatesmallText = styled.h3`
+  color: var(--alternative);
+`;

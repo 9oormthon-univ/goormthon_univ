@@ -12,6 +12,7 @@ const Container = styled.div`
 const ImageSlider = styled.div`
   display: flex;
   animation: slide 30s linear infinite;
+  overflow-x: hidden;
 
   &:hover {
     animation-play-state: paused;
@@ -29,7 +30,7 @@ const ImageSlider = styled.div`
 const ImageSlider2 = styled.div`
   display: flex;
   animation: slide2 30s linear infinite;
-
+  overflow-x: hidden;
   &:hover {
     animation-play-state: paused;
   }

@@ -77,7 +77,7 @@ function RecuritHeader() {
   const RecruitmentClosedContent = () => (
     <>
       <S.HeaderTitleText>
-        <h1>대표 모집이 마감되었어요!</h1>
+        <h1>미르미 모집중이에요!</h1>
         <h6>아래 유니브에서 구름톤 유니브 일원인 ‘미르미’ 지원이 가능합니다.</h6>
       </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
@@ -93,7 +93,10 @@ function RecuritHeader() {
           <S.HeaderTitleWrapper className="col-8 d-flex justify-content-center align-items-start flex-column">
             <RecruitmentClosedContent />
           </S.HeaderTitleWrapper>
-          {/* <S.HEaderOpenDayWrapper className="clo-4 d-flex"></S.HEaderOpenDayWrapper> */}
+          {/* <S.HEaderOpenDayWrapper className="clo-4 d-flex">
+            <S.DatesmallText>미르미 신청 OPEN</S.DatesmallText>
+            <S.DateBigText>1/22</S.DateBigText>
+          </S.HEaderOpenDayWrapper> */}
         </div>
       </div>
 
