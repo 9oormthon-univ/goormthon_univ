@@ -6,6 +6,7 @@ import Universities from '../../../utilities/UnivData';
 import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
+import RecruitUnivScrolling from '../../recruit/recruitUnivScrolling/RecruitUnivScrolling';
 
 const Container = styled.div`
   display: flex;
@@ -74,11 +75,12 @@ function FindingUniv() {
           </S.GoormBtn>
         </S.HeaderTitleWrapper>
         <S.HeaderUnivContainer>
-          <S.HeaderUnivTitleText>현재 함께하는 유니브 10개</S.HeaderUnivTitleText>
-          <S.HeaderUnivTitleTextSmall>현재 함께하는 유니브 10개</S.HeaderUnivTitleTextSmall>
-          <S.HeaderUnivListContainer>
+          <S.HeaderUnivTitleText>현재 함께하는 유니브 25개</S.HeaderUnivTitleText>
+          <S.HeaderUnivTitleTextSmall>현재 함께하는 유니브 25개</S.HeaderUnivTitleTextSmall>
+          <RecruitUnivScrolling searchable={false} />
+          {/* <S.HeaderUnivListContainer>
             <AutoScrollingImages />
-          </S.HeaderUnivListContainer>
+          </S.HeaderUnivListContainer> */}
         </S.HeaderUnivContainer>
       </S.HeaderContainer>
     </S.FindingUnivWrapper>

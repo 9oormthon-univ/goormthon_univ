@@ -109,7 +109,7 @@ function RecuritHeader() {
       <S.HeaderUnivContainer>
         <S.HeaderUnivTitleText>2기 함께하는 유니브 25개</S.HeaderUnivTitleText>
         <S.HeaderUnivListContainer>
-          <RecruitUnivScrolling />
+          <RecruitUnivScrolling searchable={true} />
         </S.HeaderUnivListContainer>
       </S.HeaderUnivContainer>
       {/* <TextButton color="dark" ref={cardRef} onClick={() => setModalOpen(true)}>

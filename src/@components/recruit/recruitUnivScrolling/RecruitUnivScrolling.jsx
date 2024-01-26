@@ -83,7 +83,7 @@ const ShadowBgCotianer = styled.div`
   filter: drop-shadow(var(--gray-200) 0px 8px 40px);
 `;
 
-function RecruitUnivScrolling() {
+function RecruitUnivScrolling({ searchable }) {
   const [searchQuery, setSearchQuery] = useState('');
   const filteredUniversities = Universities.filter((univ) =>
     univ.name.toLowerCase().includes(searchQuery.toLowerCase()),
@@ -95,11 +95,13 @@ function RecruitUnivScrolling() {
   return (
     <ShadowBgCotianer className="d-flex flex-column">
       <div className="d-flex justify-content-center align-items-center">
-        <SearchInputCustom
-          value={searchQuery}
-          placeholder="나의 유니브 찾기"
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
+        {searchable && (
+          <SearchInputCustom
+            value={searchQuery}
+            placeholder="나의 유니브 찾기"
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        )}
       </div>
       {searchQuery ? (
         <SearchContainer isHidden={searchQuery !== ''}>
