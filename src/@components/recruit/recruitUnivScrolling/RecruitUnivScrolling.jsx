@@ -24,7 +24,7 @@ const fadeOut = keyframes`
 
 const ImageSlider = styled.div`
   display: flex;
-  animation: slide 60s linear infinite;
+  animation: slide 50s linear infinite;
   overflow-x: hidden;
 
   &:hover {
@@ -42,7 +42,7 @@ const ImageSlider = styled.div`
 
 const ImageSlider2 = styled.div`
   display: flex;
-  animation: slide2 60s linear infinite;
+  animation: slide2 50s linear infinite;
   overflow-x: hidden;
   &:hover {
     animation-play-state: paused;
@@ -108,7 +108,7 @@ function RecruitUnivScrolling() {
           ))}
         </SearchContainer>
       ) : (
-        <>
+        <div>
           <Container isHidden={searchQuery !== ''}>
             {[...Array(1)].map((_, idx) => (
               <ImageSlider key={idx}>
@@ -127,7 +127,7 @@ function RecruitUnivScrolling() {
               </ImageSlider2>
             ))}
           </Container>
-        </>
+        </div>
       )}
     </ShadowBgCotianer>
   );

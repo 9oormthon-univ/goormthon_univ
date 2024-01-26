@@ -50,6 +50,15 @@ export const HeaderUnivContainer = styled.div`
   margin-top: 5rem;
   margin-bottom: 2.5rem;
   width: 100%;
+  /* 모바일 & 테블릿 (해상도 480px ~ 767px)*/
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 390px;
+  }
+
+  /* 모바일 (해상도 ~479px) */
+  @media screen and (max-width: 479px) {
+    width: 390px;
+  }
 `;
 
 export const HeaderUnivTitleText = styled.h3`
