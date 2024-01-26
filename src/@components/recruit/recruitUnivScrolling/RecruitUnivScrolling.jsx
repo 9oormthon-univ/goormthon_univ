@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Universities from '../../../utilities/UnivData';
 import UniversityItem from '../UniversityItem/UniversityItem';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { SearchInput } from '@goorm-dev/gds-components';
 
-const Container = styled.div`
-  display: flex;
-  overflow-x: hidden;
-  width: 100%;
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 `;
 
 const ImageSlider = styled.div`
   display: flex;
-  animation: slide 23s linear infinite;
+  animation: slide 50s linear infinite;
+  overflow-x: hidden;
 
   &:hover {
     animation-play-state: paused;
@@ -21,15 +35,15 @@ const ImageSlider = styled.div`
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     } // 목록의 절반만큼만 이동
   }
 `;
 
 const ImageSlider2 = styled.div`
   display: flex;
-  animation: slide2 23s linear infinite;
-
+  animation: slide2 50s linear infinite;
+  overflow-x: hidden;
   &:hover {
     animation-play-state: paused;
   }
@@ -38,34 +52,84 @@ const ImageSlider2 = styled.div`
       transform: translateX(0);
     }
     100% {
-      transform: translateX(50%);
+      transform: translateX(100%);
     } // 목록의 절반만큼만 이동
   }
 `;
 
-function RecruitUnivScrolling() {
-  const firstHalfUniversities = Universities.slice(0, Universities.length / 2);
-  const secondHalfUniversities = Universities.slice(Universities.length / 2);
-  const double1 = [...firstHalfUniversities];
-  const double2 = [...secondHalfUniversities];
-  return (
-    <div className="d-flex flex-column">
-      <Container>
-        <ImageSlider>
-          {double1.map((univ, index) => (
-            <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
-          ))}
-        </ImageSlider>
-      </Container>
+const SearchInputCustom = styled(SearchInput)`
+  margin-bottom: 6rem;
+  width: 25rem;
+  height: 3.5rem;
+`;
 
-      <Container className="mt-3">
-        <ImageSlider2>
-          {double2.map((univ, index) => (
+const Container = styled.div`
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+  animation: ${(props) => (props.isHidden ? fadeOut : fadeIn)} 0.5s ease-in-out;
+  &:hover {
+    animation-play-state: paused;
+  }
+`;
+
+const SearchContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ShadowBgCotianer = styled.div`
+  filter: drop-shadow(var(--gray-200) 0px 8px 40px);
+`;
+
+function RecruitUnivScrolling() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const filteredUniversities = Universities.filter((univ) =>
+    univ.name.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
+
+  const firstHalfUniversities = filteredUniversities.slice(0, filteredUniversities.length / 2);
+  const secondHalfUniversities = filteredUniversities.slice(filteredUniversities.length / 2);
+
+  return (
+    <ShadowBgCotianer className="d-flex flex-column">
+      <div className="d-flex justify-content-center align-items-center">
+        <SearchInputCustom
+          value={searchQuery}
+          placeholder="나의 유니브 찾기"
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
+      {searchQuery ? (
+        <SearchContainer isHidden={searchQuery !== ''}>
+          {filteredUniversities.map((univ, index) => (
             <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
           ))}
-        </ImageSlider2>
-      </Container>
-    </div>
+        </SearchContainer>
+      ) : (
+        <div>
+          <Container isHidden={searchQuery !== ''}>
+            {[...Array(1)].map((_, idx) => (
+              <ImageSlider key={idx}>
+                {firstHalfUniversities.map((univ, index) => (
+                  <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
+                ))}
+              </ImageSlider>
+            ))}
+          </Container>
+          <Container isHidden={searchQuery !== ''} className="mt-3">
+            {[...Array(1)].map((_, idx) => (
+              <ImageSlider2 key={idx}>
+                {secondHalfUniversities.map((univ, index) => (
+                  <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
+                ))}
+              </ImageSlider2>
+            ))}
+          </Container>
+        </div>
+      )}
+    </ShadowBgCotianer>
   );
 }
 

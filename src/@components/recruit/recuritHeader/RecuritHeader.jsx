@@ -1,16 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import * as S from './style';
 import { useNavigate } from 'react-router-dom';
 import RecruitUnivScrolling from '../recruitUnivScrolling/RecruitUnivScrolling';
 import { Spinner } from 'reactstrap';
-import { TextButton } from '@goorm-dev/gds-components';
+import { SearchInput, TextButton } from '@goorm-dev/gds-components';
 import { ChevronRightIcon } from '@goorm-dev/gds-icons';
+import RecruitModal from '../recruitModal/RecruitModal';
 
 function RecuritHeader() {
   const [isRecruitmentOver, setIsRecruitmentOver] = useState(false);
   const [timeRemaining, setTimeRemaining] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [isInit, setIsInit] = useState(false);
   const navigate = useNavigate();
+
+  const cardRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // 모달 오픈
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+  };
 
   useEffect(() => {
     const targetDate = new Date('2024-01-13T00:00:00+09:00');
@@ -77,8 +88,8 @@ function RecuritHeader() {
   const RecruitmentClosedContent = () => (
     <>
       <S.HeaderTitleText>
-        <h1>대표 모집이 마감되었어요!</h1>
-        <h6>아래 유니브에서 구름톤 유니브 일원인 ‘미르미’ 지원이 가능합니다.</h6>
+        <h1>미르미 모집중이에요!</h1>
+        <h6>아래 유니브에서 지원 가능합니다.</h6>
       </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
         3기 사전 알림 신청
@@ -88,29 +99,24 @@ function RecuritHeader() {
 
   return (
     <S.HeaderContainer className="container">
-      <div className="col-8">
-        <div className="row">
-          <S.HeaderTitleWrapper className="col-8 d-flex justify-content-center align-items-start flex-column">
-            <RecruitmentClosedContent />
-          </S.HeaderTitleWrapper>
-          {/* <S.HEaderOpenDayWrapper className="clo-4 d-flex"></S.HEaderOpenDayWrapper> */}
-        </div>
-      </div>
-
+      <S.HeaderTitleWrapper className="d-flex justify-content-center align-items-center flex-column">
+        <RecruitmentClosedContent />
+      </S.HeaderTitleWrapper>
+      {/* <S.HEaderOpenDayWrapper className="clo-4 d-flex">
+            <S.DatesmallText>미르미 신청 OPEN</S.DatesmallText>
+            <S.DateBigText>1/22</S.DateBigText>
+          </S.HEaderOpenDayWrapper> */}
       <S.HeaderUnivContainer>
-        <S.HeaderUnivTitleText>
-          2기 함께하는 유니브 25개
-          <br />
-          (이미지 업데이트 예정)
-        </S.HeaderUnivTitleText>
+        <S.HeaderUnivTitleText>2기 함께하는 유니브 25개</S.HeaderUnivTitleText>
         <S.HeaderUnivListContainer>
           <RecruitUnivScrolling />
         </S.HeaderUnivListContainer>
       </S.HeaderUnivContainer>
-      <TextButton color="dark">
+      {/* <TextButton color="dark" ref={cardRef} onClick={() => setModalOpen(true)}>
         유니브 전체 보기
         <ChevronRightIcon />
-      </TextButton>
+      </TextButton> */}
+      {isModalOpen && <RecruitModal isModalOpen={isModalOpen} toggleModal={toggleModal} />}
     </S.HeaderContainer>
   );
 }

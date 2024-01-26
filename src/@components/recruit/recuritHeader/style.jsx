@@ -48,11 +48,21 @@ export const HeaderUnivContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 5rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 2.5rem;
   width: 100%;
+  /* 모바일 & 테블릿 (해상도 480px ~ 767px)*/
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 390px;
+  }
+
+  /* 모바일 (해상도 ~479px) */
+  @media screen and (max-width: 479px) {
+    width: 390px;
+  }
 `;
 
-export const HeaderUnivTitleText = styled.h5`
+export const HeaderUnivTitleText = styled.h3`
+  color: var(--dark);
   margin-bottom: 1.5rem;
   text-align: center;
 `;
@@ -74,4 +84,17 @@ export const GoormBtn = styled(Button)`
   align-items: center;
   gap: 0.625rem;
   height: 3rem;
+`;
+
+export const DateBigText = styled.div`
+  color: var(--alternative);
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.5625rem; /* 89.063% */
+  letter-spacing: -0.025rem;
+`;
+
+export const DatesmallText = styled.h3`
+  color: var(--alternative);
 `;

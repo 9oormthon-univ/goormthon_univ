@@ -32,8 +32,10 @@ function RecuritTarget() {
       transition={{ duration: 0.85 }}
       className="w-100 flex-column"
     >
-      <S.TargetTitle className="mb-3">유니브 대표 지원 대상</S.TargetTitle>
-      <S.TargetDetail className="mb-4">: IT 서비스에 관심이 많고 교내 IT 확산을 하고자 하는 사람</S.TargetDetail>
+      <S.TargetTitle className="mb-3">미르미 지원 대상</S.TargetTitle>
+      <S.TargetDetail className="mb-4">
+        : IT 서비스에 구현에 관심 많고 교외 다른 파트 친구들과 협업하고 싶은 사람
+      </S.TargetDetail>
       <S.TargetRowDetailWrapper className="d-flex">
         <S.TargetRowDetailBox
           initial={{ opacity: 0, y: 100 }}
@@ -63,7 +65,7 @@ function RecuritTarget() {
         >
           {/* icon */}
           <GroupIcon className="GroupIcon__icon" color="black" width="20px" height="20px" />
-          <S.TargetDetailBoxText>교내 모집 및 운영 가능한 사람</S.TargetDetailBoxText>
+          <S.TargetDetailBoxText>열정과 성실함이 비례해서 넘치는 사람</S.TargetDetailBoxText>
           {/* text */}
         </S.TargetRowDetailBox>
       </S.TargetRowDetailWrapper>
