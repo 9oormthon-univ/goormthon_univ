@@ -38,7 +38,7 @@ export const HeaderDate = styled.h6`
 `;
 
 export const HeaderTitleText = styled.h2`
-  text-align: center;
+  text-align: left;
   margin-bottom: 1.5rem;
 `;
 
@@ -54,6 +54,7 @@ export const HeaderUnivContainer = styled.div`
 
 export const HeaderUnivTitleText = styled.h5`
   margin-bottom: 1.5rem;
+  text-align: center;
 `;
 
 export const HeaderUnivListContainer = styled.div`

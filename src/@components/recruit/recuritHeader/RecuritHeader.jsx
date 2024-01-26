@@ -88,18 +88,12 @@ function RecuritHeader() {
 
   return (
     <S.HeaderContainer className="container">
-      <div className="col-8" style={{ border: '1px solid orange' }}>
+      <div className="col-8">
         <div className="row">
-          <S.HeaderTitleWrapper
-            className="col-8 d-flex justify-content-center align-items-start flex-column"
-            style={{ border: '1px solid orange' }}
-          >
+          <S.HeaderTitleWrapper className="col-8 d-flex justify-content-center align-items-start flex-column">
             <RecruitmentClosedContent />
           </S.HeaderTitleWrapper>
-          <S.HEaderOpenDayWrapper
-            className="clo-4 d-flex"
-            style={{ border: '1px solid blue' }}
-          ></S.HEaderOpenDayWrapper>
+          {/* <S.HEaderOpenDayWrapper className="clo-4 d-flex"></S.HEaderOpenDayWrapper> */}
         </div>
       </div>
 
