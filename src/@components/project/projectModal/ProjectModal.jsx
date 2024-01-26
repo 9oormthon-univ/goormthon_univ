@@ -1,6 +1,6 @@
-import * as S from './style';
 import React from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@goorm-dev/gds-components';
+import * as S from './style';
 
 function ProjectModal({
   toggleModal,

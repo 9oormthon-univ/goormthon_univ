@@ -8,3 +8,7 @@ export const RecuritCautionWrapper = styled.div`
 export const RecuritFAQContainer = styled.div`
   margin-bottom: 11rem;
 `;
+
+export const RecruitContainer = styled.div`
+  overflow: hidden;
+`;
