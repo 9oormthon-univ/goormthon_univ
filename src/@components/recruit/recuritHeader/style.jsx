@@ -38,7 +38,7 @@ export const HeaderDate = styled.h6`
 `;
 
 export const HeaderTitleText = styled.h2`
-  text-align: left;
+  text-align: center;
   margin-bottom: 1.5rem;
 `;
 
