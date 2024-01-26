@@ -112,47 +112,47 @@ const Universities = [
   {
     image: UnivImg17,
     name: '경기대학교',
-    link: 'https://www.instagram.com/goormthon_univ_kgu/',
+    link: 'https://www.instagram.com/9oormthon_univ_kgu/',
   },
   {
     image: UnivImg18,
     name: '경희대학교',
-    link: 'https://www.instagram.com/goormthon_univ_khu/',
+    link: 'https://www.instagram.com/9oormthon_univ_khu/',
   },
   {
     image: UnivImg19,
     name: '상명대학교(천안)',
-    link: 'https://www.instagram.com/goormthon_univ_smuc/',
+    link: 'https://www.instagram.com/9oormthon_univ_smuc/',
   },
   {
     image: UnivImg20,
     name: '상명대학교(서울)',
-    link: 'https://www.instagram.com/goormthon_univ_smu/',
+    link: 'https://www.instagram.com/9oormthon_univ_smu/',
   },
   {
     image: UnivImg21,
     name: '순천향대학교',
-    link: 'https://www.instagram.com/goormthon_univ_schu/',
+    link: 'https://www.instagram.com/9oormthon_univ_schu/',
   },
   {
     image: UnivImg22,
     name: '세한대학교(당진)',
-    link: 'https://www.instagram.com/goormthon_univ_shu/',
+    link: 'https://www.instagram.com/9oormthon_univ_shu/',
   },
   {
     image: UnivImg23,
     name: '세종대학교',
-    link: 'https://www.instagram.com/goormthon_univ_sju/',
+    link: 'https://www.instagram.com/9oormthon_univ_sju/',
   },
   {
     image: UnivImg24,
     name: '성공회대학교',
-    link: 'https://www.instagram.com/goormthon_univ_skhu/',
+    link: 'https://www.instagram.com/9oormthon_univ_skhu/',
   },
   {
     image: UnivImg25,
     name: '서울여자대학교',
-    link: 'https://www.instagram.com/goormthon_univ_swu/',
+    link: 'https://www.instagram.com/9oormthon_univ_swu/',
   },
 ];
 
