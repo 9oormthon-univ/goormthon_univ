@@ -88,8 +88,8 @@ function RecuritHeader() {
   const RecruitmentClosedContent = () => (
     <>
       <S.HeaderTitleText>
-        <h1>미르미 모집중이에요!</h1>
-        <h6>아래 유니브에서 지원 가능합니다.</h6>
+        <h1>미르미 모집마감</h1>
+        <h6>3기에서 봬요!</h6>
       </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
         3기 사전 알림 신청
