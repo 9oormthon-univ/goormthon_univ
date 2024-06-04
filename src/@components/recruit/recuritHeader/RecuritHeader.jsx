@@ -54,7 +54,7 @@ function RecuritHeader() {
   const handleButtonClick = () => {
     // 모집기간 지났을때 구글폼으로
     if (isRecruitmentOver) {
-      window.open('https://forms.gle/dn3EWJtAK1VWtzTu6', '_blank');
+      window.open('https://forms.gle/rDKEvu58VSZqScCn9', '_blank');
     } else {
       // 그 외에는 모집 페이지로
       navigate('/apply');
@@ -88,11 +88,11 @@ function RecuritHeader() {
   const RecruitmentClosedContent = () => (
     <>
       <S.HeaderTitleText>
-        <h1>미르미 모집마감</h1>
-        <h6>3기에서 봬요!</h6>
+        <h1>3기 신규 유니브, 미르미 사전 모집중!</h1>
+        <h6>신규 유니브 대표 모집과 미르미 사전알림 신청받고 있습니다!</h6>
       </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
-        3기 사전 알림 신청
+        3기 신청하러가기
       </S.GoormBtn>
     </>
   );
@@ -107,7 +107,8 @@ function RecuritHeader() {
             <S.DateBigText>1/22</S.DateBigText>
           </S.HEaderOpenDayWrapper> */}
       <S.HeaderUnivContainer>
-        <S.HeaderUnivTitleText>2기 함께하는 유니브 25개</S.HeaderUnivTitleText>
+        <S.HeaderUnivTitleText>2기 함께했던 유니브 25개</S.HeaderUnivTitleText>
+        3기 유니브 선발중
         <S.HeaderUnivListContainer>
           <RecruitUnivScrolling searchable={true} />
         </S.HeaderUnivListContainer>
