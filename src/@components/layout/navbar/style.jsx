@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { GoormNavbar } from '@goorm-dev/gds-components';
 
 export const NavLogoIcon = styled.img`
-  height: 0.9375rem;
+  height: 1.7rem;
   object-fit: cover;
   margin-right: 1.5rem;
 `;
