@@ -48,11 +48,11 @@ function FindingUniv() {
 
     setDaysRemaining(daysRemaining);
   }, []);
-	
-	const navigateToRecruit = () => {
-		navigate('/recruit')
-		window.scrollTo(0, 0);
-	}
+
+  const navigateToRecruit = () => {
+    navigate('/recruit');
+    window.scrollTo(0, 0);
+  };
 
   const AutoScrollingImages = () => {
     const doubledUniversities = [...Universities, ...Universities, ...Universities];
