@@ -55,7 +55,7 @@ function RecuritTarget() {
         >
           {/* icon */}
           <CalendarIcon className="CalendarIcon__icon" color="black" width="20px" height="20px" />
-          <S.TargetDetailBoxText>2월부터 8월까지 활동이 가능한 사람</S.TargetDetailBoxText>
+          <S.TargetDetailBoxText>6월부터 12월까지 활동이 가능한 사람</S.TargetDetailBoxText>
           {/* text */}
         </S.TargetRowDetailBox>
         <S.TargetRowDetailBox
