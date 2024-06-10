@@ -80,8 +80,8 @@ function FindingUniv() {
           </S.GoormBtn>
         </S.HeaderTitleWrapper>
         <S.HeaderUnivContainer>
-          <S.HeaderUnivTitleText>현재 함께하는 유니브 25개</S.HeaderUnivTitleText>
-          <S.HeaderUnivTitleTextSmall>현재 함께하는 유니브 25개</S.HeaderUnivTitleTextSmall>
+          <S.HeaderUnivTitleText>현재 함께하는 유니브 18개</S.HeaderUnivTitleText>
+          <S.HeaderUnivTitleTextSmall>현재 함께하는 유니브 18개</S.HeaderUnivTitleTextSmall>
           <RecruitUnivScrolling searchable={false} />
           {/* <S.HeaderUnivListContainer>
             <AutoScrollingImages />
