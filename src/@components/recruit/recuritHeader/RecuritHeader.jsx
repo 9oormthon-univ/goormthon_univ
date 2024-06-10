@@ -89,7 +89,7 @@ function RecuritHeader() {
     <>
       <S.HeaderTitleText>
         <h1>3기 신규 유니브, 미르미 사전 모집중!</h1>
-        <h6>신규 유니브 대표 모집과 미르미 사전알림 신청받고 있습니다!</h6>
+        <h6>신규 유니브 대표 및 미르미 사전알림</h6>
       </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
         3기 신청하러가기
@@ -107,8 +107,8 @@ function RecuritHeader() {
             <S.DateBigText>1/22</S.DateBigText>
           </S.HEaderOpenDayWrapper> */}
       <S.HeaderUnivContainer>
-        <S.HeaderUnivTitleText>2기 함께했던 유니브 25개</S.HeaderUnivTitleText>
-        3기 유니브 선발중
+        <S.HeaderUnivTitleText>3기 확정 유니브 18개</S.HeaderUnivTitleText>
+        3기 신규 유니브 선발중
         <S.HeaderUnivListContainer>
           <RecruitUnivScrolling searchable={true} />
         </S.HeaderUnivListContainer>
