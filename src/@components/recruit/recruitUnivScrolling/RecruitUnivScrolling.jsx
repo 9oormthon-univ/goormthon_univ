@@ -59,7 +59,7 @@ const ImageSlider2 = styled.div`
 
 const SearchInputCustom = styled(SearchInput)`
   margin-bottom: 6rem;
-  width: 25rem;
+  width: 20rem;
   height: 3.5rem;
 `;
 
@@ -94,7 +94,7 @@ function RecruitUnivScrolling({ searchable }) {
 
   return (
     <ShadowBgCotianer className="d-flex flex-column">
-      <div className="d-flex justify-content-center align-items-center">
+      <div className="mx-3 d-flex justify-content-center align-items-center">
         {searchable && (
           <SearchInputCustom
             value={searchQuery}
