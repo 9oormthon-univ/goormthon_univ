@@ -88,7 +88,7 @@ function RecuritHeader() {
   const RecruitmentClosedContent = () => (
     <>
       <S.HeaderTitleText>
-        <h1>3기 신규 유니브, 미르미 사전 모집중!</h1>
+        <h1>3기 모집중!</h1>
         <h6>신규 유니브 대표 및 미르미 사전알림</h6>
       </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
