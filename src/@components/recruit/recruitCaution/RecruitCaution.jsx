@@ -50,7 +50,7 @@ function RecruitCaution() {
         animate={visibleBoxes.box0 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
         transition={{ duration: 0.85 }}
       >
-        <BodyTitle>유의사항</BodyTitle>
+        <BodyTitle>대표 지원 유의사항</BodyTitle>
       </motion.div>
 
       <CautionWrapper>
@@ -59,7 +59,7 @@ function RecruitCaution() {
           animate={visibleBoxes.box1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.85 }}
         >
-          <RecuritCautionRowBox title="활동기간" detail="2월부터 8월까지 운영 가능해야 합니다." />
+          <RecuritCautionRowBox title="활동기간" detail="6월부터 12월까지 운영 가능해야 합니다." />
         </motion.div>
 
         <motion.div
@@ -77,7 +77,7 @@ function RecruitCaution() {
         >
           <RecuritCautionRowBox
             title="모집"
-            detail="최소 6명(기획1,디자인1,백엔드2,프론트2)에서 최대 12명(기획2,디자인2,백엔드4,프론트4) 모집 가능합니다."
+            detail="3,4학년은 KDC/KDT 수강 가능생으로 1,2학년은 자유 모집가능합니다."
           />
         </motion.div>
 
@@ -88,7 +88,7 @@ function RecruitCaution() {
         >
           <RecuritCautionRowBox
             title="모집 마감일 준수"
-            detail="교내 학생 및 운영진 모집 마감일은 2월 11일까지입니다."
+            detail="교내 학생 및 운영진 모집 마감일은 7월 21일까지입니다."
           />
         </motion.div>
 

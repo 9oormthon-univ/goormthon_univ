@@ -32,7 +32,7 @@ function RecuritTarget() {
       transition={{ duration: 0.85 }}
       className="w-100 flex-column"
     >
-      <S.TargetTitle className="mb-3">미르미 지원 대상</S.TargetTitle>
+      <S.TargetTitle className="mb-3">대표 및 미르미 지원 대상</S.TargetTitle>
       <S.TargetDetail className="mb-4">
         : IT 서비스에 구현에 관심 많고 교외 다른 파트 친구들과 협업하고 싶은 사람
       </S.TargetDetail>
