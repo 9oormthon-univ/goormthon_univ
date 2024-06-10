@@ -11,4 +11,5 @@ export const RecuritFAQContainer = styled.div`
 
 export const RecruitContainer = styled.div`
   overflow: hidden;
+  width: 100%;
 `;

@@ -4,56 +4,42 @@ import UniversityItem from '../UniversityItem/UniversityItem';
 import styled, { keyframes } from 'styled-components';
 import { SearchInput } from '@goorm-dev/gds-components';
 
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
+const slideLeft = keyframes`
+  0% {
+    transform: translateX(0);
   }
-  to {
-    opacity: 1;
+  100% {
+    transform: translateX(-50%);
   }
 `;
 
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
+const slideRight = keyframes`
+  0% {
+    transform: translateX(0);
   }
-  to {
-    opacity: 0;
+  100% {
+    transform: translateX(50%);
   }
 `;
 
 const ImageSlider = styled.div`
   display: flex;
-  animation: slide 50s linear infinite;
-  overflow-x: hidden;
+  animation: ${slideLeft} 50s linear infinite;
+  overflow: hidden;
 
   &:hover {
     animation-play-state: paused;
   }
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    } // 목록의 절반만큼만 이동
-  }
+  margin-bottom: 1rem;
 `;
 
 const ImageSlider2 = styled.div`
   display: flex;
-  animation: slide2 50s linear infinite;
-  overflow-x: hidden;
+  animation: ${slideRight} 50s linear infinite;
+  overflow: hidden;
+
   &:hover {
     animation-play-state: paused;
-  }
-  @keyframes slide2 {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(100%);
-    } // 목록의 절반만큼만 이동
   }
 `;
 
@@ -65,12 +51,9 @@ const SearchInputCustom = styled(SearchInput)`
 
 const Container = styled.div`
   display: flex;
-  overflow-x: hidden;
+  flex-direction: column;
+  overflow: hidden;
   width: 100%;
-  animation: ${(props) => (props.isHidden ? fadeOut : fadeIn)} 0.5s ease-in-out;
-  &:hover {
-    animation-play-state: paused;
-  }
 `;
 
 const SearchContainer = styled.div`
@@ -79,7 +62,7 @@ const SearchContainer = styled.div`
   align-items: center;
 `;
 
-const ShadowBgCotianer = styled.div`
+const ShadowBgContainer = styled.div`
   filter: drop-shadow(var(--gray-200) 0px 8px 40px);
 `;
 
@@ -89,12 +72,15 @@ function RecruitUnivScrolling({ searchable }) {
     univ.name.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
-  const firstHalfUniversities = filteredUniversities.slice(0, filteredUniversities.length / 2);
-  const secondHalfUniversities = filteredUniversities.slice(filteredUniversities.length / 2);
+  // 슬라이더 아이템 복제
+  const firstHalfUniversities = filteredUniversities.slice(0, Math.ceil(filteredUniversities.length / 2));
+  const secondHalfUniversities = filteredUniversities.slice(Math.ceil(filteredUniversities.length / 2));
+  const duplicatedFirstHalf = [...firstHalfUniversities, ...firstHalfUniversities, ...firstHalfUniversities];
+  const duplicatedSecondHalf = [...secondHalfUniversities, ...secondHalfUniversities, ...secondHalfUniversities];
 
   return (
-    <ShadowBgCotianer className="d-flex flex-column">
-      <div className="mx-3 d-flex justify-content-center align-items-center">
+    <ShadowBgContainer className="d-flex flex-column">
+      <div className="d-flex justify-content-center align-items-center">
         {searchable && (
           <SearchInputCustom
             value={searchQuery}
@@ -104,34 +90,26 @@ function RecruitUnivScrolling({ searchable }) {
         )}
       </div>
       {searchQuery ? (
-        <SearchContainer isHidden={searchQuery !== ''}>
+        <SearchContainer>
           {filteredUniversities.map((univ, index) => (
             <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
           ))}
         </SearchContainer>
       ) : (
-        <div>
-          <Container isHidden={searchQuery !== ''}>
-            {[...Array(1)].map((_, idx) => (
-              <ImageSlider key={idx}>
-                {firstHalfUniversities.map((univ, index) => (
-                  <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
-                ))}
-              </ImageSlider>
+        <Container>
+          <ImageSlider>
+            {duplicatedFirstHalf.map((univ, index) => (
+              <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
             ))}
-          </Container>
-          <Container isHidden={searchQuery !== ''} className="mt-3">
-            {[...Array(1)].map((_, idx) => (
-              <ImageSlider2 key={idx}>
-                {secondHalfUniversities.map((univ, index) => (
-                  <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
-                ))}
-              </ImageSlider2>
+          </ImageSlider>
+          <ImageSlider2>
+            {duplicatedSecondHalf.map((univ, index) => (
+              <UniversityItem key={index} image={univ.image} name={univ.name} link={univ.link} />
             ))}
-          </Container>
-        </div>
+          </ImageSlider2>
+        </Container>
       )}
-    </ShadowBgCotianer>
+    </ShadowBgContainer>
   );
 }
 
