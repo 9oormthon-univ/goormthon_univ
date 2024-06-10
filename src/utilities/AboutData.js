@@ -23,33 +23,33 @@ import KakaoImg from '../assets/svgs/benefit-kakao.svg';
 export const TIMELINE_DATA = {
   1: {
     Icon: GroupIcon,
-    title: '9oormthonUNIV 2기 모집!',
-    description: '벚꽃톤을 함께 할 2기 운영진과 참가자를 모집해요.\n2024년을 힘차게 시작해요!',
+    title: '9oormthonUNIV 3기 모집!',
+    description: '단풍톤을 함께 할 3기 운영진과 참가자를 모집해요.\n2024년을 함께 마무리해요!',
   },
   2: {
     Icon: SchoolIcon,
-    title: 'OT & Onboarding',
-    description: 'OT를 통해 구름톤 유니브에 대해 알아가고,\n온보딩을 통해 해커톤을 하는 방법에 대해 알아가보아요!',
+    title: 'OT',
+    description: '구름톤 유니브 3기는 어떻게 진행될까요?\n이 시간에 알아보아요!!',
   },
   3: {
     Icon: Lightbulb,
-    title: '팀 빌딩',
-    description: '타 학교 미르미에게 자신의 아이디어를 공유하고\n함께 성장할 시너지 있는 팀을 꾸려요.',
+    title: 'ONBOARDING',
+    description: '해커톤을 시작하기 이전, 해커톤에 대해 알아봐요!\n다양한 연사자분께서 협업에 대해 알려주실거에요!',
   },
   4: {
-    Icon: BeotkkotSmall,
-    title: '무박 2일, 벚꽃톤',
-    description: '구름톤 유니브의 하이라이트, 벚꽃톤!\n모든 미르미가 밤을 새워 아이디어를 실현하는 장이에요.',
+    Icon: LightningIcon,
+    title: '교육 및 세미 해커톤 기간',
+    description: '단풍톤이 시작하기 이전 교내 스터디를 운영해요!세미 해커톤까지 해서 열심히 준비해보아요!)',
   },
   5: {
-    Icon: CakeIcon,
-    title: '구름톤 유니브 애프터 파티, 9UAP',
-    description: '해커톤의 여운을 이어갈 수 있도록 현직자와 수상자의 세미나, 그리고 마무리 회고를 진행해요.',
+    Icon: BeotkkotSmall,
+    title: '무박 2일, 단풍톤',
+    description: '구름톤 유니브의 하이라이트, 단풍톤!\n모든 미르미가 밤을 새워 아이디어를 실현하는 장이에요.',
   },
   6: {
-    Icon: LightningIcon,
-    title: '연합 세미나 / 연합 해커톤',
-    description: '2-3개 혹은 그 이상의 학교가 모여 또 한번 성장해요.\n판교 구름스퀘어에서 열릴 예정이에요 :)',
+    Icon: CakeIcon,
+    title: '구름톤 유니브 에프터 파티, 9UAP',
+    description: '해커톤의 여운을 이어갈 수 있도록 현직자와 수상자의 세미나,\n그리고 마무리 회고를 진행해요.',
   },
 };
 
@@ -66,14 +66,14 @@ export const ACTIVITY_DATA = [
     title: '온보딩',
     title_en: 'Onboarding',
     description:
-      '벚꽃톤/단풍톤 진행이전에 \n온보딩을 통해 해커톤에 대해 다양한 인사이트를 얻어가세요!\n한 단계 더 성장할 수 있는 도약대가 될 거예요!',
+      '단풍톤/단풍톤 진행이전에 \n온보딩을 통해 해커톤에 대해 다양한 인사이트를 얻어가세요!\n한 단계 더 성장할 수 있는 도약대가 될 거예요!',
   },
   {
     imgSrc: Img3,
     title: '해커톤',
     title_en: 'HACKATHON',
     description:
-      '기획 1명, 디자인 1명, 프론트엔드 2명, 백엔드 2명 총 6명으로 하나의 팀을 구성하여 \n해커톤 기간까지 기획과 디자인 및 개발을 합니다. 봄에는 벚꽃톤, 가을에는 단풍톤이 진행됩니다.',
+      '기획 1명, 디자인 1명, 프론트엔드 2명, 백엔드 2명 총 6명으로 하나의 팀을 구성하여 \n해커톤 기간까지 기획과 디자인 및 개발을 합니다. 봄에는 단풍톤, 가을에는 단풍톤이 진행됩니다.',
   },
   {
     imgSrc: Img4,

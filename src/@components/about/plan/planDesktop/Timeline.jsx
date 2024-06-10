@@ -12,6 +12,25 @@ import styles from './PlanDesktop.module.scss';
 
 const cx = classNames.bind(styles);
 
+export const getMonthText = (key) => {
+  switch (key) {
+    case 1:
+      return '6월';
+    case 2:
+      return '7월';
+    case 3:
+      return '8월';
+    case 4:
+      return '8-10월';
+    case 5:
+      return '11월';
+    case 6:
+      return '12월';
+    default:
+      return `${key}월`;
+  }
+};
+
 export default function Timeline({ month, handleMonthClick }) {
   const value = useScrollValue();
 
@@ -30,11 +49,6 @@ export default function Timeline({ month, handleMonthClick }) {
       handleMonthClick(6);
     }
   }, [value]);
-
-  const getMonthText = (key) => {
-    if (key === 6) return '6-8월';
-    return `${key}월`;
-  };
 
   return (
     <div className={cx('timeline', 'd-flex flex-column')}>

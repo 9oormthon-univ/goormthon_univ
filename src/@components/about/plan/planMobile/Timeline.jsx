@@ -4,6 +4,7 @@ import styles from './PlanMobile.module.scss';
 import classNames from 'classnames/bind';
 
 import CardList from './CardList';
+import { getMonthText } from '../planDesktop/Timeline';
 
 const cx = classNames.bind(styles);
 
@@ -49,11 +50,6 @@ export default function Timeline() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [window.scrollY]);
-
-  const getMonthText = (key) => {
-    if (key === 6) return '6-8월';
-    return `${key}월`;
-  };
 
   return (
     <div className={cx('timeline', 'd-flex justify-content-between')}>

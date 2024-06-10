@@ -97,7 +97,7 @@ function RecruitCaution() {
           animate={visibleBoxes.box5 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.85 }}
         >
-          <RecuritCautionRowBox title="중앙행사 참여" detail="OT와 벚꽃톤은 필수적으로 참여해야 합니다." />
+          <RecuritCautionRowBox title="중앙행사 참여" detail="OT와 단풍톤은 필수적으로 참여해야 합니다." />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
