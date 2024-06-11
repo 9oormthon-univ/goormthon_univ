@@ -102,10 +102,10 @@ export default function Project() {
             variants={fadeInVariants}
           >
             <S.SeasonthonImg src={SeasonImg} />
-            <h4 style={{ color: '#2B2D36', marginTop: '1.5rem' }}>
+            {/* <h4 style={{ color: '#2B2D36', marginTop: '1.5rem' }}>
               구름톤 유니브와 함께하여 <br />
-              3기 갤러리를 꾸며주세요 :)
-            </h4>
+              3기 단풍 갤러리를 꾸며주세요 :)
+            </h4> */}
             <S.GoormBtn2 onClick={() => navigate('/recruit')}>모집 페이지로 가기</S.GoormBtn2>
           </S.SecondTabContainer>
         )}
