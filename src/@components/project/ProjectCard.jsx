@@ -44,7 +44,7 @@ function ProjectCard({
       },
       {
         threshold: 0.01,
-        rootMargin: '400px 0px',
+        rootMargin: '10px 0px',
       },
     );
 
@@ -68,7 +68,7 @@ function ProjectCard({
         variants={variants}
         initial="hidden"
         animate={isVisible ? 'visible' : 'hidden'}
-        transition={{ duration: 0.4, delay: index * 0.3 }}
+        transition={{ duration: 0.4, delay: (index % 3) * 0.3 }}
       >
         <S.CardImgWrapper>
           <S.CardImg src={image} />
