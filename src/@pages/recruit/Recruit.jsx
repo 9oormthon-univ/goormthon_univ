@@ -15,7 +15,7 @@ export default function Recruit() {
           {/* ---------------- 지원 대상 ---------------- */}
           <RecuritTarget />
           {/* ---------------- 모집일정 ---------------- */}
-          {/* <RecuritCalendar /> */}
+          <RecuritCalendar />
           {/* ---------------- 유의 사항 ---------------- */}
           <S.RecuritCautionWrapper className="w-100 d-flex flex-column justify-content-center align-items-start">
             <RecruitCaution />
