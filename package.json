@@ -5,6 +5,7 @@
   "dependencies": {
     "@goorm-dev/gds-components": "^1.45.1",
     "@goorm-dev/gds-icons": "^1.45.1",
+    "acorn": "^8.12.1",
     "classnames": "^2.5.1",
     "firebase": "^10.7.1",
     "framer-motion": "^2.9.5",
@@ -16,6 +17,7 @@
     "react-scroll-percentage": "^4.3.2",
     "reactstrap": "^8.10.1",
     "resize-observer-polyfill": "^1.5.1",
+    "save": "^2.9.0",
     "styled-components": "^5.3.6",
     "styled-reset": "^4.5.1",
     "swiper": "^6.8.4"
