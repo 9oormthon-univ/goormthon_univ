@@ -88,8 +88,30 @@ export const SecondTabContainer = styled(motion.div)`
 export const SeasonthonImg = styled.img`
   width: 30%;
   margin-top: 5rem;
-  margin-bottom: 3rem;
+  /* gap: 1rem; */
   @media (max-width: 768px) {
     width: 80%;
   }
+`;
+
+export const BoldText = styled.p`
+  font-family: Pretendard;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.25rem; /* 150% */
+  letter-spacing: -0.01875rem;
+
+  text-align: center;
+`;
+
+export const Text = styled.p`
+  font-family: Pretendard;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.25rem; /* 150% */
+  letter-spacing: -0.01875rem;
+
+  text-align: center;
 `;

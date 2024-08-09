@@ -1,5 +1,5 @@
 import { Badge } from '@goorm-dev/gds-components';
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ProjectModal from './projectModal/ProjectModal';
 
 import * as S from './style';
@@ -79,12 +79,16 @@ function ProjectCard({
             <S.CardContent>{content}</S.CardContent>
           </S.cardBodyHeader>
           <S.BadgeWrapper>
-            <Badge color="dark" size="md" toggle={null}>
-              {award}
-            </Badge>
-            <Badge color="primary" size="md" toggle={null}>
-              {releaseLink === '' ? '' : '서비스 중'}
-            </Badge>
+            {award && (
+              <Badge color="dark" size="md" toggle={null}>
+                {award}
+              </Badge>
+            )}
+            {releaseLink && (
+              <Badge color="primary" size="md" toggle={null}>
+                서비스 중
+              </Badge>
+            )}
           </S.BadgeWrapper>
         </S.CardBodyWrapper>
       </S.CardContainer>
