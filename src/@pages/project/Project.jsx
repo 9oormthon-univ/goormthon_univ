@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import ProjectCard from '../../@components/project/ProjectCard';
-import BeotkkotProject2024Data from '../../constants/BeotkkotProject2024Data';
-import DanpoongProject2023Data from '../../utilities/ProjectData';
 import * as S from './style';
+import SeasonImg from '../../assets/images/season.png';
+import ProjectCard from '../../@components/project/ProjectCard';
+import DanpoongProject2023Data from '../../utilities/ProjectData';
+import BeotkkotProject2024Data from '../../constants/BeotkkotProject2024Data';
 
 // import { Text } from '@goorm-dev/gds-components';
 import { useNavigate } from 'react-router-dom';
@@ -24,10 +25,10 @@ export default function Project() {
       <S.BodyTitle>프로젝트 둘러보기</S.BodyTitle>
       <S.BtnWrapper>
         <S.GoormBtn onClick={() => handleButtonClick(0)} active={activeIndex === 0}>
-          전체 전체
+          전체
         </S.GoormBtn>
         <S.GoormBtn onClick={() => handleButtonClick(1)} active={activeIndex === 1}>
-          1기 1기
+          1기
         </S.GoormBtn>
         <S.GoormBtn onClick={() => handleButtonClick(2)} active={activeIndex === 2}>
           2기
