@@ -16,6 +16,20 @@ export const CautionRowBox = styled.div`
   @media (max-width: 1055px) {
     width: 100%;
   }
+  width: 35rem;
+  height: 7rem;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-300);
+  background: var(--white-light);
+
+  @media (max-width: 1401px) {
+    width: 23rem;
+  }
+
+  @media (max-width: 1055px) {
+    width: 100%;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
