@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import ProjectCard from '../../@components/project/ProjectCard';
-import SeasonImg from '../../assets/images/season.png';
 import BeotkkotProject2024Data from '../../constants/BeotkkotProject2024Data';
 import DanpoongProject2023Data from '../../utilities/ProjectData';
 import * as S from './style';
 
+// import { Text } from '@goorm-dev/gds-components';
 import { useNavigate } from 'react-router-dom';
 
 export default function Project() {
@@ -24,12 +24,15 @@ export default function Project() {
       <S.BodyTitle>프로젝트 둘러보기</S.BodyTitle>
       <S.BtnWrapper>
         <S.GoormBtn onClick={() => handleButtonClick(0)} active={activeIndex === 0}>
-          전체
+          전체 전체
         </S.GoormBtn>
         <S.GoormBtn onClick={() => handleButtonClick(1)} active={activeIndex === 1}>
-          1기
+          1기 1기
         </S.GoormBtn>
         <S.GoormBtn onClick={() => handleButtonClick(2)} active={activeIndex === 2}>
+          2기
+        </S.GoormBtn>
+        <S.GoormBtn onClick={() => handleButtonClick(3)} active={activeIndex === 3}>
           2기
         </S.GoormBtn>
         <S.GoormBtn onClick={() => handleButtonClick(3)} active={activeIndex === 3}>
@@ -104,12 +107,12 @@ export default function Project() {
             transition={{ duration: 1 }}
             variants={fadeInVariants}
           >
-            <S.SeasonthonImg src={SeasonImg} />
-            {/* <h4 style={{ color: '#2B2D36', marginTop: '1.5rem' }}>
-              구름톤 유니브와 함께하여 <br />
-              3기 단풍 갤러리를 꾸며주세요 :)
-            </h4> */}
-            <S.GoormBtn2 onClick={() => navigate('/recruit')}>모집 페이지로 가기</S.GoormBtn2>
+            <S.EmptyContainer>
+              <S.BoldText>3번째 주인공 모집 완료!</S.BoldText>
+              <S.Text>새롭게 완성될 멋진 프로젝트들을 기대해주세요!</S.Text>
+              {/* <Text typography="heading3">3번째 주인공 모집 완료!</Text>
+              <Text typography="body1">새롭게 완성될 멋진 프로젝트들을 기대해주세요!</Text> */}
+            </S.EmptyContainer>
           </S.SecondTabContainer>
         )}
       </S.ProjectBody>
