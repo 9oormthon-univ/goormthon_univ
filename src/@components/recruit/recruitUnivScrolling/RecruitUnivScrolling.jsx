@@ -81,13 +81,6 @@ function RecruitUnivScrolling({ searchable }) {
   return (
     <ShadowBgContainer className="d-flex flex-column">
       <div className="d-flex justify-content-center align-items-center">
-        {searchable && (
-          <SearchInputCustom
-            value={searchQuery}
-            placeholder="나의 유니브 찾기"
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        )}
       </div>
       {searchQuery ? (
         <SearchContainer>
