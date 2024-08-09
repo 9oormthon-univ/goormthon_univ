@@ -85,10 +85,8 @@ export const SecondTabContainer = styled(motion.div)`
   align-items: center;
 `;
 
-export const EmptyContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const SeasonthonImg = styled.img`
+  width: 30%;
   margin-top: 5rem;
   /* gap: 1rem; */
   @media (max-width: 768px) {
