@@ -1,10 +1,10 @@
 import React from 'react';
+import RecuritCalendar from '../../@components/recruit/recruitCalendar/RecuritCalendar';
+import RecruitCaution from '../../@components/recruit/recruitCaution/RecruitCaution';
+import RecuritFAQ from '../../@components/recruit/recruitFAQ/RecruitFAQ';
 import RecuritHeader from '../../@components/recruit/recuritHeader/RecuritHeader';
 import RecuritTarget from '../../@components/recruit/recuritTarget/RecuritTarget';
 import * as S from './style';
-import RecuritFAQ from '../../@components/recruit/recruitFAQ/RecruitFAQ';
-import RecruitCaution from '../../@components/recruit/recruitCaution/RecruitCaution';
-import RecuritCalendar from '../../@components/recruit/recruitCalendar/RecuritCalendar';
 
 export default function Recruit() {
   return (

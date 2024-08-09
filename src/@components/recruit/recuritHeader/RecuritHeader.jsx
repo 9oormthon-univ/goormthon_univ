@@ -1,11 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react';
-import * as S from './style';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import RecruitUnivScrolling from '../recruitUnivScrolling/RecruitUnivScrolling';
 import { Spinner } from 'reactstrap';
-import { SearchInput, TextButton } from '@goorm-dev/gds-components';
-import { ChevronRightIcon } from '@goorm-dev/gds-icons';
 import RecruitModal from '../recruitModal/RecruitModal';
+import RecruitUnivScrolling from '../recruitUnivScrolling/RecruitUnivScrolling';
+import * as S from './style';
 
 function RecuritHeader() {
   const [isRecruitmentOver, setIsRecruitmentOver] = useState(false);
@@ -88,11 +86,11 @@ function RecuritHeader() {
   const RecruitmentClosedContent = () => (
     <>
       <S.HeaderTitleText>
-        <h1>3기 모집중!</h1>
-        <h6>신규 유니브 대표 및 미르미 사전알림</h6>
+        <h1>3기 모집 완료!</h1>
+        <h6>4기 모집은 2025년 1월 예정입니다!</h6>
       </S.HeaderTitleText>
       <S.GoormBtn color="primary" size="xl" tag="button" onClick={handleButtonClick}>
-        3기 신청하러가기
+        4기 사전 신청 알림받기
       </S.GoormBtn>
     </>
   );
@@ -103,12 +101,11 @@ function RecuritHeader() {
         <RecruitmentClosedContent />
       </S.HeaderTitleWrapper>
       {/* <S.HEaderOpenDayWrapper className="clo-4 d-flex">
-            <S.DatesmallText>미르미 신청 OPEN</S.DatesmallText>
-            <S.DateBigText>1/22</S.DateBigText>
-          </S.HEaderOpenDayWrapper> */}
+        <S.DatesmallText>미르미 신청 OPEN</S.DatesmallText>
+        <S.DateBigText>1/22</S.DateBigText>
+      </S.HEaderOpenDayWrapper> */}
       <S.HeaderUnivContainer>
-        <S.HeaderUnivTitleText>3기 확정 유니브 18개</S.HeaderUnivTitleText>
-        3기 신규 유니브 선발중
+        <S.HeaderUnivTitleText>3기와 함께하는 48개의 유니브</S.HeaderUnivTitleText>
         <S.HeaderUnivListContainer>
           <RecruitUnivScrolling searchable={true} />
         </S.HeaderUnivListContainer>
