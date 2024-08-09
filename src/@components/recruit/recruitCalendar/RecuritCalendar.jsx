@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import * as S from './style';
 import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 import DefaultImg from '../../../assets/images/calendar.jpeg';
+import * as S from './style';
 
 function RecuritCalendar() {
   const [visibleBoxes, setVisibleBoxes] = useState({
@@ -35,7 +35,7 @@ function RecuritCalendar() {
           animate={visibleBoxes.calendarTitle ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.85 }}
         >
-          <S.BodyTitle>모집일정</S.BodyTitle>
+          <S.BodyTitle>3기 모집일정</S.BodyTitle>
         </motion.div>
 
         <motion.div

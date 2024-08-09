@@ -1,8 +1,8 @@
+import { SearchInput } from '@goorm-dev/gds-components';
 import React, { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
 import Universities from '../../../utilities/UnivData';
 import UniversityItem from '../UniversityItem/UniversityItem';
-import styled, { keyframes } from 'styled-components';
-import { SearchInput } from '@goorm-dev/gds-components';
 
 const slideLeft = keyframes`
   0% {
@@ -45,8 +45,7 @@ const ImageSlider2 = styled.div`
 
 const SearchInputCustom = styled(SearchInput)`
   margin-bottom: 6rem;
-  width: 20rem;
-  height: 3.5rem;
+  padding: 0.5rem 1rem;
 `;
 
 const Container = styled.div`
