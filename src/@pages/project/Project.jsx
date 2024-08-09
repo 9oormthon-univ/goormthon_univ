@@ -4,7 +4,7 @@ import BeotkkotProject2024Data from '../../constants/BeotkkotProject2024Data';
 import DanpoongProject2023Data from '../../utilities/ProjectData';
 import * as S from './style';
 
-// import { Text } from '@goorm-dev/gds-components';
+import { Text } from '@goorm-dev/gds-components'; 
 import { useNavigate } from 'react-router-dom';
 
 export default function Project() {
@@ -129,10 +129,8 @@ export default function Project() {
             variants={fadeInVariants}
           >
             <S.EmptyContainer>
-              <S.BoldText>3번째 주인공 모집 완료!</S.BoldText>
-              <S.Text>새롭게 완성될 멋진 프로젝트들을 기대해주세요!</S.Text>
-              {/* <Text typography="heading3">3번째 주인공 모집 완료!</Text>
-              <Text typography="body1">새롭게 완성될 멋진 프로젝트들을 기대해주세요!</Text> */}
+              <Text typography="heading3">3번째 주인공 모집 완료!</Text>
+              <Text typography="body1">새롭게 완성될 멋진 프로젝트들을 기대해주세요!</Text>
             </S.EmptyContainer>
           </S.SecondTabContainer>
         )}
