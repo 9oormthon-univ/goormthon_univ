@@ -4,7 +4,7 @@ import BeotkkotProject2024Data from '../../constants/BeotkkotProject2024Data';
 import DanpoongProject2023Data from '../../utilities/ProjectData';
 import * as S from './style';
 
-import { Text } from '@goorm-dev/gds-components';
+// import { Text } from '@goorm-dev/gds-components';
 import { useNavigate } from 'react-router-dom';
 
 export default function Project() {
@@ -28,13 +28,13 @@ export default function Project() {
         <S.GoormBtn onClick={() => handleButtonClick(0)} active={activeIndex === 0}>
           전체
         </S.GoormBtn>
-        <S.GoormBtn onClick={() => handleButtonClick(0)} active={activeIndex === 1}>
+        <S.GoormBtn onClick={() => handleButtonClick(1)} active={activeIndex === 1}>
           1기
         </S.GoormBtn>
-        <S.GoormBtn onClick={() => handleButtonClick(1)} active={activeIndex === 2}>
+        <S.GoormBtn onClick={() => handleButtonClick(2)} active={activeIndex === 2}>
           2기
         </S.GoormBtn>
-        <S.GoormBtn onClick={() => handleButtonClick(2)} active={activeIndex === 3}>
+        <S.GoormBtn onClick={() => handleButtonClick(3)} active={activeIndex === 3}>
           3기
         </S.GoormBtn>
       </S.BtnWrapper>
@@ -129,8 +129,10 @@ export default function Project() {
             variants={fadeInVariants}
           >
             <S.EmptyContainer>
-              <Text typography="heading3">3번째 주인공 모집 완료!</Text>
-              <Text typography="body1">새롭게 완성될 멋진 프로젝트들을 기대해주세요!</Text>
+              <S.BoldText>3번째 주인공 모집 완료!</S.BoldText>
+              <S.Text>새롭게 완성될 멋진 프로젝트들을 기대해주세요!</S.Text>
+              {/* <Text typography="heading3">3번째 주인공 모집 완료!</Text>
+              <Text typography="body1">새롭게 완성될 멋진 프로젝트들을 기대해주세요!</Text> */}
             </S.EmptyContainer>
           </S.SecondTabContainer>
         )}
