@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import RecuritCautionRowBox from '../recuritCautionRowBox/RecuritCautionRowBox';
 import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import RecuritCautionRowBox from '../recuritCautionRowBox/RecuritCautionRowBox';
 
 const CautionWrapper = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  flex-wrap: wrap;
   gap: 1rem;
 `;
 
@@ -50,7 +49,7 @@ function RecruitCaution() {
         animate={visibleBoxes.box0 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
         transition={{ duration: 0.85 }}
       >
-        <BodyTitle>대표 지원 유의사항</BodyTitle>
+        <BodyTitle>유의사항</BodyTitle>
       </motion.div>
 
       <CautionWrapper>
@@ -59,7 +58,7 @@ function RecruitCaution() {
           animate={visibleBoxes.box1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.85 }}
         >
-          <RecuritCautionRowBox title="활동기간" detail="6월부터 12월까지 운영 가능해야 합니다." />
+          <RecuritCautionRowBox title="활동 기간" detail={`6월부터 12월까지 \n 활동 가능해야 합니다.`} />
         </motion.div>
 
         <motion.div
@@ -67,7 +66,7 @@ function RecruitCaution() {
           animate={visibleBoxes.box2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.85 }}
         >
-          <RecuritCautionRowBox title="성실함" detail="대표로서 성실하고 책임감있게 활동해야 합니다." />
+          <RecuritCautionRowBox title="스터디" detail="유니브별로 진행되는 스터디에 성실하게 참여해야 합니다." />
         </motion.div>
 
         <motion.div
@@ -76,7 +75,7 @@ function RecruitCaution() {
           transition={{ duration: 0.85 }}
         >
           <RecuritCautionRowBox
-            title="모집"
+            title="KDC/KDT"
             detail="3,4학년은 KDC/KDT 수강 가능생으로 1,2학년은 자유 모집가능합니다."
           />
         </motion.div>
@@ -86,28 +85,7 @@ function RecruitCaution() {
           animate={visibleBoxes.box4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.85 }}
         >
-          <RecuritCautionRowBox
-            title="모집 마감일 준수"
-            detail="교내 학생 및 운영진 모집 마감일은 7월 21일까지입니다."
-          />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={visibleBoxes.box5 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-          transition={{ duration: 0.85 }}
-        >
-          <RecuritCautionRowBox title="중앙행사 참여" detail="OT와 단풍톤은 필수적으로 참여해야 합니다." />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={visibleBoxes.box6 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-          transition={{ duration: 0.85 }}
-        >
-          <RecuritCautionRowBox
-            title="대표 미팅"
-            detail="매달 첫째 주에 진행되는 대표 미팅에 참여가 가능해야 합니다."
-          />
+          <RecuritCautionRowBox title="행사 참여" detail="OT와 단풍톤에 필수적으로 참여해야 합니다." />
         </motion.div>
       </CautionWrapper>
     </>

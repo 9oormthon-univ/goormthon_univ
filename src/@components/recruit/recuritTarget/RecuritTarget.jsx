@@ -1,6 +1,6 @@
+import { CalendarIcon, GroupIcon, SchoolIcon } from '@goorm-dev/gds-icons';
 import React, { useEffect, useState } from 'react';
 import * as S from './style';
-import { SchoolIcon, CalendarIcon, GroupIcon } from '@goorm-dev/gds-icons';
 
 function RecuritTarget() {
   const [visibleBoxes, setVisibleBoxes] = useState({
@@ -32,10 +32,7 @@ function RecuritTarget() {
       transition={{ duration: 0.85 }}
       className="w-100 flex-column"
     >
-      <S.TargetTitle className="mb-3">대표 및 미르미 지원 대상</S.TargetTitle>
-      <S.TargetDetail className="mb-4">
-        : IT 서비스에 구현에 관심 많고 교외 다른 파트 친구들과 협업하고 싶은 사람
-      </S.TargetDetail>
+      <S.TargetTitle className="mb-3">3기 지원 대상</S.TargetTitle>
       <S.TargetRowDetailWrapper className="d-flex">
         <S.TargetRowDetailBox
           initial={{ opacity: 0, y: 100 }}
@@ -45,7 +42,7 @@ function RecuritTarget() {
         >
           {/* icon */}
           <SchoolIcon className="SchoolIcon__icon" color="black" width="20px" height="20px" />
-          <S.TargetDetailBoxText>대학 재학 및 휴학중인 사람</S.TargetDetailBoxText>
+          <S.TargetDetailBoxText>IT 서비스의 구현에 관심이 많은 대학생</S.TargetDetailBoxText>
           {/* text */}
         </S.TargetRowDetailBox>
         <S.TargetRowDetailBox
@@ -55,7 +52,7 @@ function RecuritTarget() {
         >
           {/* icon */}
           <CalendarIcon className="CalendarIcon__icon" color="black" width="20px" height="20px" />
-          <S.TargetDetailBoxText>6월부터 12월까지 활동이 가능한 사람</S.TargetDetailBoxText>
+          <S.TargetDetailBoxText>타학교 친구들과 협업 경험을 쌓고 싶은 대학생</S.TargetDetailBoxText>
           {/* text */}
         </S.TargetRowDetailBox>
         <S.TargetRowDetailBox
@@ -65,7 +62,7 @@ function RecuritTarget() {
         >
           {/* icon */}
           <GroupIcon className="GroupIcon__icon" color="black" width="20px" height="20px" />
-          <S.TargetDetailBoxText>열정과 성실함이 비례해서 넘치는 사람</S.TargetDetailBoxText>
+          <S.TargetDetailBoxText>열정과 성실함이 넘치는 대학생</S.TargetDetailBoxText>
           {/* text */}
         </S.TargetRowDetailBox>
       </S.TargetRowDetailWrapper>
