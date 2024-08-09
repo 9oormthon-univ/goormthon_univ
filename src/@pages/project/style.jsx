@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import { Button } from '@goorm-dev/gds-components';
 import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
 export const ProjectBody = styled.div`
   width: 70%;
@@ -44,8 +44,9 @@ export const BodyTitle = styled.h2`
 `;
 
 export const GoormBtn = styled(Button)`
-  /* background: var(--primary-transparent-24);
-  color: var(--semantic-color-text-text-alternative); */
+  /* background: var(--primary-transparent-24); */
+  /* color: var(--semantic-color-text-text-alternative); */
+  /* padding: 0.5rem 1rem; */
 `;
 
 export const BtnWrapper = styled.div`
@@ -85,10 +86,11 @@ export const SecondTabContainer = styled(motion.div)`
   align-items: center;
 `;
 
-export const SeasonthonImg = styled.img`
-  width: 30%;
+export const EmptyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 5rem;
-  /* gap: 1rem; */
   @media (max-width: 768px) {
     width: 80%;
   }

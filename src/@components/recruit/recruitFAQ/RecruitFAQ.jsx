@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import * as S from './style';
 import { Collapse } from '@goorm-dev/gds-components';
 import { ChevronDownIcon, ChevronUpIcon } from '@goorm-dev/gds-icons';
-import FAQData from '../../../utilities/FAQData';
 import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import FAQData from '../../../utilities/FAQData';
+import * as S from './style';
 
 function RecuritFAQ() {
   const [isOpen, setIsOpen] = useState(null);
