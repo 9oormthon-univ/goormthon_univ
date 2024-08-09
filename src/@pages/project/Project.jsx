@@ -130,7 +130,7 @@ export default function Project() {
           >
             <S.EmptyContainer>
 				<S.BoldText>3번째 주인공 모집 완료!</S.BoldText>
-				<S.Text>3번째 주인공 모집 완료!</S.Text>
+				<S.Text>새롭게 완성될 멋진 프로젝트들을 기대해주세요!</S.Text>
             </S.EmptyContainer>
           </S.SecondTabContainer>
         )}
